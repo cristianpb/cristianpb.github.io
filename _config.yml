@@ -25,7 +25,6 @@ github_username:  cristianpb
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
 exclude:
