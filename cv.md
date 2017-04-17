@@ -37,10 +37,6 @@ Krakow, Poland. "Overview of cellular automaton models for corrosion"
 
 Citation of my articles migth be found in [Google Scholar](https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ) or [Research Gate](https://www.researchgate.net/profile/Cristian_Perez_Brokate). 
 
-{% include icon-researchgate.html username=site.researchgate_username %}
-{% include icon-github.html username="jekyll" %} 
-{% include icon-twitter.html username=site.linkedin_username %}
-
 ## Journal Articles
 
 * *Cristian Felipe Pérez-Brokate*, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, Probabilistic cellular automata model of generalized corrosion, Corrosion Engineering, Science and Technology, _in press_
