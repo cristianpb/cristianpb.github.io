@@ -1,7 +1,7 @@
 ---
 layout: default
 title: CV
-permalink: /default/
+permalink: /cv/
 ---
 
 # Cristian Perez
@@ -36,6 +36,10 @@ Krakow, Poland. "Overview of cellular automaton models for corrosion"
 # Publications
 
 Citation of my articles migth be found in [Google Scholar](https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ) or [Research Gate](https://www.researchgate.net/profile/Cristian_Perez_Brokate). 
+
+{% include icon-researchgate.html username=site.researchgate_username %}
+{% include icon-github.html username="jekyll" %} 
+{% include icon-twitter.html username=site.linkedin_username %}
 
 ## Journal Articles
 
