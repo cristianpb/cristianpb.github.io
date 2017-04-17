@@ -35,7 +35,7 @@ Krakow, Poland. "Overview of cellular automaton models for corrosion"
 
 # Publications
 
-Citation of my articles migth be found in [Google Scholar](https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ) or [Research Gate](https://www.researchgate.net/profile/Cristian_Perez_Brokate). 
+Citation of my articles migth be found at {% include icon-google.html username="Google Scholar" %} or {% include icon-researchgate.html username="Research Gate" %}.
 
 ## Journal Articles
 
