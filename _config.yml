@@ -26,6 +26,8 @@ github_username:  cristianpb
 researchgate_username:  cristianpb
 disqus:
   shortname: cristianpb-github-io
+google_analytics: UA-68913933-2
+
 
 # Build settings
 markdown: kramdown
