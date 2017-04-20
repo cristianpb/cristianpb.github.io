@@ -10,7 +10,7 @@ layout: default
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {{ page.date | date: date_format }}
       </time>
-      • {{ content | reading_time_as_i }}
+      • Reading time ~ {% include read_time.html %}
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       {% endif %}</p>
