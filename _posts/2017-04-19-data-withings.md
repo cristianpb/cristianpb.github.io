@@ -5,6 +5,8 @@ date:   2017-04-19 21:01:25 +0200
 categories: withings r 
 ---
 
+# Annual report 
+
 Last year my friends gave me a [withings
 steel](https://www.withings.com/us/en/products/activite-steel) as a birthday
 gift.  It has been almost one year and  I wanted to do the annual report about
@@ -48,7 +50,7 @@ ggplot(aes(x = sleep$to, y = sleep$duration), data = sleep) + geom_point(na.rm=T
 ![plot of chunk unnamed-chunk-2](/images/data_withings/unnamed-chunk-2-1.png)
 
 During my last PhD year I used to sleep less than 7 hours in average. I
-defended my PhD the 29th of september, after that my sleep has increased
+defended my PhD the 29th of September, after that my sleep has increased
 steadily to a little less than 8 hours.
 
 ```r
