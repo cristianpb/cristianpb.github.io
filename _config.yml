@@ -33,6 +33,7 @@ google_analytics: UA-68913933-2
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-time-to-read
 exclude:
   - Gemfile
   - Gemfile.lock
