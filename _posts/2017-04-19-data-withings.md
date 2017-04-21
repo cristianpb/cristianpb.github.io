@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Data withings"
+title: "Data withings smart watch"
 date:   2017-04-19 21:01:25 +0200
 categories: withings r 
 ---
@@ -19,18 +19,11 @@ analysis because I think it is easy to get beautiful and informative graphs.
 I used the following libraries:
 
 ```r
-library('dplyr') # data manipulation
 library('ggplot2') # data manipulation
-library('plyr')
 library('scales')
 library('zoo') #yearmon
-library('rpart')
-library('mice')
-library('randomForest')
-# Load in the packages to build a fancy plot
-library(rattle)
-library(rpart.plot)
 library(RColorBrewer)
+theme_set(theme_gray(base_size = 19))
 ```
 
 ## Sleeping data
@@ -42,12 +35,12 @@ sleep$to <- strptime(sleep$to,"%Y-%m-%d %H:%M")
 sleep$duration <-  difftime(sleep$to, sleep$from ,units="hour")
 ggplot(aes(x = sleep$to, y = sleep$duration), data = sleep) + geom_point(na.rm=T) +
 	scale_y_continuous(name="Sleep time [hours]",breaks=seq(2,12,1),limits=c(2,11)) +
-	scale_x_datetime(name="Date",breaks = date_breaks("3 weeks"),
+	scale_x_datetime(name="Date",breaks = date_breaks("1 months"),
         labels = date_format("%b")) +
- stat_smooth(na.rm=T) 
+ 	stat_smooth(na.rm=T) 
 ```
 
-![plot of chunk unnamed-chunk-2](/images/data_withings/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-2](/images/data_withings/sleep.svg)
 
 During my last PhD year I used to sleep less than 7 hours in average. I
 defended my PhD the 29th of September, after that my sleep has increased
@@ -88,13 +81,18 @@ ggplot(sleep, aes(monthweek, weekdayf, fill = sleep$duration)) +
 	ylab("") + labs(fill="Sleep hours \n") 
 ```
 
-![plot of chunk unnamed-chunk-3](/images/data_withings/unnamed-chunk-3-1.png)
+![plot of chunk unnamed-chunk-3](/images/data_withings/calendar.svg)
 
-I tend to sleep longer on weekends.
+I tend to sleep longer on weekends. There are some empty spaces that correspond
+to days when I didn't have the watch, because I broke the bracelet a couple of
+times. Still it is very cheap to replace on ebay.
 
 ## Activity time
 
-Regarding the activity time. I have the information about the number of steps that I have done each day. 
+Regarding the activity time. I have the information about the number of steps
+that I have done each day.  A number of calories is calculated using this
+information. The watch doesn't have an altimeter so I don't have information
+about the elevation. 
 
 ```r
 activities <- read.csv("input/activities.csv", header = TRUE, stringsAsFactors=F)
@@ -112,13 +110,41 @@ str(activities)
 ```
 
 ```r
-ggplot(aes(x = activities$Date, y = activities$Steps), data = activities) +
-	geom_point() + scale_y_continuous(name="Steps",breaks=seq(0,40000,5000)) +
-	scale_x_datetime(name="Date",breaks = date_breaks("3 weeks"), labels =
-			 date_format("%b")) +
- 	stat_smooth(na.rm=T) 
+p <- ggplot(aes(x = activities$Date, y = activities$Steps), data = activities) +
+        geom_point() + scale_y_continuous(name="Steps",breaks=seq(0,40000,5000)) +
+        scale_x_datetime(name="Date",breaks = date_breaks("1 months"), labels =
+                         date_format("%b")) +
+        stat_smooth(na.rm=T)
+ggsave(file="figure/activity.svg", plot=p, width=10, height=8)
 ```
 
-![plot of chunk unnamed-chunk-4](/images/data_withings/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chun3](/images/data_withings/activity.svg)
 
-During the last summer I have walked more in average. I tend to go out more during the sunny days. 
+During the last summer I have walked more in average. I tend to go out more
+during the sunny days.  In addition I have been walking less than last year
+because I don't have to walk to much to go working.
+
+```r
+activities$year <- as.numeric(as.POSIXlt(activities$Date)$year+1900)
+activities$month<-as.numeric(as.POSIXlt(activities$Date)$mon+1)
+
+# turn months into ordered facors to control the appearance/ordering in the presentation
+activities$monthf<-factor(activities$month,levels=as.character(1:12),labels=c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"),ordered=TRUE)
+
+# the day of week is again easily found
+activities$weekday = as.numeric(format(as.POSIXlt(activities$Date),"%u"))
+
+p <- ggplot(aes(x = activities$weekday, y = activities$Steps), data = activities) +
+        geom_point() + scale_y_continuous(name="Steps",breaks=seq(0,40000,5000)) +
+        scale_x_discrete(breaks=c(1, 2, 3, 4, 5, 6, 7), limits=c(1,2,3,4,5,6,7),
+                   labels=c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")) +
+        xlab("Weekday") +
+        stat_smooth(na.rm=T)
+ggsave(file="figure/activity_weekday.svg", plot=p, width=10, height=8)
+```
+
+![plot of chunk unnamed-chunk-4](/images/data_withings/activity_weekday.svg)
+
+I tend to walk more during the weekends.
+
+_Lets see how it goes this summer !_
