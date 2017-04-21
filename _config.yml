@@ -32,6 +32,7 @@ google_analytics: UA-68913933-2
 # Build settings
 markdown: kramdown
 gems:
+  - jekyll-seo-tag
   - jekyll-feed
   - jekyll-time-to-read
 exclude:
