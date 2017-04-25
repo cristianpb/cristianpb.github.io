@@ -2,7 +2,8 @@
 layout: post
 title: "Data withings smart watch"
 date:   2017-04-19 21:01:25 +0200
-categories: withings r 
+description: "Analysis for one year data of my daily sleep time and number of steps."
+categories: ['withings', 'r', 'data']
 ---
 
 # Annual report 

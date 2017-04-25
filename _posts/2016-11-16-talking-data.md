@@ -2,7 +2,7 @@
 layout: post
 title: "Kaggle exercise: Talking data"
 date:   2016-11-16 21:01:25 +0200
-categories: kaggle r
+categories: ["kaggle", "r"]
 ---
 
 # Introduction
