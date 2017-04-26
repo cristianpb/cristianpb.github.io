@@ -4,7 +4,7 @@ author: Cristian Perez
 title: Cristian Perez
 email: cperez at kernix.com
 description: > # this means to ignore newlines until "baseurl:"
-        Data science, programming, technology, vim, mutt, git, node, python, nodejs, R, physics, corrosion, modelling studies, visualization.
+        Data science, programming, technology, linux, vim, mutt, git, python, nodejs, R, modelling studies, visualization.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: http://cristianpb.github.io/ "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: https://twitter.com/cris_perez_b
@@ -21,8 +21,8 @@ paginate_path: '/blog/:num'
 
 
 # Build settings
-sass:
-    style: compressed
+#sass:
+#    style: compressed
 markdown: kramdown
 #kramdown:
 #  parse_block_html: true
