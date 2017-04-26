@@ -12,4 +12,4 @@ permalink: /
 <br>
 <br>
 {% endfor %}
-
+<center><a href="{{ site.baseurl | append: '/blog/'}}">:point_right: More at the blog</a></center>

@@ -8,7 +8,7 @@ navigation: true
 
 Data Scientist @ [Kernix](https://www.kernix.com/)
 
-# Education
+# :school: Education
 
 * PhD in Physical chemistry. Université Pierre et Marie Curie. 2013-2016.
 * Master in [Materials, Processing and Modelling](http://www.cemef.mines-paristech.fr/sections/formations/masteres-specialises/ms-mapmod). École Nationale Supérieure des Mines de Paris. 
@@ -16,13 +16,13 @@ Data Scientist @ [Kernix](https://www.kernix.com/)
 * Engineer in Mechanical engineering. [Universidad Industrial de Santander](http://www.uis.edu.co/). 2007-2010.
  
 
-# Prix
+# :star: Prix
 
 * 2015	[Roberto Rocca Fellowship](http://www.robertorocca.org/en/fellowships/fellows15.aspx). Awarded to exceptional university graduates from developing countries to help fund studies towards the Ph.D. degree at a university outside his home country
 
 * 2014 [Arts et Sciences](http://artsetsciences.doc-up.info/archives/edition-2014/). Artistic contest related to science, organized by Doctoral association of Sorbonne University and UPMC. 
 
-# Communications
+# 🎙 Communications
 
 * 2016	Oral presentation ([best presentation](http://eurocorr.org/EFC+Awards+and+Prizes-p-71440.html) in WP Nuclear Corrosion) EUROCORR 2016
 Montpelier, France. "Pitting corrosion modelling by means of a stochastic cellular automata based model"
@@ -31,9 +31,11 @@ Vancouver, Canada. "[Corrosion modeling using 3D probabilistic cellular automata
 * 2015	Poster EUROCORR 2015
 Graz, Austria.	"Corrosion modelling by cellular automata"
 * 2014	Présentation orale ACRI 2014
+
+<script src="https://gist.github.com/cristianpb/487700a8492522bfb254e5fe6839989d.js"></script>
 Krakow, Poland. "Overview of cellular automaton models for corrosion"
 
-# Publications
+# 📚  Publications
 
 Citation of my articles migth be found at {% include icon-google.html username="Google Scholar" %} or {% include icon-researchgate.html username="Research Gate" %}.
 

@@ -85,43 +85,29 @@ in calculating an affine transform that deskews the image.
 
 <section data-markdown data-vertical="^\n--\n$">
 
-Or
+### Not that easy for fishes
 
-^\n--\n$
-
-
---
-
-Even
-
---
- <!--v-->
-
-Vertical
-
----
-
-Slides
+![](/images/image-preprocessing/deskewed.png)
 
 </section>
 
-<section data-markdown data-separator="^\n---\n$" data-vertical="^\n--\n$" data-notes="^Note:">
-<script type="text/template">
-## Vertical Slides
 
-Or
+<section data-markdown data-vertical="^\n--\n$">
+## Histogram equalization
 
---
+Increase image contrast using the image's histogram.
 
-Even
+![](/images/image-preprocessing/histogram_equalization.png)
+</section>
 
---
+<section data-markdown data-vertical="^\n--\n$">
 
-Vertical
+# Conclusions
 
---
+- Image preprocessing can significantly increase the performance of a
+  classification algorithm.
+- A feature descriptor represents a simplified version of an image by
+  extracting useful information and throwing away extraneous information.
+- Using feature description increases training speed compared with raw images.
 
-Slides
-
-</script>
 </section>
