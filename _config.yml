@@ -16,16 +16,16 @@ researchgate_username:  Cristian_Perez_Brokate
 disqus:
   shortname: cristianpb-github-io
 google_analytics: UA-68913933-2
-paginate: 3
-paginate_path: "/blog/page:num/"
+paginate: 12
+paginate_path: '/blog/:num'
 
 
 # Build settings
 sass:
     style: compressed
 markdown: kramdown
-kramdown:
-  parse_block_html: true
+#kramdown:
+#  parse_block_html: true
 gems:
   - jekyll-feed
   - jekyll-paginate
@@ -54,5 +54,3 @@ defaults:
 include:
   - _pages
 
-paginate: 12
-paginate_path: '/blog/:num'
