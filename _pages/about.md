@@ -12,7 +12,7 @@ Data Scientist @ [Kernix](https://www.kernix.com/)
 
 * PhD in Physical chemistry. Université Pierre et Marie Curie. 2013-2016.
 * Master in [Materials, Processing and Modelling](http://www.cemef.mines-paristech.fr/sections/formations/masteres-specialises/ms-mapmod). École Nationale Supérieure des Mines de Paris. 
-* [Engineer](http://www.enim.fr/)  + [Master in Materials and Production](http://www.lem3.fr/mmsp/index.php?page=organisation). École Nationale d’Ingénieurs de Metz. 2010-2012.
+* [Engineer](http://www.enim.fr/)  + [Master in Materials and Production](http://www.lem3.univ-lorraine.fr/mmsp/). École Nationale d’Ingénieurs de Metz. 2010-2012.
 * Engineer in Mechanical engineering. [Universidad Industrial de Santander](http://www.uis.edu.co/). 2007-2010.
  
 
@@ -31,9 +31,9 @@ Vancouver, Canada. "[Corrosion modeling using 3D probabilistic cellular automata
 * 2015	Poster EUROCORR 2015
 Graz, Austria.	"Corrosion modelling by cellular automata"
 * 2014	Présentation orale ACRI 2014
+Krakow, Poland. "Overview of cellular automaton models for corrosion"
 
 <script src="https://gist.github.com/cristianpb/487700a8492522bfb254e5fe6839989d.js"></script>
-Krakow, Poland. "Overview of cellular automaton models for corrosion"
 
 # 📚  Publications
 
@@ -55,5 +55,5 @@ Citation of my articles migth be found at {% include icon-google.html username="
 
 * **C. F. Pérez-Brokate**, D. di Caprio, D. Féron, J. D. Lamare, and A. Chaussé, [Overview of Cellular Automaton Models for Corrosion](http://link.springer.com/chapter/10.1007/978-3-319-11520-7_20), in Cellular Automata, J. Wąs, G. C. Sirakoulis, and S. Bandini, Eds. Springer International Publishing, 2014, pp. 187–196.
 
-* M. Bellet, **C. F. Pérez-Brokate**, P. Hubsch, [3D finite element thermomechanical modelling of the primary cooling for beam-blanks continuous casting](http://eccc2014.org/downloads/content/files/assets/basic-html/page1220.html), in 8th European Continuous Casting Conference, 2014, pp. 1220.
+* M. Bellet, **C. F. Pérez-Brokate**, P. Hubsch, [3D finite element thermomechanical modelling of the primary cooling for beam-blanks continuous casting](https://www.researchgate.net/profile/Michel_Bellet/publication/263446224_3D_finite_element_thermomechanical_modelling_of_the_primary_cooling_for_beam-blanks_continuous_casting/links/0c96053ad975d9afa6000000.pdf), in 8th European Continuous Casting Conference, 2014, pp. 1220.
 
