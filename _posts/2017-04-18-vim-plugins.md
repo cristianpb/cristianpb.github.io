@@ -159,9 +159,29 @@ let g:UltiSnipsExpandTrigger="<tab>"
 set runtimepath+=~/.vim/my-snippets/
 ```
 
-
 ![](https://raw.github.com/SirVer/ultisnips/master/doc/demo.gif)
 
+Markdown writting has many plugins. One of them are
+[emojis](https://en.wikipedia.org/wiki/Emoji). These are very popular smileys
+that can be found in several message applications.
+Vim provides a plugin to search for emojis called [vim-emoji](https://github.com/junegunn/vim-emoji).
+The terminal must support the use of emojis like in
+[iterm2](https://en.wikipedia.org/wiki/ITerm2). In linux additional fonts may
+be installed to render emojis like _noto-fonts-emoji_ (Google's own emoji font)
+or _ttf-symbola_.
+
+Autocompletion function can be added in `.vimrc` and then activated during _insert mode_ with the keyboard `CTRL+X` `CTRL+U`.
+
+```vim
+" Emoji
+set completefunc=emoji#complete
+```
+
+![](/images/vim-emojis.gif)
+
+I spend most on my time using vim, then I consider a good idea to make it confortable, so I like to give vim a little of style :ring:, I use [vim-devicons](https://github.com/ryanoasis/vim-devicons). Terminal font must be able to render glyphs :cat:. This can be patched with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#font-installation).
+
+![](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png)
 
 # My complete list of plugins
 

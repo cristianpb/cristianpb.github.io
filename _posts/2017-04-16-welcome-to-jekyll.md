@@ -84,6 +84,14 @@ out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub
 repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll
 Talk][jekyll-talk].
 
+# Update
+
+I started using [Emping theme](https://github.com/rmsubekti/emping). It offers
+a more aesthetic design and also includes [_Amp
+Page_](https://www.ampproject.org) implementation to improve charging time,
+_Pagination_ for the blog, a nice _404 Error Page_, _SEO Gems_ and the _Share
+Button_ with different social networks.
+
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/

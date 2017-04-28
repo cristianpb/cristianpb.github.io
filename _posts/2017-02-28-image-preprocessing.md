@@ -9,6 +9,9 @@ transition: slide
 ---
 
 <section data-markdown>
+
+[Use GitPitch](https://gitpitch.com/cristianpb/PresentationTechnique/master?grs=github&t=black)
+
 # Image preprocessing
 
 Cristian Perez
