@@ -43,7 +43,7 @@ Citation of my articles migth be found at {% include icon-google.html username="
 
 * **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, Probabilistic cellular automata model of generalized corrosion, Corrosion Engineering, Science and Technology, _in press_
 
-* **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, [Pitting corrosion modelling by means of a stochastic cellular automata-based model](http://www.tandfonline.com/eprint/4a7mVXEyACtXAMWkeMrf/full), Corrosion Engineering, Science and Technology, 2017
+* **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, [Pitting corrosion modelling by means of a stochastic cellular automata-based model](http://dx.doi.org/10.1080/1478422X.2017.1311074), Corrosion Engineering, Science and Technology, 2017
 
 * **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, [Three dimensional discrete stochastic model of occluded corrosion cell](http://www.sciencedirect.com/science/article/pii/S0010938X16301469), Corrosion Science 111 (Oct. 2016) pp. 230–241
 
