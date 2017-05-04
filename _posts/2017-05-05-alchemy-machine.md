@@ -2,7 +2,7 @@
 layout: post
 title: "The alchemy machine"
 date:   2017-05-02 20:51:25 +0200
-description: "The objetive is to create a simulator of magic potions using AngularJS"
+description: "The objetive is to create a simulator of magic potions using AngularJS and node.js"
 categories: ['angularjs', 'nodejs', 'express']
 ---
 
@@ -46,12 +46,12 @@ Inside `server.js` I define a `JSON` object with the data needed for my alchemy 
 
 ```json
 "Ingredients": [
-        {"text": "Avocado",     "emoji" : "🥑 ", "selected" :false, "quantity": 3, "image": "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocadoo-sliced-in-half.jpg"},
-        {"text": "Watermellon", "emoji" : "🍉 ", "selected" :false, "quantity": 2, "image": "http://www.pvfarms.com/images/ourproduce_watermelon.png"},
-        {"text": "Jalapeno",    "emoji" : "🌶",   "selected" :false, "quantity": 3, "image": "http://images.realfoodtoronto.com/D.cache.large/Jalapeno-Pepper.jpg"},
+        {"text": "Avocado",     "emoji" : "🥑 ",  "selected" :false, "quantity": 3, "image": "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocadoo-sliced-in-half.jpg"},
+        {"text": "Watermellon", "emoji" : "🍉 ",  "selected" :false, "quantity": 2, "image": "http://www.pvfarms.com/images/ourproduce_watermelon.png"},
+        {"text": "Jalapeno",    "emoji" : "🌶",    "selected" :false, "quantity": 3, "image": "http://images.realfoodtoronto.com/D.cache.large/Jalapeno-Pepper.jpg"},
         {"text": "Pineapple",   "emoji" : "🍍 ",  "selected" :false, "quantity": 2, "image": "http://www.cuisine-de-bebe.com/wp-content/uploads/lananas.jpg"},
-        {"text": "Kiwi",        "emoji" : "🥝 ", "selected" :false, "quantity": 5, "image": "http://media.mercola.com/assets/images/foodfacts/kiwifruit-nutrition--facts.jpg"},
-        {"text": "Strawberry",  "emoji" : "🍓", "selected" :false, "quantity": 2, "image": "http://maviedemamanlouve.com/wp-content/uploads/2015/10/fraise-1.jpg"},
+        {"text": "Kiwi",        "emoji" : "🥝 ",  "selected" :false, "quantity": 5, "image": "http://media.mercola.com/assets/images/foodfacts/kiwifruit-nutrition--facts.jpg"},
+        {"text": "Strawberry",  "emoji" : "🍓",   "selected" :false, "quantity": 2, "image": "http://maviedemamanlouve.com/wp-content/uploads/2015/10/fraise-1.jpg"},
         {"text": "Lemon",       "emoji" : "🍋  ", "selected" :false, "quantity": 4, "image": "https://realfood.tesco.com/media/images/Lemon-easter-biscuits-hero-1d74c01d-8906-45fe-8135-322f0520c434-0-472x310.jpg"},
         {"text": "Banana",      "emoji" : "🍌 ",  "selected" :false, "quantity": 2, "image": "http://www.granini.com/data/images/fruit_images/full/banana.png"}
 ],
@@ -64,9 +64,9 @@ Inside `server.js` I define a `JSON` object with the data needed for my alchemy 
 
 ```json
 "Recipes":[
-        {"name" : "Power",      "quantity" : 0, "ingredients" : ["Avocado",   "Jalapeno",    "Pineapple"]},
+        {"name" : "Power",        "quantity" : 0, "ingredients" : ["Avocado",   "Jalapeno",    "Pineapple"]},
         {"name" : "Invisibility", "quantity" : 0, "ingredients" : ["Pineapple", "Kiwi",        "Lemon"  ]},
-        {"name" : "Agility",    "quantity" : 0, "ingredients" : ["Banana",    "Watermellon", "Strawberry"]}
+        {"name" : "Agility",      "quantity" : 0, "ingredients" : ["Banana",    "Watermellon", "Strawberry"]}
 ],
 ```
 
@@ -254,4 +254,19 @@ The `index.html` file interacts directly with angularjs using the module and the
 </html>
 ```
 
+## Final view
+
+In the following **gif**, I test the main functions of the application: selecting ingridients to make magic potions, see how the number of ingridients decreases while I am making potions and also that I not able to do magic potions when I run out of the ingridients.
+
 ![](/images/alchemy-machine/alchemy.gif)
+
+
+## Test the application
+
+The application can be found at my [github](https://github.com/cristianpb/alchemy-machine). To get it all up and running:
+
+* Make sure you have [Node](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed
+* Clone the repo: git clone git@github.com:cristianpb/alchemy-machine.git
+* Install the application: npm install
+* Start the server: node server.js
+* View in your browser at http://localhost:8080
