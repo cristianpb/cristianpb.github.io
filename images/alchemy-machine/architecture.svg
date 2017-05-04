@@ -243,7 +243,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.29898165"
-     inkscape:cx="1365.0229"
+     inkscape:cx="890.07736"
      inkscape:cy="755.43366"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -557,23 +557,18 @@
     <text
        id="text4608"
        y="42.576454"
-       x="-373.22977"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.953125px;line-height:13.22916698px;font-family:'Noto Color Emoji';-inkscape-font-specification:'Noto Color Emoji';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-304.49951"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.953125px;line-height:13.22916698px;font-family:'Noto Color Emoji';-inkscape-font-specification:'Noto Color Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.93333244px;line-height:13.22916698px;font-family:Lato;-inkscape-font-specification:Lato;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.93333244px;line-height:13.22916698px;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;text-anchor:middle;stroke-width:0.26458332px"
          y="42.576454"
-         x="-373.22977"
+         x="-304.49951"
          id="tspan4606"
          sodipodi:role="line">Data:</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.93333244px;line-height:13.22916698px;font-family:Lato;-inkscape-font-specification:Lato;stroke-width:0.26458332px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.93333244px;line-height:13.22916698px;font-family:Lato;-inkscape-font-specification:Lato;text-align:center;text-anchor:middle;stroke-width:0.26458332px"
          y="59.42387"
-         x="-373.22977"
+         x="-304.49951"
          sodipodi:role="line"
-         id="tspan4610">{Ingredients, Recipe, </tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.93333244px;line-height:13.22916698px;font-family:Lato;-inkscape-font-specification:Lato;stroke-width:0.26458332px"
-         y="76.271286"
-         x="-373.22977"
-         sodipodi:role="line"
-         id="tspan4612">Potions made}</tspan></text>
+         id="tspan4612">{Ingredients, Recipes}</tspan></text>
   </g>
 </svg>
