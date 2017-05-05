@@ -11,6 +11,14 @@ libraries such as **nodejs** and **angularjs**.  I chose this project because I
 have never use these technologies before and I thought that it
 was a good opportunity to try them. 
 
+The application should present a list of ingredients that can be selected to
+make magic potions.  Each magic potion is made with three different ingredients
+and they are shown in the application. The ingredients have a defined quantity
+and the application will do magic potions only when there are available
+ingredients. 
+
+## Structure of the application
+
 [AngularJS](https://angularjs.org/) is great for declaring static documents.
 It has a data binding to update the view whenever the model changes, as
 well as updating the model whenever the view changes. 
