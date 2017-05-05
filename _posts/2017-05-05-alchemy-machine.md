@@ -185,30 +185,31 @@ The `index.html` file interacts directly with angularjs using the module and the
 * The ingredients of the available recipes.
 * The **mix** button.
 
+{% raw %}
 ```html
-<!doctype html>
-
 <!-- ASSIGN OUR ANGULAR MODULE -->
 <html ng-app="alchemyMachine">
 <head>
     <!-- META -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->                                                                 
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
     <title>The Alchemy Machine</title>
 
     <!-- SCROLLS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
-    <style>                                                                                                                                                                       #inline_images {display: inline-block;}
-        html                    { overflow-y:scroll; }
-        body                    { padding-top:50px; }
-        #ingredient-list              { margin-bottom:30px; }
+    <style>
+	#inline_images   { display: inline-block;}
+        html             { overflow-y:scroll; }
+        body             { padding-top:50px; }
+        #ingredient-list { margin-bottom:30px; }
     </style>
 
     <!-- SPELLS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
-    <script src="core.js"></script>                                                                                                                                       
-</head>                                                                                                                                                                   <!-- SET THE CONTROLLER AND GET ALL INFO -->
+    <script src="core.js"></script>
+</head>
+<!-- SET THE CONTROLLER AND GET ALL INFO -->
 <body ng-controller="mainController">
     <div class="container">
 
@@ -258,6 +259,7 @@ The `index.html` file interacts directly with angularjs using the module and the
   </body>
 </html>
 ```
+{% endraw %}
 
 ## Final view
 

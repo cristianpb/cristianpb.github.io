@@ -32,7 +32,6 @@ gems:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-time-to-read
   - jemoji
 exclude:
   - CNAME
