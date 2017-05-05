@@ -6,14 +6,15 @@ description: "The objetive is to create a simulator of magic potions using Angul
 categories: ['angularjs', 'nodejs', 'express']
 ---
 
-The objective of this project is to make an small interface using some popular
+The objective of this project is to make an simple application with some popular
 libraries such as **nodejs** and **angularjs**.  I chose this project because I
-never have the opportunity of using these technologies and I thought that it
-was a good opportunity to get in touch them. 
+have never use these technologies before and I thought that it
+was a good opportunity to try them. 
 
 [AngularJS](https://angularjs.org/) is great for declaring static documents.
-His data binding is a way of updating the view whenever the model changes, as
-well as updating the model whenever the view changes.
+It has a data binding to update the view whenever the model changes, as
+well as updating the model whenever the view changes. 
+This avoid the need to refresh the page in order to see the changes.
 I use it in the front end to access all the data and render the different views and changes of the app.
 [NodeJS](https://nodejs.org/en/) is used on the server side to execute
 JavaScript code.
@@ -22,7 +23,11 @@ JavaScript code.
 
 ## Structure of the files
 
-I use the following files for this application. The file `core.js` contains the angularjs module, `index.html` contains the external webpage, `package.json` contains the `npm` node modules used for the application.I use [express.js](http://expressjs.com/) to create an small server which communicates javascript code in the back-end with the `index.html` file in the front-end. It is included in `server.js`, which include all javascript code executed using nodejs. 
+I use the following files for this application:
+* The file `core.js` contains the angularjs module
+* `index.html` contains the external webpage
+* `package.json` contains the `npm` node modules used for the application.
+* `server.js` include all javascript code executed using nodejs. I use [express.js](http://expressjs.com/) to create a small server which sends the data to the `index.html` file in the front-end. 
 
 ```tree
 ├── public
@@ -37,27 +42,27 @@ I use the following files for this application. The file `core.js` contains the 
 
 Inside `server.js` I define a `JSON` object with the data needed for my alchemy machine such as:
 
-* The ingredients:
+* The ingredients, including:
 	* The name.
-	* An emojis (everybody loves emojis :heart:).
+	* An emoji (everybody loves emojis :heart:).
 	* A boolean to know if the item has been selected or not.
-	* The quantity (randomly created).
+	* The quantity (random).
 	* An `url` from an image of the ingredient.
 
 ```json
 "Ingredients": [
-        {"text": "Avocado",     "emoji" : "🥑 ",  "selected" :false, "quantity": 3, "image": "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocadoo-sliced-in-half.jpg"},
-        {"text": "Watermellon", "emoji" : "🍉 ",  "selected" :false, "quantity": 2, "image": "http://www.pvfarms.com/images/ourproduce_watermelon.png"},
-        {"text": "Jalapeno",    "emoji" : "🌶",    "selected" :false, "quantity": 3, "image": "http://images.realfoodtoronto.com/D.cache.large/Jalapeno-Pepper.jpg"},
-        {"text": "Pineapple",   "emoji" : "🍍 ",  "selected" :false, "quantity": 2, "image": "http://www.cuisine-de-bebe.com/wp-content/uploads/lananas.jpg"},
-        {"text": "Kiwi",        "emoji" : "🥝 ",  "selected" :false, "quantity": 5, "image": "http://media.mercola.com/assets/images/foodfacts/kiwifruit-nutrition--facts.jpg"},
-        {"text": "Strawberry",  "emoji" : "🍓",   "selected" :false, "quantity": 2, "image": "http://maviedemamanlouve.com/wp-content/uploads/2015/10/fraise-1.jpg"},
-        {"text": "Lemon",       "emoji" : "🍋  ", "selected" :false, "quantity": 4, "image": "https://realfood.tesco.com/media/images/Lemon-easter-biscuits-hero-1d74c01d-8906-45fe-8135-322f0520c434-0-472x310.jpg"},
-        {"text": "Banana",      "emoji" : "🍌 ",  "selected" :false, "quantity": 2, "image": "http://www.granini.com/data/images/fruit_images/full/banana.png"}
+        {"text": "Avocado",     "emoji" : "🥑", "selected" :false, "quantity": 3, "image": "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocadoo-sliced-in-half.jpg"},
+        {"text": "Watermellon", "emoji" : "🍉", "selected" :false, "quantity": 2, "image": "http://www.pvfarms.com/images/ourproduce_watermelon.png"},
+        {"text": "Jalapeno",    "emoji" : "🌶", "selected" :false, "quantity": 3, "image": "http://images.realfoodtoronto.com/D.cache.large/Jalapeno-Pepper.jpg"},
+        {"text": "Pineapple",   "emoji" : "🍍", "selected" :false, "quantity": 2, "image": "http://www.cuisine-de-bebe.com/wp-content/uploads/lananas.jpg"},
+        {"text": "Kiwi",        "emoji" : "🥝", "selected" :false, "quantity": 5, "image": "http://media.mercola.com/assets/images/foodfacts/kiwifruit-nutrition--facts.jpg"},
+        {"text": "Strawberry",  "emoji" : "🍓", "selected" :false, "quantity": 2, "image": "http://maviedemamanlouve.com/wp-content/uploads/2015/10/fraise-1.jpg"},
+        {"text": "Lemon",       "emoji" : "🍋", "selected" :false, "quantity": 4, "image": "https://realfood.tesco.com/media/images/Lemon-easter-biscuits-hero-1d74c01d-8906-45fe-8135-322f0520c434-0-472x310.jpg"},
+        {"text": "Banana",      "emoji" : "🍌", "selected" :false, "quantity": 2, "image": "http://www.granini.com/data/images/fruit_images/full/banana.png"}
 ],
 ```
 
-* The recipes for the potions:
+* The recipes for the potions, including:
 	* The name of the potion.
 	* The number of potions made (initially 0).
 	* The ingredients needed to do this potion (randomly chosen).
@@ -79,8 +84,8 @@ Inside `server.js` I define a `JSON` object with the data needed for my alchemy 
 ## Angularjs module
 
 The file `core.js` contains the module `alchemyMachine`, the controller `mainController` and the functions to handle the actions inside the application. There are two main functions: 
-	* `get ('/api/donnes')` that hit the node _API_ to obtain all the data from the route `/api/donnes/` and bind it to `$scope.todos`.
-	* `post ('/api/donnes/mix` that sends that hit the `/api/donnes/mix` to create a potion with the selected ingredients.
+* `get ('/api/donnes')` that hit the node _API_ to obtain all the data from the route `/api/donnes/` and bind it to `$scope.todos`.
+* `post ('/api/donnes/mix` that sends that hit the `/api/donnes/mix` to create a potion with the selected ingredients.
 
 ```js
 var alchemyMachine = angular.module('alchemyMachine', []);
@@ -114,7 +119,7 @@ function mainController($scope, $http) {
 
 ## Nodejs server
 
-The `server.js` file exposes the application at `http://localhost:8080/`
+The `server.js` file exposes the application at [http://localhost:8080/](http://localhost:8080/)
 
 ```js
 // listen (start app with node server.js) ======================================
@@ -266,7 +271,7 @@ In the following **gif**, I test the main functions of the application: selectin
 The application can be found at my [github](https://github.com/cristianpb/alchemy-machine). To get it all up and running:
 
 * Make sure you have [Node](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed
-* Clone the repo: git clone git@github.com:cristianpb/alchemy-machine.git
-* Install the application: npm install
-* Start the server: node server.js
-* View in your browser at http://localhost:8080
+* Clone the repo: `git clone git@github.com:cristianpb/alchemy-machine.git`
+* Install the application: `npm install`
+* Start the server: `node server.js`
+* View in your browser at [http://localhost:8080](http://localhost:8080)
