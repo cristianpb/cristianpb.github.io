@@ -1,10 +1,10 @@
 # Site settings
 
-author: Cristian Perez
-title: Cristian Perez
+author: Cristian Perez Brokate
+title: Cristian Perez Brokate
 email: cperez at kernix.com
 description: > # this means to ignore newlines until "baseurl:"
-        Data science, programming, technology, linux, vim, mutt, git, python, nodejs, R, modelling studies, visualization.
+        Data scientist, programming, technology, linux, vim, mutt, git, python, nodejs, R, modelling studies, visualization.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: http://cristianpb.github.io/ "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: https://twitter.com/cris_perez_b

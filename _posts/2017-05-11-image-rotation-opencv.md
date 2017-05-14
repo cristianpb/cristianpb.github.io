@@ -2,6 +2,7 @@
 layout: post
 title: "Image rotation using OpenCV"
 date: 2017-05-13
+description: "This post shows how to recalculate bounding box coordinates when the image rotate. An example using OpenCV in python is provided."
 categories: ["opencv", "python"]
 ---
 <script type="text/javascript"
@@ -47,15 +48,15 @@ $$
 
 ## Transformation matrix
 
-The transforamtion matrix can be obtained using the rotation angle and the center coordianates. It can be expressed also as the following structure:
+The transformation matrix can be obtained using the rotation angle and the centre coordinates. It can be expressed also as the following structure:
 
 $$
-\begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{center.x} - \beta
-\cdot \texttt{center.y} \\ - \beta & \alpha & \beta \cdot \texttt{center.x} +
-(1- \alpha ) \cdot \texttt{center.y} \end{bmatrix}
+\begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{centre.x} - \beta
+\cdot \texttt{centre.y} \\ - \beta & \alpha & \beta \cdot \texttt{centre.x} +
+(1- \alpha ) \cdot \texttt{centre.y} \end{bmatrix}
 $$
 
-where:
+Where:
 
 * $$\alpha = scale * \cos \theta$$,
 * $$\beta = scale * \sin \theta$$ and
@@ -75,19 +76,19 @@ Where the new with and height can be calculated using the following relations:
 * $$ \texttt{new.width} = h*\sin(\theta) + w*\cos(\theta) $$ 
 * $$ \texttt{new.height} = h*\cos(\theta) + w*\sin(\theta) $$
 
-Since the image size changes, the coordinates of the rotation point (center of the image) change too. Then it has to be taken into account in the transformation matrix.
+Since the image size changes, the coordinates of the rotation point (centre of the image) change too. Then it has to be taken into account in the transformation matrix.
 This is added to the last column of the transformation matrix as follows:
 
 $$
-\begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{center.x} - \beta
-\cdot \texttt{center.y} + (\texttt{new.width}/2 - \texttt{center.x}) \\ - \beta & \alpha & \beta \cdot \texttt{center.x} +
-(1- \alpha ) \cdot \texttt{center.y} + (\texttt{new.height}/2 - \texttt{center.y}) \end{bmatrix}
+\begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{centre.x} - \beta
+\cdot \texttt{centre.y} + (\texttt{new.width}/2 - \texttt{centre.x}) \\ - \beta & \alpha & \beta \cdot \texttt{centre.x} +
+(1- \alpha ) \cdot \texttt{centre.y} + (\texttt{new.height}/2 - \texttt{centre.y}) \end{bmatrix}
 $$
 
 ## Implementation using OpenCV
 
 I have implemented the solution in python, using OpenCV.
-I use a sample image of a chat :cat: :cat2:, because everybody loves cats.
+I use a sample image of a :cat2:, because everybody loves cats.
 I create the bounding box of the face and the eyes using [Sloth](https://github.com/cvhciKIT/sloth).
 The result is a `json` like this:
 
@@ -219,7 +220,7 @@ def rotate_box(bb, cx, cy, h, w):
 
 def rotate_bound(image, angle):
     # grab the dimensions of the image and then determine the
-    # center
+    # centre
     (h, w) = image.shape[:2]
     (cX, cY) = (w // 2, h // 2)
 
