@@ -1,6 +1,8 @@
 ---
-title: Image rotation using OpenCV
+layout: post
+title: "Image rotation using OpenCV"
 date: 2017-05-13
+categories: ["opencv", "python"]
 ---
 <script type="text/javascript"
     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
