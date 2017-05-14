@@ -6,7 +6,7 @@ description: "Analysis of one year data of my daily sleep time and number of ste
 categories: ['withings', 'r', 'data']
 ---
 
-# Introduction
+## Introduction
 
 Last year my friends gave me a [withings
 steel](https://www.withings.com/us/en/products/activite-steel) as a birthday
@@ -19,7 +19,7 @@ terms of data.  I used
 [R](https://en.wikipedia.org/wiki/R_(programming_language)) to do the analysis
 because I think it is easy to get beautiful and informative graphs. 
 
-# Library import 
+## Library import 
 
 I used the following libraries:
 
@@ -31,7 +31,7 @@ library(RColorBrewer)
 theme_set(theme_gray(base_size = 19))
 ```
 
-# Sleeping data
+## Sleeping data
 
 The data can easily be exported from [their
 website](https://healthmate.withings.com/).  The sleeping data contains the
@@ -100,7 +100,7 @@ I tend to sleep longer on weekends. There are some empty spaces that correspond
 to days when I didn't have the watch, because I broke the bracelet a couple of
 times. Still it is very cheap to replace on ebay.
 
-# Activity time
+## Activity time
 
 Regarding the activity time. I have the information about the number of steps
 that I have done each day.  A number of calories and distance is calculated
