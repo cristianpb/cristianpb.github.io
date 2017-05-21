@@ -34,6 +34,7 @@ gems:
   - jekyll-sitemap
   - jemoji
 exclude:
+  - drafts
   - CNAME
   - Gemfile
   - Gemfile.lock
