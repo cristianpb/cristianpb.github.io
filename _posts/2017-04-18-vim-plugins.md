@@ -177,7 +177,7 @@ Autocompletion function can be added in `.vimrc` and then activated during _inse
 set completefunc=emoji#complete
 ```
 
-![](/images/vim-emojis.gif)
+![](/images/vim-plugins/vim-emoji.gif)
 
 I spend most on my time using vim, then I consider a good idea to make it confortable, so I like to give vim a little of style :ring:, I use [vim-devicons](https://github.com/ryanoasis/vim-devicons). Terminal font must be able to render glyphs :cat:. This can be patched with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#font-installation).
 
