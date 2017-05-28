@@ -142,3 +142,7 @@ respectively)
 During weekdays, there is a peak of utilisation at 8am and 7pm. When people is going to work. 
 The peak of utilisation is 4552 bikes, which is around  30 % of the available bikes in the city (~15593).
 On weekend, the peak is at 6pm, maybe because people is coming back home.
+
+The complete code can be found at in [this
+notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/velib-folium/02-Exploration.ipynb).
+
