@@ -6,9 +6,7 @@ categories: vim
 description: "My vim workflow. Description of some plugins and functionlities."
 ---
 
-# Vim 
-
-I really like [vim](https://github.com/vim/vim). I think it is [good for my fingers](http://stackoverflow.com/questions/29500098/is-there-any-data-supporting-a-correlation-between-carpal-tunnels-and-using-keyb) because it uses few short cuts. Instead of using combos with touches like _Ctrl_, _Alt_ or _MetaKey_, it uses different function modes (normal, insert, visual and command). In this way, the fingers remain  near the [home row](https://en.wikipedia.org/wiki/Touch_typing) in rest position, being able to have a continuous typing rate. [Some people](http://stackoverflow.com/questions/29500098/is-there-any-data-supporting-a-correlation-between-carpal-tunnels-and-using-keyb) speculate that this can prevent [musculoskeletal diseases](https://en.wikipedia.org/wiki/Repetitive_strain_injury). 
+I use [vim](https://github.com/vim/vim) everyday. I think it is [good for my fingers](http://stackoverflow.com/questions/29500098/is-there-any-data-supporting-a-correlation-between-carpal-tunnels-and-using-keyb) because it uses few short cuts. Instead of using combos with touches like _Ctrl_, _Alt_ or _MetaKey_, it uses different function modes (normal, insert, visual and command). In this way, the fingers remain  near the [home row](https://en.wikipedia.org/wiki/Touch_typing) in rest position, being able to have a continuous typing rate. [Some people](http://stackoverflow.com/questions/29500098/is-there-any-data-supporting-a-correlation-between-carpal-tunnels-and-using-keyb) speculate that this can prevent [musculoskeletal diseases](https://en.wikipedia.org/wiki/Repetitive_strain_injury). 
 
 It also induce motion to be done without neither the [arrow keys](https://en.wikipedia.org/wiki/Arrow_keys) nor the mouse. Instead single movement is controlled by _HJKL_ keys to avoid the movement of the hand for every manipulations of the text. In addition vim offers [several other motions](http://vimdoc.sourceforge.net/htmldoc/motion.html#operator) capabilities, by word, by line, by paragraph, by places of text, etc.
 

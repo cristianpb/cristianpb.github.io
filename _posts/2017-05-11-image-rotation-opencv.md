@@ -6,6 +6,8 @@ description: "This post shows how to recalculate bounding box coordinates when t
 categories: ["opencv", "python"]
 ---
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 ## Summary of the problem
 
 - We have an image
