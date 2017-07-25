@@ -6,15 +6,43 @@ avatar: true
 navigation: true
 ---
 
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.20.1/vis.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.20.1/vis.min.js"></script>
+
 Data Scientist @ [Kernix](https://www.kernix.com/)
 
 # :school: Education
 
-* PhD in Physical chemistry. Université Pierre et Marie Curie. 2013-2016.
-* Master in [Materials, Processing and Modelling](http://www.cemef.mines-paristech.fr/sections/formations/masteres-specialises/ms-mapmod). École Nationale Supérieure des Mines de Paris. 
-* [Engineer](http://www.enim.fr/)  + [Master in Materials and Production](http://www.lem3.univ-lorraine.fr/mmsp/). École Nationale d’Ingénieurs de Metz. 2010-2012.
-* Engineer in Mechanical engineering. [Universidad Industrial de Santander](http://www.uis.edu.co/). 2007-2010.
- 
+* PhD in [Physical chemistry](https://tel.archives-ouvertes.fr/tel-01561596), Université Pierre et Marie Curie, 2013-2016.
+* Master in [Materials, Processing and Modelling](http://www.cemef.mines-paristech.fr/sections/formations/masteres-specialises/ms-mapmod), École Nationale Supérieure des Mines de Paris, 2012-2013.
+* [Engineer](http://www.enim.fr/)  + [Master in Materials and Production](http://www.lem3.univ-lorraine.fr/mmsp/), École Nationale d’Ingénieurs de Metz, 2010-2012.
+* Engineer in Mechanical engineering. [Universidad Industrial de Santander](http://www.uis.edu.co/), 2007-2010.
+
+
+<div id="visualization"></div>
+<script type="text/javascript">
+  // DOM element where the Timeline will be attached
+  var container = document.getElementById('visualization');
+
+  // Create a DataSet (allows two way data-binding)
+  var items = new vis.DataSet([
+    {id: 6, content: '🇨🇴', start: '2007-04-16'},
+    {id: 1, content: 'Universidad Industrial Santander', start: '2007-04-16', end: '2010-04-19', className: 'red'},
+    {id: 2, content: '🇫🇷', start: '2010-04-16'},
+    {id: 3, content: 'ENIM', start: '2010-04-16', end: '2012-04-19'},
+    {id: 4, content: 'MINES', start: '2012-04-16', end: '2013-04-19'},
+    {id: 7, content: '🗼', start: '2013-04-16'},
+    {id: 5, content: 'UPMC', start: '2013-04-16', end: '2016-04-19'}
+  ]);
+
+  // Configuration for the Timeline
+  var options = {};
+
+  // Create a Timeline
+  var timeline = new vis.Timeline(container, items, options);
+</script>
+
 
 # :star: Prix
 
@@ -38,6 +66,10 @@ Krakow, Poland. "Overview of cellular automaton models for corrosion"
 # 📚  Publications
 
 Citation of my articles migth be found at {% include icon-google.html username="Google Scholar" %} or {% include icon-researchgate.html username="Research Gate" %}.
+
+## PhD Thesis
+
+**Cristian Felipe Perez Brokate**, [Uniform and localized corrosion modelling by means of probabilistic cellular automata](https://tel.archives-ouvertes.fr/tel-01561596), Université Pierre et Marie Curie - Paris VI, 2016.  
 
 ## Journal Articles
 
