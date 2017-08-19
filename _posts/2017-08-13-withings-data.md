@@ -2,8 +2,8 @@
 layout: post
 title: "Withings data"
 date: 2017-08-13
-description: "This post used javascript library Chartjs to illustrate interactively the statistics of a running activity"
-categories: ["run", "python", "chartjs", "folium"]
+description: "Steps data from my smart watch"
+categories: ["run", "python", "chartjs"]
 calheatmap: true
 chartjs: true
 
@@ -87,17 +87,20 @@ var ctx = document.getElementById("barChart").getContext('2d');
 var barChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        labels: data_steps.steps_weekday.index,
         datasets: [{
             label: 'Scatter Dataset',
             fill:false,
             showLine: false,
-            data: data_steps.steps_weekday
+            borderColor: '#9AD0F5',
+            backgroundColor: '#36A2EB',
+            data: data_steps.steps_weekday.values
         }]
     },
     options: {
         responsive: true,
                     legend: {
+                        display: false,
                         position: 'top',
                     },
                     title: {
@@ -110,17 +113,20 @@ var ctx = document.getElementById("barChartMonth").getContext('2d');
 var barChartMonth = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        labels: data_steps.steps_month.index,
         datasets: [{
             label: 'Scatter Dataset',
+            borderColor: '#9AD0F5',
+            backgroundColor: '#36A2EB',
             fill:false,
             showLine: false,
-            data: data_steps.steps_month
+            data: data_steps.steps_month.values
         }]
     },
     options: {
         responsive: true,
                     legend: {
+                        display: false,
                         position: 'top',
                     },
                     title: {
