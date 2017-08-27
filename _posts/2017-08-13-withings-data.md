@@ -40,6 +40,11 @@ cal.init({
     nextSelector: "#example-c-NextDomain-selector",
     previousSelector: "#example-c-PreviousDomain-selector",
     data: data_steps.steps_heatmap,
+    itemName: ["step", "steps"],
+    subDomainTitleFormat: {
+		empty: "No data recorded in {date}",
+		filled: "{count} {name} on {date}"
+	},
     legend: [3000, 7000, 10000, 15000, 20000],
     legendColors: ["#ecf5e2", "#232181"]
 });
