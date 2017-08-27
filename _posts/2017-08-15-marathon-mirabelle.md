@@ -177,8 +177,8 @@ var bubbleChartSpeed = new Chart(ctx, {
     data: {
         datasets: [{
             label: '',
-            borderColor: '#FFB0C1',
-            backgroundColor: '#FF6384',
+            borderColor: '#9AD0F5',
+            backgroundColor: '#36A2EB',
             data: data_marathon.bubble_speed
         }]
     },

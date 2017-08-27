@@ -73,15 +73,17 @@ Citation of my articles migth be found at {% include icon-google.html username="
 
 ## Journal Articles
 
-* **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, Probabilistic cellular automata model of generalized corrosion, Corrosion Engineering, Science and Technology, _in press_
+* Mariem Zenkri, Dung di Caprio, **Cristian Felipe Pérez-Brokate**, Damien Féron, Jacques de Lamare, Contribution of cellular automata to the understanding of corrosion phenomena, Condensed Matter Physics 20 (3), 33802
 
-* **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, [Pitting corrosion modelling by means of a stochastic cellular automata-based model](http://dx.doi.org/10.1080/1478422X.2017.1311074), Corrosion Engineering, Science and Technology, 2017
+* **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, [Probabilistic cellular automata model of generalized corrosion](http://dx.doi.org/10.1080/1478422X.2017.1300748), Corrosion Engineering, Science and Technology, (Aug. 2017), pp. 186-193
+
+* **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, [Pitting corrosion modelling by means of a stochastic cellular automata-based model](http://dx.doi.org/10.1080/1478422X.2017.1311074), Corrosion Engineering, Science and Technology, (Apr. 2017), pp. 1-6
 
 * **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, [Three dimensional discrete stochastic model of occluded corrosion cell](http://www.sciencedirect.com/science/article/pii/S0010938X16301469), Corrosion Science 111 (Oct. 2016) pp. 230–241
 
 * **Cristian Felipe Pérez-Brokate**, Dung di Caprio, Éric Mahé, Damien Féron, Jacques de Lamare, [Cyclic voltammetry simulations with cellular automata](http://www.sciencedirect.com/science/article/pii/S1877750315300107), Journal of Computational Science 11 (Nov. 2015) pp. 269–278
 
-* J. X. Zou, **C. F. Pérez-Brokate**, R. Arruffat, B. Bolle, J. J. Fundenberger, X. Q. Zeng, T. Grosdidier, and W. J. Ding, [Nanostructured bulk Mg + MgO composite synthesized through arc plasma evaporation and high pressure torsion for H-storage application](http://www.sciencedirect.com/science/article/pii/S0921510713004224#), Materials Science and Engineering: B, vol. 183, pp. 1–5, Apr. 2014.
+* J. X. Zou, **C. F. Pérez-Brokate**, R. Arruffat, B. Bolle, J. J. Fundenberger, X. Q. Zeng, T. Grosdidier, and W. J. Ding, [Nanostructured bulk Mg + MgO composite synthesized through arc plasma evaporation and high pressure torsion for H-storage application](http://www.sciencedirect.com/science/article/pii/S0921510713004224#), Materials Science and Engineering: B, vol. 183, (Apr. 2014), pp. 1–5
 
 ## Conference proceedings
 
