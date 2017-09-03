@@ -11,7 +11,6 @@ chartjs: true
 
 ## Calendar
 
-
 <table>
    <tr>
       <td>
@@ -49,6 +48,10 @@ chartjs: true
 <div id="container" style="width: 100%;">
         <canvas id="SpeedAltitudeChart"></canvas>
 </div>
+
+## Python notebook with data preprocessing
+
+Code inside [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/runner-up/04-Multiple_Trainning.ipynb).
 
 <script type="text/javascript">
 var data_marathon = {{ site.data.marathon.marathon | jsonify }}
