@@ -64,6 +64,7 @@ cal.init({
     nextSelector: "#example-c-NextDomain-selector",
     previousSelector: "#example-c-PreviousDomain-selector",
     data: data_marathon.heatmap_km,
+    cellSize: 15,
     legend: [3, 5, 10, 20],
     legendColors: ["#ecf5e2", "#232181"],
     itemName: ["kilometre", "kilometres"],
@@ -118,7 +119,15 @@ var radarWeekly = new Chart(ctx, {
               ticks: {
                 beginAtZero: true
               }
-            }
+            },
+            tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+			hover: {
+					mode: 'index',
+					intersect: false
+				},
         }
 });
 
@@ -158,7 +167,15 @@ var barChartWeek = new Chart(ctx, {
                     title: {
                         display: false,
                         text: 'Week number'
-                    }
+                    },
+            tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+			hover: {
+					mode: 'index',
+					intersect: false
+				},
     }
 });
 
@@ -197,7 +214,15 @@ var barChartMonth = new Chart(ctx, {
                     title: {
                         display: false,
                         text: 'Week number'
-                    }
+                    },
+            tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+			hover: {
+					mode: 'index',
+					intersect: false
+				},
     }
 });
 
@@ -206,11 +231,28 @@ var bubbleChartSpeed = new Chart(ctx, {
     type: 'bubble',
     data: {
         datasets: [{
-            label: '',
+            label: '5 km',
             borderColor: '#9AD0F5',
             backgroundColor: '#36A2EB',
             data: data_marathon.bubble_speed
-        }]
+        }, 
+{
+            label: '10 km',
+            borderColor: '#36A2EB',
+            backgroundColor: '#36A2EB',
+            data: {},
+            borderWidth: 10,
+            type: 'scatter'
+        },
+{
+            label: '20 km',
+            borderColor: '#36A2EB',
+            backgroundColor: '#36A2EB',
+            data: {},
+            borderWidth: 15,
+            type: 'scatter'
+        }
+]
     },
     options: {
         scales: {
@@ -222,21 +264,45 @@ var bubbleChartSpeed = new Chart(ctx, {
             yAxes: [{
                 position: 'left',
                         scaleLabel: {
-                            display: false,
-                            fontColor: '#FF6384',
+                            display: true,
+                            //fontColor: '#FF6384',
                             labelString: 'Speed [km/h]'
-                        }
+                        },
+                ticks: {
+                userCallback: function(value, index, values) {
+                return parseInt(value);
+                }
+                }
             }]
         },
         responsive: true,
                     legend: {
-                        display:false,
+                        display:true,
                         position: 'top',
+    labels: {
+                            usePointStyle: true
+                        }
                     },
                     title: {
                         display: true,
                         text: 'Average speed by training'
+                    },
+            tooltips: {
+					mode: 'nearest',
+					intersect: false,
+  callbacks: {
+
+                    label: function(tooltipItems, data) { 
+                        var value = data.datasets[0].data[tooltipItems.index].r;
+                        //value = value.toString();
+                        return tooltipItems.xLabel + ', ' + tooltipItems.yLabel + ' Km/h, ' + value + ' Km';
                     }
+                }
+				},
+			hover: {
+					mode: 'nearest',
+					intersect: false
+				},
     }
 });
 
@@ -273,6 +339,14 @@ var SpeedAltitudeChart = new Chart(ctx, {
                     display: false,
                    text: 'Chart.js Time Scale'
                },
+            tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+			hover: {
+					mode: 'index',
+					intersect: false
+				},
                scales: {
                    xAxes: [{
                        type: "time",

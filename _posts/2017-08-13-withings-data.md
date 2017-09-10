@@ -84,7 +84,21 @@ var scatterChart = new Chart(ctx, {
                 type: 'time',
                 position: 'bottom'
             }]
-        }
+        },
+        tooltips: {
+				mode: 'nearest',
+				intersect: false,
+  callbacks: {
+
+                    label: function(tooltipItems, data) { 
+                        return tooltipItems.xLabel + ', ' + tooltipItems.yLabel + ' steps';
+                    }
+                }
+			},
+		hover: {
+				mode: 'nearest',
+				intersect: false
+			},
     }
 });
 
