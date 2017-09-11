@@ -68,6 +68,7 @@ cal.init({
     legend: [3, 5, 10, 20],
     legendColors: ["#ecf5e2", "#232181"],
     itemName: ["kilometre", "kilometres"],
+    tooltip: true,
     subDomainTitleFormat: {
 		empty: "No data recorded in {date}",
 		filled: "{count} {name} on {date}"

@@ -46,7 +46,8 @@ cal.init({
 		filled: "{count} {name} on {date}"
 	},
     legend: [3000, 7000, 10000, 15000, 20000],
-    legendColors: ["#ecf5e2", "#232181"]
+    legendColors: ["#ecf5e2", "#232181"],
+    tooltip: true
 });
 var timeFormat = 'YY:MM:dd';
 var ctx = document.getElementById("scatterChart").getContext('2d');
