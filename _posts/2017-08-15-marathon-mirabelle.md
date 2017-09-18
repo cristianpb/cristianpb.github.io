@@ -235,7 +235,7 @@ var bubbleChartSpeed = new Chart(ctx, {
             label: '5 km',
             borderColor: '#9AD0F5',
             backgroundColor: '#36A2EB',
-            data: data_marathon.bubble_speed
+            data: data_marathon.bubble_speed.real
         }, 
 {
             label: '10 km',
@@ -251,6 +251,14 @@ var bubbleChartSpeed = new Chart(ctx, {
             backgroundColor: '#36A2EB',
             data: {},
             borderWidth: 15,
+            type: 'scatter'
+        },
+{
+            label: 'Predicted',
+            borderColor: '#FFB0C1',
+            backgroundColor: '#FF6384',
+            data: data_marathon.bubble_speed.predict,
+            fill:false,
             type: 'scatter'
         }
 ]
@@ -307,6 +315,52 @@ var bubbleChartSpeed = new Chart(ctx, {
     }
 });
 
+//var map = L.map('map');
+//var drawMap = function(){
+//
+//    map.setView([48.777845, 2.2909380], 11);
+//    mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+//    L.tileLayer(
+//        'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//            attribution: '&copy; ' + mapLink + ' Contributors',
+//            maxZoom: 15,
+//        }).addTo(map);
+//
+//    for (var i = 0; i < data_marathon.leaflet.length; i++) {
+//		//marker = new L.marker([data_marathon.leaflet[i][0],data_marathon.leaflet[i][1]])
+//		//	.bindPopup(data_marathon.leaflet[i][2])
+//            //	.addTo(map);
+//        var circle = L.circle([data_marathon.leaflet[i][0], data_marathon.leaflet[i][1]], {
+//            color: 'red',
+//            fillColor: '#f03',
+//            fillOpacity: 0.5,
+//            radius: 500
+//    }).addTo(map).bindPopup(data_marathon.leaflet[i][2]);
+//		
+//	}
+//    var popup = L.popup();
+//
+//	function onMapClick(e) {
+//		popup
+//			.setLatLng(e.latlng)
+//			.setContent("You clicked the map at " + e.latlng.toString())
+//			.openOn(map);
+//	}
+//
+//	map.on('click', onMapClick);
+//
+//    //var geoD = [];
+//    //_.each(allDim.top(Infinity), function (d) {
+//    //    geoD.push([d["Latitude"], d["Longitude"], 1]);
+//    //  });
+//    //var heat = L.heatLayer(data_marathon.leaflet,{
+//    //    radius: 5,
+//    //    blur: 10, 
+//    //    maxZoom: 1,
+//    //}).addTo(map);
+//
+//};
+//drawMap();
 
 var ctx = document.getElementById("SpeedAltitudeChart").getContext('2d');
 var data_santorini = {{ site.data.marathon.marathon_run | jsonify }} ;
