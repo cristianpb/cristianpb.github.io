@@ -8,8 +8,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cristianpb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: https://twitter.com/cris_perez_b
-twitter:
+# Needed by jekyll-seo-tag
+twitter: 
   username: cris_perez_b
+logo: '/assets/favicons/android-icon-192x192.png' 
 linkedin_username: cristianperezbrokate
 github_username:  cristianpb
 researchgate_username:  Cristian_Perez_Brokate
@@ -18,7 +20,18 @@ disqus:
 google_analytics: UA-68913933-2
 paginate: 12
 paginate_path: '/blog/:num'
+google-site-verification: 'dadHYln91lNA-p2JDYCrivQ6etkGJeqk1Dz1GpshKk0'
+social:
+  name: Cristian Perez Brokate
+  links:
+    - https://twitter.com/cris_perez_b
+    - https://www.linkedin.com/in/cristianperezbrokate
+    - https://github.com/cristianpb
+    - https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
+    - https://www.researchgate.net/profile/Cristian_Perez_Brokate
+    - https://www.kaggle.com/cristianpb
 
+ 
 # Build settings
 sass:
     style: compressed
