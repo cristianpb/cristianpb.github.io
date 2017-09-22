@@ -4,6 +4,7 @@ title:  "Vim plugins"
 date:   2017-04-18 21:01:25 +0200
 categories: vim 
 description: "My vim workflow. Description of some plugins and functionlities."
+
 ---
 
 I use [vim](https://github.com/vim/vim) everyday. I think it is [good for my fingers](http://stackoverflow.com/questions/29500098/is-there-any-data-supporting-a-correlation-between-carpal-tunnels-and-using-keyb) because it uses few short cuts. Instead of using combos with touches like _Ctrl_, _Alt_ or _MetaKey_, it uses different function modes (normal, insert, visual and command). In this way, the fingers remain  near the [home row](https://en.wikipedia.org/wiki/Touch_typing) in rest position, being able to have a continuous typing rate. [Some people](http://stackoverflow.com/questions/29500098/is-there-any-data-supporting-a-correlation-between-carpal-tunnels-and-using-keyb) speculate that this can prevent [musculoskeletal diseases](https://en.wikipedia.org/wiki/Repetitive_strain_injury). 
@@ -175,7 +176,7 @@ Autocompletion function can be added in `.vimrc` and then activated during _inse
 set completefunc=emoji#complete
 ```
 
-![](/images/vim-plugins/vim-emoji.gif)
+<amp-img src="/images/vim-plugins/vim-emoji.gif" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
 
 I spend most on my time using vim, then I consider a good idea to make it confortable, so I like to give vim a little of style :ring:, I use [vim-devicons](https://github.com/ryanoasis/vim-devicons). Terminal font must be able to render glyphs :cat:. This can be patched with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#font-installation).
 

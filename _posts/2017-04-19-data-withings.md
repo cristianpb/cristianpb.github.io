@@ -53,7 +53,7 @@ ggplot(aes(x = sleep$to, y = sleep$duration), data = sleep) + geom_point(na.rm=T
  	stat_smooth(na.rm=T) 
 ```
 
-![plot of chunk unnamed-chunk-2](/images/data_withings/sleep.svg)
+<amp-img src="/images/data_withings/sleep.svg" alt="Sleep data" height="576" width="720" layout="responsive"></amp-img>
 
 During my last PhD year I used to sleep less than 7 hours in average. I
 defended my PhD at the end of September, after that my sleep has increased
@@ -94,7 +94,7 @@ ggplot(sleep, aes(monthweek, weekdayf, fill = sleep$duration)) +
 	ylab("") + labs(fill="Sleep hours \n") 
 ```
 
-![plot of chunk unnamed-chunk-3](/images/data_withings/calendar.svg)
+<amp-img src="/images/data_withings/calendar.svg" alt="Calendar sleep data" height="504" width="504" layout="responsive"></amp-img>
 
 I tend to sleep longer on weekends. There are some empty spaces that correspond
 to days when I didn't have the watch, because I broke the bracelet a couple of
@@ -131,7 +131,7 @@ p <- ggplot(aes(x = activities$Date, y = activities$Steps), data = activities) +
 ggsave(file="figure/activity.svg", plot=p, width=10, height=8)
 ```
 
-![plot of chunk unnamed-chun3](/images/data_withings/activity.svg)
+<amp-img src="/images/data_withings/activity.svg" alt="Activity data" height="576" width="720" layout="responsive"></amp-img>
 
 During the last summer I have walked more in average. I tend to go out more
 during the sunny days.  In addition I have been walking less than last year
@@ -156,7 +156,7 @@ p <- ggplot(aes(x = activities$weekday, y = activities$Steps), data = activities
 ggsave(file="figure/activity_weekday.svg", plot=p, width=10, height=8)
 ```
 
-![plot of chunk unnamed-chunk-4](/images/data_withings/activity_weekday.svg)
+<amp-img src="/images/data_withings/activity_weekday.svg" alt="Activity data weekdays" height="576" width="720" layout="responsive"></amp-img>
 
 I tend to walk more during the weekends.
 

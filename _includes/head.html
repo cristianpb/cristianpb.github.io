@@ -21,6 +21,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js" type="text/javascript"></script>
   {% endif %}
+  {% if page.mathjax %}
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  {% endif %}
   {% if page.dcjs %}
     <link rel="stylesheet" href="lib/css/dc.min.css">
     <link rel="stylesheet" href="lib/css/leaflet.css">

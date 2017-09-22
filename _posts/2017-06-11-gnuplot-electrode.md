@@ -23,7 +23,7 @@ dimensional matrix where each element has a number that represents a
 concentration of species. This can be represented as a heatmap where the
 concentration is linked to a color scale.   
 
-```gnuplot
+```python
 reset
 load 'moreland.plt'
 SCALE=2
@@ -56,14 +56,14 @@ plot sprintf("ProfileXY%d.dat",t) matrix u ($1*SCALE):($2*SCALE):3 w image notit
 }
 ```
 
-![Electrode Profile XY](/images/gnuplot-electrode/Profile.gif "opt title")
+<amp-img src="/images/gnuplot-electrode/Profile.gif" alt="Electrode profile XY" height="480" width="640" layout="responsive"></amp-img>
 
 ## Degrade line curves
 
 The second representation is just the evolution of the one dimensional
 concentration, which has been averaged in the other dimensions.
 
-```gnuplot
+```python
 load 'palettedegrade.plt'
 filename='profileztra.dat'
 filename2='profileztraRe.dat'
@@ -150,7 +150,7 @@ unset multiplot
 unset output
 ```
 
-![Electrode Profile Z](/images/gnuplot-electrode/ProfilZ.svg "opt title")
+<amp-img src="/images/gnuplot-electrode/ProfilZ.svg" alt="Electrode Profile Z" height="480" width="600" layout="responsive"></amp-img>
 
 The plots that have been presented here have different format than the ones
 that appear in the paper article [Cyclic voltammetry simulations with cellular

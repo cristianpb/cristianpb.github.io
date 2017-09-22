@@ -52,9 +52,7 @@ average, then I have a average speed of 6.6 kilometres per hour.  The speed
 oscillated with the relief and at the end I end the race within 1 hour and 40
 minutes, having a average speed of 9 kilometres per hour.
 
-<div id="container" style="width: 100%;">
-        <canvas id="canvas"></canvas>
-</div>
+<canvas id="run_speed" width="400" height="200"></canvas>
 
 <script>
 var ctx = document.getElementById("myChart").getContext('2d');
@@ -157,7 +155,7 @@ var myChart = new Chart(ctx, {
         };
 
         window.onload = function() {
-            var ctx = document.getElementById("canvas").getContext("2d");
+            var ctx = document.getElementById("run_speed").getContext("2d");
             window.myBar = new Chart(ctx, {
                 type: 'bar',
                 data: barChartData,

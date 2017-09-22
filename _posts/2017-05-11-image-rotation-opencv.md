@@ -4,9 +4,10 @@ title: "Image rotation using OpenCV"
 date: 2017-05-13
 description: "This post shows how to recalculate bounding box coordinates when the image rotate. An example using OpenCV in python is provided."
 categories: ["opencv", "python"]
+mathjax: true
+
 ---
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 ## Summary of the problem
 
@@ -69,7 +70,7 @@ For this case of rotation image, where the image size changes after rotation
 and also the reference point, the transformation matrix has to be modified.
 The figure represents how the new dimension is calculated:
 
-![](/images/image-rotation-opencv/dessin.svg)
+<amp-img src="/images/image-rotation-opencv/dessin.svg" alt="Image rotation schema" height="480" width="640"  layout="responsive"></amp-img>
 
 Where the new with and height can be calculated using the following relations:
 * $$ \texttt{new.width} = h*\sin(\theta) + w*\cos(\theta) $$ 
@@ -169,7 +170,7 @@ def rotate_box(bb, cx, cy, h, w):
 
 ## Results
 
-![cat rotated picture](/images/image-rotation-opencv/cat.png)
+<amp-img src="/images/image-rotation-opencv/cat.jpg" alt="image rotation results" height="900" width="600"  layout="responsive"></amp-img>
 
 ## Code
 

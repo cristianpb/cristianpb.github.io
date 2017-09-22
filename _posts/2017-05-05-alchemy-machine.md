@@ -27,7 +27,7 @@ I use it in the front end to access all the data and render the different views 
 [NodeJS](https://nodejs.org/en/) is used on the server side to execute
 JavaScript code.
 
-![](/images/alchemy-machine/architecture.svg)
+<amp-img src="/images/alchemy-machine/architecture.svg" alt="Alchemy machine architecture" height="230" width="600" layout="responsive"></amp-img>
 
 ## Structure of the files
 
@@ -273,7 +273,7 @@ The `index.html` file interacts directly with angularjs using the module and the
 
 In the following **gif**, I test the main functions of the application: selecting ingridients to make magic potions, see how the number of ingridients decreases while I am making potions and also that I not able to do magic potions when I run out of the ingridients.
 
-![](/images/alchemy-machine/alchemy.gif)
+<amp-img src="/images/alchemy-machine/alchemy.gif" alt="Demonstration of the alchemy machine" height="422" width="750" layout="responsive"></amp-img>
 
 
 ## Test the application
