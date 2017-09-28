@@ -9,30 +9,38 @@ chartjs: true
 
 ---
 
-I wanted to run a marathon at least once in my life. Then I started a
-preparation program 3 months before the course.
+I wanted to run a marathon at least once in my life, then I started a
+preparation program 3 months before the race.
 
 ## Running calendar
 
-I started running regularly the first week of july. I run small distances on the weekdays and I tried to run more during the weekend. At the begining not that much but starting from august I started to run regularly on saturdays.
+I started running regularly the first week of July. I run small distances on weekdays and I tried to run more during the weekend. At the beginning, on July, not that much but from august I started to run regularly, specially on Saturdays. 
 
 <div id="cal-heatmap"></div>
 
 ## Daily behaviour
 
+I prefer to run on Tuesday, Thursday and a little bit on Saturdays. On the opposite I rarely run on Fridays. I tend to run a lot on Saturdays as you might see. However, it is difficult to say that I run faster on one specific day of the week.
+
 <canvas id="radarWeekly" width="400" height="200"></canvas>
 
 ## Weekly behaviour
+
+It is nice to see the progress week by week, running 22 kilometres at the beginning of July and reaching 46 kilometres on September. In average I did it 3 times a week.
 
 <canvas id="barChartWeek" width="400" height="200"></canvas>
 
 ## Monthly behaviour
 
+It is possible to see also the progress of run kilometres month by month.
+
 <canvas id="barChartMonth" width="400" height="200"></canvas>
 
 ## Average speed and length per training
 
-<canvas id="bubbleChartSpeed" width="400" height="200"></canvas>
+My average speed varies depending on the number of kilometres that I run. For long distances, the average was near 11.2 km/hour. Meanwhile, for shorter distances I was able to reach 12.7 km/hours during 8 kilometres.
+
+<canvas id="bubbleChartSpeed" width="400" height="300"></canvas>
 
 ## Longest run 
 
@@ -248,7 +256,8 @@ var bubbleChartSpeed = new Chart(ctx, {
             backgroundColor: '#FF6384',
             data: data_marathon.bubble_speed.predict,
             fill:false,
-            type: 'scatter'
+            type: 'scatter',
+            borderDash: [10,5]
         }
 ]
     },
