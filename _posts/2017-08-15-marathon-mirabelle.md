@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Marathon Mirabelle Metz"
+title: "Marathon training program"
 date: 2017-08-13
 description: "Stats for my preparation for the Metz Marathon"
 categories: ["run", "python", "chartjs", "folium"]
@@ -9,32 +9,57 @@ chartjs: true
 
 ---
 
-I wanted to run a marathon at least once in my life, then I started a
-preparation program 3 months before the race.
+I wanted to run a marathon at least once in my life, then I chose to do the
+[Marathon de Metz](http://www.marathon-metz.fr).
 
 ## Running calendar
 
-I started running regularly the first week of July. I run small distances on weekdays and I tried to run more during the weekend. At the beginning, on July, not that much but from august I started to run regularly, specially on Saturdays. 
+I began my preparation program 3 months before the race. I started running regularly the first week of July. Mostly small distances on weekdays and longest ones during the weekend. I wasn't strict at the beginning, during the month of July but, then I my training became more regular. 
 
 <div id="cal-heatmap"></div>
 
 ## Daily behaviour
 
-I prefer to run on Tuesday, Thursday and a little bit on Saturdays. On the opposite I rarely run on Fridays. I tend to run a lot on Saturdays as you might see. However, it is difficult to say that I run faster on one specific day of the week.
+From my daily analysis I can say that I prefer to run mostly on Tuesday and that I barely run on Fridays. Saturdays runs are the longest ones, with an average of 20.4 km. Regarding speed, I run slower on Saturdays, because distance are longer.
 
 <canvas id="radarWeekly" width="400" height="200"></canvas>
 
 ## Weekly behaviour
 
-It is nice to see the progress week by week, running 22 kilometres at the beginning of July and reaching 46 kilometres on September. In average I did it 3 times a week.
+It is nice to see the weekly progress, running 22 kilometres at the beginning of July and reaching 46 kilometres on September. In average, I train 3 times a week.
 
 <canvas id="barChartWeek" width="400" height="200"></canvas>
 
 ## Monthly behaviour
 
-It is possible to see also the progress of run kilometres month by month.
+There is also an monthly progress, being September my best month with 164 km and 14 training sessions. Almost half of the month.
 
 <canvas id="barChartMonth" width="400" height="200"></canvas>
+
+
+## Marathon time prediction
+
+It is possible to estimate the elapsed the time that I would spend to cover the 42.195 km of the marathon. I applied a simple linear regression using the cover distance and the climbed altitude. 
+
+The predicted time is 3.99 hours with an average speed of 10.56 km/h. One may see that for my training, the cover distance is more important than the climb altitude when predicting the elapsed time. 
+
+```python
+from sklearn import linear_model
+
+# Use distance and climb height
+X_train = recent_frame[['Kilometers','Climb']].values
+y_train = recent_frame['Time']
+# Test with the marathon 42.195 km and 400 m climb
+X_test = np.array([42.195, 400]).reshape(1,-1)
+
+# Use linear regression
+regr = linear_model.LinearRegression()
+regr.fit(X_train, y_train)
+y_pred = regr.predict(X_test)
+print('Distance: {} Km, Speed: {} Km/h, Time: {} hours \n'.format(X_test[0][0], X_test[0][0]/float(y_pred[0]/60), y_pred[0]/60))
+>>> Distance: 42.195 Km, Speed: 10.56 Km/h, Time: 3.99 hours 
+```
+<canvas id="linearRegressionChart" width="400" height="200"></canvas>
 
 ## Average speed and length per training
 
@@ -42,13 +67,9 @@ My average speed varies depending on the number of kilometres that I run. For lo
 
 <canvas id="bubbleChartSpeed" width="400" height="300"></canvas>
 
-## Longest run 
+## Data analysis
 
-<canvas id="SpeedAltitudeChart" width="400" height="200"></canvas>
-
-## Python notebook with data preprocessing
-
-Code inside [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/runner-up/04-Multiple_Trainning.ipynb).
+The python code used to explore the data can be found inside this [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/runner-up/04-Multiple_Trainning.ipynb).
 
 <script type="text/javascript">
 var data_marathon = {{ site.data.marathon.marathon | jsonify }}
@@ -85,21 +106,21 @@ var radarWeekly = new Chart(ctx, {
             labels: data_marathon.weekday.index,
             datasets: [{
                 label: 'Number of trainings',
-                fill:true,
+                fill:false,
                 showLine: false,
-                borderColor: '#FFB0C1',
-                backgroundColor: '#FF6384',
+                borderColor: '#FF6384',
+                backgroundColor: '#FFB0C1',
                 data: data_marathon.weekday.Trains
             },{
             label: 'Average kilometres',
-            fill:true,
+            fill:false,
             showLine: false,
-            borderColor: '#9AD0F5',
-            backgroundColor: '#36A2EB',
+            borderColor: '#36A2EB',
+            backgroundColor: '#9AD0F5',
             data: data_marathon.weekday.Kilometers
             },{
                 label: 'Average speed',
-                fill:true,
+                fill:false,
                 showLine: false,
                 data: data_marathon.weekday.Speed
             }
@@ -229,6 +250,14 @@ var bubbleChartSpeed = new Chart(ctx, {
     type: 'bubble',
     data: {
         datasets: [{
+            label: 'Predicted',
+            borderColor: '#FFB0C1',
+            backgroundColor: '#FF6384',
+            data: data_marathon.bubble_speed.predict,
+            fill:false,
+            borderDash: [10,5]
+        },
+{
             label: '5 km',
             borderColor: '#9AD0F5',
             backgroundColor: '#36A2EB',
@@ -249,15 +278,6 @@ var bubbleChartSpeed = new Chart(ctx, {
             data: {},
             borderWidth: 15,
             type: 'scatter'
-        },
-{
-            label: 'Predicted',
-            borderColor: '#FFB0C1',
-            backgroundColor: '#FF6384',
-            data: data_marathon.bubble_speed.predict,
-            fill:false,
-            type: 'scatter',
-            borderDash: [10,5]
         }
 ]
     },
@@ -300,7 +320,7 @@ var bubbleChartSpeed = new Chart(ctx, {
   callbacks: {
 
                     label: function(tooltipItems, data) { 
-                        var value = data.datasets[0].data[tooltipItems.index].r;
+                        var value = data.datasets[1].data[tooltipItems.index].r;
                         //value = value.toString();
                         return tooltipItems.xLabel + ', ' + tooltipItems.yLabel + ' Km/h, ' + value + ' Km';
                     }
@@ -312,138 +332,69 @@ var bubbleChartSpeed = new Chart(ctx, {
 				},
     }
 });
-
-//var map = L.map('map');
-//var drawMap = function(){
-//
-//    map.setView([48.777845, 2.2909380], 11);
-//    mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
-//    L.tileLayer(
-//        'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//            attribution: '&copy; ' + mapLink + ' Contributors',
-//            maxZoom: 15,
-//        }).addTo(map);
-//
-//    for (var i = 0; i < data_marathon.leaflet.length; i++) {
-//		//marker = new L.marker([data_marathon.leaflet[i][0],data_marathon.leaflet[i][1]])
-//		//	.bindPopup(data_marathon.leaflet[i][2])
-//            //	.addTo(map);
-//        var circle = L.circle([data_marathon.leaflet[i][0], data_marathon.leaflet[i][1]], {
-//            color: 'red',
-//            fillColor: '#f03',
-//            fillOpacity: 0.5,
-//            radius: 500
-//    }).addTo(map).bindPopup(data_marathon.leaflet[i][2]);
-//		
-//	}
-//    var popup = L.popup();
-//
-//	function onMapClick(e) {
-//		popup
-//			.setLatLng(e.latlng)
-//			.setContent("You clicked the map at " + e.latlng.toString())
-//			.openOn(map);
-//	}
-//
-//	map.on('click', onMapClick);
-//
-//    //var geoD = [];
-//    //_.each(allDim.top(Infinity), function (d) {
-//    //    geoD.push([d["Latitude"], d["Longitude"], 1]);
-//    //  });
-//    //var heat = L.heatLayer(data_marathon.leaflet,{
-//    //    radius: 5,
-//    //    blur: 10, 
-//    //    maxZoom: 1,
-//    //}).addTo(map);
-//
-//};
-//drawMap();
-
-var ctx = document.getElementById("SpeedAltitudeChart").getContext('2d');
-var data_santorini = {{ site.data.marathon.marathon_run | jsonify }} ;
-var timeFormat = 'HH:mm:ss';
-var SpeedAltitudeChart = new Chart(ctx, {
-    type: 'line',
+var ctx = document.getElementById("linearRegressionChart").getContext('2d');
+var linearRegressionChart = new Chart(ctx, {
+    type: 'scatter',
     data: {
-            labels: data_santorini.AltSpeed.Time,
         datasets: [{
-            label: "Speed",
-            fill: false,
-            yAxisID: "y-axis-1",
-            borderColor: '#FFB0C1',
-            backgroundColor: '#FF6384',
-            lineTension: 0,
-            data: data_santorini.AltSpeed.Speed
-        },{
-            label: "Altitude",
-            fill: true,
-            pointRadius: 1,
+            label: 'Training',
             borderColor: '#9AD0F5',
             backgroundColor: '#36A2EB',
-            yAxisID: "y-axis-2",
-            lineTension: 0,
-            data: data_santorini.AltSpeed.Altitude
-        }
-        ]
+            fill:false, 
+            showLine: false,
+            data: data_marathon.linear_reg.points
+        },{
+            label: 'Prediction',
+            borderColor: '#FFB0C1',
+            backgroundColor: '#FF6384',
+            borderDash: [10,5],
+            fill:false, 
+            showLine: true,
+            data: data_marathon.linear_reg.line
+        }], 
     },
     options: {
-               title:{
-                    display: false,
-                   text: 'Chart.js Time Scale'
-               },
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                            display: true,
+                            //fontColor: '#FF6384',
+                            labelString: 'Kilometers'
+                        },
+                position: 'bottom',
+            }],
+            yAxes: [{
+                position: 'left',
+                scaleLabel: {
+                            display: true,
+                            //fontColor: '#FF6384',
+                            labelString: 'Time [hours]'
+                        },
+            }]
+        },
+        responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: false,
+                        text: 'Week number'
+                    },
             tooltips: {
 					mode: 'index',
 					intersect: false,
+                    callbacks: {
+                    label: function(tooltipItems, data) { 
+                        //var value = data.datasets[0].data[tooltipItems.index].r;
+                        //value = value.toString();
+                        return tooltipItems.xLabel + ' km, ' + tooltipItems.yLabel + ' hours';
+                    }
+                }
 				},
 			hover: {
-					mode: 'index',
+					mode: 'nearest',
 					intersect: false
 				},
-               scales: {
-                   xAxes: [{
-                       type: "time",
-                       time: {
-                           format: timeFormat,
-                           //round: 'minute',
-                           tooltipFormat: 'HH:mm:ss',
-                           displayFormats: {
-                                                  millisecond: '',
-                                                  second: '',
-                                                  minute: 'H:mm'
-                                              }
-                       },
-                       scaleLabel: {
-                           display: true,
-                           labelString: 'Time [Hour:minute]'
-                       }
-                   }, ],
-                   yAxes: [{
-                        type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-                        display: true,
-                        position: "left",
-                        id: "y-axis-1",
-                        scaleLabel: {
-                            display: true,
-                            fontColor: '#FF6384',
-                            labelString: 'Speed [km/h]'
-                        }
-                   }, {
-                        type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-                        display: true,
-                        position: "right",
-                        id: "y-axis-2",
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Altitude [m]',
-                            fontColor: '#36A2EB'
-                        },
-                        // grid line settings
-                        gridLines: {
-                            drawOnChartArea: false, // only want the grid lines for one axis to show up
-                        },
-                   }]
-               },
-              }
+    }
 });
 </script>
