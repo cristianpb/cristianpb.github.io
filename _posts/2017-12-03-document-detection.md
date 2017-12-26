@@ -68,4 +68,34 @@ We use the extreme points of the contours to crop the image.
 
 <amp-img src="/images/document-detection/crop_image.png" alt="Cropped image" height="200" width="300" ></amp-img>
 
-The complete code can be found on this [notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/document-detection/DocuementDetection.ipynb).
+## Background color substitution
+
+The biggest contour can be found using the `max` python function, ordering by 
+contour area with the function `cv2.contourArea`. Other contour properties can 
+be found at [Opencv 
+Contours](https://docs.opencv.org/3.1.0/d1/d32/tutorial_py_contour_properties.html).
+This biggest contour is filled with the function `cv2.fillPoly` to create the 
+mask to select the important information of the image.
+
+```python
+c = max(list_contours, key=cv2.contourArea)
+mask = np.zeros(img.shape, dtype=np.uint8)
+mask = cv2.fillPoly(img=img.copy(), pts=c.reshape(1, -2, 2), color=(0,0,0))
+masked_image = cv2.bitwise_and(img, ~mask)
+```
+
+This mask is used again to initializate the background of the image and then 
+add it to the masked image from the previous step.
+
+```python
+background = np.zeros(img.shape, dtype=np.uint8)
+background[:,:,:] = 128
+masked_bg = cv2.bitwise_and(background, mask)
+```
+
+<amp-img src="/images/document-detection/masked.png" alt="Masked image" 
+height="100" width="300" layout="responsive"></amp-img>
+
+
+The complete code can be found on this 
+[notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/document-detection/DocuementDetection.ipynb).
