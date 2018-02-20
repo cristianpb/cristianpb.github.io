@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Price minister"
-date: 2017-12-03
+date: 2018-01-05
 description: "NLP problem solved using best practices for a data science project."
 categories: ["nlp", "python", "cookie-cutter", "sphinx"]
 
