@@ -4,13 +4,13 @@ title: About
 permalink: /about/
 avatar: true
 navigation: true
+leaflet: true
+visjs: true
+
 ---
 
-
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.20.1/vis.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.20.1/vis.min.js"></script>
-
 Data Scientist @ [Kernix](https://www.kernix.com/)
+
 
 # :school: Education
 
@@ -61,7 +61,38 @@ Graz, Austria.	"Corrosion modelling by cellular automata"
 * 2014	Présentation orale ACRI 2014
 Krakow, Poland. "Overview of cellular automaton models for corrosion"
 
-<script src="https://gist.github.com/cristianpb/487700a8492522bfb254e5fe6839989d.js"></script>
+
+<div id="mapid" style="height: 300px; width: 100%;"></div>
+<script type="text/javascript">
+  var mymap = L.map('mapid').setView([43, -70], 2);
+
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    id: 'mapbox.light'
+	}).addTo(mymap);
+
+var LeafIcon = L.Icon.extend({
+    options: {
+        shadowUrl: '/assets/flags/canada.svg',
+        iconSize:     [40, 40],
+        iconAnchor:   [40, 40],
+        popupAnchor:  [-20, -40]
+    }
+});
+
+var canadaIcon = new LeafIcon({iconUrl: '/assets/flags/canada.svg'}),
+    franceIcon = new LeafIcon({iconUrl: '/assets/flags/france.svg'}),
+    austriaIcon = new LeafIcon({iconUrl: '/assets/flags/austria.svg'}),
+    polandIcon = new LeafIcon({iconUrl: '/assets/flags/poland.svg'});
+
+  L.marker([49.24966, -123.11934], {icon: canadaIcon}).addTo(mymap).bindPopup('<b>CORROSION 2016</b><br /> Vancouvert, Canada').openPopup();
+  L.marker([43.6108, 3.8767], {icon: franceIcon}).addTo(mymap).bindPopup('<b>EUROCORR 2016</b><br />Montperllier, France');
+  L.marker([47.0707, 15.4395], {icon: austriaIcon}).addTo(mymap).bindPopup('<b>EUROCORR 2015</b><br />Graz, Austria');
+  L.marker([50.0647, 19.9450], {icon: polandIcon}).addTo(mymap).bindPopup('<b>ACRI 2014</b><br />Krakow, Poland');
+</script>
 
 # 📚  Publications
 
