@@ -33,7 +33,7 @@ gulp.task('sass', function () {
 // purify removes unused CSS classes
 gulp.task('purify', function() {
   return gulp.src('./_includes/main.css')
-    .pipe(purify(['_includes/**.html', './_layouts/default.html','./_layouts/page.html','./_layouts/post.html', './_pages/index.md', './_pages/abobut.md'], {info: true, rejected: true}))
+    .pipe(purify(['_includes/**.html', './_layouts/default.html','./_layouts/page.html','./_layouts/post.html', './_pages/index.html', './_pages/abobut.md'], {info: true, rejected: true}))
     .pipe(minifyCss())
     .pipe(gulp.dest('./_includes/purify'));
 });
