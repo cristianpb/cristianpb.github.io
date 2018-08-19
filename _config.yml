@@ -51,14 +51,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - reveal.js/index.html
-  - reveal.js/plugin/markdown/example.html
-  - reveal.js/plugin/notes/notes.html
-  - reveal.js/plugin/notes-server/notes.html
-  - reveal.js/test/
-  - reveal.js/*.md
-  - reveal.js/Gruntfile.js
-  - reveal.js/package.json
+  - node_modules
+  - gulpfile.js
  
 defaults:
     - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title'}}
