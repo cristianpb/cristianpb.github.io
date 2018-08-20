@@ -38,8 +38,9 @@ gulp.task('purify', function() {
     .pipe(gulp.dest('./_includes/purify'));
 });
 
-gulp.task("watch", ["purify"], function() {
-  gulp.watch("./_pages/*", ["purify"])
+gulp.task("watch", ["purify", "sass"], function() {
+  gulp.watch("./_sass/main.css", ["sass"])
+  gulp.watch(["./_pages/*", "./_layouts/*"], ["purify"]);
 })
 
 gulp.task('default', ['watch'], function(){});

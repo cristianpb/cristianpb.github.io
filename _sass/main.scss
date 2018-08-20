@@ -2,3 +2,6 @@
 
 @import 'variables';
 @import "bulma";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+
+$fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
