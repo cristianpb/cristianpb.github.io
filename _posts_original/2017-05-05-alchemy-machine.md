@@ -17,10 +17,7 @@ and they are shown in the application. The ingredients have a defined quantity
 and the application will do magic potions only when there are available
 ingredients. 
 
-<br>
-
-{:.title}
-##Structure of the application
+## Structure of the application
 
 [AngularJS](https://angularjs.org/) is great for declaring static documents.
 It has a data binding to update the view whenever the model changes, as
@@ -32,10 +29,7 @@ JavaScript code.
 
 <amp-img src="/images/alchemy-machine/architecture.svg" alt="Alchemy machine architecture" height="230" width="600" layout="responsive"></amp-img>
 
-<br>
-
-{:.title}
-##Structure of the files
+## Structure of the files
 
 I use the following files for this application:
 * The file `core.js` contains the angularjs module
@@ -52,8 +46,7 @@ I use the following files for this application:
 └── server.js
 ```
 
-{:.subtitle}
-###Data
+### Data
 
 Inside `server.js` I define a `JSON` object with the data needed for my alchemy machine such as:
 
@@ -96,10 +89,7 @@ Inside `server.js` I define a `JSON` object with the data needed for my alchemy 
 "Magic" : [{"value": false, "name": "empty"}]};
 ```
 
-<br>
-
-{:.title}
-##Angularjs module
+## Angularjs module
 
 The file `core.js` contains the module `alchemyMachine`, the controller `mainController` and the functions to handle the actions inside the application. There are two main functions: 
 * `get ('/api/donnes')` that hit the node _API_ to obtain all the data from the route `/api/donnes/` and bind it to `$scope.todos`.
@@ -135,10 +125,7 @@ function mainController($scope, $http) {
 }
 ```
 
-<br>
-
-{:.title}
-##Nodejs server
+## Nodejs server
 
 The `server.js` file exposes the application at [http://localhost:8080/](http://localhost:8080/)
 
@@ -197,10 +184,7 @@ app.get('*', function(req, res) {
 });
 ```
 
-<br>
-
-{:.title}
-##Front end view 
+## Front end view 
 
 The `index.html` file interacts directly with angularjs using the module and the controller defined before. It shows:
 * The images from the ingredients.
@@ -285,20 +269,14 @@ The `index.html` file interacts directly with angularjs using the module and the
 ```
 {% endraw %}
 
-<br>
-
-{:.title}
-##Final view
+## Final view
 
 In the following **gif**, I test the main functions of the application: selecting ingridients to make magic potions, see how the number of ingridients decreases while I am making potions and also that I not able to do magic potions when I run out of the ingridients.
 
 <amp-img src="/images/alchemy-machine/alchemy.gif" alt="Demonstration of the alchemy machine" height="422" width="750" layout="responsive"></amp-img>
 
 
-<br>
-
-{:.title}
-##Test the application
+## Test the application
 
 The application can be found at my [github](https://github.com/cristianpb/alchemy-machine). To get it all up and running:
 

@@ -12,47 +12,32 @@ chartjs: true
 I wanted to run a marathon at least once in my life, then I chose to do the
 [Marathon de Metz](http://www.marathon-metz.fr).
 
-<br>
-
-{:.title}
-##Running calendar
+## Running calendar
 
 I began my preparation program 3 months before the race. I started running regularly the first week of July. Mostly small distances on weekdays and longest ones during the weekend. I wasn't strict at the beginning, during the month of July but, then I my training became more regular. 
 
 <div id="cal-heatmap"></div>
 
-<br>
-
-{:.title}
-##Daily behaviour
+## Daily behaviour
 
 From my daily analysis I can say that I prefer to run mostly on Tuesday and that I barely run on Fridays. Saturdays runs are the longest ones, with an average of 20.4 km. Regarding speed, I run slower on Saturdays, because distance are longer.
 
 <canvas id="radarWeekly" width="400" height="200"></canvas>
 
-<br>
-
-{:.title}
-##Weekly behaviour
+## Weekly behaviour
 
 It is nice to see the weekly progress, running 22 kilometres at the beginning of July and reaching 46 kilometres on September. In average, I train 3 times a week.
 
 <canvas id="barChartWeek" width="400" height="200"></canvas>
 
-<br>
-
-{:.title}
-##Monthly behaviour
+## Monthly behaviour
 
 There is also an monthly progress, being September my best month with 164 km and 14 training sessions. Almost half of the month.
 
 <canvas id="barChartMonth" width="400" height="200"></canvas>
 
 
-<br>
-
-{:.title}
-##Marathon time prediction
+## Marathon time prediction
 
 It is possible to estimate the elapsed the time that I would spend to cover the 42.195 km of the marathon. I applied a simple linear regression using the cover distance and the climbed altitude. 
 
@@ -76,19 +61,13 @@ print('Distance: {} Km, Speed: {} Km/h, Time: {} hours \n'.format(X_test[0][0], 
 ```
 <canvas id="linearRegressionChart" width="400" height="200"></canvas>
 
-<br>
-
-{:.title}
-##Average speed and length per training
+## Average speed and length per training
 
 My average speed varies depending on the number of kilometres that I run. For long distances, the average was near 11.2 km/hour. Meanwhile, for shorter distances I was able to reach 12.7 km/hours during 8 kilometres.
 
 <canvas id="bubbleChartSpeed" width="400" height="300"></canvas>
 
-<br>
-
-{:.title}
-##Data analysis
+## Data analysis
 
 The python code used to explore the data can be found inside this [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/runner-up/04-Multiple_Trainning.ipynb).
 

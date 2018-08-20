@@ -4,8 +4,17 @@ var gulp = require('gulp'),
 var sass = require('gulp-sass');
 var purify = require('gulp-purifycss');
 var minifyCss = require('gulp-minify-css');
-
-var site = 'https://d40e46fc.ngrok.io';
+var replace = require('gulp-replace');
+ 
+gulp.task('templates', function(){
+  gulp.src(['./_posts_original/**.md'])
+    // See http://mdn.io/string.replace#Specifying_a_string_as_a_parameter
+    .pipe(replace(/### /gm, '{:.subtitle}\n###'))
+    .pipe(replace(/## /gm, '<br>\n\n{:.title}\n##'))
+    //.pipe(replace(/(###).{1}/gm, '### '))
+    //.pipe(replace(/##(.{1})/gm, '## '))
+    .pipe(gulp.dest('_posts/'));
+});
 
 gulp.task('image', function () {
   gulp.src('./assets/images/*')

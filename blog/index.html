@@ -1,0 +1,88 @@
+---
+layout: default
+title: Blog
+
+---
+
+
+<section class="section hero is-medium">
+  <div class="container">
+    <h1 class="title">
+      Blog
+    </h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    
+  <div class="columns is-multiline">
+    {% for post in paginator.posts  %}
+    <div class="column is-one-third">
+      <div class="card">
+        {% if post.figure %}
+        <div class="card-image">
+          <figure class="image">
+            <amp-img src="{{ post.figure }}" alt="Schema grafana" height="150" width="300" layout="responsive"></amp-img>
+          </figure>
+        </div>
+        {% endif %}
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <a class="title is-4" href="{{ post.url | prepend: site.baseurl }}">{{ 
+                post.title }}</a>
+            </div>
+          </div>
+
+          <div class="content">
+            {% if post.description %}
+            {{ post.description | strip_html | strip_newlines | truncate: 250 }}
+            {% else %}
+            {{ post.content | strip_html | strip_newlines | truncate: 250 }}
+            {% endif %}
+            <br>
+            <span class="small">{{ post.date | date: "%b %-d, %Y" }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container">
+    {% if paginator.total_pages > 1 %}<!-- Pagination links -->
+    <nav class="pagination" role="navigation" aria-label="pagination">
+      <ul class="pagination-list">
+        
+        {% if paginator.previous_page %}<li><a class="pagination-link" 
+            href="/blog/{% if paginator.previous_page > 1 %}{{ 
+            paginator.previous_page }}{% else %}{% endif %}" aria-label="Go to 
+            page {{ paginator.previous_page }}">{{ paginator.previous_page 
+            }}</a></li>{% endif %}
+          <a class="pagination-link is-current" aria-label="Page {{ 
+            paginator.page }}" aria-current="page" disabled>{{ paginator.page 
+            }}</a>
+          {% if paginator.next_page %} <li><a class="pagination-link" 
+              href="/blog/{{ paginator.next_page }}" aria-label="Go to page {{ 
+              paginator.next_page }}" aria-current="page">{{ 
+              paginator.next_page }}</a></li>{% endif %}
+      </ul>
+      {% if paginator.previous_page %} <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-previous is-right">← Newer Posts</a> {% endif %}
+      {% if paginator.next_page %} <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagination-next is-right">Older Posts →</a>{% endif %}
+    </nav>
+    {% endif %}
+  </div>
+</section>

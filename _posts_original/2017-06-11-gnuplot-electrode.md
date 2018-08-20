@@ -16,10 +16,7 @@ and the a state for each cell of the lattice.
 It is difficult see the variation of a dense cell using a three dimensional
 representation, therefore we will use lateral projections of the lattice. 
 
-<br>
-
-{:.title}
-##Heatmaps
+## Heatmaps
 
 The first projection is a like a top view of the lattice. We have a two
 dimensional matrix where each element has a number that represents a
@@ -61,10 +58,7 @@ plot sprintf("ProfileXY%d.dat",t) matrix u ($1*SCALE):($2*SCALE):3 w image notit
 
 <amp-img src="/images/gnuplot-electrode/Profile.gif" alt="Electrode profile XY" height="480" width="640" layout="responsive"></amp-img>
 
-<br>
-
-{:.title}
-##Degrade line curves
+## Degrade line curves
 
 The second representation is just the evolution of the one dimensional
 concentration, which has been averaged in the other dimensions.

@@ -11,10 +11,7 @@ chartjs: true
 Paris Open Data platform proposes databases of the bike rental system [Velib](http://en.velib.paris.fr/). They propose an API to download the data in real-time. The file can be obtained using a http query to the [API](https://opendata.paris.fr/explore/dataset/stations-velib-disponibilites-en-temps-reel/) and saved in `csv` or `json` format.
 We will use `python` in this post to obtain some insights about the rental systems.
 
-<br>
-
-{:.title}
-##Obtaining the data
+## Obtaining the data
 
 ```python
 import requests
@@ -49,10 +46,7 @@ We will focus only in the open stations by using the following command:
 velibs = velibs[velibs.status == 'OPEN']
 ```
 
-<br>
-
-{:.title}
-##Number of bike stands per _arrondisement_
+## Number of bike stands per _arrondisement_
 
 The number of arrondisement can be obtained from the address of station. We
 will focus only on the stations that are in Paris, which means that has a
@@ -95,10 +89,7 @@ m
 We can see graphically that the 15th arrondisement has more bikes than any
 other. It is mainly because it is bigger than other arrondisements.
 
-<br>
-
-{:.title}
-##Available bikes 
+## Available bikes 
 
 We can normalize the number of available bikes using the total number of bikes for each station. This give information if the station is relatively empty or not.
 We can plot this information directly to a map using the coordinates of the station and a function that colours the station to red if the station is empty and green if the station is full.
@@ -134,10 +125,7 @@ they tend to go to the inner side of Paris.
 
 <amp-img src="/images/velib-folium/anim.gif" alt="Animation velib diary" height="720" width="1200" layout="responsive"></amp-img>
 
-<br>
-
-{:.title}
-##Bike utilisation by hour
+## Bike utilisation by hour
 
 Using an scheduler [cron](https://en.wikipedia.org/wiki/Cron) task, we can
 obtain information about the evolution of the bike utilisation. For this case,

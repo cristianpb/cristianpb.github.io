@@ -9,10 +9,7 @@ categories: ["opencv", "python"]
 
 Scanned images have always undesired white space. It is tedious to crop manually when you have several images. In this blog we show how to implemented a simple algorithm to detect the document of an image using image preprocessing functions of opencv. 
 
-<br>
-
-{:.title}
-##Image preprocessing
+## Image preprocessing
 
 We use an example image found on the internet that is similar to scanned image with excessive white space around the document.
 
@@ -38,10 +35,7 @@ edged = cv2.Canny(eq, 0, 150)
 
 <amp-img src="/images/document-detection/edged.png" alt="Edge detection" height="100" width="300" layout="responsive"></amp-img>
 
-<br>
-
-{:.title}
-##Contour detection
+## Contour detection
 
 We use Opencv function
 [findContours](https://docs.opencv.org/3.1.0/d4/d73/tutorial_py_contours_begin.html)
@@ -68,19 +62,13 @@ The result are the biggest contours in the image. Then we can use the biggest on
 
 <amp-img src="/images/document-detection/contours.png" alt="Contours of the image" height="300" width="300" ></amp-img>
 
-<br>
-
-{:.title}
-##Image crop
+## Image crop
 
 We use the extreme points of the contours to crop the image.
 
 <amp-img src="/images/document-detection/crop_image.png" alt="Cropped image" height="200" width="300" ></amp-img>
 
-<br>
-
-{:.title}
-##Background color substitution
+## Background color substitution
 
 The biggest contour can be found using the `max` python function, ordering by 
 contour area with the function `cv2.contourArea`. Other contour properties can 

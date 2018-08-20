@@ -9,10 +9,7 @@ mathjax: true
 ---
 
 
-<br>
-
-{:.title}
-##Summary of the problem
+## Summary of the problem
 
 - We have an image
 - We draw some rectangles over as object detection.
@@ -21,10 +18,7 @@ mathjax: true
 
 This calculation of the coordinates can be made using an **affine transformation**.
 
-<br>
-
-{:.title}
-##Affine transformation
+## Affine transformation
 
 The image transformation can be expressed in the form of a matrix
 multiplication using an [affine
@@ -52,10 +46,7 @@ $$
 T = \begin{bmatrix} a_{00}x + a_{01}y + b_{00} \\ a_{10}x + a_{11}y + b_{10} \end{bmatrix}
 $$
 
-<br>
-
-{:.title}
-##Transformation matrix
+## Transformation matrix
 
 The transformation matrix can be obtained using the rotation angle and the centre coordinates. It can be expressed also as the following structure:
 
@@ -73,8 +64,7 @@ Where:
 
 For this case, we use $$scale = 1$$.
 
-{:.subtitle}
-###Adjust coordinates to the new reference point
+### Adjust coordinates to the new reference point
 
 For this case of rotation image, where the image size changes after rotation
 and also the reference point, the transformation matrix has to be modified.
@@ -95,10 +85,7 @@ $$
 (1- \alpha ) \cdot \texttt{centre.y} + (\texttt{new.height}/2 - \texttt{centre.y}) \end{bmatrix}
 $$
 
-<br>
-
-{:.title}
-##Implementation using OpenCV
+## Implementation using OpenCV
 
 I have implemented the solution in python, using OpenCV.
 I use a sample image of a :cat2:, because everybody loves cats.
@@ -181,17 +168,11 @@ def rotate_box(bb, cx, cy, h, w):
 - The image centre after rotation is:
 (2907, 1961)
 
-<br>
-
-{:.title}
-##Results
+## Results
 
 <amp-img src="/images/image-rotation-opencv/cat.jpg" alt="image rotation results" height="900" width="600"  layout="responsive"></amp-img>
 
-<br>
-
-{:.title}
-##Code
+## Code
 
 ```python
 import matplotlib as mpl
@@ -282,18 +263,12 @@ ax1.add_patch(mpatches.Polygon(bb1[2], lw=3.0, fill=False, color='green'))
 (new_cx, new_cy) = (new_width // 2, new_height // 2)
 print(cx,cy,new_cx,new_cy)
 
-<br>
-
-{:.title}
-##Calculate the new bounding box coordinates
+## Calculate the new bounding box coordinates
 new_bb = {}
 for i in bb1:
     new_bb[i] = rotate_box(bb1[i], cx, cy, heigth, width)
 
-<br>
-
-{:.title}
-##Plot rotated image and bounding boxes
+## Plot rotated image and bounding boxes
 ax2.imshow(rotated_img[...,::-1], aspect='auto')
 ax2.axis('off')
 ax2.add_patch(mpatches.Polygon(new_bb[0],lw=3.0, fill=False, color='red'))
