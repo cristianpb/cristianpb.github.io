@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-permalink: /about/
+permalink: /about
 avatar: true
 navigation: true
 leaflet: true
@@ -96,7 +96,7 @@ var canadaIcon = new LeafIcon({iconUrl: '/assets/flags/canada.svg'}),
 
 # 📚  Publications
 
-Citation of my articles migth be found at {% include icon-google.html username="Google Scholar" %} or {% include icon-researchgate.html username="Research Gate" %}.
+Citation of my articles migth be found at Google Scholar and Research Gate.
 
 ## PhD Thesis
 

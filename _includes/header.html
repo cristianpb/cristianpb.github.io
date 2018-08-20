@@ -3,7 +3,7 @@
   <div class="navbar-brand">
     <div class="navbar-item">
       <a class="navbar-item" href="/">
-        Cristian
+        <amp-img class="avatar" src="{{ site.baseurl | append:'/assets/avatar.png'}}" width="90" height="90" layout="responsive" alt="{{ site.title }}" ></amp-img>
       </a>
     </div>
     <a class="navbar-burger burger" on='tap:sidebar.toggle' data-target="navbarExampleTransparentExample">
@@ -16,64 +16,37 @@
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item" href="/">
-        Global SWAI
+        {{ site.title }}
       </a>
     </div>
 
     <div class="navbar-end">
-      <a class="navbar-item is-link" href="/#about">
-        Get involved
-      </a>
-
-      <a class="navbar-item" href="/gswai2017">
-        GSWAI 2017
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Media
-        </a>
-        <div class="navbar-dropdown is-boxed">
-          <a class="navbar-item bd-tw-button button" href="/videos">
-            <i class="fab fa-youtube"></i>   Videos
-          </a>
-          <a class="navbar-item bd-tw-button button" href="/articles">
-            <i class="fab fa-medium"></i>   Articles
-          </a>
-        </div>
-        <hr class="navbar-divider">
-      </div>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Find us
-        </a>
-        <div class="navbar-dropdown is-boxed">
-          <a class="navbar-item bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{ site.author.twitter }}" target="_blank" href="{{ site.author.twitter }}">
-            <i class="fab fa-twitter"></i>&nbsp;Twitter
-          </a>
-          <a class="navbar-item bd-tw-button button" href="{{ site.author.facebook }}">
-            <i class="fab fa-facebook"></i>&nbsp;Facebook
-          </a>
-          <a class="navbar-item bd-tw-button button" href="{{ site.author.instagram }}">
-            <i class="fab fa-instagram"></i>&nbsp;Instagram
-          </a>
-        </div>
-      </div>
+      {% for page in site.pages %}
+        {% if page.title and page.navigation %}
+        <a class="navbar-item is-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
 </nav>
 
 {% if include.avatar %}
 <section class="hero is-primary is-medium">
-  <div class="hero-body">
+  <div class="hero-body is-centered">
     <div class="container">
       <h1 class="title">
-        Primary title
+        {{ site.title }}
       </h1>
       <h2 class="subtitle">
-        Primary subtitle
+        {{ site. description }}
       </h2>
+      {% for link in site.author %}
+       {% if link[0] != 'name' %}
+        <a class="icon is-medium" href="{{ link[1] }}">
+          <i class="fab fa-{{ link[0] }} fa-2x"></i>
+        </a>
+       {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>

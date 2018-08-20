@@ -30,7 +30,15 @@ social:
     - https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
     - https://www.researchgate.net/profile/Cristian_Perez_Brokate
     - https://www.kaggle.com/cristianpb
-
+author:
+  name: Cristian Perez Brokate
+  linkedin: https://www.linkedin.com/in/cristianperezbrokate
+  github: https://github.com/cristianpb
+  twitter: https://twitter.com/cris_perez_b
+  google: https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
+  researchgate: https://www.researchgate.net/profile/Cristian_Perez_Brokate
+  kaggle: https://www.kaggle.com/cristianpb
+  medium: https://medium.com/@cristianpb
  
 # Build settings
 sass:
