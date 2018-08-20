@@ -31,16 +31,16 @@ gulp.task('sass', function () {
 });
 
 // purify removes unused CSS classes
-gulp.task('purify', function() {
+gulp.task('purify', ['sass'],  function() {
   return gulp.src('./_includes/main.css')
-    .pipe(purify(['_includes/**.html', './_layouts/default.html','./_layouts/page.html','./_layouts/post.html', './_pages/index.html', './_pages/about.md'], {info: true, rejected: true}))
+    .pipe(purify(['_includes/**.html', './_layouts/**.html', './_pages/**.html', './blog/**.html'], {info: true}))
     .pipe(minifyCss())
     .pipe(gulp.dest('./_includes/purify'));
 });
 
 gulp.task("watch", ["purify", "sass"], function() {
-  gulp.watch("./_sass/main.css", ["sass"])
-  gulp.watch(["./_pages/*", "./_layouts/*"], ["purify"]);
+  gulp.watch("./_sass/main.scss", ["sass", "purify"])
+  gulp.watch(["./_pages/**", "./_layouts/**"], ["purify"]);
 })
 
 gulp.task('default', ['watch'], function(){});

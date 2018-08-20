@@ -18,7 +18,7 @@ researchgate_username:  Cristian_Perez_Brokate
 disqus:
   shortname: cristianpb-github-io
 google_analytics: UA-68913933-2
-paginate: 12
+paginate: 6
 paginate_path: '/blog/:num'
 google-site-verification: 'dadHYln91lNA-p2JDYCrivQ6etkGJeqk1Dz1GpshKk0'
 social:

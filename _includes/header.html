@@ -26,6 +26,7 @@
         <a class="navbar-item is-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
       {% endfor %}
+        <a class="navbar-item is-link" href="/blog">Blog</a>
     </div>
   </div>
 </nav>
@@ -48,6 +49,16 @@
        {% endif %}
       {% endfor %}
     </div>
+  </div>
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth is-centered">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a href="/about">Last articles</a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
 </section>
 {% endif %}
