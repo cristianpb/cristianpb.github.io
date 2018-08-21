@@ -4,6 +4,7 @@ title: "Price minister"
 date: 2018-01-05
 description: "NLP problem solved using best practices for a data science project."
 categories: ["nlp", "python", "cookie-cutter", "sphinx"]
+figure: /images/priceminister/word_number.png
 
 ---
 

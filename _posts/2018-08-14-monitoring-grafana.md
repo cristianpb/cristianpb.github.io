@@ -20,7 +20,7 @@ how to easily deploy it using docker technology.
 <br>
 
 {:.title}
-##Introduction
+## Introduction
 
 Let's start with the presentation of the components of the stack.
 
@@ -45,7 +45,7 @@ image and they are build and launched using docker-compose program.
 <br>
 
 {:.title}
-##Data collection
+## Data collection
 
 There is no official dockerfile image available for collectd. The closest
 available comes from [fr3nd](https://hub.docker.com/r/fr3nd/collectd/).
@@ -81,7 +81,7 @@ This line uses a collectd plugin to send data to the address
 <br>
 
 {:.title}
-##Saving the data
+## Saving the data
 
 Influxdb has an official [dockerfile
 image](https://hub.docker.com/_/influxdb/). We use the version 1.4, which
@@ -126,7 +126,7 @@ The `types.db` file defines the collectd data source specification, which influx
 <br>
 
 {:.title}
-##Dashboard monitoring
+## Dashboard monitoring
 
 We use the grafana docker image 5.1 which comes with the possibility to include
 data sources and predefined dashboards as `yaml` files, which makes easier the
@@ -162,7 +162,7 @@ Grafana has many ways to be customized and also an [explicit documentation](http
 <br>
 
 {:.title}
-##Conclusion
+## Conclusion
 
 The main motivation of this project was to monitor AWS instances. Which can be
 easily done using our code source that is available in

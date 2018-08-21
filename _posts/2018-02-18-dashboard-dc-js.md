@@ -25,7 +25,7 @@ The visualization have to main files:
 <br>
 
 {:.title}
-##Front
+## Front
 
 I used [bulma.io](https://bulma.io/) css framework to set the differents charts
 in a responsive way. This framework provides a **tiles** disposition to create
@@ -64,7 +64,7 @@ tile is-ancestor
 <br>
 
 {:.title}
-##Back 
+## Back 
 
 The `div` elements that are inside the tiles are created using the `graph.js`
 file. This file uses [d3.queue](https://github.com/d3/d3-queue) to load the
@@ -89,7 +89,7 @@ so when one chart is filtered, the results are shown in the heatmap.
 <br>
 
 {:.title}
-##Conclusion
+## Conclusion
 
 The final interactive visualization is available [in this block
 link](https://bl.ocks.org/cristianpb/raw/f623461c406020eef068c1e4ecc6313f/)

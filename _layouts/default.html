@@ -1,7 +1,7 @@
 <!doctype html>
 <html ⚡ lang="en">
   {% include head.html %}
-  <body>
+  <body class="has-navbar-fixed-top">
     {% if page.avatar %}{% include header.html avatar="true" %} {% else %} {% include header.html %} {% endif %}
     <div class="page-content {% if page.layout == 'default-author' %}default{%endif%}">
       <div class="wrapper">

@@ -8,7 +8,7 @@ categories: ["kaggle", "r"]
 <br>
 
 {:.title}
-##Introduction
+## Introduction
 
 ----
 
@@ -23,14 +23,14 @@ categories: ["kaggle", "r"]
 <br>
 
 {:.title}
-##Données
+## Données
 
 <amp-img src="/images/talking_data/description.svg" alt="Talking data description" height="532" width="691" layout="responsive"></amp-img>
 
 <br>
 
 {:.title}
-##Librairies
+## Librairies
 
 
 ```r
@@ -41,15 +41,15 @@ rm(list=ls());gc()
 <br>
 
 {:.title}
-##           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+##            used  (Mb) gc trigger   (Mb)  max used   (Mb)
 <br>
 
 {:.title}
-##Ncells  1684989  90.0    4799883  256.4   8631012  461.0
+## Ncells  1684989  90.0    4799883  256.4   8631012  461.0
 <br>
 
 {:.title}
-##Vcells 48367176 369.1  343765888 2622.8 685123017 5227.1
+## Vcells 48367176 369.1  343765888 2622.8 685123017 5227.1
 ```
 
 ```r
@@ -62,7 +62,7 @@ library('FeatureHashing')
 <br>
 
 {:.title}
-##Lecture des données
+## Lecture des données
 
 
 ```r
@@ -77,7 +77,7 @@ test$group <- test$age <- test$gender <- NA
 ```
 
 {:.subtitle}
-###Train et test
+### Train et test
 
 
 ```r
@@ -88,31 +88,31 @@ str(train)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	74645 obs. of  4 variables:
+## Classes 'data.table' and 'data.frame':	74645 obs. of  4 variables:
 <br>
 
 {:.title}
-## $ device_id: chr  "-1000369272589010951" "-1000572055892391496" "-1000643208750517791" "-1001337759327042486" ...
+##  $ device_id: chr  "-1000369272589010951" "-1000572055892391496" "-1000643208750517791" "-1001337759327042486" ...
 <br>
 
 {:.title}
-## $ gender   : chr  "F" "F" "M" "M" ...
+##  $ gender   : chr  "F" "F" "M" "M" ...
 <br>
 
 {:.title}
-## $ age      : int  26 27 29 30 22 40 36 47 33 44 ...
+##  $ age      : int  26 27 29 30 22 40 36 47 33 44 ...
 <br>
 
 {:.title}
-## $ group    : chr  "F24-26" "F27-28" "M29-31" "M29-31" ...
+##  $ group    : chr  "F24-26" "F27-28" "M29-31" "M29-31" ...
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr> 
+##  - attr(*, ".internal.selfref")=<externalptr> 
 <br>
 
 {:.title}
-## - attr(*, "sorted")= chr "device_id"
+##  - attr(*, "sorted")= chr "device_id"
 ```
 
 ```r
@@ -123,35 +123,35 @@ str(test)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	112071 obs. of  4 variables:
+## Classes 'data.table' and 'data.frame':	112071 obs. of  4 variables:
 <br>
 
 {:.title}
-## $ device_id: chr  "-1000025442746372936" "-1000030473234264316" "-1000146476441213272" "-100015673884079572" ...
+##  $ device_id: chr  "-1000025442746372936" "-1000030473234264316" "-1000146476441213272" "-100015673884079572" ...
 <br>
 
 {:.title}
-## $ gender   : logi  NA NA NA NA NA NA ...
+##  $ gender   : logi  NA NA NA NA NA NA ...
 <br>
 
 {:.title}
-## $ age      : logi  NA NA NA NA NA NA ...
+##  $ age      : logi  NA NA NA NA NA NA ...
 <br>
 
 {:.title}
-## $ group    : logi  NA NA NA NA NA NA ...
+##  $ group    : logi  NA NA NA NA NA NA ...
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr> 
+##  - attr(*, ".internal.selfref")=<externalptr> 
 <br>
 
 {:.title}
-## - attr(*, "sorted")= chr "device_id"
+##  - attr(*, "sorted")= chr "device_id"
 ```
 
 {:.subtitle}
-###Train: Genre 
+### Train: Genre 
 
 
 
@@ -178,21 +178,21 @@ rm(gendertrain);gc()
 <br>
 
 {:.title}
-##           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+##            used  (Mb) gc trigger   (Mb)  max used   (Mb)
 <br>
 
 {:.title}
-##Ncells  1884699 100.7    4799883  256.4   8631012  461.0
+## Ncells  1884699 100.7    4799883  256.4   8631012  461.0
 <br>
 
 {:.title}
-##Vcells 49690360 379.2  275012710 2098.2 685123017 5227.1
+## Vcells 49690360 379.2  275012710 2098.2 685123017 5227.1
 ```
 
 <br>
 
 {:.title}
-##Train: Age et genre
+## Train: Age et genre
 
 
 ```r
@@ -219,22 +219,22 @@ rm(agetrain);gc()
 <br>
 
 {:.title}
-##           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+##            used  (Mb) gc trigger   (Mb)  max used   (Mb)
 <br>
 
 {:.title}
-##Ncells  1888426 100.9    4799883  256.4   8631012  461.0
+## Ncells  1888426 100.9    4799883  256.4   8631012  461.0
 <br>
 
 {:.title}
-##Vcells 49697213 379.2  220010168 1678.6 685123017 5227.1
+## Vcells 49697213 379.2  220010168 1678.6 685123017 5227.1
 ```
 Age moyenne est 32 pour les femmes et 31 pour les hommes.
 
 <br>
 
 {:.title}
-##Analyse des marques du portables
+## Analyse des marques du portables
 
 
 ```r
@@ -275,7 +275,7 @@ dim(phone)
 <br>
 
 {:.title}
-##[1] 186722      3
+## [1] 186722      3
 ```
 
 
@@ -294,107 +294,107 @@ merge(duplicate_phone,phone,by="device_id",all.x=T)
 <br>
 
 {:.title}
-##               device_id phone_brand.x device_model.x phone_brand.y
+##                device_id phone_brand.x device_model.x phone_brand.y
 <br>
 
 {:.title}
-## 1: -3004353610608679970       Coolpad           7296       Coolpad
+##  1: -3004353610608679970       Coolpad           7296       Coolpad
 <br>
 
 {:.title}
-## 2: -3004353610608679970       Coolpad           7296       Coolpad
+##  2: -3004353610608679970       Coolpad           7296       Coolpad
 <br>
 
 {:.title}
-## 3: -5269721363279128080        Xiaomi           MI 3       samsung
+##  3: -5269721363279128080        Xiaomi           MI 3       samsung
 <br>
 
 {:.title}
-## 4: -5269721363279128080        Xiaomi           MI 3        Xiaomi
+##  4: -5269721363279128080        Xiaomi           MI 3        Xiaomi
 <br>
 
 {:.title}
-## 5: -6590454305031525112        Huawei     荣耀6 Plus        Xiaomi
+##  5: -6590454305031525112        Huawei     荣耀6 Plus        Xiaomi
 <br>
 
 {:.title}
-## 6: -6590454305031525112        Huawei     荣耀6 Plus        Huawei
+##  6: -6590454305031525112        Huawei     荣耀6 Plus        Huawei
 <br>
 
 {:.title}
-## 7: -7059081542575379359         Meizu     魅蓝Note 2            LG
+##  7: -7059081542575379359         Meizu     魅蓝Note 2            LG
 <br>
 
 {:.title}
-## 8: -7059081542575379359         Meizu     魅蓝Note 2         Meizu
+##  8: -7059081542575379359         Meizu     魅蓝Note 2         Meizu
 <br>
 
 {:.title}
-## 9: -7297178577997113203        Huawei         荣耀3C        Huawei
+##  9: -7297178577997113203        Huawei         荣耀3C        Huawei
 <br>
 
 {:.title}
-##10: -7297178577997113203        Huawei         荣耀3C        Huawei
+## 10: -7297178577997113203        Huawei         荣耀3C        Huawei
 <br>
 
 {:.title}
-##11:  5245428108336915020        Xiaomi    MI One Plus         Meizu
+## 11:  5245428108336915020        Xiaomi    MI One Plus         Meizu
 <br>
 
 {:.title}
-##12:  5245428108336915020        Xiaomi    MI One Plus        Xiaomi
+## 12:  5245428108336915020        Xiaomi    MI One Plus        Xiaomi
 <br>
 
 {:.title}
-##         device_model.y
+##          device_model.y
 <br>
 
 {:.title}
-## 1:                5891
+##  1:                5891
 <br>
 
 {:.title}
-## 2:                7296
+##  2:                7296
 <br>
 
 {:.title}
-## 3: Galaxy Core Advance
+##  3: Galaxy Core Advance
 <br>
 
 {:.title}
-## 4:                MI 3
+##  4:                MI 3
 <br>
 
 {:.title}
-## 5:                MI 3
+##  5:                MI 3
 <br>
 
 {:.title}
-## 6:          荣耀6 Plus
+##  6:          荣耀6 Plus
 <br>
 
 {:.title}
-## 7:             Nexus 5
+##  7:             Nexus 5
 <br>
 
 {:.title}
-## 8:          魅蓝Note 2
+##  8:          魅蓝Note 2
 <br>
 
 {:.title}
-## 9:          荣耀畅玩5X
+##  9:          荣耀畅玩5X
 <br>
 
 {:.title}
-##10:              荣耀3C
+## 10:              荣耀3C
 <br>
 
 {:.title}
-##11:                 MX4
+## 11:                 MX4
 <br>
 
 {:.title}
-##12:         MI One Plus
+## 12:         MI One Plus
 ```
 
 
@@ -408,7 +408,7 @@ dim(phone)
 <br>
 
 {:.title}
-##[1] 186716      3
+## [1] 186716      3
 ```
 
 
@@ -424,39 +424,39 @@ str(phonetrain)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	74645 obs. of  6 variables:
+## Classes 'data.table' and 'data.frame':	74645 obs. of  6 variables:
 <br>
 
 {:.title}
-## $ device_id   : chr  "-1000369272589010951" "-1000572055892391496" "-1000643208750517791" "-1001337759327042486" ...
+##  $ device_id   : chr  "-1000369272589010951" "-1000572055892391496" "-1000643208750517791" "-1001337759327042486" ...
 <br>
 
 {:.title}
-## $ gender      : chr  "F" "F" "M" "M" ...
+##  $ gender      : chr  "F" "F" "M" "M" ...
 <br>
 
 {:.title}
-## $ age         : int  26 27 29 30 22 40 36 47 33 44 ...
+##  $ age         : int  26 27 29 30 22 40 36 47 33 44 ...
 <br>
 
 {:.title}
-## $ group       : chr  "F24-26" "F27-28" "M29-31" "M29-31" ...
+##  $ group       : chr  "F24-26" "F27-28" "M29-31" "M29-31" ...
 <br>
 
 {:.title}
-## $ phone_brand : chr  "vivo" "OPPO" "Gionee" "OPPO" ...
+##  $ phone_brand : chr  "vivo" "OPPO" "Gionee" "OPPO" ...
 <br>
 
 {:.title}
-## $ device_model: chr  "Y17T" "R819T" "GN137" "A31" ...
+##  $ device_model: chr  "Y17T" "R819T" "GN137" "A31" ...
 <br>
 
 {:.title}
-## - attr(*, "sorted")= chr "device_id"
+##  - attr(*, "sorted")= chr "device_id"
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr>
+##  - attr(*, ".internal.selfref")=<externalptr>
 ```
 
 ```r
@@ -467,39 +467,39 @@ str(phonetest)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	112071 obs. of  6 variables:
+## Classes 'data.table' and 'data.frame':	112071 obs. of  6 variables:
 <br>
 
 {:.title}
-## $ device_id   : chr  "-1000025442746372936" "-1000030473234264316" "-1000146476441213272" "-100015673884079572" ...
+##  $ device_id   : chr  "-1000025442746372936" "-1000030473234264316" "-1000146476441213272" "-100015673884079572" ...
 <br>
 
 {:.title}
-## $ gender      : logi  NA NA NA NA NA NA ...
+##  $ gender      : logi  NA NA NA NA NA NA ...
 <br>
 
 {:.title}
-## $ age         : logi  NA NA NA NA NA NA ...
+##  $ age         : logi  NA NA NA NA NA NA ...
 <br>
 
 {:.title}
-## $ group       : logi  NA NA NA NA NA NA ...
+##  $ group       : logi  NA NA NA NA NA NA ...
 <br>
 
 {:.title}
-## $ phone_brand : chr  "samsung" "samsung" "Meizu" "Xiaomi" ...
+##  $ phone_brand : chr  "samsung" "samsung" "Meizu" "Xiaomi" ...
 <br>
 
 {:.title}
-## $ device_model: chr  "Galaxy Grand 2" "Galaxy Trend DUOS 2" "魅蓝NOTE" "小米note" ...
+##  $ device_model: chr  "Galaxy Grand 2" "Galaxy Trend DUOS 2" "魅蓝NOTE" "小米note" ...
 <br>
 
 {:.title}
-## - attr(*, "sorted")= chr "device_id"
+##  - attr(*, "sorted")= chr "device_id"
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr>
+##  - attr(*, ".internal.selfref")=<externalptr>
 ```
 
 
@@ -527,22 +527,22 @@ rm(lowphone,highphone,phonetraingroup,duplicate_phone,phone);gc()
 <br>
 
 {:.title}
-##           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+##            used  (Mb) gc trigger   (Mb)  max used   (Mb)
 <br>
 
 {:.title}
-##Ncells  1889826 101.0    4799883  256.4   8631012  461.0
+## Ncells  1889826 101.0    4799883  256.4   8631012  461.0
 <br>
 
 {:.title}
-##Vcells 50618796 386.2  176008134 1342.9 685123017 5227.1
+## Vcells 50618796 386.2  176008134 1342.9 685123017 5227.1
 ```
 80% du marche est contrôlé par 6 grands marques
 
 <br>
 
 {:.title}
-##Applications des téléphones
+## Applications des téléphones
 
 Chaque enregistrement des applications indexe dans le tableau events avec la
 position et la date.
@@ -558,7 +558,7 @@ events <- fread("../TalkingData/input/events.csv", header = TRUE,
 <br>
 
 {:.title}
-##Read 65.8% of 3252950 rowsRead 78.1% of 3252950 rowsRead 3252950 rows and 5 (of 5) columns from 0.182 GB file in 00:00:04
+## Read 65.8% of 3252950 rowsRead 78.1% of 3252950 rowsRead 3252950 rows and 5 (of 5) columns from 0.182 GB file in 00:00:04
 ```
 
 ```r
@@ -570,35 +570,35 @@ str(events)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	3252950 obs. of  5 variables:
+## Classes 'data.table' and 'data.frame':	3252950 obs. of  5 variables:
 <br>
 
 {:.title}
-## $ event_id : chr  "1004583" "1026437" "1032393" "1077411" ...
+##  $ event_id : chr  "1004583" "1026437" "1032393" "1077411" ...
 <br>
 
 {:.title}
-## $ device_id: chr  "-100015673884079572" "-100015673884079572" "-100015673884079572" "-100015673884079572" ...
+##  $ device_id: chr  "-100015673884079572" "-100015673884079572" "-100015673884079572" "-100015673884079572" ...
 <br>
 
 {:.title}
-## $ timestamp: chr  "2016-05-02 06:34:52" "2016-05-01 00:12:55" "2016-05-04 08:05:40" "2016-05-03 00:30:32" ...
+##  $ timestamp: chr  "2016-05-02 06:34:52" "2016-05-01 00:12:55" "2016-05-04 08:05:40" "2016-05-03 00:30:32" ...
 <br>
 
 {:.title}
-## $ longitude: num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ longitude: num  0 0 0 0 0 0 0 0 0 0 ...
 <br>
 
 {:.title}
-## $ latitude : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ latitude : num  0 0 0 0 0 0 0 0 0 0 ...
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr> 
+##  - attr(*, ".internal.selfref")=<externalptr> 
 <br>
 
 {:.title}
-## - attr(*, "sorted")= chr  "device_id" "event_id"
+##  - attr(*, "sorted")= chr  "device_id" "event_id"
 ```
 
 Global position of events
@@ -626,7 +626,7 @@ ggplot() + borders('world', colour='gray50', fill='gray50') +
 <br>
 
 {:.title}
-##Applications dans le tableau event
+## Applications dans le tableau event
 
 
 ```r
@@ -637,7 +637,7 @@ event_app <- fread("../TalkingData/input/app_events.csv",colClasses=rep("charact
 <br>
 
 {:.title}
-##Read 0.0% of 32473067 rowsRead 15.8% of 32473067 rowsRead 31.6% of 32473067 rowsRead 46.9% of 32473067 rowsRead 62.2% of 32473067 rowsRead 77.6% of 32473067 rowsRead 93.3% of 32473067 rowsRead 32473067 rows and 4 (of 4) columns from 0.966 GB file in 00:00:10
+## Read 0.0% of 32473067 rowsRead 15.8% of 32473067 rowsRead 31.6% of 32473067 rowsRead 46.9% of 32473067 rowsRead 62.2% of 32473067 rowsRead 77.6% of 32473067 rowsRead 93.3% of 32473067 rowsRead 32473067 rows and 4 (of 4) columns from 0.966 GB file in 00:00:10
 ```
 
 ```r
@@ -649,31 +649,31 @@ str(event_app)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	32473067 obs. of  4 variables:
+## Classes 'data.table' and 'data.frame':	32473067 obs. of  4 variables:
 <br>
 
 {:.title}
-## $ event_id    : chr  "1000000" "1000000" "1000000" "1000000" ...
+##  $ event_id    : chr  "1000000" "1000000" "1000000" "1000000" ...
 <br>
 
 {:.title}
-## $ app_id      : chr  "543880124725657021" "2229153468836897886" "-506173428906005275" "5927333115845830913" ...
+##  $ app_id      : chr  "543880124725657021" "2229153468836897886" "-506173428906005275" "5927333115845830913" ...
 <br>
 
 {:.title}
-## $ is_installed: chr  "1" "1" "1" "1" ...
+##  $ is_installed: chr  "1" "1" "1" "1" ...
 <br>
 
 {:.title}
-## $ is_active   : chr  "1" "1" "0" "0" ...
+##  $ is_active   : chr  "1" "1" "0" "0" ...
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr> 
+##  - attr(*, ".internal.selfref")=<externalptr> 
 <br>
 
 {:.title}
-## - attr(*, "sorted")= chr "event_id"
+##  - attr(*, "sorted")= chr "event_id"
 ```
 
 Pour pouvoir combiner avec le tableau de numéro de dispositif (device_id) il
@@ -693,23 +693,23 @@ str(event_app)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	1488096 obs. of  2 variables:
+## Classes 'data.table' and 'data.frame':	1488096 obs. of  2 variables:
 <br>
 
 {:.title}
-## $ event_id: chr  "1000000" "1000004" "1000005" "1000006" ...
+##  $ event_id: chr  "1000000" "1000004" "1000005" "1000006" ...
 <br>
 
 {:.title}
-## $ apps    : chr  "543880124725657021,2229153468836897886,-506173428906005275,5927333115845830913,-1633887856876571208,4743373741129926453,8693964"| __truncated__ "5195654633279707117,2229153468836897886,-6608180948776167473,6284164581582112235,1001398498434380294,5927333115845830913,-27055"| __truncated__ "5195654633279707117,-4762108283218821740,1000519352029378378,6284164581582112235,5927333115845830913,3433289601737013244,-39552"| __truncated__ "-7689286664726196654,-6159006306231678365,-3955212733485100109" ...
+##  $ apps    : chr  "543880124725657021,2229153468836897886,-506173428906005275,5927333115845830913,-1633887856876571208,4743373741129926453,8693964"| __truncated__ "5195654633279707117,2229153468836897886,-6608180948776167473,6284164581582112235,1001398498434380294,5927333115845830913,-27055"| __truncated__ "5195654633279707117,-4762108283218821740,1000519352029378378,6284164581582112235,5927333115845830913,3433289601737013244,-39552"| __truncated__ "-7689286664726196654,-6159006306231678365,-3955212733485100109" ...
 <br>
 
 {:.title}
-## - attr(*, "sorted")= chr "event_id"
+##  - attr(*, "sorted")= chr "event_id"
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr>
+##  - attr(*, ".internal.selfref")=<externalptr>
 ```
 Maintenant il faut combiner les avec le tableau d'évènements pour obtenir le
 id du dispositif et ensuite avoir les applications par dispositif.
@@ -726,15 +726,15 @@ rm(event_app);gc()
 <br>
 
 {:.title}
-##            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+##             used   (Mb) gc trigger   (Mb)  max used   (Mb)
 <br>
 
 {:.title}
-##Ncells   1937956  103.5    8134204  434.5  10167755  543.1
+## Ncells   1937956  103.5    8134204  434.5  10167755  543.1
 <br>
 
 {:.title}
-##Vcells 134332577 1024.9  530008062 4043.7 724249325 5525.6
+## Vcells 134332577 1024.9  530008062 4043.7 724249325 5525.6
 ```
 
 ```r
@@ -745,19 +745,19 @@ str(events)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	60865 obs. of  2 variables:
+## Classes 'data.table' and 'data.frame':	60865 obs. of  2 variables:
 <br>
 
 {:.title}
-## $ device_id: chr  "29182687948017175" "-8195816569128397698" "163167796882803305" "-4537233125614571555" ...
+##  $ device_id: chr  "29182687948017175" "-8195816569128397698" "163167796882803305" "-4537233125614571555" ...
 <br>
 
 {:.title}
-## $ apps     : chr  "NA,8026407831917254841,6324195578393301030,6666573791286858743,8693964245073640147,2689721421138748406,-709131373705578095,6324"| __truncated__ "NA,289117438905230816,-8504475857937456387,NA,2229153468836897886,1001398498434380294,5927333115845830913,4574657903816099535,8"| __truncated__ "NA,6284164581582112235,5927333115845830913,3433289601737013244,-6159006306231678365,8693964245073640147,-395459949649198327,622"| __truncated__ "NA,3433289601737013244,3433289601737013244,1088227414300337900,NA,NA,NA,NA,NA,NA,5927333115845830913,-6590029937880196169,34332"| __truncated__ ...
+##  $ apps     : chr  "NA,8026407831917254841,6324195578393301030,6666573791286858743,8693964245073640147,2689721421138748406,-709131373705578095,6324"| __truncated__ "NA,289117438905230816,-8504475857937456387,NA,2229153468836897886,1001398498434380294,5927333115845830913,4574657903816099535,8"| __truncated__ "NA,6284164581582112235,5927333115845830913,3433289601737013244,-6159006306231678365,8693964245073640147,-395459949649198327,622"| __truncated__ "NA,3433289601737013244,3433289601737013244,1088227414300337900,NA,NA,NA,NA,NA,NA,5927333115845830913,-6590029937880196169,34332"| __truncated__ ...
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr>
+##  - attr(*, ".internal.selfref")=<externalptr>
 ```
 Il y a l'information des applications pour 60865
 dispositifs uniquement.
@@ -775,15 +775,15 @@ rm(events);gc()
 <br>
 
 {:.title}
-##            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+##             used   (Mb) gc trigger   (Mb)  max used   (Mb)
 <br>
 
 {:.title}
-##Ncells   1933245  103.3    6507363  347.6  10167755  543.1
+## Ncells   1933245  103.3    6507363  347.6  10167755  543.1
 <br>
 
 {:.title}
-##Vcells 133575512 1019.2  424006449 3235.0 724249325 5525.6
+## Vcells 133575512 1019.2  424006449 3235.0 724249325 5525.6
 ```
 
 ```r
@@ -794,43 +794,43 @@ str(device_train)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	74645 obs. of  7 variables:
+## Classes 'data.table' and 'data.frame':	74645 obs. of  7 variables:
 <br>
 
 {:.title}
-## $ device_id   : chr  "-1000369272589010951" "-1000572055892391496" "-1000643208750517791" "-1001337759327042486" ...
+##  $ device_id   : chr  "-1000369272589010951" "-1000572055892391496" "-1000643208750517791" "-1001337759327042486" ...
 <br>
 
 {:.title}
-## $ gender      : chr  "F" "F" "M" "M" ...
+##  $ gender      : chr  "F" "F" "M" "M" ...
 <br>
 
 {:.title}
-## $ age         : int  26 27 29 30 22 40 36 47 33 44 ...
+##  $ age         : int  26 27 29 30 22 40 36 47 33 44 ...
 <br>
 
 {:.title}
-## $ group       : chr  "F24-26" "F27-28" "M29-31" "M29-31" ...
+##  $ group       : chr  "F24-26" "F27-28" "M29-31" "M29-31" ...
 <br>
 
 {:.title}
-## $ phone_brand : chr  "vivo" "OPPO" "Gionee" "OPPO" ...
+##  $ phone_brand : chr  "vivo" "OPPO" "Gionee" "OPPO" ...
 <br>
 
 {:.title}
-## $ device_model: chr  "Y17T" "R819T" "GN137" "A31" ...
+##  $ device_model: chr  "Y17T" "R819T" "GN137" "A31" ...
 <br>
 
 {:.title}
-## $ apps        : chr  NA NA NA "8693964245073640147,7167114343576723123,5927333115845830913,6956699582426139508,NA,NA,NA,NA,-7054804880832650555,-5368809411346"| __truncated__ ...
+##  $ apps        : chr  NA NA NA "8693964245073640147,7167114343576723123,5927333115845830913,6956699582426139508,NA,NA,NA,NA,-7054804880832650555,-5368809411346"| __truncated__ ...
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr> 
+##  - attr(*, ".internal.selfref")=<externalptr> 
 <br>
 
 {:.title}
-## - attr(*, "sorted")= chr "device_id"
+##  - attr(*, "sorted")= chr "device_id"
 ```
 
 ```r
@@ -841,43 +841,43 @@ str(device_test)
 <br>
 
 {:.title}
-##Classes 'data.table' and 'data.frame':	112071 obs. of  7 variables:
+## Classes 'data.table' and 'data.frame':	112071 obs. of  7 variables:
 <br>
 
 {:.title}
-## $ device_id   : chr  "-1000025442746372936" "-1000030473234264316" "-1000146476441213272" "-100015673884079572" ...
+##  $ device_id   : chr  "-1000025442746372936" "-1000030473234264316" "-1000146476441213272" "-100015673884079572" ...
 <br>
 
 {:.title}
-## $ gender      : logi  NA NA NA NA NA NA ...
+##  $ gender      : logi  NA NA NA NA NA NA ...
 <br>
 
 {:.title}
-## $ age         : logi  NA NA NA NA NA NA ...
+##  $ age         : logi  NA NA NA NA NA NA ...
 <br>
 
 {:.title}
-## $ group       : logi  NA NA NA NA NA NA ...
+##  $ group       : logi  NA NA NA NA NA NA ...
 <br>
 
 {:.title}
-## $ phone_brand : chr  "samsung" "samsung" "Meizu" "Xiaomi" ...
+##  $ phone_brand : chr  "samsung" "samsung" "Meizu" "Xiaomi" ...
 <br>
 
 {:.title}
-## $ device_model: chr  "Galaxy Grand 2" "Galaxy Trend DUOS 2" "魅蓝NOTE" "小米note" ...
+##  $ device_model: chr  "Galaxy Grand 2" "Galaxy Trend DUOS 2" "魅蓝NOTE" "小米note" ...
 <br>
 
 {:.title}
-## $ apps        : chr  NA NA NA "6324195579000287296,-7745076081943986520,-506173428906005275,5927333115845830913,936333950832647056,7316250158002095415,5033830"| __truncated__ ...
+##  $ apps        : chr  NA NA NA "6324195579000287296,-7745076081943986520,-506173428906005275,5927333115845830913,936333950832647056,7316250158002095415,5033830"| __truncated__ ...
 <br>
 
 {:.title}
-## - attr(*, ".internal.selfref")=<externalptr> 
+##  - attr(*, ".internal.selfref")=<externalptr> 
 <br>
 
 {:.title}
-## - attr(*, "sorted")= chr "device_id"
+##  - attr(*, "sorted")= chr "device_id"
 ```
 
 J'ai choisi l'algorithme du gradient boosting tree (XGB).
@@ -902,39 +902,39 @@ str(X_train)
 <br>
 
 {:.title}
-##Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+## Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
 <br>
 
 {:.title}
-##  ..@ i       : int [1:1074293] 592 7155 31344 71970 4589 10094 12753 20196 25129 42360 ...
+##   ..@ i       : int [1:1074293] 592 7155 31344 71970 4589 10094 12753 20196 25129 42360 ...
 <br>
 
 {:.title}
-##  ..@ p       : int [1:16385] 0 4 13 72 93 93 94 95 95 95 ...
+##   ..@ p       : int [1:16385] 0 4 13 72 93 93 94 95 95 95 ...
 <br>
 
 {:.title}
-##  ..@ Dim     : int [1:2] 74645 16384
+##   ..@ Dim     : int [1:2] 74645 16384
 <br>
 
 {:.title}
-##  ..@ Dimnames:List of 2
+##   ..@ Dimnames:List of 2
 <br>
 
 {:.title}
-##  .. ..$ : chr(0) 
+##   .. ..$ : chr(0) 
 <br>
 
 {:.title}
-##  .. ..$ : chr [1:16384] "1" "2" "3" "4" ...
+##   .. ..$ : chr [1:16384] "1" "2" "3" "4" ...
 <br>
 
 {:.title}
-##  ..@ x       : num [1:1074293] 1 1 1 1 1 1 1 1 1 1 ...
+##   ..@ x       : num [1:1074293] 1 1 1 1 1 1 1 1 1 1 ...
 <br>
 
 {:.title}
-##  ..@ factors : list()
+##   ..@ factors : list()
 ```
 
 ```r
@@ -945,39 +945,39 @@ str(X_test)
 <br>
 
 {:.title}
-##Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
+## Formal class 'dgCMatrix' [package "Matrix"] with 6 slots
 <br>
 
 {:.title}
-##  ..@ i       : int [1:1625049] 23788 25876 57495 83863 86218 98030 99614 104190 363 6329 ...
+##   ..@ i       : int [1:1625049] 23788 25876 57495 83863 86218 98030 99614 104190 363 6329 ...
 <br>
 
 {:.title}
-##  ..@ p       : int [1:16385] 0 8 24 97 116 116 116 118 118 118 ...
+##   ..@ p       : int [1:16385] 0 8 24 97 116 116 116 118 118 118 ...
 <br>
 
 {:.title}
-##  ..@ Dim     : int [1:2] 112071 16384
+##   ..@ Dim     : int [1:2] 112071 16384
 <br>
 
 {:.title}
-##  ..@ Dimnames:List of 2
+##   ..@ Dimnames:List of 2
 <br>
 
 {:.title}
-##  .. ..$ : chr(0) 
+##   .. ..$ : chr(0) 
 <br>
 
 {:.title}
-##  .. ..$ : chr [1:16384] "1" "2" "3" "4" ...
+##   .. ..$ : chr [1:16384] "1" "2" "3" "4" ...
 <br>
 
 {:.title}
-##  ..@ x       : num [1:1625049] 1 1 1 1 1 1 1 1 1 1 ...
+##   ..@ x       : num [1:1625049] 1 1 1 1 1 1 1 1 1 1 ...
 <br>
 
 {:.title}
-##  ..@ factors : list()
+##   ..@ factors : list()
 ```
 
 ```r
@@ -1012,403 +1012,403 @@ m1 <- xgb.train(data = dmodel, param, nrounds = 100,
 <br>
 
 {:.title}
-##[0]	model-mlogloss:2.453019	valid-mlogloss:2.463175
+## [0]	model-mlogloss:2.453019	valid-mlogloss:2.463175
 <br>
 
 {:.title}
-##[1]	model-mlogloss:2.429327	valid-mlogloss:2.448532
+## [1]	model-mlogloss:2.429327	valid-mlogloss:2.448532
 <br>
 
 {:.title}
-##[2]	model-mlogloss:2.409742	valid-mlogloss:2.437439
+## [2]	model-mlogloss:2.409742	valid-mlogloss:2.437439
 <br>
 
 {:.title}
-##[3]	model-mlogloss:2.392664	valid-mlogloss:2.428449
+## [3]	model-mlogloss:2.392664	valid-mlogloss:2.428449
 <br>
 
 {:.title}
-##[4]	model-mlogloss:2.377299	valid-mlogloss:2.420852
+## [4]	model-mlogloss:2.377299	valid-mlogloss:2.420852
 <br>
 
 {:.title}
-##[5]	model-mlogloss:2.363189	valid-mlogloss:2.414244
+## [5]	model-mlogloss:2.363189	valid-mlogloss:2.414244
 <br>
 
 {:.title}
-##[6]	model-mlogloss:2.350059	valid-mlogloss:2.408373
+## [6]	model-mlogloss:2.350059	valid-mlogloss:2.408373
 <br>
 
 {:.title}
-##[7]	model-mlogloss:2.337721	valid-mlogloss:2.403073
+## [7]	model-mlogloss:2.337721	valid-mlogloss:2.403073
 <br>
 
 {:.title}
-##[8]	model-mlogloss:2.326054	valid-mlogloss:2.398239
+## [8]	model-mlogloss:2.326054	valid-mlogloss:2.398239
 <br>
 
 {:.title}
-##[9]	model-mlogloss:2.314965	valid-mlogloss:2.393794
+## [9]	model-mlogloss:2.314965	valid-mlogloss:2.393794
 <br>
 
 {:.title}
-##[10]	model-mlogloss:2.304379	valid-mlogloss:2.389678
+## [10]	model-mlogloss:2.304379	valid-mlogloss:2.389678
 <br>
 
 {:.title}
-##[11]	model-mlogloss:2.294247	valid-mlogloss:2.385852
+## [11]	model-mlogloss:2.294247	valid-mlogloss:2.385852
 <br>
 
 {:.title}
-##[12]	model-mlogloss:2.284518	valid-mlogloss:2.382278
+## [12]	model-mlogloss:2.284518	valid-mlogloss:2.382278
 <br>
 
 {:.title}
-##[13]	model-mlogloss:2.275168	valid-mlogloss:2.378931
+## [13]	model-mlogloss:2.275168	valid-mlogloss:2.378931
 <br>
 
 {:.title}
-##[14]	model-mlogloss:2.266157	valid-mlogloss:2.375793
+## [14]	model-mlogloss:2.266157	valid-mlogloss:2.375793
 <br>
 
 {:.title}
-##[15]	model-mlogloss:2.257458	valid-mlogloss:2.372841
+## [15]	model-mlogloss:2.257458	valid-mlogloss:2.372841
 <br>
 
 {:.title}
-##[16]	model-mlogloss:2.249054	valid-mlogloss:2.370061
+## [16]	model-mlogloss:2.249054	valid-mlogloss:2.370061
 <br>
 
 {:.title}
-##[17]	model-mlogloss:2.240919	valid-mlogloss:2.367439
+## [17]	model-mlogloss:2.240919	valid-mlogloss:2.367439
 <br>
 
 {:.title}
-##[18]	model-mlogloss:2.233039	valid-mlogloss:2.364964
+## [18]	model-mlogloss:2.233039	valid-mlogloss:2.364964
 <br>
 
 {:.title}
-##[19]	model-mlogloss:2.225398	valid-mlogloss:2.362627
+## [19]	model-mlogloss:2.225398	valid-mlogloss:2.362627
 <br>
 
 {:.title}
-##[20]	model-mlogloss:2.217980	valid-mlogloss:2.360419
+## [20]	model-mlogloss:2.217980	valid-mlogloss:2.360419
 <br>
 
 {:.title}
-##[21]	model-mlogloss:2.210772	valid-mlogloss:2.358332
+## [21]	model-mlogloss:2.210772	valid-mlogloss:2.358332
 <br>
 
 {:.title}
-##[22]	model-mlogloss:2.203762	valid-mlogloss:2.356355
+## [22]	model-mlogloss:2.203762	valid-mlogloss:2.356355
 <br>
 
 {:.title}
-##[23]	model-mlogloss:2.196944	valid-mlogloss:2.354489
+## [23]	model-mlogloss:2.196944	valid-mlogloss:2.354489
 <br>
 
 {:.title}
-##[24]	model-mlogloss:2.190302	valid-mlogloss:2.352721
+## [24]	model-mlogloss:2.190302	valid-mlogloss:2.352721
 <br>
 
 {:.title}
-##[25]	model-mlogloss:2.183828	valid-mlogloss:2.351049
+## [25]	model-mlogloss:2.183828	valid-mlogloss:2.351049
 <br>
 
 {:.title}
-##[26]	model-mlogloss:2.177517	valid-mlogloss:2.349468
+## [26]	model-mlogloss:2.177517	valid-mlogloss:2.349468
 <br>
 
 {:.title}
-##[27]	model-mlogloss:2.171357	valid-mlogloss:2.347974
+## [27]	model-mlogloss:2.171357	valid-mlogloss:2.347974
 <br>
 
 {:.title}
-##[28]	model-mlogloss:2.165346	valid-mlogloss:2.346563
+## [28]	model-mlogloss:2.165346	valid-mlogloss:2.346563
 <br>
 
 {:.title}
-##[29]	model-mlogloss:2.159472	valid-mlogloss:2.345227
+## [29]	model-mlogloss:2.159472	valid-mlogloss:2.345227
 <br>
 
 {:.title}
-##[30]	model-mlogloss:2.153734	valid-mlogloss:2.343969
+## [30]	model-mlogloss:2.153734	valid-mlogloss:2.343969
 <br>
 
 {:.title}
-##[31]	model-mlogloss:2.148123	valid-mlogloss:2.342782
+## [31]	model-mlogloss:2.148123	valid-mlogloss:2.342782
 <br>
 
 {:.title}
-##[32]	model-mlogloss:2.142635	valid-mlogloss:2.341663
+## [32]	model-mlogloss:2.142635	valid-mlogloss:2.341663
 <br>
 
 {:.title}
-##[33]	model-mlogloss:2.137264	valid-mlogloss:2.340611
+## [33]	model-mlogloss:2.137264	valid-mlogloss:2.340611
 <br>
 
 {:.title}
-##[34]	model-mlogloss:2.132007	valid-mlogloss:2.339622
+## [34]	model-mlogloss:2.132007	valid-mlogloss:2.339622
 <br>
 
 {:.title}
-##[35]	model-mlogloss:2.126857	valid-mlogloss:2.338695
+## [35]	model-mlogloss:2.126857	valid-mlogloss:2.338695
 <br>
 
 {:.title}
-##[36]	model-mlogloss:2.121815	valid-mlogloss:2.337824
+## [36]	model-mlogloss:2.121815	valid-mlogloss:2.337824
 <br>
 
 {:.title}
-##[37]	model-mlogloss:2.116872	valid-mlogloss:2.337011
+## [37]	model-mlogloss:2.116872	valid-mlogloss:2.337011
 <br>
 
 {:.title}
-##[38]	model-mlogloss:2.112023	valid-mlogloss:2.336253
+## [38]	model-mlogloss:2.112023	valid-mlogloss:2.336253
 <br>
 
 {:.title}
-##[39]	model-mlogloss:2.107273	valid-mlogloss:2.335547
+## [39]	model-mlogloss:2.107273	valid-mlogloss:2.335547
 <br>
 
 {:.title}
-##[40]	model-mlogloss:2.102612	valid-mlogloss:2.334890
+## [40]	model-mlogloss:2.102612	valid-mlogloss:2.334890
 <br>
 
 {:.title}
-##[41]	model-mlogloss:2.098037	valid-mlogloss:2.334285
+## [41]	model-mlogloss:2.098037	valid-mlogloss:2.334285
 <br>
 
 {:.title}
-##[42]	model-mlogloss:2.093548	valid-mlogloss:2.333729
+## [42]	model-mlogloss:2.093548	valid-mlogloss:2.333729
 <br>
 
 {:.title}
-##[43]	model-mlogloss:2.089138	valid-mlogloss:2.333217
+## [43]	model-mlogloss:2.089138	valid-mlogloss:2.333217
 <br>
 
 {:.title}
-##[44]	model-mlogloss:2.084813	valid-mlogloss:2.332750
+## [44]	model-mlogloss:2.084813	valid-mlogloss:2.332750
 <br>
 
 {:.title}
-##[45]	model-mlogloss:2.080561	valid-mlogloss:2.332324
+## [45]	model-mlogloss:2.080561	valid-mlogloss:2.332324
 <br>
 
 {:.title}
-##[46]	model-mlogloss:2.076379	valid-mlogloss:2.331943
+## [46]	model-mlogloss:2.076379	valid-mlogloss:2.331943
 <br>
 
 {:.title}
-##[47]	model-mlogloss:2.072277	valid-mlogloss:2.331602
+## [47]	model-mlogloss:2.072277	valid-mlogloss:2.331602
 <br>
 
 {:.title}
-##[48]	model-mlogloss:2.068241	valid-mlogloss:2.331301
+## [48]	model-mlogloss:2.068241	valid-mlogloss:2.331301
 <br>
 
 {:.title}
-##[49]	model-mlogloss:2.064275	valid-mlogloss:2.331040
+## [49]	model-mlogloss:2.064275	valid-mlogloss:2.331040
 <br>
 
 {:.title}
-##[50]	model-mlogloss:2.060372	valid-mlogloss:2.330811
+## [50]	model-mlogloss:2.060372	valid-mlogloss:2.330811
 <br>
 
 {:.title}
-##[51]	model-mlogloss:2.056536	valid-mlogloss:2.330623
+## [51]	model-mlogloss:2.056536	valid-mlogloss:2.330623
 <br>
 
 {:.title}
-##[52]	model-mlogloss:2.052758	valid-mlogloss:2.330471
+## [52]	model-mlogloss:2.052758	valid-mlogloss:2.330471
 <br>
 
 {:.title}
-##[53]	model-mlogloss:2.049045	valid-mlogloss:2.330351
+## [53]	model-mlogloss:2.049045	valid-mlogloss:2.330351
 <br>
 
 {:.title}
-##[54]	model-mlogloss:2.045388	valid-mlogloss:2.330267
+## [54]	model-mlogloss:2.045388	valid-mlogloss:2.330267
 <br>
 
 {:.title}
-##[55]	model-mlogloss:2.041791	valid-mlogloss:2.330214
+## [55]	model-mlogloss:2.041791	valid-mlogloss:2.330214
 <br>
 
 {:.title}
-##[56]	model-mlogloss:2.038246	valid-mlogloss:2.330192
+## [56]	model-mlogloss:2.038246	valid-mlogloss:2.330192
 <br>
 
 {:.title}
-##[57]	model-mlogloss:2.034761	valid-mlogloss:2.330203
+## [57]	model-mlogloss:2.034761	valid-mlogloss:2.330203
 <br>
 
 {:.title}
-##[58]	model-mlogloss:2.031321	valid-mlogloss:2.330244
+## [58]	model-mlogloss:2.031321	valid-mlogloss:2.330244
 <br>
 
 {:.title}
-##[59]	model-mlogloss:2.027941	valid-mlogloss:2.330317
+## [59]	model-mlogloss:2.027941	valid-mlogloss:2.330317
 <br>
 
 {:.title}
-##[60]	model-mlogloss:2.024607	valid-mlogloss:2.330418
+## [60]	model-mlogloss:2.024607	valid-mlogloss:2.330418
 <br>
 
 {:.title}
-##[61]	model-mlogloss:2.021322	valid-mlogloss:2.330546
+## [61]	model-mlogloss:2.021322	valid-mlogloss:2.330546
 <br>
 
 {:.title}
-##[62]	model-mlogloss:2.018087	valid-mlogloss:2.330703
+## [62]	model-mlogloss:2.018087	valid-mlogloss:2.330703
 <br>
 
 {:.title}
-##[63]	model-mlogloss:2.014898	valid-mlogloss:2.330887
+## [63]	model-mlogloss:2.014898	valid-mlogloss:2.330887
 <br>
 
 {:.title}
-##[64]	model-mlogloss:2.011750	valid-mlogloss:2.331094
+## [64]	model-mlogloss:2.011750	valid-mlogloss:2.331094
 <br>
 
 {:.title}
-##[65]	model-mlogloss:2.008654	valid-mlogloss:2.331332
+## [65]	model-mlogloss:2.008654	valid-mlogloss:2.331332
 <br>
 
 {:.title}
-##[66]	model-mlogloss:2.005595	valid-mlogloss:2.331594
+## [66]	model-mlogloss:2.005595	valid-mlogloss:2.331594
 <br>
 
 {:.title}
-##[67]	model-mlogloss:2.002586	valid-mlogloss:2.331880
+## [67]	model-mlogloss:2.002586	valid-mlogloss:2.331880
 <br>
 
 {:.title}
-##[68]	model-mlogloss:1.999610	valid-mlogloss:2.332188
+## [68]	model-mlogloss:1.999610	valid-mlogloss:2.332188
 <br>
 
 {:.title}
-##[69]	model-mlogloss:1.996678	valid-mlogloss:2.332524
+## [69]	model-mlogloss:1.996678	valid-mlogloss:2.332524
 <br>
 
 {:.title}
-##[70]	model-mlogloss:1.993788	valid-mlogloss:2.332880
+## [70]	model-mlogloss:1.993788	valid-mlogloss:2.332880
 <br>
 
 {:.title}
-##[71]	model-mlogloss:1.990933	valid-mlogloss:2.333260
+## [71]	model-mlogloss:1.990933	valid-mlogloss:2.333260
 <br>
 
 {:.title}
-##[72]	model-mlogloss:1.988117	valid-mlogloss:2.333662
+## [72]	model-mlogloss:1.988117	valid-mlogloss:2.333662
 <br>
 
 {:.title}
-##[73]	model-mlogloss:1.985340	valid-mlogloss:2.334087
+## [73]	model-mlogloss:1.985340	valid-mlogloss:2.334087
 <br>
 
 {:.title}
-##[74]	model-mlogloss:1.982598	valid-mlogloss:2.334532
+## [74]	model-mlogloss:1.982598	valid-mlogloss:2.334532
 <br>
 
 {:.title}
-##[75]	model-mlogloss:1.979892	valid-mlogloss:2.335000
+## [75]	model-mlogloss:1.979892	valid-mlogloss:2.335000
 <br>
 
 {:.title}
-##[76]	model-mlogloss:1.977219	valid-mlogloss:2.335489
+## [76]	model-mlogloss:1.977219	valid-mlogloss:2.335489
 <br>
 
 {:.title}
-##[77]	model-mlogloss:1.974579	valid-mlogloss:2.335997
+## [77]	model-mlogloss:1.974579	valid-mlogloss:2.335997
 <br>
 
 {:.title}
-##[78]	model-mlogloss:1.971977	valid-mlogloss:2.336525
+## [78]	model-mlogloss:1.971977	valid-mlogloss:2.336525
 <br>
 
 {:.title}
-##[79]	model-mlogloss:1.969406	valid-mlogloss:2.337071
+## [79]	model-mlogloss:1.969406	valid-mlogloss:2.337071
 <br>
 
 {:.title}
-##[80]	model-mlogloss:1.966867	valid-mlogloss:2.337639
+## [80]	model-mlogloss:1.966867	valid-mlogloss:2.337639
 <br>
 
 {:.title}
-##[81]	model-mlogloss:1.964359	valid-mlogloss:2.338225
+## [81]	model-mlogloss:1.964359	valid-mlogloss:2.338225
 <br>
 
 {:.title}
-##[82]	model-mlogloss:1.961881	valid-mlogloss:2.338826
+## [82]	model-mlogloss:1.961881	valid-mlogloss:2.338826
 <br>
 
 {:.title}
-##[83]	model-mlogloss:1.959430	valid-mlogloss:2.339447
+## [83]	model-mlogloss:1.959430	valid-mlogloss:2.339447
 <br>
 
 {:.title}
-##[84]	model-mlogloss:1.957015	valid-mlogloss:2.340088
+## [84]	model-mlogloss:1.957015	valid-mlogloss:2.340088
 <br>
 
 {:.title}
-##[85]	model-mlogloss:1.954625	valid-mlogloss:2.340745
+## [85]	model-mlogloss:1.954625	valid-mlogloss:2.340745
 <br>
 
 {:.title}
-##[86]	model-mlogloss:1.952263	valid-mlogloss:2.341417
+## [86]	model-mlogloss:1.952263	valid-mlogloss:2.341417
 <br>
 
 {:.title}
-##[87]	model-mlogloss:1.949931	valid-mlogloss:2.342107
+## [87]	model-mlogloss:1.949931	valid-mlogloss:2.342107
 <br>
 
 {:.title}
-##[88]	model-mlogloss:1.947623	valid-mlogloss:2.342815
+## [88]	model-mlogloss:1.947623	valid-mlogloss:2.342815
 <br>
 
 {:.title}
-##[89]	model-mlogloss:1.945344	valid-mlogloss:2.343537
+## [89]	model-mlogloss:1.945344	valid-mlogloss:2.343537
 <br>
 
 {:.title}
-##[90]	model-mlogloss:1.943093	valid-mlogloss:2.344276
+## [90]	model-mlogloss:1.943093	valid-mlogloss:2.344276
 <br>
 
 {:.title}
-##[91]	model-mlogloss:1.940863	valid-mlogloss:2.345031
+## [91]	model-mlogloss:1.940863	valid-mlogloss:2.345031
 <br>
 
 {:.title}
-##[92]	model-mlogloss:1.938662	valid-mlogloss:2.345802
+## [92]	model-mlogloss:1.938662	valid-mlogloss:2.345802
 <br>
 
 {:.title}
-##[93]	model-mlogloss:1.936484	valid-mlogloss:2.346587
+## [93]	model-mlogloss:1.936484	valid-mlogloss:2.346587
 <br>
 
 {:.title}
-##[94]	model-mlogloss:1.934333	valid-mlogloss:2.347386
+## [94]	model-mlogloss:1.934333	valid-mlogloss:2.347386
 <br>
 
 {:.title}
-##[95]	model-mlogloss:1.932204	valid-mlogloss:2.348201
+## [95]	model-mlogloss:1.932204	valid-mlogloss:2.348201
 <br>
 
 {:.title}
-##[96]	model-mlogloss:1.930100	valid-mlogloss:2.349030
+## [96]	model-mlogloss:1.930100	valid-mlogloss:2.349030
 <br>
 
 {:.title}
-##[97]	model-mlogloss:1.928019	valid-mlogloss:2.349874
+## [97]	model-mlogloss:1.928019	valid-mlogloss:2.349874
 <br>
 
 {:.title}
-##[98]	model-mlogloss:1.925958	valid-mlogloss:2.350730
+## [98]	model-mlogloss:1.925958	valid-mlogloss:2.350730
 <br>
 
 {:.title}
-##[99]	model-mlogloss:1.923920	valid-mlogloss:2.351599
+## [99]	model-mlogloss:1.923920	valid-mlogloss:2.351599
 ```
 
 ```r
@@ -1442,225 +1442,225 @@ confusionMatrix(predicValues,Y[valid])
 <br>
 
 {:.title}
-##Confusion Matrix and Statistics
+## Confusion Matrix and Statistics
 <br>
 
 {:.title}
-##
+## 
 <br>
 
 {:.title}
-##          Reference
+##           Reference
 <br>
 
 {:.title}
-##Prediction   0   1   2   3   4   5   6   7   8   9  10  11
+## Prediction   0   1   2   3   4   5   6   7   8   9  10  11
 <br>
 
 {:.title}
-##        0  269  99  96 117 118  97 168 199  97 146 158 156
+##         0  269  99  96 117 118  97 168 199  97 146 158 156
 <br>
 
 {:.title}
-##        1  117 176  66 105 102  90 160 203 117 109 194 153
+##         1  117 176  66 105 102  90 160 203 117 109 194 153
 <br>
 
 {:.title}
-##        2   89  81 121  77  93  59 116 166 108 134 137 147
+##         2   89  81 121  77  93  59 116 166 108 134 137 147
 <br>
 
 {:.title}
-##        3  105  92  76 195 140  91 162 200 109 149 213 168
+##         3  105  92  76 195 140  91 162 200 109 149 213 168
 <br>
 
 {:.title}
-##        4  125 115  86 151 263 134 149 216 124 182 202 190
+##         4  125 115  86 151 263 134 149 216 124 182 202 190
 <br>
 
 {:.title}
-##        5   94  91  69 102 127 194 142 166  91 136 182 202
+##         5   94  91  69 102 127 194 142 166  91 136 182 202
 <br>
 
 {:.title}
-##        6  162 129  85 133 136 112 441 310 156 177 209 216
+##         6  162 129  85 133 136 112 441 310 156 177 209 216
 <br>
 
 {:.title}
-##        7  163 157 118 144 150 124 289 488 214 299 294 269
+##         7  163 157 118 144 150 124 289 488 214 299 294 269
 <br>
 
 {:.title}
-##        8  124  93  71  87 127  87 185 244 224 192 251 198
+##         8  124  93  71  87 127  87 185 244 224 192 251 198
 <br>
 
 {:.title}
-##        9  116 103  80 149 168 115 211 286 175 390 312 224
+##         9  116 103  80 149 168 115 211 286 175 390 312 224
 <br>
 
 {:.title}
-##        10 145 131  90 146 200 150 211 331 204 301 582 352
+##         10 145 131  90 146 200 150 211 331 204 301 582 352
 <br>
 
 {:.title}
-##        11 152 122 100 137 211 147 192 296 177 253 345 610
+##         11 152 122 100 137 211 147 192 296 177 253 345 610
 <br>
 
 {:.title}
-##
+## 
 <br>
 
 {:.title}
-##Overall Statistics
+## Overall Statistics
 <br>
 
 {:.title}
-##                                         
+##                                          
 <br>
 
 {:.title}
-##               Accuracy : 0.1604         
+##                Accuracy : 0.1604         
 <br>
 
 {:.title}
-##                 95% CI : (0.1558, 0.165)
+##                  95% CI : (0.1558, 0.165)
 <br>
 
 {:.title}
-##    No Information Rate : 0.126          
+##     No Information Rate : 0.126          
 <br>
 
 {:.title}
-##    P-Value [Acc > NIR] : < 2.2e-16      
+##     P-Value [Acc > NIR] : < 2.2e-16      
 <br>
 
 {:.title}
-##                                         
+##                                          
 <br>
 
 {:.title}
-##                  Kappa : 0.0775         
+##                   Kappa : 0.0775         
 <br>
 
 {:.title}
-## Mcnemar's Test P-Value : 7.119e-14      
+##  Mcnemar's Test P-Value : 7.119e-14      
 <br>
 
 {:.title}
-##
+## 
 <br>
 
 {:.title}
-##Statistics by Class:
+## Statistics by Class:
 <br>
 
 {:.title}
-##
+## 
 <br>
 
 {:.title}
-##                     Class: 0 Class: 1 Class: 2 Class: 3 Class: 4 Class: 5
+##                      Class: 0 Class: 1 Class: 2 Class: 3 Class: 4 Class: 5
 <br>
 
 {:.title}
-##Sensitivity           0.16195 0.126710  0.11437 0.126377  0.14332 0.138571
+## Sensitivity           0.16195 0.126710  0.11437 0.126377  0.14332 0.138571
 <br>
 
 {:.title}
-##Specificity           0.93687 0.939112  0.94883 0.934854  0.92661 0.939686
+## Specificity           0.93687 0.939112  0.94883 0.934854  0.92661 0.939686
 <br>
 
 {:.title}
-##Pos Pred Value        0.15640 0.110553  0.09111 0.114706  0.13578 0.121554
+## Pos Pred Value        0.15640 0.110553  0.09111 0.114706  0.13578 0.121554
 <br>
 
 {:.title}
-##Neg Pred Value        0.93928 0.947382  0.95981 0.941251  0.93077 0.947677
+## Neg Pred Value        0.93928 0.947382  0.95981 0.941251  0.93077 0.947677
 <br>
 
 {:.title}
-##Prevalence            0.06740 0.056360  0.04293 0.062609  0.07446 0.056807
+## Prevalence            0.06740 0.056360  0.04293 0.062609  0.07446 0.056807
 <br>
 
 {:.title}
-##Detection Rate        0.01091 0.007141  0.00491 0.007912  0.01067 0.007872
+## Detection Rate        0.01091 0.007141  0.00491 0.007912  0.01067 0.007872
 <br>
 
 {:.title}
-##Detection Prevalence  0.06979 0.064597  0.05389 0.068980  0.07860 0.064760
+## Detection Prevalence  0.06979 0.064597  0.05389 0.068980  0.07860 0.064760
 <br>
 
 {:.title}
-##Balanced Accuracy     0.54941 0.532911  0.53160 0.530616  0.53497 0.539129
+## Balanced Accuracy     0.54941 0.532911  0.53160 0.530616  0.53497 0.539129
 <br>
 
 {:.title}
-##                     Class: 6 Class: 7 Class: 8 Class: 9 Class: 10
+##                      Class: 6 Class: 7 Class: 8 Class: 9 Class: 10
 <br>
 
 {:.title}
-##Sensitivity           0.18178   0.1572 0.124722  0.15802   0.18902
+## Sensitivity           0.18178   0.1572 0.124722  0.15802   0.18902
 <br>
 
 {:.title}
-##Specificity           0.91786   0.8969 0.927393  0.91257   0.89516
+## Specificity           0.91786   0.8969 0.927393  0.91257   0.89516
 <br>
 
 {:.title}
-##Pos Pred Value        0.19462   0.1801 0.118959  0.16745   0.20471
+## Pos Pred Value        0.19462   0.1801 0.118959  0.16745   0.20471
 <br>
 
 {:.title}
-##Neg Pred Value        0.91130   0.8807 0.930938  0.90688   0.88547
+## Neg Pred Value        0.91130   0.8807 0.930938  0.90688   0.88547
 <br>
 
 {:.title}
-##Prevalence            0.09844   0.1260 0.072875  0.10014   0.12493
+## Prevalence            0.09844   0.1260 0.072875  0.10014   0.12493
 <br>
 
 {:.title}
-##Detection Rate        0.01789   0.0198 0.009089  0.01582   0.02362
+## Detection Rate        0.01789   0.0198 0.009089  0.01582   0.02362
 <br>
 
 {:.title}
-##Detection Prevalence  0.09195   0.1099 0.076405  0.09450   0.11536
+## Detection Prevalence  0.09195   0.1099 0.076405  0.09450   0.11536
 <br>
 
 {:.title}
-##Balanced Accuracy     0.54982   0.5270 0.526057  0.53529   0.54209
+## Balanced Accuracy     0.54982   0.5270 0.526057  0.53529   0.54209
 <br>
 
 {:.title}
-##                     Class: 11
+##                      Class: 11
 <br>
 
 {:.title}
-##Sensitivity            0.21144
+## Sensitivity            0.21144
 <br>
 
 {:.title}
-##Specificity            0.90202
+## Specificity            0.90202
 <br>
 
 {:.title}
-##Pos Pred Value         0.22247
+## Pos Pred Value         0.22247
 <br>
 
 {:.title}
-##Neg Pred Value         0.89613
+## Neg Pred Value         0.89613
 <br>
 
 {:.title}
-##Prevalence             0.11706
+## Prevalence             0.11706
 <br>
 
 {:.title}
-##Detection Rate         0.02475
+## Detection Rate         0.02475
 <br>
 
 {:.title}
-##Detection Prevalence   0.11126
+## Detection Prevalence   0.11126
 <br>
 
 {:.title}
-##Balanced Accuracy      0.55673
+## Balanced Accuracy      0.55673
 ```

@@ -12,7 +12,7 @@ Revealjs presentation available in [GitPitch](https://gitpitch.com/cristianpb/Pr
 <br>
 
 {:.title}
-##Image preprocessing
+## Image preprocessing
 
 - Many traditional computer vision image classification algorithms follow this pipeline
 - Deep Learning based algorithms bypass the feature extraction step completely
@@ -20,10 +20,10 @@ Revealjs presentation available in [GitPitch](https://gitpitch.com/cristianpb/Pr
 <br>
 
 {:.title}
-##Preprocessing 
+## Preprocessing 
 
 {:.subtitle}
-###Deskew
+### Deskew
 
 Align an image to a reference assits the classification algorithm 
 [1](http://docs.opencv.org/trunk/dd/d3b/tutorial_py_svm_opencv.html),
@@ -58,7 +58,7 @@ two central moments ( mu11 / mu02 ). The skewness thus calculated can be used
 in calculating an affine transform that deskews the image.
 
 {:.subtitle}
-###Histogram equalization
+### Histogram equalization
 
 Increase image contrast using the image's histogram.
 
@@ -67,7 +67,7 @@ Increase image contrast using the image's histogram.
 <br>
 
 {:.title}
-##Conclusions
+## Conclusions
 
 - Image preprocessing can significantly increase the performance of a
   classification algorithm.

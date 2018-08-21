@@ -9,7 +9,7 @@ categories: ['withings', 'r', 'data']
 <br>
 
 {:.title}
-##Introduction
+## Introduction
 
 Last year my friends gave me a [withings
 steel](https://www.withings.com/us/en/products/activite-steel) as a birthday
@@ -25,7 +25,7 @@ because I think it is easy to get beautiful and informative graphs.
 <br>
 
 {:.title}
-##Library import 
+## Library import 
 
 I used the following libraries:
 
@@ -40,7 +40,7 @@ theme_set(theme_gray(base_size = 19))
 <br>
 
 {:.title}
-##Sleeping data
+## Sleeping data
 
 The data can easily be exported from [their
 website](https://healthmate.withings.com/).  The sleeping data contains the
@@ -112,7 +112,7 @@ times. Still it is very cheap to replace on ebay.
 <br>
 
 {:.title}
-##Activity time
+## Activity time
 
 Regarding the activity time. I have the information about the number of steps
 that I have done each day.  A number of calories and distance is calculated
@@ -129,27 +129,27 @@ str(activities)
 <br>
 
 {:.title}
-##'data.frame':	347 obs. of  5 variables:
+## 'data.frame':	347 obs. of  5 variables:
 <br>
 
 {:.title}
-## $ Date           : POSIXlt, format: "2017-04-18" "2017-04-17" ...
+##  $ Date           : POSIXlt, format: "2017-04-18" "2017-04-17" ...
 <br>
 
 {:.title}
-## $ Steps          : int  2208 5206 7287 5455 5212 5367 4577 5407 4930 16677 ...
+##  $ Steps          : int  2208 5206 7287 5455 5212 5367 4577 5407 4930 16677 ...
 <br>
 
 {:.title}
-## $ Distance..m.   : num  1.8 5.44 6.89 4.37 4.22 4.35 3.71 4.35 3.93 12.8 ...
+##  $ Distance..m.   : num  1.8 5.44 6.89 4.37 4.22 4.35 3.71 4.35 3.93 12.8 ...
 <br>
 
 {:.title}
-## $ Elevation..m.  : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ Elevation..m.  : int  0 0 0 0 0 0 0 0 0 0 ...
 <br>
 
 {:.title}
-## $ Active.calories: int  64 308 305 156 150 155 132 155 140 458 ...
+##  $ Active.calories: int  64 308 305 156 150 155 132 155 140 458 ...
 ```
 
 ```r

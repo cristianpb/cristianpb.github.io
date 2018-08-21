@@ -15,7 +15,7 @@ I wanted to run a marathon at least once in my life, then I chose to do the
 <br>
 
 {:.title}
-##Running calendar
+## Running calendar
 
 I began my preparation program 3 months before the race. I started running regularly the first week of July. Mostly small distances on weekdays and longest ones during the weekend. I wasn't strict at the beginning, during the month of July but, then I my training became more regular. 
 
@@ -24,7 +24,7 @@ I began my preparation program 3 months before the race. I started running regul
 <br>
 
 {:.title}
-##Daily behaviour
+## Daily behaviour
 
 From my daily analysis I can say that I prefer to run mostly on Tuesday and that I barely run on Fridays. Saturdays runs are the longest ones, with an average of 20.4 km. Regarding speed, I run slower on Saturdays, because distance are longer.
 
@@ -33,7 +33,7 @@ From my daily analysis I can say that I prefer to run mostly on Tuesday and that
 <br>
 
 {:.title}
-##Weekly behaviour
+## Weekly behaviour
 
 It is nice to see the weekly progress, running 22 kilometres at the beginning of July and reaching 46 kilometres on September. In average, I train 3 times a week.
 
@@ -42,7 +42,7 @@ It is nice to see the weekly progress, running 22 kilometres at the beginning of
 <br>
 
 {:.title}
-##Monthly behaviour
+## Monthly behaviour
 
 There is also an monthly progress, being September my best month with 164 km and 14 training sessions. Almost half of the month.
 
@@ -52,7 +52,7 @@ There is also an monthly progress, being September my best month with 164 km and
 <br>
 
 {:.title}
-##Marathon time prediction
+## Marathon time prediction
 
 It is possible to estimate the elapsed the time that I would spend to cover the 42.195 km of the marathon. I applied a simple linear regression using the cover distance and the climbed altitude. 
 
@@ -79,7 +79,7 @@ print('Distance: {} Km, Speed: {} Km/h, Time: {} hours \n'.format(X_test[0][0], 
 <br>
 
 {:.title}
-##Average speed and length per training
+## Average speed and length per training
 
 My average speed varies depending on the number of kilometres that I run. For long distances, the average was near 11.2 km/hour. Meanwhile, for shorter distances I was able to reach 12.7 km/hours during 8 kilometres.
 
@@ -88,7 +88,7 @@ My average speed varies depending on the number of kilometres that I run. For lo
 <br>
 
 {:.title}
-##Data analysis
+## Data analysis
 
 The python code used to explore the data can be found inside this [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/runner-up/04-Multiple_Trainning.ipynb).
 

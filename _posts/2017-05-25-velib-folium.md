@@ -14,7 +14,7 @@ We will use `python` in this post to obtain some insights about the rental syste
 <br>
 
 {:.title}
-##Obtaining the data
+## Obtaining the data
 
 ```python
 import requests
@@ -52,7 +52,7 @@ velibs = velibs[velibs.status == 'OPEN']
 <br>
 
 {:.title}
-##Number of bike stands per _arrondisement_
+## Number of bike stands per _arrondisement_
 
 The number of arrondisement can be obtained from the address of station. We
 will focus only on the stations that are in Paris, which means that has a
@@ -98,7 +98,7 @@ other. It is mainly because it is bigger than other arrondisements.
 <br>
 
 {:.title}
-##Available bikes 
+## Available bikes 
 
 We can normalize the number of available bikes using the total number of bikes for each station. This give information if the station is relatively empty or not.
 We can plot this information directly to a map using the coordinates of the station and a function that colours the station to red if the station is empty and green if the station is full.
@@ -137,7 +137,7 @@ they tend to go to the inner side of Paris.
 <br>
 
 {:.title}
-##Bike utilisation by hour
+## Bike utilisation by hour
 
 Using an scheduler [cron](https://en.wikipedia.org/wiki/Cron) task, we can
 obtain information about the evolution of the bike utilisation. For this case,

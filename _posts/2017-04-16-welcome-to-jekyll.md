@@ -34,7 +34,7 @@ Then, I can modify the footer of my page with the file `_includes/footer.html`,
 add new icons and accounts.
 
 {:.subtitle}
-###Google analytics
+### Google analytics
 
 I can also use [Google
 analytics](https://www.google.com/analytics/#?modal_active=none) to track the
@@ -52,7 +52,7 @@ google_analytics: UA—XXXXXXXX-X
 ```
 
 {:.subtitle}
-###Disqus commments
+### Disqus commments
 
 Finally I can add comments inside the blog using [disqus comment
 system](https://disqus.com/features/).  I create an account at
