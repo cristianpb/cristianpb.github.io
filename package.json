@@ -18,10 +18,6 @@
   },
   "homepage": "https://github.com/cristianpb/cristianpb.github.io#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.2.0",
-    "bulma": "^0.7.1",
-    "bulma-calendar": "^4.0.1",
-    "bulma-timeline": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-image": "^4.3.0",
     "gulp-minify-css": "^1.2.4",

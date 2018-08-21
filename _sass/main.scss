@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-
 @import 'variables';
-///@import "bulma";
-@import "../node_modules/bulma/bulma";
-@import "../node_modules/bulma-timeline/src/sass/index";
-//@import "../node_modules/bulma-timeline/dist/css/bulma-timeline";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-//@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
-//@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "bulma/bulma";
+@import "bulma-timeline/src/sass/index";

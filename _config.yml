@@ -54,7 +54,6 @@ plugins:
   - jekyll-feed
   - jemoji
 exclude:
-  - _posts_original
   - drafts
   - CNAME
   - Gemfile
@@ -62,6 +61,8 @@ exclude:
   - README.md
   - node_modules
   - gulpfile.js
+  - package.json
+  - package-lock.json
  
 defaults:
     - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title'}}

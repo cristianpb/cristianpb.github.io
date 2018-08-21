@@ -43,12 +43,13 @@ gulp.task('sass', function () {
 gulp.task('purify', ['sass'],  function() {
   return gulp.src('./_includes/main.css')
     .pipe(purify(['_includes/**.html', './_layouts/**.html', './_pages/**.html', './blog/**.html'], {info: true}))
+    .pipe(replace(/!important/gm, ''))
     .pipe(minifyCss())
     .pipe(gulp.dest('./_includes/purify'));
 });
 
 gulp.task("watch", ["purify", "sass"], function() {
-  gulp.watch("./_sass/main.scss", ["sass", "purify"])
+  gulp.watch(["./_sass/main.scss", "./_sass/_variables.scss"], ["sass", "purify"])
   gulp.watch(["./_pages/**", "./_layouts/**"], ["purify"]);
 })
 

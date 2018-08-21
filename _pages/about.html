@@ -2,12 +2,23 @@
 layout: default
 title: About
 permalink: /about
-avatar: true
+avatar: false
 navigation: true
-leaflet: true
-visjs: true
+leaflet: false
+visjs: false
 
 ---
+
+<section class="hero is-primary is-small">
+  <div class="hero-body is-centered">
+    <div class="container">
+      <h1 class="title">
+        {{ site.title }}
+      </h1>
+    </div>
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container">
@@ -37,7 +48,7 @@ visjs: true
       </header>
       <div class="timeline-item">
         <div class="timeline-marker is-image is-32x32">
-          <img src="http://bulma.io/images/placeholders/32x32.png">
+          <amp-img src="http://bulma.io/images/placeholders/32x32.png" width="32" height="32"></amp-img>
         </div>
         <div class="timeline-content">
           <p class="heading">École Nationale Supérieure des Mines de Paris</p>
@@ -79,46 +90,104 @@ visjs: true
 
 <section class="section">
   <div class="container">
-    <h2 class="title"> :star: Prix</h2>
-    <ul>
-      <li><strong>2015</strong> <a href="http://www.robertorocca.org/en/fellowships/fellows15.aspx" target="_blank">Roberto Rocca Fellowship</a>. Awarded to exceptional university graduates from developing countries to help fund studies towards the Ph.D. degree at a university outside his home country
-      </li>
-      <li><strong>2014</strong> <a href="http://artsetsciences.doc-up.info/archives/edition-2014/" target="_blank">Arts et Sciences</a>. Artistic contest related to science, organized by Doctoral association of Sorbonne University and UPMC.  </li>
-    </ul>
+    <h2 class="title"> 🌟  Prix</h2>
+
+    <div class="columns is-centered">
+
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image is-centered">
+            <figure class="image">
+              <amp-img src="/assets/img/about/roberto_rocca.jpg" width="434" height="244" layout="responsive"></amp-img>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <a class="title is-4" href="http://www.robertorocca.org/en/fellowships/fellows15.aspx" target="_blank">Roberto Rocca Fellowship</a>
+                <p class="subtitle is-6">2015</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Awarded to exceptional university graduates from developing countries
+              to help fund studies towards the Ph.D. degree at a university outside
+              his home country
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <amp-img src="/assets/img/about/arts.jpg" width="450" height="300" layout="responsive"></amp-img>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <a class="title is-4" href="http://artsetsciences.doc-up.info/archives/edition-2014/" target="_blank">Arts et Sciences</a>.
+                <p class="subtitle is-6">2014</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Artistic contest related to science, organized by Doctoral
+              association of Sorbonne University and UPMC.
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <section class="section hero is-primary">
   <div class="container">
     <h2 class="title">
-      :microphone: Communications
+      🎤 Communications
     </h2>
 
+    <div class="content">
     <ul>
       <li>2016	Oral presentation <a href="http://eurocorr.org/EFC+Awards+and+Prizes-p-71440.html" target="_blank">best presentation</a> in WP Nuclear Corrosion EUROCORR 2016
         Montpelier, France. "Pitting corrosion modelling by means of a stochastic cellular automata based model"
       </li>
       <li>
         2016	Oral presentation CORROSION 2016
-        Vancouver, Canada. "[Corrosion modeling using 3D probabilistic cellular automata based model](http://corrosionfp.epubxp.com/i/640839-2016/51)"
+        Vancouver, Canada. <p><a href="http://corrosionfp.epubxp.com/i/640839-2016/51">Corrosion modeling using 3D probabilistic cellular automata based model</a></p>
       </li>
       <li>
         2015	Poster EUROCORR 2015
         Graz, Austria.	"Corrosion modelling by cellular automata"
       </li>
       <li>
-        2014	Présentation orale ACRI 2014
+        2014	Oral presentation ACRI 2014
         Krakow, Poland. "Overview of cellular automaton models for corrosion"
       </li>
     </ul>
+      
+    </div>
   </div>
 </section>
 
 
 <section class="section">
   <div class="container">
-    <h2 class="title"> :books: Publications</h2>
-    <p>Citation of my articles migth be found at Google Scholar and Research Gate.</p>
+    <h2 class="title"> 📚 Publications</h2>
+    <p>Citations of my articles might be found at <a class="icon" href="{{ site.author.google }}">
+          <i class="fab fa-google"></i>
+        </a> Google Scholar and 
+        <a class="icon" href="{{ site.author.researchgate }}">
+          <i class="fab fa-researchgate"></i>
+        </a> Research Gate.
+        
+    </p>
     <br></br>
     <h2 class="subtitle" id="phdthesis">PhD Thesis</h2>
     
@@ -176,14 +245,9 @@ visjs: true
             <span>{{ article.title }}</span>
           </p>
         </div>
-        <nav class="level is-mobile">
-          <div class="level-left">
-            <a class="level-item">
-              <a class="icon is-small" href="{{ article.url }}"><i class="far 
-              fa-file-pdf"></i></a>
-            </a>
-          </div>
-        </nav>
+      </div>
+      <div class="media-right">
+        <a class="icon is-small" href="{{ article.url }}"><i class="far fa-file-pdf fa-2x"></i></a>
       </div>
     </article>
       
@@ -214,14 +278,9 @@ visjs: true
             <span>{{ article.title }}</span>
           </p>
         </div>
-        <nav class="level is-mobile">
-          <div class="level-left">
-            <a class="level-item">
-              <a class="icon is-small" href="{{ article.url }}"><i class="far 
-              fa-file-pdf"></i></a>
-            </a>
-          </div>
-        </nav>
+      </div>
+      <div class="media-right">
+        <a class="icon is-small" href="{{ article.url }}"><i class="far fa-file-pdf fa-2x"></i></a>
       </div>
     </article>
       
