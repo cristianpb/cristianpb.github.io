@@ -11,32 +11,20 @@ chartjs: true
 
 Code inside [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/withings/01-Withings.ipynb).
 
-<br>
-
-{:.title}
 ## Calendar heatmap of steps
 
 <div id="cal-heatmap"></div>
 <button id="example-c-PreviousDomain-selector" style="height: 20; width: 20px; margin-top: 10px;margin-bottom: 10px;" class="btn"><i class="icon icon-chevron-left"></i>< </button>
 <button id="example-c-NextDomain-selector" style="height: 25; width: 20px; margin-bottom: 10px;" class="btn"><i class="icon icon-chevron-right"></i>></button>
 
-<br>
-
-{:.title}
 ## Daily steps 
 
 <canvas id="scatterChart" width="400" height="200"></canvas>
 
-<br>
-
-{:.title}
 ## Steps per day
 
 <canvas id="barChart" width="400" height="200"></canvas>
 
-<br>
-
-{:.title}
 ## Steps per month
 
 <canvas id="barChartMonth" width="400" height="200"></canvas>

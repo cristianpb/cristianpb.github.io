@@ -17,9 +17,6 @@ lacks of a global vision, like the one that that we can have in a dashboard.
 This article will explains the components of a responsive dashboard system and 
 how to easily deploy it using docker technology.
 
-<br>
-
-{:.title}
 ## Introduction
 
 Let's start with the presentation of the components of the stack.
@@ -42,9 +39,6 @@ source.
 Each component of the stack is saved as a docker instance using a dockerfile
 image and they are build and launched using docker-compose program.
 
-<br>
-
-{:.title}
 ## Data collection
 
 There is no official dockerfile image available for collectd. The closest
@@ -78,9 +72,6 @@ LoadPlugin network
 This line uses a collectd plugin to send data to the address
 `127.0.0.1:25826/udp`, where we have to listen to save the data.
 
-<br>
-
-{:.title}
 ## Saving the data
 
 Influxdb has an official [dockerfile
@@ -123,9 +114,6 @@ The connection with collectd is done inside the configuration file
 
 The `types.db` file defines the collectd data source specification, which influxdb needs this file to understand collectd’s data.
 
-<br>
-
-{:.title}
 ## Dashboard monitoring
 
 We use the grafana docker image 5.1 which comes with the possibility to include
@@ -159,9 +147,6 @@ The grafana interface can be reached at port 3000. The default username is admin
 
 Grafana has many ways to be customized and also an [explicit documentation](http://docs.grafana.org/guides/getting_started/).
 
-<br>
-
-{:.title}
 ## Conclusion
 
 The main motivation of this project was to monitor AWS instances. Which can be

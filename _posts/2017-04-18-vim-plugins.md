@@ -14,9 +14,6 @@ It also induce motion to be done without neither the [arrow keys](https://en.wik
 It is simple and it is ubiquitous in most Unix operating systems. Still it is very powerful and can be highly customized with plugings.
 I will present my vim workflow in the following sections.
 
-<br>
-
-{:.title}
 ## Plugin manager
 
 I use [vundle](https://github.com/VundleVim/Vundle.vim) as a plugin manager. I
@@ -27,9 +24,6 @@ install/update/search/remove/clean plugins.
 
 All that with a single keypress with an interactive mode. In addition it regenerates the tags automatically after installing and updating, as a difference from pathogen for example.
 
-<br>
-
-{:.title}
 ## Navigation
 
 I use [nerd tree](https://github.com/scrooloose/nerdtree) to explore my file system and open files from inside vim. It performs simple filesystem operations, saving bookmarks, etc. I like to have `F3` as a shortcut for this plugin and also to ignore python `*.pyc` files.
@@ -54,9 +48,6 @@ nmap <F6> :TagbarToggle<CR>
 
 ![](https://camo.githubusercontent.com/fc85311154723793776aed28488befdfaab36c42/68747470733a2f2f692e696d6775722e636f6d2f5366394c7332722e706e67)
 
-<br>
-
-{:.title}
 ## Customization 
 
 I use the combo [airline](https://github.com/bling/vim-airline), [tmuxline](https://github.com/edkolev/tmuxline.vim) and [promptline](https://github.com/edkolev/promptline.vim) to put the same theme on the vim status bar, my tmux bar and my promptline.
@@ -98,9 +89,6 @@ let g:promptline_preset = {
 
 ![](https://github.com/vim-airline/vim-airline/wiki/screenshots/demo.gif)
 
-<br>
-
-{:.title}
 ## Git tools
 
 I use [fugitive](https://github.com/tpope/vim-fugitive) to use git inside vim, it is consider one of the best git wrapers of all time. It allows to see the changes of each file from different version, the file logs, the changes using `git blame` and from my personal point of view, the merge conflict resolution are easy to solve using fugitive. I have the default options of the pluging. The only thing that I have change is that I prefer to have a vertical split when dealing with merge conflicts.
@@ -122,9 +110,6 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 ![](https://raw.github.com/airblade/vim-gitgutter/master/screenshot.png)
 
-<br>
-
-{:.title}
 ## Syntax checking
 
 I use [Syntastic](https://github.com/scrooloose/syntastic) the syntax checker. It supports all the programming languages that I know. For python it has support of flake8, pyflakes and [pep8](https://www.python.org/dev/peps/pep-0008/) in general. I have this plugin in passive mode so that it doesn't bother me when I am coding. I use the shortcut `,sc` to activate it. It is also possible to customize the visual appareance.
@@ -143,9 +128,6 @@ let g:syntastic_check_on_wq              = 0
 
 ![](https://github.com/vim-syntastic/syntastic/raw/master/_assets/screenshot_1.png)
 
-<br>
-
-{:.title}
 ## Writting tools
 
 I use [easy aligns](https://github.com/junegunn/vim-easy-align) plugin to create text tables, align equations and assignments. I select the text that I want to align, then I use the shortcut `<Enter>` to activate the pulgin and then I write the character where I want to align.

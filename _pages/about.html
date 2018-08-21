@@ -156,20 +156,77 @@ visjs: true
 
 
     <h2 class="subtitle" id="journalarticles">Journal Articles</h2>
-    <ul>
-      <li><p>Mariem Zenkri, Dung di Caprio, <strong>Cristian Felipe Pérez-Brokate</strong>, Damien Féron, Jacques de Lamare, <a href="https://arxiv.org/abs/1710.01545">Contribution of cellular automata to the understanding of corrosion phenomena</a>, Condensed Matter Physics, vol. 20, (Oct. 2017), pp. 1-13</p></li>
-      <li><p><strong>Cristian Felipe Pérez-Brokate</strong>, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, <a href="http://dx.doi.org/10.1080/1478422X.2017.1300748">Probabilistic cellular automata model of generalized corrosion</a>, Corrosion Engineering, Science and Technology, vol. 52, (Aug. 2017), pp. 186-193</p></li>
-      <li><p><strong>Cristian Felipe Pérez-Brokate</strong>, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, <a href="http://dx.doi.org/10.1080/1478422X.2017.1311074">Pitting corrosion modelling by means of a stochastic cellular automata-based model</a>, Corrosion Engineering, Science and Technology, vol. 52, (Apr. 2017), pp. 1-6</p></li>
-      <li><p><strong>Cristian Felipe Pérez-Brokate</strong>, Dung di Caprio, Damien Féron, Jacques de Lamare, Annie Chaussé, <a href="http://www.sciencedirect.com/science/article/pii/S0010938X16301469">Three dimensional discrete stochastic model of occluded corrosion cell</a>, Corrosion Science, vol. 111, (Oct. 2016) pp. 230–241</p></li>
-      <li><p><strong>Cristian Felipe Pérez-Brokate</strong>, Dung di Caprio, Éric Mahé, Damien Féron, Jacques de Lamare, <a href="http://www.sciencedirect.com/science/article/pii/S1877750315300107">Cyclic voltammetry simulations with cellular automata</a>, Journal of Computational Science, vol. 11, (Nov. 2015) pp. 269–278</p></li>
-      <li><p>J. X. Zou, <strong>C. F. Pérez-Brokate</strong>, R. Arruffat, B. Bolle, J. J. Fundenberger, X. Q. Zeng, T. Grosdidier, and W. J. Ding, <a href="http://www.sciencedirect.com/science/article/pii/S0921510713004224#">Nanostructured bulk Mg + MgO composite synthesized through arc plasma evaporation and high pressure torsion for H-storage application</a>, Materials Science and Engineering: B, vol. 183, (Apr. 2014), pp. 1–5</p></li>
-    </ul>
-    <br></br>
+
+    {% for article in site.data.about.articles %}
+    <div class="box">
+    
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <amp-img src="{{ article.img }}" width="64" height="90"></amp-img>
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            {{ article.authors }}
+            <br>
+            <small>{{ article.journal }}</small>  ({{ article.date }})
+            <br>
+            <span>{{ article.title }}</span>
+          </p>
+        </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <a class="level-item">
+              <a class="icon is-small" href="{{ article.url }}"><i class="far 
+              fa-file-pdf"></i></a>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </article>
+      
+    </div>
+    {% endfor %}
 
     <h2 class="subtitle" id="conferenceproceedings">Conference proceedings</h2>
-    <ul>
-      <li><p><strong>C. F. Pérez-Brokate</strong>, D. di Caprio, D. Féron, J. D. Lamare, and A. Chaussé, <a href="http://link.springer.com/chapter/10.1007/978-3-319-11520-7_20">Overview of Cellular Automaton Models for Corrosion</a>, in Cellular Automata, J. Wąs, G. C. Sirakoulis, and S. Bandini, Eds. Springer International Publishing, 2014, pp. 187–196.</p></li>
-      <li><p>M. Bellet, <strong>C. F. Pérez-Brokate</strong>, P. Hubsch, <a href="https://www.researchgate.net/profile/Michel_Bellet/publication/263446224_3D_finite_element_thermomechanical_modelling_of_the_primary_cooling_for_beam-blanks_continuous_casting/links/0c96053ad975d9afa6000000.pdf">3D finite element thermomechanical modelling of the primary cooling for beam-blanks continuous casting</a>, in 8th European Continuous Casting Conference, 2014, pp. 1220.</p></li>
-    </ul>
+
+
+    {% for article in site.data.about.conference_proceedings %}
+    <div class="box">
+    
+    <article class="media">
+      {% if article.img %}
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <amp-img src="{{ article.img }}" width="64" height="90"></amp-img>
+        </p>
+      </figure>
+      {% endif %}
+      <div class="media-content">
+        <div class="content">
+          <p>
+            {{ article.authors }}
+            <br>
+            <small>{{ article.journal }}</small>  ({{ article.date }})
+            <br>
+            <span>{{ article.title }}</span>
+          </p>
+        </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <a class="level-item">
+              <a class="icon is-small" href="{{ article.url }}"><i class="far 
+              fa-file-pdf"></i></a>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </article>
+      
+    </div>
+    {% endfor %}
+
   </div>
 </section>

@@ -4,8 +4,7 @@ avatar: true
 permalink: /
 ---
 <section class="section">
-<div class="container">
-
+<div class="container" id="last_articles">
 <div class="columns is-desktop">
 {% for post in site.posts limit: 3 %}
 <div class="column is-one-third">
@@ -21,7 +20,8 @@ permalink: /
     <div class="media">
       <div class="media-left">
         <figure class="image is-48x48">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+          <amp-img src="https://bulma.io/images/placeholders/96x96.png" 
+                   alt="Placeholder image" width="48" height="48"></amp-img>
         </figure>
       </div>
       <div class="media-content">

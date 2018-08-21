@@ -22,9 +22,6 @@ The visualization have to main files:
   * **graph.js** that contains all javascript that runs the interactive components
 
 
-<br>
-
-{:.title}
 ## Front
 
 I used [bulma.io](https://bulma.io/) css framework to set the differents charts
@@ -61,9 +58,6 @@ tile is-ancestor
 
 
 
-<br>
-
-{:.title}
 ## Back 
 
 The `div` elements that are inside the tiles are created using the `graph.js`
@@ -86,9 +80,6 @@ the other dimensions. In addition, the Leaflet map is connected to the charts
 so when one chart is filtered, the results are shown in the heatmap.
 
 
-<br>
-
-{:.title}
 ## Conclusion
 
 The final interactive visualization is available [in this block
