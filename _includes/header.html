@@ -1,38 +1,64 @@
 {% include sidebar.html %}
-<header class="site-header{% if include.avatar %} header-nav{% endif %}">
-    {% unless include.avatar %}<div class="wrapper"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>{% endunless %}
+<nav class="navbar is-fixed-top is-primary">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <a class="navbar-item" href="/">
+        <amp-img src="{{ site.baseurl | append:'/images/resize_photo.png'}}" width="30" height="30"></amp-img>
+      </a>
+    </div>
+    <a class="navbar-burger burger" on='tap:sidebar.toggle' data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
 
-    <nav class="site-nav">
-      <button on='tap:sidebar.toggle' class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </button>
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title and page.navigation %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-        <a href="{{ site.baseurl | append: '/blog/'}}">Blog</a>
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/">
+        {{ page.title }}
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      {% for page in site.pages %}
+        {% if page.title and page.navigation %}
+        <a class="navbar-item is-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+      {% endfor %}
+        <a class="navbar-item is-link" href="/blog">Blog</a>
+    </div>
+  </div>
+</nav>
+
+{% if include.avatar %}
+<section class="hero is-primary is-medium">
+  <div class="hero-body is-centered">
+    <div class="container">
+      <h1 class="title">
+        {{ site.title }}
+      </h1>
+      <h2 class="subtitle">
+        {{ site. description }}
+      </h2>
+      {% for link in site.author %}
+       {% if link[0] != 'name' %}
+        <a class="icon is-medium" href="{{ link[1] }}">
+          <i class="fab fa-{{ link[0] }} fa-2x"></i>
+        </a>
+       {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-centered">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a href="/#last_articles">Last articles</a></li>
+        </ul>
       </div>
-    </nav>{% if include.avatar %}
-    <div class="wrapper">
-        <div class="author">
-          <a href="{{ site.baseurl | append: '/' }}">
-            <amp-img class="avatar" src="{{ site.baseurl | append:'/assets/avatar.png'}}" width="90" height="90" layout="responsive" alt="{{ site.title }}" ></amp-img>
-            <h1 class="name">{{ site.title }}</h1>
-	    {% include icon-google.html %}
-	    {% include icon-github.html %}
-	    {% include icon-kaggle.html %}
-	    {% include icon-researchgate.html %}
-	    {% include icon-twitter.html %}
-	    {% include icon-linkedin.html %}
-          </a>
-          <h2 class="description">{{site.description}}</h2>
-        </div>
-    </div>{% endif %}
-  {% unless include.avatar %}</div>{% endunless %}
-</header>
+    </nav>
+  </div>
+</section>
+{% endif %}

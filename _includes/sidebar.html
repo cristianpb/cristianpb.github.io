@@ -1,18 +1,39 @@
-<amp-sidebar id='sidebar'
-    layout="nodisplay"
-    side="right">
-  <amp-img class='amp-close-image'
-      src="{{ site.baseurl }}/assets/img/close.png"
-      width="20"
-      height="20"
-      alt="close sidebar"
-      on="tap:sidebar.close"
-      role="button"
-      tabindex="0"></amp-img>
-      {% for page in site.pages %}
-        {% if page.title and page.navigation %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endif %}
+<amp-sidebar id="sidebar"
+  layout="nodisplay"
+  side="right">
+  <amp-img class="amp-close-image"
+    src="/assets/img/close.png"
+    width="30"
+    height="30"
+    alt="close sidebar"
+    on="tap:sidebar.close"
+    role="button"
+    tabindex="0"></amp-img>
+
+
+  {% for page in site.pages %}
+    {% if page.title and page.navigation %}
+    <a class="navbar-item is-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+    {% endif %}
+  {% endfor %}
+    <a class="navbar-item is-link" href="/blog">Blog</a>
+  <div class="navbar-item has-dropdown is-hoverable">
+    <a class="navbar-link">
+      Find me
+    </a>
+    <div class="navbar-dropdown is-boxed">
+
+      {% for link in site.author %}
+       {% if link[0] != 'name' %}
+        <a class="navbar-item bd-tw-button button" href="{{ link[1] }}">
+          <i class="fab fa-{{ link[0] }}"></i>
+          &nbsp;{{ link[0] }}
+        </a>
+       {% endif %}
       {% endfor %}
-      <a class="page-link" href="{{ site.baseurl | append: '/blog/'}}">Blog</a>
+
+
+
+    </div>
+  </div>
 </amp-sidebar>

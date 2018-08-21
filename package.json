@@ -1,0 +1,29 @@
+{
+  "name": "cristianpb.github.io",
+  "version": "1.0.0",
+  "description": "With Jekyll and Github Pages",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/.bin/gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianpb/cristianpb.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristianpb/cristianpb.github.io/issues"
+  },
+  "homepage": "https://github.com/cristianpb/cristianpb.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-image": "^4.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1"
+  }
+}

@@ -18,7 +18,7 @@ researchgate_username:  Cristian_Perez_Brokate
 disqus:
   shortname: cristianpb-github-io
 google_analytics: UA-68913933-2
-paginate: 12
+paginate: 6
 paginate_path: '/blog/:num'
 google-site-verification: 'dadHYln91lNA-p2JDYCrivQ6etkGJeqk1Dz1GpshKk0'
 social:
@@ -30,7 +30,15 @@ social:
     - https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
     - https://www.researchgate.net/profile/Cristian_Perez_Brokate
     - https://www.kaggle.com/cristianpb
-
+author:
+  name: Cristian Perez Brokate
+  linkedin: https://www.linkedin.com/in/cristianperezbrokate
+  github: https://github.com/cristianpb
+  twitter: https://twitter.com/cris_perez_b
+  google: https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
+  researchgate: https://www.researchgate.net/profile/Cristian_Perez_Brokate
+  kaggle: https://www.kaggle.com/cristianpb
+  medium: https://medium.com/@cristianpb
  
 # Build settings
 sass:
@@ -51,14 +59,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - reveal.js/index.html
-  - reveal.js/plugin/markdown/example.html
-  - reveal.js/plugin/notes/notes.html
-  - reveal.js/plugin/notes-server/notes.html
-  - reveal.js/test/
-  - reveal.js/*.md
-  - reveal.js/Gruntfile.js
-  - reveal.js/package.json
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - package-lock.json
  
 defaults:
     - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title'}}

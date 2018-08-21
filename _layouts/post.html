@@ -1,23 +1,55 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      📅 {{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}  ⏳ {% include read_time.html %} read time 
-</p>
-  </header>
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
+
+<section class="section">
+  <div class="container has-text-centered">
+    <h2 class="title">{{ page.title }}</h2>
+    <p>
+      <time datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished"> 
+        📅 {{ page.date | date: "%b %-d, %Y" }}</time>
+      ⏳ {% include read_time.html %} read time 
+    </p>
+    <br>
+    <div class="tags is-centered">
+    {% for cat in page.categories %}
+    <span class="tag">{{ cat }}</span>
+    {% endfor %}
+    </div>
   </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container has-text-centered">
   {% include amp-social-share.html %}
-</article>
-<!-- Post Navigation -->
-<div class="pagination">
-  {% if page.previous.url %}<a class="prev" href="{{ page.previous.url | prepend: site.baseurl }}">←&nbsp; Previous post</a>{% endif %}
-  {% if page.next.url %}<a class="next" href="{{ page.next.url | prepend: site.baseurl }}">Next post&nbsp;→</a>{% endif %}
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
-</div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <nav class="pagination" role="navigation" aria-label="pagination">
+      {% if page.previous.url %} <a href="{{ page.previous.url | prepend: site.baseurl }}" class="pagination-previous is-left">← Previous post</a> {% endif %}
+      {% if page.next.url %} <a href="{{ page.next.url | prepend: site.baseurl }}" class="pagination-next is-right">Next post →</a>{% endif %}
+    </nav>
+  </div>
+</section>
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
+

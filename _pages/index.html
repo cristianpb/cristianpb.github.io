@@ -1,0 +1,49 @@
+---
+layout: default
+avatar: true
+permalink: /
+---
+<section class="section">
+<div class="container" id="last_articles">
+<div class="columns is-desktop">
+{% for post in site.posts limit: 3 %}
+<div class="column is-one-third">
+<div class="card">
+  {% if post.figure %}
+  <div class="card-image">
+    <figure class="image">
+      <amp-img src="{{ post.figure }}" alt="Schema grafana" height="150" width="300" layout="responsive"></amp-img>
+    </figure>
+  </div>
+  {% endif %}
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">{{ post.title }}</p>
+      </div>
+    </div>
+
+    <div class="content">
+      {{ post.description }}
+      <br>
+      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+    </div>
+  </div>
+</div>
+
+<!--
+<a href="{{ post.url | prepend: site.baseurl }}">🅿️ {{ post.title }} </a>
+{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}{{ post.date | date: date_format }}
+<br>
+{{ post.description }}
+<br>
+<br>
+-->
+</div>
+{% endfor %}
+</div>
+
+<center><a href="{{ site.baseurl | append: '/blog/'}}">More at the blog</a></center>
+  
+</div>
+</section>
