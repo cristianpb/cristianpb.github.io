@@ -19,12 +19,15 @@
   "homepage": "https://github.com/cristianpb/cristianpb.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
     "gulp-image": "^4.3.0",
-    "gulp-minify-css": "^1.2.4",
     "gulp-purifycss": "^0.2.0",
     "gulp-replace": "^1.0.0",
     "gulp-responsive": "^2.11.0",
     "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1"
+    "gulp-uglify": "^3.0.1",
+    "i": "^0.3.6",
+    "npm": "^6.4.0"
   }
 }

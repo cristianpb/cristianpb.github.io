@@ -3,9 +3,11 @@ var gulp = require('gulp'),
   gp_uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var purify = require('gulp-purifycss');
-var minifyCss = require('gulp-minify-css');
 var replace = require('gulp-replace');
+let cleanCSS = require('gulp-clean-css');
 var responsive = require('gulp-responsive');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
  
 gulp.task('replace', function(){
   gulp.src(['./_posts/**.md'])
@@ -66,20 +68,27 @@ gulp.task('image', function () {
 gulp.task('sass', function () {
   return gulp.src('./_sass/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./_includes/'));
+    .pipe(gulp.dest('./assets/css/dist'));
 });
 
 // purify removes unused CSS classes
 gulp.task('purify', ['sass'],  function() {
-  return gulp.src('./_includes/main.css')
-    .pipe(purify(['_includes/**.html', './_layouts/**.html', './_pages/**.html', './blog/**.html'], {info: true}))
+  return gulp.src('./assets/css/dist/main.css')
+    .pipe(purify(['./_includes/**.html', './_layouts/**.html', './_pages/**.html', './blog/**.html'], {info: true}))
     .pipe(replace(/!important/gm, ''))
-    .pipe(minifyCss())
-    .pipe(gulp.dest('./_includes/purify'));
+    .pipe(gulp.dest('./assets/css/dist'));
+});
+ 
+gulp.task('concat', ['purify'], function() {
+  return gulp.src(['./assets/css/dist/main.css', './assets/css/syntax.css'])
+    .pipe(concat('main.css'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename({ suffix: '-min' }))
+    .pipe(gulp.dest('./_includes/'));
 });
 
-gulp.task("watch", ["purify", "sass"], function() {
-  gulp.watch(["./_sass/main.scss", "./_sass/_variables.scss"], ["sass", "purify"])
+gulp.task("watch", ["purify", "sass", "concat"], function() {
+  gulp.watch(["./_sass/main.scss", "./_sass/_variables.scss"], ["sass", "purify", "concat"])
   gulp.watch(["./_pages/**", "./_layouts/**", "./_includes/**.html", "./blog/*"], ["purify"]);
 })
 
