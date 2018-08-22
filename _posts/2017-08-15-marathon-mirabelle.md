@@ -6,6 +6,7 @@ description: "Stats for my preparation for the Metz Marathon"
 categories: ["run", "python", "chartjs", "folium"]
 calheatmap: true
 chartjs: true
+figure: /assets/img/marathon-mirabelle/main-crop.png
 
 ---
 
@@ -69,7 +70,7 @@ My average speed varies depending on the number of kilometres that I run. For lo
 
 ## Data analysis
 
-The python code used to explore the data can be found inside this [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/runner-up/04-Multiple_Trainning.ipynb).
+The python code used to explore the data can be found inside this [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/runner-up/04-Multiple_Trainning.ipynb).
 
 <script type="text/javascript">
 var data_marathon = {{ site.data.marathon.marathon | jsonify }}

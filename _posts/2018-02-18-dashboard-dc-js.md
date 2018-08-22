@@ -4,7 +4,7 @@ title: "Interactive data exploration using Dc.js"
 date: 2018-02-18
 description: "Creating data visualizations for a reader narrative exploration"
 categories: ["d3.js", "dc.js", "visualization"]
-figure: https://gist.githubusercontent.com/cristianpb/f623461c406020eef068c1e4ecc6313f/raw/8ebd799fc42059fcd4b1163c96a66dd538013963/preview.png
+figure: /assets/img/dashboard-dc-js/main-crop.png
 
 ---
 

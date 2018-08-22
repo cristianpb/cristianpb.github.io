@@ -9,7 +9,7 @@ chartjs: true
 
 ---
 
-Code inside [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/withings/01-Withings.ipynb).
+Code inside [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/withings/01-Withings.ipynb).
 
 ## Calendar heatmap of steps
 

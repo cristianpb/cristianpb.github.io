@@ -9,7 +9,7 @@ categories: ["kaggle", "r"]
 
 ----
 
-<amp-img src="/images/talking_data/logotalking.png" alt="Logo talking data" height="289" width="862" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/logotalking.png" alt="Logo talking data" height="289" width="862" layout="responsive"></amp-img>
 
 - Le but de cette exercice est de construire un modèle pour prédire les caractéristiques démographiques (âge et genre) des utilisateurs de smartphones avec les applications installées, géolocalisation et les caractéristiques des portables. 
 
@@ -19,7 +19,7 @@ categories: ["kaggle", "r"]
 
 ## Données
 
-<amp-img src="/images/talking_data/description.svg" alt="Talking data description" height="532" width="691" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/description.svg" alt="Talking data description" height="532" width="691" layout="responsive"></amp-img>
 
 ## Librairies
 
@@ -103,7 +103,7 @@ ggplot(gendertrain, aes(x="", y=freq_label, fill=gender))+
 		      label = paste(round(freq_label*100,digits=0),"%")), size=5) + xlab("") + ylab("")
 ```
 
-<amp-img src="/images/talking_data/unnamed-chunk-9-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/unnamed-chunk-9-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
 
 ```r
 rm(gendertrain);gc()
@@ -132,7 +132,7 @@ ggplot(data=agetrain) + geom_bar(aes(x=age, y=freq_label, fill=gender),
 	geom_vline(aes(xintercept=meanM),col="blue")
 ```
 
-<amp-img src="/images/talking_data/unnamed-chunk-10-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/unnamed-chunk-10-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
 
 ```r
 rm(agetrain);gc()
@@ -290,7 +290,7 @@ ggplot(highphone, aes(x="", y=freq_label, fill=phone_brand))+
                       label = paste(round(freq_label*100,digits=0),"%")), size=5)
 ```
 
-<amp-img src="/images/talking_data/unnamed-chunk-19-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/unnamed-chunk-19-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
 
 ```r
 rm(lowphone,highphone,phonetraingroup,duplicate_phone,phone);gc()
@@ -344,7 +344,7 @@ ggplot() + borders('world', colour='gray50', fill='gray50') +
                    color='blue',size=1)
 ```
 
-<amp-img src="/images/talking_data/unnamed-chunk-21-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/unnamed-chunk-21-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
 
 Main number of events based in China
 
@@ -355,7 +355,7 @@ ggplot() + borders('world', colour='gray50', fill='gray50') +
                    color='blue',size=1)
 ```
 
-<amp-img src="/images/talking_data/unnamed-chunk-22-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/unnamed-chunk-22-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
 
 ## Applications dans le tableau event
 
@@ -534,7 +534,7 @@ Y_key <- sort(unique(device_train$group))
 Y     <- match(device_train$group, Y_key) - 1
 ```
 
-<amp-img src="/images/talking_data/xtrain.svg" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/xtrain.svg" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
 
 
 ```r
@@ -679,7 +679,7 @@ melted_cormat <- melt(confusionmat)
 ggplot(data = melted_cormat, aes(x=var1, y=var2, fill=value)) + geom_tile()
 ```
 
-<amp-img src="/images/talking_data/unnamed-chunk-28-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/unnamed-chunk-28-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
 
 ```r
 library(caret)

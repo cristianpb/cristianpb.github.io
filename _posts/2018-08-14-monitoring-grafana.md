@@ -6,7 +6,7 @@ description: "Docker allow to easily deploy a monitoring system using beautiful
 Grafana dashboards and connected with optimized data sources with Influxdb and 
 Collectd"
 categories: ["grafana", "docker", "influxdb", "collectd", "aws"]
-figure: /images/monitoring-grafana/schema.jpg
+figure: /assets/img/monitoring-grafana/main-crop.jpg
 
 ---
 System monitoring is important to understand the global performance of a
@@ -21,7 +21,7 @@ how to easily deploy it using docker technology.
 
 Let's start with the presentation of the components of the stack.
 
-<amp-img src="/images/monitoring-grafana/schema.jpg" alt="Schema grafana" height="150" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/monitoring-grafana/schema.jpg" alt="Schema grafana" height="150" width="300" layout="responsive"></amp-img>
 
 [Collectd](https://collectd.org/) is a daemon process that runs on the system
 and collects information like CPU, memory, disk usage, network data, etc. It
@@ -143,7 +143,7 @@ advantages:
 
 The grafana interface can be reached at port 3000. The default username is admin and the password is admin.
 
-<amp-img src="/images/monitoring-grafana/dashboard.png" alt="grafana dashboard" height="150" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/monitoring-grafana/dashboard.png" alt="grafana dashboard" height="150" width="300" layout="responsive"></amp-img>
 
 Grafana has many ways to be customized and also an [explicit documentation](http://docs.grafana.org/guides/getting_started/).
 

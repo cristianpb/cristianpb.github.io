@@ -6,6 +6,7 @@ description: "This post used javascript library Chartjs to illustrate interactiv
 categories: ["run", "python", "chartjs", "folium"]
 chartjs: true
 calheatmap: true
+figure: /assets/img/santorini-experience/main-crop.png
 
 ---
 
@@ -27,7 +28,7 @@ a `xml` format from Garmin, I converted to a `csv` file using [a script from
 Corey
 Siegel](https://github.com/coreysiegel/tcx-gpx-csv/blob/master/tcx2csv.py).
 Then, I used pandas to pre-process the `csv` file. The details can be found in the 
-[python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/runner-up/03-Export_json.ipynb).
+[python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/runner-up/03-Export_json.ipynb).
 The coordinates latitude and longitude can be used to plot the trajectory of
 the race using folium library with a back end of Leaflet.
 

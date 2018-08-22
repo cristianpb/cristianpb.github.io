@@ -12,14 +12,14 @@ permalink: /
   {% if post.figure %}
   <div class="card-image">
     <figure class="image">
-      <amp-img src="{{ post.figure }}" alt="Schema grafana" height="150" width="300" layout="responsive"></amp-img>
+      <amp-img src="{{ post.figure }}" alt="{{ post.title }}" height="200" width="300" layout="responsive"></amp-img>
     </figure>
   </div>
   {% endif %}
   <div class="card-content">
     <div class="media">
       <div class="media-content">
-        <p class="title is-4">{{ post.title }}</p>
+        <a href="{{ post.url }}" class="title is-4">{{ post.title }}</a>
       </div>
     </div>
 

@@ -4,7 +4,7 @@ title: "Price minister"
 date: 2018-01-05
 description: "NLP problem solved using best practices for a data science project."
 categories: ["nlp", "python", "cookie-cutter", "sphinx"]
-figure: /images/priceminister/word_number.png
+figure: /assets/img/priceminister/main-crop.png
 
 ---
 
@@ -35,35 +35,35 @@ ID| 	review_content |	review_title 	|review_stars 	|product 	|Target
 
 The two labels are well represented and there is only a small percentage difference between the two. Same thing happen for the number of stars given to the product, each class has a representative number of 1 and 0 labels. There are more positive ratings for products, I guess the articles sell at Price Minister are very good
 
-<amp-img src="/images/priceminister/classes.png" alt="Number of classes" height="100" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/priceminister/classes.png" alt="Number of classes" height="100" width="300" layout="responsive"></amp-img>
 
 ### Product reviews
 
 There are some products that have several reviews. There is one product with 138 reviews, other with 115, other with 45, etc. At the end there are 19932 products with more than one review and 40068 with just one review. It doesn't seems to be a great correlation between useful reviews and the number of reviews of the article, the mean number of reviews for useful articles is 1.32 and 1.13 useless articles.
 
-<amp-img src="/images/priceminister/product_review.png" alt="Number of product reviews" height="150" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/priceminister/product_review.png" alt="Number of product reviews" height="150" width="300" layout="responsive"></amp-img>
 
 ### Review size
 
 The review size has a bigger importance. The longer reviews tend to be more useful and shorter reviews are usually useless. However there is no big influence regarding the size of the title of the review.
 
-<amp-img src="/images/priceminister/review_size.png" alt="Size of the review" height="100" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/priceminister/review_size.png" alt="Size of the review" height="100" width="300" layout="responsive"></amp-img>
 
 ### Word number
 
 The words of the review for each label are very similar. It is very difficult to difference a useful review just by counting the words that it contains. In addition, words like *c'est* doesn't give to much sense to the document analysis.
 
-<amp-img src="/images/priceminister/word_number.png" alt="Word number" height="100" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/priceminister/word_number.png" alt="Word number" height="100" width="300" layout="responsive"></amp-img>
 
 We clean the words by removing common French stop words.
 
-<amp-img src="/images/priceminister/word_number_cleaned.png" alt="Word number cleaned" height="100" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/priceminister/word_number_cleaned.png" alt="Word number cleaned" height="100" width="300" layout="responsive"></amp-img>
 
 ### Tfidf
 
 Since the number of words doesn't give us to much information, we use instead **tfidf** (term frequency–inverse document frequency), which is intended to reflect how important a word is to a document in a collection. The result of **tfidf** is a score of importance for each word or combination of words. The common words that doesn't give information about the document have less score and the rare words that give much sense to a document have a higher score.  
 
-<amp-img src="/images/priceminister/tfidf_lemma.png" alt="tfidf representations of words lemma" height="100" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/priceminister/tfidf_lemma.png" alt="tfidf representations of words lemma" height="100" width="300" layout="responsive"></amp-img>
 
 The code source to make this analysis can be found at this [notebook](https://nbviewer.jupyter.org/url/github.com/cristianpb/priceminister/blob/master/notebooks/01-Exploration.ipynb).
 
@@ -88,7 +88,7 @@ I have used the facebook model *FastText* pretrained with french wikipedia pages
 
 The result of the transformation for the review content is a vector with 300 dimensions. This can be simplified in 2D using [LDA](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) and can be plotted as follows.
 
-<amp-img src="/images/priceminister/word_embeddings_lda.png" alt="Word embeddings" height="100" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/priceminister/word_embeddings_lda.png" alt="Word embeddings" height="100" width="300" layout="responsive"></amp-img>
 
 The details of word embeddings can be found at this [notebook](https://nbviewer.jupyter.org/url/github.com/cristianpb/priceminister/blob/master/notebooks/03-Word embeddings.ipynb).
 

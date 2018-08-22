@@ -5,6 +5,7 @@ date: 2017-05-25
 description: "This post shows how to query data from Paris Open Data base, make some geographical plots using folium and also some analysis about the bike utilisation depending on the date"
 categories: ["folium", "python", "Open Data"]
 chartjs: true
+figure: /assets/img/velib-folium/main.png
 
 ---
 
@@ -123,7 +124,7 @@ On the opposite, at 8am, a lot of people take the bikes on the outer ring and
 they tend to go to the inner side of Paris.
 
 
-<amp-img src="/images/velib-folium/anim.gif" alt="Animation velib diary" height="720" width="1200" layout="responsive"></amp-img>
+<amp-img src="/assets/img/velib-folium/anim.gif" alt="Animation velib diary" height="720" width="1200" layout="responsive"></amp-img>
 
 ## Bike utilisation by hour
 
@@ -146,7 +147,7 @@ The peak of utilisation is 4552 bikes, which is around  30 % of the available bi
 On weekend, the peak is at 6pm, maybe because people is coming back home.
 
 The complete code can be found at in [this
-notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/velib-folium/02-Exploration.ipynb).
+notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/velib-folium/02-Exploration.ipynb).
 
 
 <script>

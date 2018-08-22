@@ -4,6 +4,8 @@ title: "The alchemy machine"
 date:   2017-05-04 20:51:25 +0200
 description: "The objetive is to create a simulator of magic potions using AngularJS and node.js"
 categories: ['angularjs', 'nodejs', 'express']
+figure: /assets/img/alchemy-machine/main.svg
+
 ---
 
 The objective of this project is to make an simple application with some popular
@@ -27,7 +29,7 @@ I use it in the front end to access all the data and render the different views 
 [NodeJS](https://nodejs.org/en/) is used on the server side to execute
 JavaScript code.
 
-<amp-img src="/images/alchemy-machine/architecture.svg" alt="Alchemy machine architecture" height="230" width="600" layout="responsive"></amp-img>
+<amp-img src="/assets/img/alchemy-machine/architecture.svg" alt="Alchemy machine architecture" height="230" width="600" layout="responsive"></amp-img>
 
 ## Structure of the files
 
@@ -60,13 +62,13 @@ Inside `server.js` I define a `JSON` object with the data needed for my alchemy 
 ```json
 "Ingredients": [
         {"text": "Avocado",     "emoji" : "🥑", "selected" :false, "quantity": 3, "image": "https://cdn.authoritynutrition.com/wp-content/uploads/2014/09/avocadoo-sliced-in-half.jpg"},
-        {"text": "Watermellon", "emoji" : "🍉", "selected" :false, "quantity": 2, "image": "http://www.pvfarms.com/images/ourproduce_watermelon.png"},
+        {"text": "Watermellon", "emoji" : "🍉", "selected" :false, "quantity": 2, "image": "http://www.pvfarms.com/assets/img/ourproduce_watermelon.png"},
         {"text": "Jalapeno",    "emoji" : "🌶", "selected" :false, "quantity": 3, "image": "http://images.realfoodtoronto.com/D.cache.large/Jalapeno-Pepper.jpg"},
         {"text": "Pineapple",   "emoji" : "🍍", "selected" :false, "quantity": 2, "image": "http://www.cuisine-de-bebe.com/wp-content/uploads/lananas.jpg"},
-        {"text": "Kiwi",        "emoji" : "🥝", "selected" :false, "quantity": 5, "image": "http://media.mercola.com/assets/images/foodfacts/kiwifruit-nutrition--facts.jpg"},
+        {"text": "Kiwi",        "emoji" : "🥝", "selected" :false, "quantity": 5, "image": "http://media.mercola.com/assets/assets/img/foodfacts/kiwifruit-nutrition--facts.jpg"},
         {"text": "Strawberry",  "emoji" : "🍓", "selected" :false, "quantity": 2, "image": "http://maviedemamanlouve.com/wp-content/uploads/2015/10/fraise-1.jpg"},
-        {"text": "Lemon",       "emoji" : "🍋", "selected" :false, "quantity": 4, "image": "https://realfood.tesco.com/media/images/Lemon-easter-biscuits-hero-1d74c01d-8906-45fe-8135-322f0520c434-0-472x310.jpg"},
-        {"text": "Banana",      "emoji" : "🍌", "selected" :false, "quantity": 2, "image": "http://www.granini.com/data/images/fruit_images/full/banana.png"}
+        {"text": "Lemon",       "emoji" : "🍋", "selected" :false, "quantity": 4, "image": "https://realfood.tesco.com/media/assets/img/Lemon-easter-biscuits-hero-1d74c01d-8906-45fe-8135-322f0520c434-0-472x310.jpg"},
+        {"text": "Banana",      "emoji" : "🍌", "selected" :false, "quantity": 2, "image": "http://www.granini.com/data/assets/img/fruit_images/full/banana.png"}
 ],
 ```
 
@@ -273,7 +275,7 @@ The `index.html` file interacts directly with angularjs using the module and the
 
 In the following **gif**, I test the main functions of the application: selecting ingridients to make magic potions, see how the number of ingridients decreases while I am making potions and also that I not able to do magic potions when I run out of the ingridients.
 
-<amp-img src="/images/alchemy-machine/alchemy.gif" alt="Demonstration of the alchemy machine" height="422" width="750" layout="responsive"></amp-img>
+<amp-img src="/assets/img/alchemy-machine/alchemy.gif" alt="Demonstration of the alchemy machine" height="422" width="750" layout="responsive"></amp-img>
 
 
 ## Test the application

@@ -22,7 +22,7 @@ Align an image to a reference assits the classification algorithm
 [1](http://docs.opencv.org/trunk/dd/d3b/tutorial_py_svm_opencv.html),
 [2](https://www.learnopencv.com/handwritten-digits-classification-an-opencv-c-python-tutorial/).
 
-<amp-img src="/images/image-preprocessing/deskew1.jpg" alt="Deskew" height="200" width="100" ></amp-img>
+<amp-img src="/assets/img/image-preprocessing/deskew1.jpg" alt="Deskew" height="200" width="100" ></amp-img>
 
 Deskewing simple grayscale images can be achieved using image moments (distance and intensity of pixels). 
 
@@ -54,7 +54,7 @@ in calculating an affine transform that deskews the image.
 
 Increase image contrast using the image's histogram.
 
-<amp-img src="/images/image-preprocessing/histogram_equalization.png" alt="histogram equalization" height="100" width="300" ></amp-img>
+<amp-img src="/assets/img/image-preprocessing/histogram_equalization.png" alt="histogram equalization" height="100" width="300" ></amp-img>
 
 ## Conclusions
 

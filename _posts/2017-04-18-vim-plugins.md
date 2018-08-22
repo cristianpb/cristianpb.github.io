@@ -4,6 +4,7 @@ title:  "Vim plugins"
 date:   2017-04-18 21:01:25 +0200
 categories: vim 
 description: "My vim workflow. Description of some plugins and functionlities."
+figure: /assets/img/vim-plugins/main-crop.png
 
 ---
 
@@ -176,7 +177,7 @@ Autocompletion function can be added in `.vimrc` and then activated during _inse
 set completefunc=emoji#complete
 ```
 
-<amp-img src="/images/vim-plugins/vim-emoji.gif" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
+<amp-img src="/assets/img/vim-plugins/vim-emoji.gif" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
 
 I spend most on my time using vim, then I consider a good idea to make it confortable, so I like to give vim a little of style :ring:, I use [vim-devicons](https://github.com/ryanoasis/vim-devicons). Terminal font must be able to render glyphs :cat:. This can be patched with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#font-installation).
 

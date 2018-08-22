@@ -4,6 +4,7 @@ title: "Using gnuplot to plot heatmaps for scientific publications"
 date: 2017-06-10
 description: "How to use gnuplot to make heatmaps and manage labels for scientific publications"
 categories: ["gnuplot"]
+figure: /assets/img/gnuplot-electrode/main.svg
 
 ---
 
@@ -56,7 +57,7 @@ plot sprintf("ProfileXY%d.dat",t) matrix u ($1*SCALE):($2*SCALE):3 w image notit
 }
 ```
 
-<amp-img src="/images/gnuplot-electrode/Profile.gif" alt="Electrode profile XY" height="480" width="640" layout="responsive"></amp-img>
+<amp-img src="/assets/img/gnuplot-electrode/Profile.gif" alt="Electrode profile XY" height="480" width="640" layout="responsive"></amp-img>
 
 ## Degrade line curves
 
@@ -150,7 +151,7 @@ unset multiplot
 unset output
 ```
 
-<amp-img src="/images/gnuplot-electrode/ProfilZ.svg" alt="Electrode Profile Z" height="480" width="600" layout="responsive"></amp-img>
+<amp-img src="/assets/img/gnuplot-electrode/ProfilZ.svg" alt="Electrode Profile Z" height="480" width="600" layout="responsive"></amp-img>
 
 The plots that have been presented here have different format than the ones
 that appear in the paper article [Cyclic voltammetry simulations with cellular

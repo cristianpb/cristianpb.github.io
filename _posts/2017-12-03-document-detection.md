@@ -4,7 +4,7 @@ title: "Document detection"
 date: 2017-12-03
 description: "Docuement detection using opencv"
 categories: ["opencv", "python"]
-figure: /images/document-detection/contours.png
+figure: /assets/img/document-detection/main-crop.png
 
 ---
 
@@ -14,7 +14,7 @@ Scanned images have always undesired white space. It is tedious to crop manually
 
 We use an example image found on the internet that is similar to scanned image with excessive white space around the document.
 
-<amp-img src="/images/document-detection/cni.jpg" alt="Identity docuement" height="300" width="300" ></amp-img>
+<amp-img src="/assets/img/document-detection/cni.jpg" alt="Identity docuement" height="300" width="300" ></amp-img>
 
 We use opencv **3.3** to read the image, transform it in grey level, then we
 use a [bilateral
@@ -34,7 +34,7 @@ eq = cv2.equalizeHist(bilateral)
 edged = cv2.Canny(eq, 0, 150)
 ```
 
-<amp-img src="/images/document-detection/edged.png" alt="Edge detection" height="100" width="300" layout="responsive"></amp-img>
+<amp-img src="/assets/img/document-detection/edged.png" alt="Edge detection" height="100" width="300" layout="responsive"></amp-img>
 
 ## Contour detection
 
@@ -61,13 +61,13 @@ for c in contours:
 
 The result are the biggest contours in the image. Then we can use the biggest one to crop our image.
 
-<amp-img src="/images/document-detection/contours.png" alt="Contours of the image" height="300" width="300" ></amp-img>
+<amp-img src="/assets/img/document-detection/contours.png" alt="Contours of the image" height="300" width="300" ></amp-img>
 
 ## Image crop
 
 We use the extreme points of the contours to crop the image.
 
-<amp-img src="/images/document-detection/crop_image.png" alt="Cropped image" height="200" width="300" ></amp-img>
+<amp-img src="/assets/img/document-detection/crop_image.png" alt="Cropped image" height="200" width="300" ></amp-img>
 
 ## Background color substitution
 
@@ -94,9 +94,9 @@ background[:,:,:] = 128
 masked_bg = cv2.bitwise_and(background, mask)
 ```
 
-<amp-img src="/images/document-detection/masked.png" alt="Masked image" 
+<amp-img src="/assets/img/document-detection/masked.png" alt="Masked image" 
 height="100" width="300" layout="responsive"></amp-img>
 
 
 The complete code can be found on this 
-[notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/images/document-detection/DocuementDetection.ipynb).
+[notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/document-detection/DocuementDetection.ipynb).

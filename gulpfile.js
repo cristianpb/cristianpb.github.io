@@ -5,15 +5,45 @@ var sass = require('gulp-sass');
 var purify = require('gulp-purifycss');
 var minifyCss = require('gulp-minify-css');
 var replace = require('gulp-replace');
+var responsive = require('gulp-responsive');
  
-gulp.task('templates', function(){
-  gulp.src(['./_posts_original/**.md'])
+gulp.task('replace', function(){
+  gulp.src(['./_posts/**.md'])
     // See http://mdn.io/string.replace#Specifying_a_string_as_a_parameter
-    .pipe(replace(/### /gm, '{:.subtitle}\n###]]'))
-    .pipe(replace(/## /gm, '<br>\n\n{:.title}\n##]]'))
-    .pipe(replace(/{:.subtitle}\n###]]/gm, '{:.subtitle}\n### '))
-    .pipe(replace(/{:.title}\n##]]/gm, '{:.title}\n## '))
+    .pipe(replace(/\/images\//gm, '/assets/img/'))
     .pipe(gulp.dest('_posts/'));
+});
+
+gulp.task('responsive', function () {
+  return gulp.src('./assets/img/**/{main.png,main.jpg}')
+    .pipe(responsive({
+      //'*/main.jpg': {
+      //  // Resize all JPG images to 200 pixels wide
+      //  width: 200,
+      //},
+      //'*/main.png': {
+      //  // Resize all PNG images to 50% of original pixels wide
+      //  width: '50%',
+      //},
+      // Resize all images to 100 pixels wide and add suffix -thumbnail
+      '*/main.{jpg,png}': {
+        width: 300,
+        height: 200,
+        rename: { suffix: '-crop' },
+      },
+    }, {
+      // Global configuration for all images
+      // The output quality for JPEG, WebP and TIFF output formats
+      quality: 70,
+      // Use progressive (interlace) scan for JPEG and PNG output
+      progressive: true,
+      // Zlib compression level of PNG output format
+      compressionLevel: 6,
+      // Strip all metadata
+      withMetadata: false,
+      crop: 'entropy'
+    }))
+    .pipe(gulp.dest('./assets/img'));
 });
 
 gulp.task('image', function () {
