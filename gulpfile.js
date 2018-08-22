@@ -80,7 +80,7 @@ gulp.task('purify', ['sass'],  function() {
 
 gulp.task("watch", ["purify", "sass"], function() {
   gulp.watch(["./_sass/main.scss", "./_sass/_variables.scss"], ["sass", "purify"])
-  gulp.watch(["./_pages/**", "./_layouts/**"], ["purify"]);
+  gulp.watch(["./_pages/**", "./_layouts/**", "./_includes/**.html", "./blog/*"], ["purify"]);
 })
 
 gulp.task('default', ['watch'], function(){});

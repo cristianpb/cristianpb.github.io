@@ -39,6 +39,10 @@ author:
   researchgate: https://www.researchgate.net/profile/Cristian_Perez_Brokate
   kaggle: https://www.kaggle.com/cristianpb
   medium: https://medium.com/@cristianpb
+
+# Color the browser elements #
+color-browser: "#00C7A9"
+apple-status-bar-style: "black-translucent"
  
 # Build settings
 sass:
