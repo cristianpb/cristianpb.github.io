@@ -26,7 +26,7 @@ permalink: /
     <div class="content">
       {{ post.description }}
       <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      <span class="small">{{ post.date | date: "%b %-d, %Y" }}</span>
     </div>
   </div>
 </div>

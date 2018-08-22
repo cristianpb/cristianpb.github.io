@@ -16,9 +16,11 @@
 
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="/">
-        {{ page.title }}
-      </a>
+      {% if page.title %}
+        <a class="navbar-item" href="/">
+          {{ page.title }}
+        </a>
+      {% endif %}
     </div>
 
     <div class="navbar-end">

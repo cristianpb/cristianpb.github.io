@@ -17,17 +17,30 @@ visjs: false
       </h1>
     </div>
   </div>
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-centered">
+      <div class="container">
+        <ul>
+          <li><a href="/about/#current">Current position</a></li>
+          <li><a href="/about/#education">Education</a></li>
+          <li><a href="/about/#prix">Prix</a></li>
+          <li><a href="/about/#communications">Communications</a></li>
+          <li><a href="/about/#publications">Publications</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </section>
 
 
-<section class="section">
+<section class="section" id="current">
   <div class="container">
     <i class="fas fa-briefcase"></i>
     Data Scientist @<a href="https://www.kernix.com/" target="_blank">Kernix</a>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="education">
   <div class="container">
     <h1 class="title"><i class="fas fa-graduation-cap"></i>Education</h1>
     
@@ -88,7 +101,7 @@ visjs: false
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="prix">
   <div class="container">
     <h2 class="title"> 🌟  Prix</h2>
 
@@ -147,7 +160,7 @@ visjs: false
   </div>
 </section>
 
-<section class="section hero is-primary">
+<section class="section hero is-primary" id="communications">
   <div class="container">
     <h2 class="title">
       🎤 Communications
@@ -177,7 +190,7 @@ visjs: false
 </section>
 
 
-<section class="section">
+<section class="section" id="publications">
   <div class="container">
     <h2 class="title"> 📚 Publications</h2>
     <p>Citations of my articles might be found at <a class="icon" href="{{ site.author.google }}">
@@ -202,9 +215,9 @@ visjs: false
       <div class="media-content">
         <div class="content">
           <p>
-            <strong>Cristian Perez Brokate</strong> <small>Université Pierre et Marie Curie - Paris VI, 2016</small> 
-            <br>
             <span>Uniform and localized corrosion modelling by means of probabilistic cellular automata</span>
+            <br>
+            <strong>Cristian Perez Brokate</strong> <small>Université Pierre et Marie Curie - Paris VI, 2016</small> 
           </p>
         </div>
         <nav class="level is-mobile">
@@ -238,11 +251,11 @@ visjs: false
       <div class="media-content">
         <div class="content">
           <p>
+            <span>{{ article.title }}</span>
+            <br>
             {{ article.authors }}
             <br>
             <small>{{ article.journal }}</small>  ({{ article.date }})
-            <br>
-            <span>{{ article.title }}</span>
           </p>
         </div>
       </div>
@@ -271,11 +284,11 @@ visjs: false
       <div class="media-content">
         <div class="content">
           <p>
-            {{ article.authors }}
+            <span>{{ article.title }}</span>
             <br>
             <small>{{ article.journal }}</small>  ({{ article.date }})
             <br>
-            <span>{{ article.title }}</span>
+            {{ article.authors }}
           </p>
         </div>
       </div>
