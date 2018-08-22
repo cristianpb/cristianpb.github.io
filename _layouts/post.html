@@ -33,13 +33,6 @@ layout: default
   </div>
 </section>
 
-<section class="section is-small">
-  <div class="container has-text-centered">
-  {% include amp-social-share.html %}
-  </div>
-</section>
-
-
 <section class="section">
   <div class="container">
     <nav class="pagination" role="navigation" aria-label="pagination">
@@ -49,7 +42,11 @@ layout: default
   </div>
 </section>
 
-{% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
-
+<section class="section is-small">
+  <div class="container has-text-centered">
+  {% include amp-social-share.html %}
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+  </div>
+</section>
