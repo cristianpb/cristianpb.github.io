@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
   image = require('gulp-image'),
-  gp_uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var purify = require('gulp-purifycss');
 var replace = require('gulp-replace');
