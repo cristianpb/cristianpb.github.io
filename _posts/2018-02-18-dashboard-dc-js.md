@@ -4,7 +4,7 @@ title: "Interactive data exploration using Dc.js"
 date: 2018-02-18
 description: "Creating data visualizations for a reader narrative exploration"
 categories: ["d3.js", "dc.js", "visualization", "bulma"]
-figure: /assets/img/dashboard-dc-js/main-crop.png
+image: /assets/img/dashboard-dc-js/main-crop.png
 
 ---
 

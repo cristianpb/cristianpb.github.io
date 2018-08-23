@@ -6,7 +6,7 @@ description: "Docker allow to easily deploy a monitoring system using beautiful
 Grafana dashboards and connected with optimized data sources with Influxdb and 
 Collectd"
 categories: ["grafana", "docker", "influxdb", "collectd", "aws"]
-figure: /assets/img/monitoring-grafana/main-crop.jpg
+image: /assets/img/monitoring-grafana/main-crop.jpg
 
 ---
 System monitoring is important to understand the global performance of a

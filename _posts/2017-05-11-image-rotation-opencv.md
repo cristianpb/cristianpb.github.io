@@ -5,7 +5,7 @@ date: 2017-05-13
 description: "This post shows how to recalculate bounding box coordinates when the image rotate. An example using OpenCV in python is provided."
 categories: ["opencv", "python"]
 mathjax: true
-figure: /assets/img/image-rotation-opencv/main-crop.jpg
+image: /assets/img/image-rotation-opencv/main-crop.jpg
 
 ---
 

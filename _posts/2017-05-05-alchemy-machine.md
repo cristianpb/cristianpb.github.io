@@ -4,7 +4,7 @@ title: "The alchemy machine"
 date:   2017-05-04 20:51:25 +0200
 description: "The objetive is to create a simulator of magic potions using AngularJS and node.js"
 categories: ['angularjs', 'nodejs', 'express']
-figure: /assets/img/alchemy-machine/main.svg
+image: /assets/img/alchemy-machine/main.svg
 
 ---
 

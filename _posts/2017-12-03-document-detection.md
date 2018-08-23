@@ -4,7 +4,7 @@ title: "Document detection"
 date: 2017-12-03
 description: "Docuement detection using opencv"
 categories: ["opencv", "python"]
-figure: /assets/img/document-detection/main-crop.png
+image: /assets/img/document-detection/main-crop.png
 
 ---
 

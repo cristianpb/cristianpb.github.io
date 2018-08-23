@@ -4,7 +4,7 @@ title:  "Vim plugins"
 date:   2017-04-18 21:01:25 +0200
 categories: vim 
 description: "My vim workflow. Description of some plugins and functionlities."
-figure: /assets/img/vim-plugins/main-crop.png
+image: /assets/img/vim-plugins/main-crop.png
 
 ---
 

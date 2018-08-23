@@ -6,7 +6,7 @@ description: "This post used javascript library Chartjs to illustrate interactiv
 categories: ["run", "python", "chartjs", "folium"]
 chartjs: true
 calheatmap: true
-figure: /assets/img/santorini-experience/main-crop.png
+image: /assets/img/santorini-experience/main-crop.png
 
 ---
 

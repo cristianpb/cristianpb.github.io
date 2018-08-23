@@ -6,7 +6,7 @@ description: "Stats for my preparation for the Metz Marathon"
 categories: ["run", "python", "chartjs", "folium"]
 calheatmap: true
 chartjs: true
-figure: /assets/img/marathon-mirabelle/main-crop.png
+image: /assets/img/marathon-mirabelle/main-crop.png
 
 ---
 

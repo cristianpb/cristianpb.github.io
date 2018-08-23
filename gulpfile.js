@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-  image = require('gulp-image'),
+  image = require('gulp-image');
 var sass = require('gulp-sass');
 var purify = require('gulp-purifycss');
 var replace = require('gulp-replace');
@@ -11,7 +11,8 @@ var rename = require('gulp-rename');
 gulp.task('replace', function(){
   gulp.src(['./_posts/**.md'])
     // See http://mdn.io/string.replace#Specifying_a_string_as_a_parameter
-    .pipe(replace(/\/images\//gm, '/assets/img/'))
+    //.pipe(replace(/\/images\//gm, '/assets/img/'))
+    .pipe(replace(/figure:/gm, 'image:'))
     .pipe(gulp.dest('_posts/'));
 });
 

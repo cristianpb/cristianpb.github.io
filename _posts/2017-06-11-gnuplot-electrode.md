@@ -4,7 +4,7 @@ title: "Using gnuplot to plot heatmaps for scientific publications"
 date: 2017-06-10
 description: "How to use gnuplot to make heatmaps and manage labels for scientific publications"
 categories: ["gnuplot"]
-figure: /assets/img/gnuplot-electrode/main.svg
+image: /assets/img/gnuplot-electrode/main.svg
 
 ---
 
