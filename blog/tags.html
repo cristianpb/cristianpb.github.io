@@ -16,7 +16,7 @@ title: Blog
     <nav class="tabs is-boxed is-centered">
       <div class="container">
         <ul>
-          <li><a href="/blog/">Last articles</a></li>
+          <li><a href="/blog/">Articles</a></li>
           <li><a href="/blog/tags">Categories</a></li>
           <li><a href="/feed.xml"><i class="fas fa-rss"></i>&nbsp;Atom</a></li>
         </ul>
@@ -39,7 +39,9 @@ title: Blog
 
 <section class="section">
   <div class="container">
+    <div class="columns is-multiline">
       {% for category in site.categories %}
+      <div class="column is-one-third">
         {% capture category_name %}{{ category | first }}{% endcapture %}
         <div id="{{ category_name | slugize }}"></div>
         <h2 class="title">{{ category_name }}</h2>
@@ -47,6 +49,8 @@ title: Blog
         <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a> {{ post.date | date: "%b %-d, %Y" }}<br>
         {% endfor %}
         <br>
+      </div>
       {% endfor %}
+    </div>
   </div>
 </section>

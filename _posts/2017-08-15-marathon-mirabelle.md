@@ -3,7 +3,7 @@ layout: post
 title: "Marathon training program"
 date: 2017-08-13
 description: "Stats for my preparation for the Metz Marathon"
-categories: ["run", "python", "chartjs", "folium"]
+categories: ["run", "python", "chartjs", "folium", "withings"]
 calheatmap: true
 chartjs: true
 image: /assets/img/marathon-mirabelle/main-crop.png

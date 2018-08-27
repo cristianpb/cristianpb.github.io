@@ -3,6 +3,7 @@ layout: post
 title: "Image preprocessing"
 author: Cristian Perez
 date:   2017-02-28 21:01:25 +0200
+categories: ["opencv", "python"]
 description: A presentation slide for how to use reveal.js in Jekyll
 
 ---

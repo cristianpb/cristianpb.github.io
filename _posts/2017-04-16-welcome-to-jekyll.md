@@ -2,8 +2,9 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2017-04-16 21:01:25 +0200
-categories: ['jekyll', 'markdown']
+categories: ['jekyll']
 description: "How do I create this blog with Jekyll. Including functionalities like disqus comments and google analytics"
+
 ---
 
 This is my first post using jekyll.  I started to use it because I really like
