@@ -14,7 +14,7 @@ layout: default
     <br>
     <div class="tags is-centered">
     {% for cat in page.categories %}
-    <span class="tag">{{ cat }}</span>
+    <a class="tag" href="/blog/tags#{{ cat }}" target="_blank"> {{ cat }}</a>
     {% endfor %}
     </div>
   </div>
