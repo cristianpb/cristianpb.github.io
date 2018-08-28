@@ -81,9 +81,9 @@ title: Blog
             paginator.previous_page }}{% else %}{% endif %}" aria-label="Go to 
             page {{ paginator.previous_page }}">{{ paginator.previous_page 
             }}</a></li>{% endif %}
-          <div class="pagination-link is-current" aria-label="Page {{ 
-            paginator.page }}" aria-current="page" disabled>{{ paginator.page 
-            }}</div>
+          <p class="pagination-link is-current" aria-label="Page {{ 
+            paginator.page }}" aria-current="page">{{ paginator.page 
+            }}</p>
           {% if paginator.next_page %} <li><a class="pagination-link" 
               href="/blog/{{ paginator.next_page }}" aria-label="Go to page {{ 
               paginator.next_page }}" aria-current="page">{{ 
