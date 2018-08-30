@@ -23,13 +23,21 @@ I began my preparation program 3 months before the race. I started running regul
 
 From my daily analysis I can say that I prefer to run mostly on Tuesday and that I barely run on Fridays. Saturdays runs are the longest ones, with an average of 20.4 km. Regarding speed, I run slower on Saturdays, because distance are longer.
 
-<canvas id="radarWeekly" width="400" height="200"></canvas>
+<div class="columns is-centered">
+<div class="column is-12-mobile is-6-desktop">
+<canvas id="radarWeekly" width="100%" height="100"></canvas>
+</div>
+</div>
 
 ## Weekly behaviour
 
 It is nice to see the weekly progress, running 22 kilometres at the beginning of July and reaching 46 kilometres on September. In average, I train 3 times a week.
 
-<canvas id="barChartWeek" width="400" height="200"></canvas>
+<div class="columns is-centered">
+<div class="column is-12-mobile is-6-desktop">
+<canvas id="barChartWeek" width="100%" height="80%"></canvas>
+</div>
+</div>
 
 ## Monthly behaviour
 

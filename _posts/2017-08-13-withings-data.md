@@ -14,8 +14,11 @@ Code inside [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github
 ## Calendar heatmap of steps
 
 <div id="cal-heatmap"></div>
-<button id="example-c-PreviousDomain-selector" style="height: 20; width: 20px; margin-top: 10px;margin-bottom: 10px;" class="btn"><i class="icon icon-chevron-left"></i>< </button>
-<button id="example-c-NextDomain-selector" style="height: 25; width: 20px; margin-bottom: 10px;" class="btn"><i class="icon icon-chevron-right"></i>></button>
+<br>
+<button id="example-c-PreviousDomain-selector" class="button"><i class="fas 
+fa-angle-left is-medium"></i>Previous </button>
+<button id="example-c-NextDomain-selector" class="button">Next month <i 
+class="fas fa-angle-right is-medium"></i></button>
 
 ## Daily steps 
 
@@ -47,6 +50,8 @@ cal.init({
 	},
     legend: [3000, 7000, 10000, 15000, 20000],
     legendColors: ["#ecf5e2", "#232181"],
+    legendCellSize: 20,
+    legendCellPadding: 5,
     tooltip: true
 });
 var timeFormat = 'YY:MM:dd';
