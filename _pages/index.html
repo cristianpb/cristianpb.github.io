@@ -3,8 +3,92 @@ layout: default
 avatar: true
 permalink: /
 ---
+
+<section class="section">
+  <div class="container">
+    <h2 class="title">
+      What I do:
+    </h2>
+    <div class="columns is-mobile is-multiline is-horizontal-center">
+      <div class="column is-3-desktop is-12-mobile">
+        <h3 class="subtitle">Data modelling</h3>
+        <amp-img src="/assets/img/about/model.svg" alt="data modelling" height="200" width="300" layout="responsive"></amp-img>
+        <div class="content">
+          <ul>
+            <li>
+              Regression and classification algorithms for finance and assurance French companies.  
+            </li>
+            <li>
+              Deep learning algorithms for object detection 
+            </li>
+            <li>
+              LSTM models for time series prediction in robotics application
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="column is-3-desktop is-12-mobile">
+        <h3 class="subtitle">Data engineering</h3>
+        <amp-img src="/assets/img/about/engineer.svg" alt="data engineer" height="200" width="300" layout="responsive"></amp-img>
+        <div class="content">
+          <ul>
+            <li>
+              Collect data from different kinds of sources social networks, APIs, websites.
+            </li>
+            <li>
+              Save large amounts of data coming at high intensity using a differed processing pipeline.
+            </li>
+            <li>
+              SQL and NoSQL database management (mongodb, neo4j, oracle, MySQL, SQLite)
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="column is-3-desktop is-12-mobile">
+        <h3 class="subtitle">System management</h3>
+        <amp-img src="/assets/img/about/system.svg" alt="system management" height="200" width="300" layout="responsive"></amp-img>
+        <div class="content">
+          <ul>
+            <li>
+              Application deployment using docker container system
+            </li>
+            <li>
+              Cloud computing management using AWS
+            </li>
+            <li>
+              Linux system management
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="column is-3-desktop is-12-mobile">
+        <h3 class="subtitle">Visualization</h3>
+        <amp-img src="/assets/img/about/visualization.svg" alt="visualization" height="200" width="300" layout="responsive"></amp-img>
+        <div class="content">
+          <ul>
+            <li>
+              Interactive dashboards development using javascript libraries such as d3.js, dc.js
+            </li>
+            <li>
+              Web applications using modern frameworks such as Angular.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<center><a class="button is-primary "  href="{{ site.baseurl | append: '/about/'}}">More about me</a></center>
+
 <section class="section">
 <div class="container" id="last_articles">
+  <h2 class="title">
+    Last articles
+  </h2>
+
 <div class="columns is-desktop">
 {% for post in site.posts limit: 3 %}
 <div class="column is-one-third">
@@ -37,7 +121,7 @@ permalink: /
 {% endfor %}
 </div>
 
-<center><a class="button is-primary "  href="{{ site.baseurl | append: '/blog/'}}">More at the blog</a></center>
+<center><a class="button is-primary "  href="{{ site.baseurl | append: '/blog/'}}">More articles at the blog</a></center>
   
 </div>
 </section>

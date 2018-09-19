@@ -27,12 +27,26 @@
     </div>
 
     <div class="navbar-end">
-      {% for page in site.pages %}
-        {% if page.title and page.navigation %}
-        <a class="navbar-item is-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endif %}
-      {% endfor %}
-        <a class="navbar-item is-link" href="/blog">Blog</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="/about/">About me</a>
+        <div class="navbar-dropdown is-right">
+          <a class="navbar-item" href="/about/#experience">
+            Experience
+          </a>
+          <a class="navbar-item" href="/about/#education">
+            Education
+          </a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="/blog/">Blog</a>
+        <div class="navbar-dropdown is-right">
+          <a class="navbar-item" href="/blog/tags">
+            Categories
+          </a>
+          <a class="navbar-item" href="/feed.xml"><i class="fas fa-rss"></i>&nbsp;Atom</a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
@@ -55,16 +69,6 @@
        {% endif %}
       {% endfor %}
     </div>
-  </div>
-  <!-- Hero footer: will stick at the bottom -->
-  <div class="hero-foot">
-    <nav class="tabs is-boxed is-centered">
-      <div class="container">
-        <ul>
-          <li class="is-active"><a href="/#last_articles">Last articles</a></li>
-        </ul>
-      </div>
-    </nav>
   </div>
 </section>
 {% endif %}
