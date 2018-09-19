@@ -36,6 +36,9 @@
           <a class="navbar-item" href="/about/#education">
             Education
           </a>
+          <a class="navbar-item" href="/assets/pdf/cv.pdf">
+            <i class="fas fa-file-download"></i>&nbsp;CV
+          </a>
         </div>
       </div>
       <div class="navbar-item has-dropdown is-hoverable">
@@ -52,7 +55,7 @@
 </nav>
 
 {% if include.avatar %}
-<section class="hero is-primary is-medium">
+<section class="hero is-primary is-small">
   <div class="hero-body is-centered">
     <div class="container">
       <h1 class="title">
@@ -61,14 +64,22 @@
       <h2 class="subtitle">
         {{ site. description }}
       </h2>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-centered">
+      <div class="container">
+        <ul>
       {% for link in site.author %}
        {% if link[0] != 'name' %}
-        <a class="icon is-medium" href="{{ link[1] }}">
-          <i class="fab fa-{{ link[0] }} fa-2x"></i>
-        </a>
+       <li>
+         <a href="{{ link[1] }}"><i class="fab fa-{{ link[0] }}"></i></a>
+      </li>
        {% endif %}
       {% endfor %}
-    </div>
+        </ul>
+      </div>
+    </nav>
   </div>
 </section>
 {% endif %}

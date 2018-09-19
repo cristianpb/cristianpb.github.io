@@ -1,0 +1,39 @@
+---
+layout: default
+title: External articles
+
+---
+
+<section class="hero is-primary is-small">
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-centered">
+      <div class="container">
+        <ul>
+          <li><a href="/blog/">Articles</a></li>
+          <li><a href="/blog/tags">Categories</a></li>
+          <li><a href="/blog/external">External articles</a></li>
+          <li><a href="/feed.xml"><i class="fas fa-rss"></i>&nbsp;Atom</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    
+    <div class="content">
+    {% for article in site.data.blog.external_articles %}
+    <i class="fab fa-medium"></i>
+    <strong><a href="{{ article.link }}" target="_blank">{{ article.title }}</a></strong>
+    <p>
+      <small>{{ article.date }}</small>
+      <br>
+      {{ article.description }}
+    </p>
+    {% endfor %}
+    </div>
+
+  </div>
+</section>
