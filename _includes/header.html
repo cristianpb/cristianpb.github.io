@@ -3,6 +3,7 @@
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
         <amp-img src="{{ site.baseurl | append:'/assets/img/avatar.png'}}" 
+          alt="{{ site.title }}"
           width="30" height="30"></amp-img>
     </a>
     <div class="navbar-item" >
@@ -46,6 +47,9 @@
         <div class="navbar-dropdown is-right">
           <a class="navbar-item" href="/blog/tags">
             Categories
+          </a>
+          <a class="navbar-item" href="/blog/external">
+            External articles
           </a>
           <a class="navbar-item" href="/feed.xml"><i class="fas fa-rss"></i>&nbsp;Atom</a>
         </div>

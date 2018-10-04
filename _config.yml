@@ -4,7 +4,7 @@ author: Cristian Perez Brokate
 title: Cristian Perez Brokate
 email: cperez at kernix.com
 description: > # this means to ignore newlines until "baseurl:"
-        Data scientist at Paris area. I use machine learning, data science, deep learning to build useful models for diverse kind of data with python and R. I build interactive dashboards and web applications using nodejs, flask, python, Angular, docker.
+        Data scientist at Paris area. I use machine learning, data science, deep learning for data projets using python, javascript and R. I build interactive dashboards and web applications using nodejs, flask, python, Angular, docker.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cristianpb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: https://twitter.com/cris_perez_b
@@ -76,6 +76,8 @@ exclude:
  
 defaults:
     - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title'}}
+    - {scope: {path: "", layout: default, type: "pages"}, values: {image: '/assets/img/avatar.png'}}
+    - {scope: {path: "blog/"}, values: {permalink: '/blog/:title'}}
 
 include:
   - _pages

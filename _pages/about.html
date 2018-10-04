@@ -212,7 +212,7 @@ visjs: false
 
 <section class="section" id="education">
   <div class="container">
-    <h1 class="title"><i class="fas fa-graduation-cap"></i>Education</h1>
+    <h2 class="title"><i class="fas fa-graduation-cap"></i>Education</h2>
     
 
     <div class="timeline is-centered">
@@ -221,7 +221,7 @@ visjs: false
       </header>
       <div class="timeline-item">
         <div class="timeline-marker is-image is-48x48">
-          <amp-img layout="responsive" src="/assets/img/about/upmc.svg" width="48" height="48"></amp-img>
+          <amp-img layout="responsive" src="/assets/img/about/upmc.svg" width="48" height="48" alt="logo umpc"></amp-img>
         </div>
         <div class="timeline-content">
           <p class="heading">Université Pierre et Marie Curie</p>
@@ -233,7 +233,7 @@ visjs: false
       </header>
       <div class="timeline-item">
         <div class="timeline-marker is-image is-48x48">
-          <amp-img layout="responsive" src="/assets/img/about/mines_paristech.svg" width="48" height="48"></amp-img>
+          <amp-img layout="responsive" src="/assets/img/about/mines_paristech.svg" width="48" height="48" alt="logo mines paristech"></amp-img>
         </div>
         <div class="timeline-content">
           <p class="heading">École Nationale Supérieure des Mines de Paris</p>
@@ -245,7 +245,7 @@ visjs: false
       </header>
       <div class="timeline-item">
         <div class="timeline-marker is-image is-48x48">
-          <amp-img layout="responsive" src="/assets/img/about/enim.svg" width="48" height="48"></amp-img>
+          <amp-img layout="responsive" src="/assets/img/about/enim.svg" width="48" height="48" alt="logo enim"></amp-img>
         </div>
         <div class="timeline-content">
           <p class="heading">École Nationale d’Ingénieurs de Metz</p>
@@ -257,7 +257,7 @@ visjs: false
       </header>
       <div class="timeline-item">
         <div class="timeline-marker is-image is-48x48">
-          <amp-img layout="responsive" src="/assets/img/about/uis.svg" width="48" height="48"></amp-img>
+          <amp-img layout="responsive" src="/assets/img/about/uis.svg" width="48" height="48" alt="logo uis"></amp-img>
         </div>
         <div class="timeline-content">
           <p class="heading"><a href="http://www.uis.edu.co/" target="_blank">Universidad Industrial de Santander</a></p>
@@ -284,7 +284,7 @@ visjs: false
           <div class="card-image is-centered">
             <figure class="image">
               <a href="http://www.robertorocca.org/en/fellowships/fellows15.aspx" target="_blank">
-              <amp-img src="/assets/img/about/roberto_rocca.jpg" width="434" height="244" layout="responsive"></amp-img>
+              <amp-img src="/assets/img/about/roberto_rocca.jpg" width="434" height="244" layout="responsive" alt="roberto rocca fellowship program"></amp-img>
               </a>
             </figure>
           </div>
@@ -311,7 +311,7 @@ visjs: false
           <div class="card-image">
             <a href="http://artsetsciences.doc-up.info/archives/edition-2014/" target="_blank">
             <figure class="image">
-              <amp-img src="/assets/img/about/arts.jpg" width="450" height="300" layout="responsive"></amp-img>
+              <amp-img src="/assets/img/about/arts.jpg" width="450" height="300" layout="responsive" alt="concours arts et sciences"></amp-img>
             </figure>
             </a>
           </div>
@@ -391,14 +391,14 @@ visjs: false
         
     </p>
     <br></br>
-    <h2 class="subtitle" id="phdthesis">PhD Thesis</h2>
+    <h3 class="subtitle" id="phdthesis">PhD Thesis</h3>
     
     <div class="box">
     
     <article class="media">
       <figure class="media-left">
         <p class="image is-64x64">
-          <amp-img src="/assets/img/about/phd.png" width="64" height="90"></amp-img>
+          <amp-img src="/assets/img/about/phd.png" width="64" height="90" alt="phd thesis cristian perez"></amp-img>
         </p>
       </figure>
       <div class="media-content">
@@ -426,7 +426,7 @@ visjs: false
 
 
 
-    <h2 class="subtitle" id="journalarticles">Journal Articles</h2>
+    <h3 class="subtitle" id="journalarticles">Journal Articles</h3>
 
     {% for article in site.data.about.articles %}
     <div class="box">
@@ -434,7 +434,7 @@ visjs: false
     <article class="media">
       <figure class="media-left">
         <p class="image is-64x64">
-          <amp-img src="{{ article.img }}" width="64" height="90"></amp-img>
+          <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}"></amp-img>
         </p>
       </figure>
       <div class="media-content">
@@ -456,7 +456,7 @@ visjs: false
     </div>
     {% endfor %}
 
-    <h2 class="subtitle" id="conferenceproceedings">Conference proceedings</h2>
+    <h3 class="subtitle" id="conferenceproceedings">Conference proceedings</h3>
 
 
     {% for article in site.data.about.conference_proceedings %}
@@ -466,7 +466,7 @@ visjs: false
       {% if article.img %}
       <figure class="media-left">
         <p class="image is-64x64">
-          <amp-img src="{{ article.img }}" width="64" height="90"></amp-img>
+          <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}"></amp-img>
         </p>
       </figure>
       {% endif %}

@@ -5,6 +5,13 @@ title: External articles
 ---
 
 <section class="hero is-primary is-small">
+  <div class="hero-body is-centered">
+    <div class="container">
+      <h1 class="title">
+        {{ page.title }}
+      </h1>
+    </div>
+  </div>
   <div class="hero-foot">
     <nav class="tabs is-boxed is-centered">
       <div class="container">
@@ -25,10 +32,10 @@ title: External articles
     
     <div class="content">
     {% for article in site.data.blog.external_articles %}
-    <i class="fab fa-medium"></i>
     <strong><a href="{{ article.link }}" target="_blank">{{ article.title }}</a></strong>
     <p>
-      <small>{{ article.date }}</small>
+      <i class="far fa-newspaper"></i>  <strong>{{ article.source }}</strong> - 
+      <i class="far fa-calendar-alt"></i>  <small>{{ article.date }}</small>
       <br>
       {{ article.description }}
     </p>
