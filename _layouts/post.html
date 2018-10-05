@@ -28,25 +28,27 @@ layout: default
         <div class="content">
           {{ content }}
         </div>
+
+        <section class="section">
+          <div class="container">
+            <nav class="pagination" role="navigation" aria-label="pagination">
+              {% if page.previous.url %} <a href="{{ page.previous.url | prepend: site.baseurl }}" class="pagination-previous is-left">← Previous post</a> {% endif %}
+              {% if page.next.url %} <a href="{{ page.next.url | prepend: site.baseurl }}" class="pagination-next is-right">Next post →</a>{% endif %}
+            </nav>
+          </div>
+        </section>
+
+        <section class="section is-small">
+          <div class="container is-center">
+            {% include amp-social-share.html %}
+            {% if site.disqus.shortname %}
+            {% include disqus_comments.html %}
+            {% endif %}
+          </div>
+        </section>
+
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <nav class="pagination" role="navigation" aria-label="pagination">
-      {% if page.previous.url %} <a href="{{ page.previous.url | prepend: site.baseurl }}" class="pagination-previous is-left">← Previous post</a> {% endif %}
-      {% if page.next.url %} <a href="{{ page.next.url | prepend: site.baseurl }}" class="pagination-next is-right">Next post →</a>{% endif %}
-    </nav>
-  </div>
-</section>
-
-<section class="section is-small">
-  <div class="container has-text-centered">
-  {% include amp-social-share.html %}
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
-  </div>
-</section>

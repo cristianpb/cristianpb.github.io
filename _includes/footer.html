@@ -1,6 +1,16 @@
 <footer class="footer">
   <div class="content has-text-centered">
-    <p class="copy">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    <p>&copy; {{ site.time | date: '%Y' }} - {{ site.title }} 
+      - 
+      {% for link in site.author %}
+       {% if link[0] != 'name' %}
+        <a href="{{ link[1] }}">
+          <i class="fab fa-{{ link[0] }}"></i>
+          &nbsp;
+        </a>
+       {% endif %}
+      {% endfor %}
+    </p>
   </div>
 </footer>
 <amp-analytics type="googleanalytics" id="analytics1">
