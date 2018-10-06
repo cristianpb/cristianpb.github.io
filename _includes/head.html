@@ -8,6 +8,7 @@
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {% if page.layout == "post" %}<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>{% endif %}
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title> {% seo title=false %}
+  <meta property="og:type" content="website" />
     {% feed_meta %}
   <link rel="stylesheet" 
   href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
