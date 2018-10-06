@@ -74,12 +74,10 @@
     <nav class="tabs is-boxed is-centered">
       <div class="container">
         <ul>
-      {% for link in site.author %}
-       {% if link[0] != 'name' %}
+      {% for link in site.socialnetworks %}
        <li>
          <a href="{{ link[1] }}"><i class="fab fa-{{ link[0] }}"></i></a>
       </li>
-       {% endif %}
       {% endfor %}
         </ul>
       </div>
