@@ -74,7 +74,7 @@ visjs: false
               </ul>
               <br>
               {%   assign today = site.time | date: '%s'      %}
-              {%   assign start = '20-01-2017 04:00:00' | date: '%s'  %}
+              {%   assign start = '01-01-2017 04:00:00' | date: '%s'  %}
               {%   assign secondsSince = today | minus: start     %}
               {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
               {%   assign daysSince = hoursSince | divided_by: 24  %}
@@ -110,7 +110,7 @@ visjs: false
               </ul>
               <br>
               {%   assign today = site.time | date: '%s'      %}
-              {%   assign start = '20-05-2018 04:00:00' | date: '%s'  %}
+              {%   assign start = '01-11-2017 04:00:00' | date: '%s'  %}
               {%   assign secondsSince = today | minus: start     %}
               {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
               {%   assign daysSince = hoursSince | divided_by: 24  %}
@@ -118,7 +118,7 @@ visjs: false
               {%   assign k = 10   %}
               {%   assign divisor = 365   %}
               {%   assign modulus = daysSince | modulo: 365 | times: k | divided_by: divisor  %}
-              <p>May 2018 - Present ({{yearsSince}}.{{modulus}} years)</p>
+              <p>Nov 2017 - Present ({{yearsSince}}.{{modulus}} years)</p>
             </div>
           </div>
         </div>
@@ -152,7 +152,7 @@ visjs: false
               </ul>
               <br>
               {%   assign today = site.time | date: '%s'      %}
-              {%   assign start = '20-05-2018 04:00:00' | date: '%s'  %}
+              {%   assign start = '01-05-2018 04:00:00' | date: '%s'  %}
               {%   assign secondsSince = today | minus: start     %}
               {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
               {%   assign daysSince = hoursSince | divided_by: 24  %}
