@@ -57,31 +57,3 @@
     </div>
   </div>
 </nav>
-
-{% if include.avatar %}
-<section class="hero is-primary is-small">
-  <div class="hero-body is-centered">
-    <div class="container">
-      <h1 class="title">
-        {{ site.title }}
-      </h1>
-      <h2 class="subtitle">
-        {{ site. description }}
-      </h2>
-    </div>
-  </div>
-  <div class="hero-foot">
-    <nav class="tabs is-boxed is-centered">
-      <div class="container">
-        <ul>
-      {% for link in site.socialnetworks %}
-       <li>
-         <a href="{{ link[1] }}"><i class="fab fa-{{ link[0] }}"></i></a>
-      </li>
-      {% endfor %}
-        </ul>
-      </div>
-    </nav>
-  </div>
-</section>
-{% endif %}

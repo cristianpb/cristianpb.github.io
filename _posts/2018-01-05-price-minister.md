@@ -2,7 +2,7 @@
 layout: post
 title: "Price minister NLP project"
 date: 2018-01-05
-description: "NLP problem solved using best practices for a data science project."
+description: "This projects uses NLP to classify a user review as useful or not useful. Best practices for a data science project such as document structure, documentation and virtual environment are used"
 categories: ["nlp", "python", "cookie-cutter", "sphinx"]
 image: /assets/img/priceminister/main-crop.png
 

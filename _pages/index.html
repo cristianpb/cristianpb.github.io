@@ -1,11 +1,38 @@
 ---
 layout: default
-avatar: true
+carousel: true
 permalink: /
 ---
 
+<section class="hero is-primary is-small">
+  <div class="hero-body is-centered">
+    <div class="container">
+      <h1 class="title">
+        {{ site.title }}
+      </h1>
+      <h2 class="subtitle">
+        {{ site. description }}
+      </h2>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-centered">
+      <div class="container">
+        <ul>
+      {% for link in site.socialnetworks %}
+       <li>
+         <a href="{{ link[1] }}"><i class="fab fa-{{ link[0] }}"></i></a>
+      </li>
+      {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
+
     <h2 class="title">
       What I do:
     </h2>
@@ -77,55 +104,54 @@ permalink: /
       </div>
     </div>
 
+    <center><a class="button"  href="{{ site.baseurl | append: '/about/'}}">More about me</a></center>
   </div>
 </section>
 
 
-<center><a class="button"  href="{{ site.baseurl | append: '/about/'}}">More about me</a></center>
-<br>
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container" id="last_articles">
 
-<section class="section hero is-primary">
-<div class="container" id="last_articles">
-  <h2 class="title">
-    Last articles
-  </h2>
+      <h2 class="title"> Last articles </h2>
 
-<div class="columns is-desktop">
-{% for post in site.posts limit: 3 %}
-<div class="column is-one-third">
-<div class="card">
-  {% if post.image %}
-  <div class="card-image">
-    <a href="{{ post.url }}" target="_blank">
-    <figure class="image">
-      <amp-img src="{{ post.image }}" alt="{{ post.title }}" height="200" width="300" layout="responsive"></amp-img>
-    </figure>
-    </a> 
-  </div>
-  {% endif %}
-  <div class="card-content">
-    <div class="media">
-      <div class="media-content">
-        <a href="{{ post.url }}" class="title is-4">{{ post.title }}</a>
-      </div>
-    </div>
 
-    <div class="content">
-      {{ post.description }}
+      <amp-carousel height="500" layout="fixed-height" type="carousel"  controls>
+        {% for post in site.posts limit: 9 %}
+        <div class="card">
+          {% if post.image %}
+          <div class="card-image">
+            <figure class="image">
+              <a href="{{ post.url }}">
+                <amp-img src="{{ post.image }}" alt="{{ post.title }}"  height="200" width="300" layout="intrinsic"></amp-img>
+              </a>
+            </figure>
+          </div>
+          {% endif %}
+          <div class="card-content">
+            <div class="media apretaito">
+              <div class="media-content">
+                <a href="{{ post.url }}" class="title is-4">{{ post.title }}</a>
+              </div>
+            </div>
+
+            <div class="content apretaito">
+              <p> {{ post.description }} </p>
+              <span class="tag">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </div>
+
+          </div>
+        </div>
+        {% endfor %}
+      </amp-carousel>
+
       <br>
-      <span class="tag">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <center><a class="button"  href="{{ site.baseurl | append: '/blog/'}}">More at my blog</a></center>
     </div>
   </div>
-</div>
-
-</div>
-{% endfor %}
-</div>
-
-<center><a class="button"  href="{{ site.baseurl | append: '/blog/'}}">More articles at my blog</a></center>
-  
-</div>
 </section>
+
+
 <section class="section">
   <div class="container" id="last_articles">
     <h2 class="title">

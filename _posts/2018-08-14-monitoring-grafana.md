@@ -2,7 +2,7 @@
 layout: post
 title: "System monitoring with Grafana, InfluxDB and Collectd"
 date: 2018-08-14
-description: "Docker allow to easily deploy a monitoring system using beautiful 
+description: "Docker allows to easily deploy a monitoring system using beautiful 
 Grafana dashboards and connected with optimized data sources with Influxdb and 
 Collectd"
 categories: ["grafana", "docker", "influxdb", "collectd", "aws"]

@@ -2,7 +2,7 @@
 layout: post
 title: "Interactive data exploration using Dc.js"
 date: 2018-02-18
-description: "Creating data visualizations for a reader narrative exploration"
+description: "Interactive visualizations allows the reader to explore data for differents points of views. Javascript library Dc.js allows to combine multi variable firlters to the analysis."
 categories: ["d3.js", "dc.js", "visualization", "bulma"]
 image: /assets/img/dashboard-dc-js/main-crop.png
 
