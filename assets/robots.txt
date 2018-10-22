@@ -1,9 +1,0 @@
----
-permalink: /robots.txt
----
-User-agent: *
-Disallow: /ngitung/
-Sitemap: {{ site.url }}/sitemap.xml
-
-User-agent: Mediapartners-Google
-Allow: /
