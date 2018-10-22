@@ -17,10 +17,8 @@ github_username:  cristianpb
 researchgate_username:  Cristian_Perez_Brokate
 disqus:
   shortname: cristianpb-github-io
-google_analytics: UA-68913933-2
 paginate: 6
 paginate_path: '/blog/:num'
-google-site-verification: 'dadHYln91lNA-p2JDYCrivQ6etkGJeqk1Dz1GpshKk0'
 social:
   name: Cristian Perez Brokate
   links:
@@ -46,6 +44,9 @@ socialnetworks:
   kaggle: https://www.kaggle.com/cristianpb
   google: https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
   researchgate: https://www.researchgate.net/profile/Cristian_Perez_Brokate
+
+google_analytics: UA-68913933-2
+google_site_verification: dadHYln91lNA-p2JDYCrivQ6etkGJeqk1Dz1GpshKk0
 
 # Color the browser elements #
 color-browser: "#03abea"
