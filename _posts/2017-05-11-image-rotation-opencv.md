@@ -4,7 +4,8 @@ title: "Image rotation using OpenCV"
 date: 2017-05-13
 description: "This post shows how to recalculate bounding box coordinates when the image rotate. An example using OpenCV in python is provided."
 categories: ["opencv", "python"]
-mathjax: true
+mathjax: false
+mathml: true
 image: /assets/img/image-rotation-opencv/main-crop.jpg
 
 ---
@@ -27,43 +28,34 @@ transformation](https://en.wikipedia.org/wiki/Affine_transformation).  This
 matrix can be used to express a rotation, translation and scale operations.
 The usual way to represent a affine transformation is using a `2 x 3` matrix.
 
-$$
-\begin{aligned}
-M = \begin{bmatrix} a_{00} & a_{01} & b_{00} \\ a_{10} & a_{11} & b_{10} \end{bmatrix}
-\end{aligned}
-$$
+<amp-mathml layout="container" data-formula="\[M= \left[ {\begin{array}{cc} a_{00} & a_{01} & b_{00}\\ a_{10} & a_{11} & b_{10}\\ \end{array} } \right] \]">
+</amp-mathml>
 
-Considering that we want to transform a 2D vector
-$$ X = \begin{bmatrix}x \\
-y\end{bmatrix}$$
+
+Considering that we want to transform a 2D vector 
+<amp-mathml layout="container" data-formula="\[X= \left[ {\begin{array}{cc} x \\ y\\ \end{array} } \right] \]"> </amp-mathml>
 
 The transformed vector can be obtained by 
 
-$$
-T = M \cdot [x, y, 1]^{T}
-$$
+<amp-mathml layout="container" data-formula="\[T = M \cdot [x, y, 1]^{T}\]"> </amp-mathml>
 
-$$
-T = \begin{bmatrix} a_{00}x + a_{01}y + b_{00} \\ a_{10}x + a_{11}y + b_{10} \end{bmatrix}
-$$
+<amp-mathml layout="container" data-formula="\[ T = \begin{bmatrix} a_{00}x + a_{01}y + b_{00} \\ a_{10}x + a_{11}y + b_{10} \end{bmatrix} \]"> </amp-mathml>
 
 ## Transformation matrix
 
 The transformation matrix can be obtained using the rotation angle and the centre coordinates. It can be expressed also as the following structure:
 
-$$
-\begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{centre.x} - \beta
+<amp-mathml layout="container" data-formula="\[ \begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{centre.x} - \beta
 \cdot \texttt{centre.y} \\ - \beta & \alpha & \beta \cdot \texttt{centre.x} +
-(1- \alpha ) \cdot \texttt{centre.y} \end{bmatrix}
-$$
+(1- \alpha ) \cdot \texttt{centre.y} \end{bmatrix} \]"> </amp-mathml>
 
 Where:
 
-* $$\alpha = scale * \cos \theta$$,
-* $$\beta = scale * \sin \theta$$ and
-* $$\theta$$ is the rotation angle.
+* <amp-mathml layout="container" inline data-formula="\[ \alpha = scale * \cos \theta \]"></amp-mathml>
+* <amp-mathml layout="container" inline data-formula="\[ \beta = scale * \sin \theta \]"></amp-mathml>
+* and <amp-mathml layout="container" inline data-formula="\[ \theta \]"> </amp-mathml> is the rotation angle.
 
-For this case, we use $$scale = 1$$.
+For this case, we use <amp-mathml layout="container" inline data-formula="\[ scale = 1. \]">
 
 ### Adjust coordinates to the new reference point
 
@@ -71,25 +63,26 @@ For this case of rotation image, where the image size changes after rotation
 and also the reference point, the transformation matrix has to be modified.
 The figure represents how the new dimension is calculated:
 
+<center>
 <amp-img src="/assets/img/image-rotation-opencv/dessin.svg" alt="Image rotation schema" height="480" width="640"  layout="responsive"></amp-img>
+<br><i>Image rotation schema</i>
+</center>
 
 Where the new with and height can be calculated using the following relations:
-* $$ \texttt{new.width} = h*\sin(\theta) + w*\cos(\theta) $$ 
-* $$ \texttt{new.height} = h*\cos(\theta) + w*\sin(\theta) $$
+<amp-mathml layout="container" data-formula="\[ \texttt{new.width} = h*\sin(\theta) + w*\cos(\theta) \]"> </amp-mathml>
+<amp-mathml layout="container" data-formula="\[ \texttt{new.height} = h*\cos(\theta) + w*\sin(\theta) \]"> </amp-mathml>
 
 Since the image size changes, the coordinates of the rotation point (centre of the image) change too. Then it has to be taken into account in the transformation matrix.
 This is added to the last column of the transformation matrix as follows:
 
-$$
-\begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{centre.x} - \beta
+<amp-mathml layout="container" data-formula="\[ \begin{bmatrix} \alpha & \beta & (1- \alpha ) \cdot \texttt{centre.x} - \beta
 \cdot \texttt{centre.y} + (\texttt{new.width}/2 - \texttt{centre.x}) \\ - \beta & \alpha & \beta \cdot \texttt{centre.x} +
-(1- \alpha ) \cdot \texttt{centre.y} + (\texttt{new.height}/2 - \texttt{centre.y}) \end{bmatrix}
-$$
+(1- \alpha ) \cdot \texttt{centre.y} + (\texttt{new.height}/2 - \texttt{centre.y}) \end{bmatrix} \]"> </amp-mathml>
 
 ## Implementation using OpenCV
 
 I have implemented the solution in python, using OpenCV.
-I use a sample image of a :cat2:, because everybody loves cats.
+I use a sample image of a 🐈, because everybody loves cats.
 I create the bounding box of the face and the eyes using [Sloth](https://github.com/cvhciKIT/sloth).
 The result is a `json` like this:
 
@@ -128,7 +121,7 @@ img_orig = cv2.imread('images/original_image.jpg')
 rotated_img = rotate_bound(img_orig, theta)
 ```
 
-I use a `for` loop to transform each $$(x,y)$$ coordinates.
+I use a `for` loop to transform each _(x,y)_ coordinates.
 
 ```python
 new_bb = {}

@@ -9,6 +9,9 @@
   {% if page.carousel %}
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
   {% endif %}
+  {% if page.mathml %}
+  <script async custom-element="amp-mathml" src="https://cdn.ampproject.org/v0/amp-mathml-0.1.js"></script>
+  {% endif %}
     {% if page.layout == "post" %}<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>{% endif %}
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title> {% seo title=false %}
   <meta property="og:type" content="website" />
