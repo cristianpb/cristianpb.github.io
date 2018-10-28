@@ -39,6 +39,7 @@
     </div>
   </div>
 </footer>
+{% if jekyll.environment == "production" %}
 <amp-analytics type="googleanalytics" id="analytics1">
 <script type="application/json">
 {
@@ -55,3 +56,4 @@
 </script>
 </amp-analytics>
 <amp-install-serviceworker src="{{ site.baseurl | prepend: site.url }}/sw.js" layout="nodisplay"></amp-install-serviceworker>
+{% endif %}

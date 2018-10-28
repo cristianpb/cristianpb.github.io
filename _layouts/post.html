@@ -38,6 +38,99 @@ layout: default
   </div>
 </section>
 
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h3 class="subtitle">You may also like: </h3>
+  
+    {% assign maxRelated = 4 %}
+    {% assign minCommonTags =  2 %}
+    {% assign maxRelatedCounter = 0 %}
+
+    {% for post in site.posts %}
+
+    {% assign recNum = 0 %}
+    {% assign sameTagCount = 0 %}
+    {% assign commonTags = '' %}
+
+    {% for category in post.categories %}
+      {% if post.url != page.url %}
+        {% if page.categories contains category %}
+          {% assign sameTagCount = sameTagCount | plus: 1 %}
+          {% capture tagmarkup %} {{ category }} {% endcapture %}
+          {% assign commonTags = commonTags | append: tagmarkup %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% if sameTagCount >= minCommonTags %}
+
+    <div class="box">
+    
+    <article class="media">
+      <figure class="media-left">
+        <a class="image is-128x128" href="{{ post.url }}">
+          <amp-img src="{{ post.image }}" width="128" height="128" alt="{{ post.title }}"></amp-img>
+        </a>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <br>
+              {% for cat in post.categories %}
+              <a class="tag" href="/blog/tags#{{ cat }}"> {{ cat }}</a>
+              {% endfor %}
+            <br>
+            {{ post.description }}
+            <br>
+            <small><i> {{ post.date | date: "%b %-d, %Y" }} </i></small>
+        </div>
+      </div>
+    </article>
+      
+    </div>
+      {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+      {% if maxRelatedCounter >= maxRelated %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+    {% if forloop.last == true and maxRelatedCounter == 0 %}
+      {% for post in site.posts limit: 2 %}
+    <div class="box">
+    
+    <article class="media">
+      <figure class="media-left">
+        <a class="image is-128x128" href="{{ post.url }}">
+          <amp-img src="{{ post.image }}" width="128" height="128" alt="{{ post.title }}"></amp-img>
+        </a>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <br>
+              {% for cat in post.categories %}
+              <a class="tag" href="/blog/tags#{{ cat }}"> {{ cat }}</a>
+              {% endfor %}
+            <br>
+            {{ post.description }}
+            <br>
+            <small><i> {{ post.date | date: "%b %-d, %Y" }} </i></small>
+        </div>
+      </div>
+    </article>
+      
+    </div>
+      {% endfor %}
+    {% endif %}
+
+  {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="section is-small">
   <div class="container has-text-centered">
     {% include amp-social-share.html %}
