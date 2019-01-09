@@ -35,7 +35,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 nmap <silent> <F3> :NERDTreeToggle<CR>
 ```
 
-![](https://cdn-images-1.medium.com/max/800/1*yFuOEvHxG9U0AUjrDlpbrQ.png)
+<amp-img src="https://cdn-images-1.medium.com/max/800/1*yFuOEvHxG9U0AUjrDlpbrQ.png" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
 
 I use [tagbar](https://github.com/majutsushi/tagbar) to browser tags of the current file and its structure. 
 It does this by creating a sidebar that displays the ctags-generated tags of
@@ -47,7 +47,7 @@ in python are displayed under the class they are defined in. I like to toggle th
 nmap <F6> :TagbarToggle<CR>
 ```
 
-![](https://camo.githubusercontent.com/fc85311154723793776aed28488befdfaab36c42/68747470733a2f2f692e696d6775722e636f6d2f5366394c7332722e706e67)
+<amp-img src="https://camo.githubusercontent.com/fc85311154723793776aed28488befdfaab36c42/68747470733a2f2f692e696d6775722e636f6d2f5366394c7332722e706e67" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
 
 ## Customization 
 
@@ -87,8 +87,7 @@ let g:promptline_preset = {
 ```
 
 
-
-![](https://github.com/vim-airline/vim-airline/wiki/screenshots/demo.gif)
+<amp-img src="https://github.com/vim-airline/vim-airline/wiki/screenshots/demo.gif" alt="Vim emoji" height="50" width="593" layout="intrinsic"></amp-img>
 
 ## Git tools
 
@@ -99,7 +98,7 @@ I use [fugitive](https://github.com/tpope/vim-fugitive) to use git inside vim, i
 set diffopt+=vertical "Vertical split by default
 ```
 
-![](https://camo.githubusercontent.com/dae2bbd335e42f9d093c46e4631e8af6fb3fdeed/687474703a2f2f692e696d6775722e636f6d2f4b526176612e706e67)
+<amp-img src="https://camo.githubusercontent.com/dae2bbd335e42f9d093c46e4631e8af6fb3fdeed/687474703a2f2f692e696d6775722e636f6d2f4b526176612e706e67" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
 
 I also use [vim-gitgutter](https://github.com/airblade/vim-gitgutter) to check the lines that has been modified, removed or added with a simple plus and minus sign at the left part of the file. It have disable this pluing by default, and configure a shortcut using `,d`
 
@@ -109,7 +108,7 @@ let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
 ```
 
-![](https://raw.github.com/airblade/vim-gitgutter/master/screenshot.png)
+<amp-img src="https://raw.github.com/airblade/vim-gitgutter/master/screenshot.png" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
 
 ## Syntax checking
 
@@ -127,7 +126,7 @@ let g:syntastic_check_on_open            = 1
 let g:syntastic_check_on_wq              = 0
 ```
 
-![](https://github.com/vim-syntastic/syntastic/raw/master/_assets/screenshot_1.png)
+<amp-img src="https://github.com/vim-syntastic/syntastic/raw/master/_assets/screenshot_1.png" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
 
 ## Writting tools
 
@@ -141,11 +140,7 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 ```
 
-![](https://raw.githubusercontent.com/junegunn/i/master/easy-align/equals.gif)
-
 I use [surround](https://github.com/tpope/vim-surround) to modify any time of parentheses.
-
-![](https://two-wrongs.com/static/image/surround_vim.gif)
 
 I use [ultisnips](https://github.com/sirver/ultisnips) to use predefined snippets. There are several snippets for each programming language. It is also possible to create very modular snippets. I have added a path where I put my own snippets inside `~/.vim/`.
 
@@ -159,7 +154,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 set runtimepath+=~/.vim/my-snippets/
 ```
 
-![](https://raw.github.com/SirVer/ultisnips/master/doc/demo.gif)
+<amp-img src="https://raw.github.com/SirVer/ultisnips/master/doc/demo.gif" alt="ultisnips" height="432" width="593" layout="responsive"></amp-img>
 
 Markdown writting has many plugins. One of them are
 [emojis](https://en.wikipedia.org/wiki/Emoji). These are very popular smileys
@@ -179,10 +174,10 @@ set completefunc=emoji#complete
 
 <amp-img src="/assets/img/vim-plugins/vim-emoji.gif" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
 
-I spend most on my time using vim, then I consider a good idea to make it confortable, so I like to give vim a little of style :ring:, I use [vim-devicons](https://github.com/ryanoasis/vim-devicons). Terminal font must be able to render glyphs :cat:. This can be patched with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#font-installation).
+I spend most on my time using vim, then I consider a good idea to make it confortable, so I like to give vim a little of style, I use [vim-devicons](https://github.com/ryanoasis/vim-devicons). Terminal font must be able to render glyphs. This can be patched with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#font-installation).
 
-![](https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png)
+<amp-img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png" alt="screenshots" height="432" width="650" layout="responsive"></amp-img>
 
-# My complete list of plugins
+## Checkout more ! 
 
-<script src="https://gist.github.com/cristianpb/504f9d105edabf4a0a04ff18bbbc6df0.js"></script>
+Checkout my `.vimrc` and my other `rc` files in my [dotfiles repository](https://github.com/cristianpb/dotfiles)
