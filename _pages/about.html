@@ -41,39 +41,58 @@ visjs: false
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <amp-img src="/assets/img/about/kernix.png" layout="responsive" width="48" height="48" alt="Kernix logo"></amp-img>
+                  <amp-img src="/assets/img/about/ministere_interieur.png" layout="responsive" width="48" height="48" alt="Kernix logo"></amp-img>
                 </figure>
               </div>
               <div class="media-content">
-                <a class="title is-4">Data scientist</a><br>
-                <a class="subtitle is-6" href="https://www.kernix.com/">Kernix</a>
+                <a class="title is-4">Entrepreneur d'Intérêt Général</a><br>
+                <a class="subtitle is-6" href="https://www.interieur.gouv.fr">Ministère de l'intérieur</a>
               </div>
             </div>
             <div class="content">
-              Develop entire data products and analysis using machine learning tools:
+              <p>
+              Entrepreneur d'Intérêt Général is equivalent to the Presidential Innovation Fellows in the US. This program hires Entrepreneurs for a 10 months mission, in order to bring digital transformation in the French Administration, and make use of public Data. 
+              </p>
+              <p>
+              I'm implementing image recognition algorithms using deep learning in french national automatic image processing agency. 
+              </p>
+
+              👉 
+              <a href="https://entrepreneur-interet-general.etalab.gouv.fr/defis/2019/iaflash.html" target="_blank">AI Flash</a>
+              👈
+              <br>
+              <p>Jan 2019 - Present</p>
+            </div>
+          </div>
+      </div>
+      <div class="tile is-child card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <amp-img src="/assets/img/about/cityai.png" layout="responsive" width="48" height="48" alt="City AI logo"></amp-img>
+                </figure>
+              </div>
+              <div class="media-content">
+                <a class="title is-4">Content expert</a><br>
+                <a class="subtitle is-6" href="https://city.ai/">City AI</a>
+              </div>
+            </div>
+            <div class="content">
               <ul>
                 <li>
-                  Prediction models for finance and insurance French companies
+                  Write content about AI from a specialized point of view
                 </li>
                 <li>
-                  Deep learning models for object detection
+                  Development of an application to collect news in the AI fields and share them with the community
                 </li>
                 <li>
-                  LSTM model for time series prediction
-                </li>
-                <li>
-                  Recommendation systems
-                </li>
-                <li>
-                  Build interactive dashboards and web apps using <i class="fab fa-js"></i>
-                </li>
-                <li>
-                  Experience with SQL and NoSQL databases (MongoDB, MySQL, Neo4j)
+                  French AI ecosystem mapping using crunchbase API
                 </li>
               </ul>
               <br>
               {%   assign today = site.time | date: '%s'      %}
-              {%   assign start = '01-01-2017 04:00:00' | date: '%s'  %}
+              {%   assign start = '01-05-2018 04:00:00' | date: '%s'  %}
               {%   assign secondsSince = today | minus: start     %}
               {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
               {%   assign daysSince = hoursSince | divided_by: 24  %}
@@ -81,9 +100,11 @@ visjs: false
               {%   assign k = 10   %}
               {%   assign divisor = 365   %}
               {%   assign modulus = daysSince | modulo: 365 | times: k | divided_by: divisor  %}
-              <p>Jan 2017 - Present ({{yearsSince}}.{{modulus}} years)</p>
+              <p>May 2018 - Present ({{yearsSince}}.{{modulus}} years)</p>
             </div>
           </div>
+
+
       </div>
       <div class="tile is-child card">
           <div class="card-content">
@@ -129,41 +150,40 @@ visjs: false
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <amp-img src="/assets/img/about/cityai.png" layout="responsive" width="48" height="48" alt="City AI logo"></amp-img>
+                  <amp-img src="/assets/img/about/kernix.png" layout="responsive" width="48" height="48" alt="Kernix logo"></amp-img>
                 </figure>
               </div>
               <div class="media-content">
-                <a class="title is-4">Content expert</a><br>
-                <a class="subtitle is-6" href="https://city.ai/">City AI</a>
+                <a class="title is-4">Data scientist</a><br>
+                <a class="subtitle is-6" href="https://www.kernix.com/">Kernix</a>
               </div>
             </div>
             <div class="content">
+              Develop entire data products and analysis using machine learning tools:
               <ul>
                 <li>
-                  Write content about AI from a specialized point of view
+                  Prediction models for finance and insurance French companies
                 </li>
                 <li>
-                  Development of an application to collect news in the AI fields and share them with the community
+                  Deep learning models for object detection
                 </li>
                 <li>
-                  French AI ecosystem mapping using crunchbase API
+                  LSTM model for time series prediction
+                </li>
+                <li>
+                  Recommendation systems
+                </li>
+                <li>
+                  Build interactive dashboards and web apps using <i class="fab fa-js"></i>
+                </li>
+                <li>
+                  Experience with SQL and NoSQL databases (MongoDB, MySQL, Neo4j)
                 </li>
               </ul>
               <br>
-              {%   assign today = site.time | date: '%s'      %}
-              {%   assign start = '01-05-2018 04:00:00' | date: '%s'  %}
-              {%   assign secondsSince = today | minus: start     %}
-              {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-              {%   assign daysSince = hoursSince | divided_by: 24  %}
-              {%   assign yearsSince = daysSince | divided_by: 365  %}
-              {%   assign k = 10   %}
-              {%   assign divisor = 365   %}
-              {%   assign modulus = daysSince | modulo: 365 | times: k | divided_by: divisor  %}
-              <p>May 2018 - Present ({{yearsSince}}.{{modulus}} years)</p>
+              <p>Jan 2017 - Jan 2019 (2 years)</p>
             </div>
           </div>
-
-
       </div>
       <div class="tile is-child card">
           <div class="card-content">
