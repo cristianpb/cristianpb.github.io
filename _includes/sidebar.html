@@ -20,13 +20,11 @@
   <div class="navbar-item has-dropdown is-hoverable">
     <div class="navbar-dropdown is-boxed">
 
-      {% for link in site.author %}
-       {% if link[0] != 'name' %}
+      {% for link in site.socialnetworks %}
         <a class="navbar-item bd-tw-button button" href="{{ link[1] }}">
           <i class="fab fa-{{ link[0] }}"></i>
           &nbsp;{{ link[0] }}
         </a>
-       {% endif %}
       {% endfor %}
 
 
