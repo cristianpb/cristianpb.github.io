@@ -11,14 +11,14 @@ ligthbox: true
 
 In a [previous post](/blog/music-voice-cotrol).  I showed how to monitor data using Collectd, Influxdb and Grafana. 
 In the mean time I wanted to add more functionalities to Colectd but it was difficult
-to find plugings for Nvidia GPU and also to monitoring other docker instances.
-Instead I found Telegraf, which is a tool from the same InfluxDB company that can collect data from several sources.
+to find plugings for Nvidia GPU and also to monitor other docker instances.
+Then I found Telegraf, which is a tool from the same InfluxDB company that can collect data from several sources.
 There are three advantages that made me change to Telegraf instead of collectd:
 * Telegraf is written in go, which make it fast, light and it reduces the footprint when collecting data.
 * There is an extensive list of [telegraf plugins](https://github.com/influxdata/telegraf/tree/master/plugins/inputs) indexed in one official github repository. Which makes very practical to find and install plugins.
 * There is more active support in [telegraf github](https://github.com/influxdata/telegraf) than in [collectd github](https://github.com/collectd/collectd).
 
-In this post I will show how to plug Telegraf plugins to monitor GPU devices and also battery status using Grafana.
+In this post I will show how to use Telegraf plugins to monitor GPU devices and battery status using Grafana.
 
 ## Monitoring stack
 
@@ -106,9 +106,20 @@ services:
       - ./docker/telegraf/telegraf-gpu.conf:/etc/telegraf/telegraf.conf
 ```
 
-The first one is the runtime option so that docker can access to the GPU. The other one if an environment variable `NVIDIA_VISIBLE_DEVICES` to select the number of allowed NVIDIA devices. The possible values are either *all* or the *device number* (multiple device id can be added separated with comma)
+* The first one is the runtime option so that docker can access to the GPU. 
+* The other one if an environment variable `NVIDIA_VISIBLE_DEVICES` to select the number of allowed NVIDIA devices. The possible values are either *all* or the *device number* (multiple device id can be added separated with comma).
+* I use a different telegraf configuration when monitoring GPU because I add the telegraf plugin to monitor GPU using `nvidia_smi` tool. The only thing that changes is to uncomment the following lines:
 
+```config
+[[inputs.nvidia_smi]]
+  ## Optional: path to nvidia-smi binary, defaults to $PATH via exec.LookPath
+  # bin_path = /usr/bin/nvidia-smi
+  
+  ## Optional: timeout for GPU polling
+  # timeout = 5s
+```
 
+In the image below you can see the temperature of each GPU and the utilization of them. I have a batch of work distributed on all GPU that when it finish it writes things in a database. 
 
 <amp-image-lightbox id="lightbox3"
   layout="nodisplay"></amp-image-lightbox>
@@ -127,14 +138,14 @@ The first one is the runtime option so that docker can access to the GPU. The ot
 </div>
 <br>
 
-In the image you can see the temperature of each GPU and the utilization of them. I have a batch of work distributed on all GPU that when it finish it writes things in a database. You can notice two things:
-* *GPU 0* has a lower temperature than the other devices. This occurs because in my disposition *GPU 0* is at the edge and the fan is not blocked by the other GPU.
+You can notice two things:
+* *GPU 0* has a lower temperature than the other devices. This occurs because in my disposition *GPU 0* is placed near the border and the fan is not blocked by the other GPU.
 * Temperatures don't go beyond 80C, which is OK for my GPU.
 
 ## Battery monitoring
 
 I was also curious about my battery utilisation. Because I try to optimize the
-charging cycles, by don't letting the battery go below 20% and not charging
+charging cycles by don't letting the battery go below 20% and not charging
 above 90%.
 So I tried [telegraf battery plugin](https://dev.sigpipe.me/dashie/telegraf-plugins),
 which fetch battery status from `/proc` folder.
@@ -164,3 +175,4 @@ I also try to do complete cycle for the batteries as one can see in the battery 
 ## Conclusion
 
 The combination of telegraf, influxdb and grafana allows me to get an overview of the resources of my system. Combining them with docker allows me to deploy it easily in any remote server.
+All the stack is easily deploy using docker-compose. You can checkout the [github code here](https://github.com/cristianpb/telegraf-influxdb-grafana-docker).
