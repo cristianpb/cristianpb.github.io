@@ -69,6 +69,8 @@ collections:
   iframes:
     output: true
     permalink: /:collection/:name
+  articles:
+    output: false
 
 exclude:
   - drafts

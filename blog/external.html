@@ -29,18 +29,35 @@ title: External articles
 
 <section class="section">
   <div class="container">
+
+
+    {% assign sorted = (site.articles | sort: 'date') | reverse %}
+    {% for article in sorted %}
+    <div class="box">
     
-    <div class="content">
-    {% for article in site.data.blog.external_articles %}
-    <strong><a href="{{ article.link }}" target="_blank">{{ article.title }}</a></strong>
-    <p>
-      <i class="far fa-newspaper"></i>  <strong>{{ article.source }}</strong> - 
-      <i class="far fa-calendar-alt"></i>  <small>{{ article.date }}</small>
-      <br>
-      {{ article.description }}
-    </p>
-    {% endfor %}
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <amp-img src="{{ article.image }}" width="64" height="90" alt="{{ article.title }}"></amp-img>
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong><a href="{{ article.link }}" target="_blank">{{ article.title }}</a></strong>
+            <br>
+            {{ article.description }}
+            <div class="tags has-addons">
+              <span class="tag"><i class="far fa-newspaper"></i>&nbsp; {{ article.source }}</span>
+              <span class="tag is-primary"><i class="far fa-calendar-alt"></i>&nbsp;{{ article.date | date_to_string }}</span>
+            </div>
+          </p>
+        </div>
+      </div>
+    </article>
+      
     </div>
+    {% endfor %}
 
   </div>
 </section>
