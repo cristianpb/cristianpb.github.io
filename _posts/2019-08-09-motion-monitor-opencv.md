@@ -52,7 +52,7 @@ Another popular application for Raspberry Pi is home surveillance. This can be a
 * comparing two consecutive pictures using a subtraction of values,
 * filtering the differences in order to detect movement.
 
-This simple algorithm can be used to spot the difference for two pictures. I used [my motion detection algorithm](https://github.com/cristianpb/object-detection/blob/master/backend/motion.py) for the following Sponge Bob pictures in order to find the differences between the two pictures. It can detect the 3 differences from Sponge Bob and also the cropping gap errors that I made when diving the image. 
+This simple algorithm can be used to spot the difference for two pictures. I used [my motion detection algorithm](https://github.com/cristianpb/object-detection/blob/master/backend/motion.py) for the following Sponge Bob pictures in order to find the differences between the two pictures. It can detect the 3 differences from Sponge Bob and also the cropping errors that I made when dividing the image. 
 
 <div class="columns is-mobile is-multiline is-horizontal-center">
 <div class="column is-4-desktop is-6-mobile">
@@ -297,3 +297,5 @@ I'm satisfied with the results. It's has been almost 5 months since I started to
 Rapsberry Pi are very versatile units, nowadays there are some devices that are are specialized to run deep learning algorithms such as coral dev board or the jetson nano from NVIDIA. However Raspberry Pi stands as the most popular device by far and has a great community behind which makes easy when building some projects with.
 
 Running long and recurrent task using a task manager such as Celery has the advantage of running your process in the background, so that any other tasks that runs in the same device are not directly affected. For example I also have a server app to stream video from the Pi Camera, so having Celery simplifies my code, which I will talk in the future.
+
+As always the code is available in [github](https://github.com/cristianpb/object-detection). 
