@@ -14,6 +14,12 @@ $fa-font-path: "/assets/fonts/font-awesome";
 $white: #ffffff;
 $navbar-burger-color: $white;
 
+code,
+pre,
+samp {
+  white-space: pre-wrap; /* force long lines to break */
+}
+
 
 .has-bg-img { background: url('/assets/images/GSWAI_withoutlogo.jpg')center 
 center; background-size:cover;  opacity: 1.00; filter: alpha(opacity=1.00); }
