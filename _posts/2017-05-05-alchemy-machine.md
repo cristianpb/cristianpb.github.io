@@ -54,7 +54,7 @@ Inside `server.js` I define a `JSON` object with the data needed for my alchemy 
 
 * The ingredients, including:
 	* The name.
-	* An emoji (everybody loves emojis :heart:).
+	* An emoji (everybody loves emojis ♥️ ).
 	* A boolean to know if the item has been selected or not.
 	* The quantity (random).
 	* An `url` from an image of the ingredient.
