@@ -191,7 +191,7 @@ Still it's very light and can run near *real time* in a Raspberry Pi as you can 
   height="720"
   src="/assets/img/motion-monitor/main.webm"
   poster="/assets/img/motion-monitor/main.jpg"
-  layout="intrinsic"
+  layout="responsive"
   controls
   loop
   autoplay>
