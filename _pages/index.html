@@ -148,10 +148,10 @@ permalink: /
             </div>
 
             <div class="content apretaito">
-              <p> {{ post.description | truncate: 50, ".." }} </p>
+              <p> {{ post.description | truncate: 70, ".." }} </p>
               <div class="tags has-addons">
                 <span class="tag">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <span class="tag is-link">{{ post.categories | join: ", "}}</span>
+                <span class="tag is-link">{{ post.categories | join: ", " | truncate: 30, ".."}}</span>
               </div>
             </div>
 
