@@ -16,7 +16,7 @@ In this article I explore some applications using a PiCamera and computer vision
 ## Object detection using YoloV3 and SSD Mobilenet
 
 Deep learning algorithms are the first AI application that can be used for image analysis.
-Some of the most poplars algorithms that can be used in Raspberry Pi environments are SSD Mobilenet and YoloV3 since they light and have a good quality/price ratio.
+Some of the most poplars algorithms that can be used in Raspberry Pi environments are SSD Mobilenet and YoloV3 since they are light and have a good quality/price ratio.
 
 >In a [previous article](https://cristianpb.github.io/blog/ssd-yolo) I compared these two algorithms using the deep learning module from OpenCV.
 
@@ -52,7 +52,7 @@ Another popular application for Raspberry Pi is home surveillance. This can be a
 * comparing two consecutive pictures using a subtraction of values,
 * filtering the differences in order to detect movement.
 
-This simple algorithm can be used to spot the difference for two pictures. I used [my motion detection algorithm](https://github.com/cristianpb/object-detection/blob/master/backend/motion.py) for the following Sponge Bob pictures in order to find the differences between the two pictures. It can detect the 3 differences from Sponge Bob and also the cropping errors that I made when dividing the image. 
+This simple algorithm can be used to spot the difference for two pictures. I used [my motion detection algorithm](https://github.com/cristianpb/object-detection/blob/master/backend/motion.py) for the following Sponge Bob pictures in order to find the differences between the two pictures. It can detect the 3 differences from Sponge Bob and also the difference on the image borders (that I made when cropping the original image to obtain image 1 and 2).
 
 <div class="columns is-mobile is-multiline is-horizontal-center">
 <div class="column is-4-desktop is-6-mobile">
@@ -184,7 +184,7 @@ I organized my code in a python class that contains 3 methods:
 </div>
 </div>
 
-This algorithm has very low power consumption and during my tests it was 10 times faster than SSD Mobilenet. The only disadvantage is the fact that it needs a almost static background to work well, if not it will increase false positive errors. 
+This algorithm has very low power consumption and during my tests it was 10 times faster than SSD Mobilenet. The only disadvantage is the fact that it needs an almost static background to work well, if not it will increase false positive errors. 
 Still it's very light and can run near *real time* in a Raspberry Pi as you can see in the following video:
 
 <amp-video width="1280"
