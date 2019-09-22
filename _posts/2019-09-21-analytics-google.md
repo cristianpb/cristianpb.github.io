@@ -26,6 +26,7 @@ In this article I will tell you how to:
 
 <center>
 <amp-img src="/assets/img/analytics-google/main.jpg" alt="google analytics dashboard" height="651" width="682" layout="intrinsic"></amp-img>
+<br><i><a href="https://cristianpb.github.io/analytics-google">Interactive dashboard from my google analytics data</a></i>
 </center>
 
 ## Google analytics
@@ -267,7 +268,7 @@ responsive designs.
 
 From my dashboard I can conclude that people visit mostly:
 - my [image rotation article](https://cristianpb.github.io/blog/image-rotation-opencv) is one of the most popular articles. It's because I wrote the article to solve a [stackoverflow question](https://stackoverflow.com/questions/42354804/find-x-y-rotated-coordinates-locations-in-image-opencv-python/47956005#47956005) and put the link to my article there. Stackoverflow is a very popular website!
-- my [ssd yolo article](https://cristianpb.github.io/blog/ssd-yolo) is very popular too. It's because deep learning applications are a big hype right now, so I get a lot of organic traffic coming mostly from google. My website is well ranked by google search algorithm, I think [AMP standard](http://www.url.com) helps a lot.
+- my [ssd yolo article](https://cristianpb.github.io/blog/ssd-yolo) is very popular too. It's because deep learning applications are a big hype right now, so I get a lot of organic traffic coming mostly from google. My website is well ranked by google search algorithm, I think [AMP standard](https://cristianpb.github.io/blog/bulma-amp) helps a lot.
 - People visits mostly form desktop devices, but that my change in the future. I let you have your own conclusions by exploring the chart by yourself at [this page](https://cristianpb.github.io/analytics-google) 
 
 As always, the code is available at [github](https://github.com/cristianpb/analytics-google). Don't forget to 🌟.
