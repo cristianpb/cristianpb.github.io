@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Interactive dashboard using Google Analytics and Dc.js"
+title: "Interactive dashboard using Google Analytics, Github Actions and Dc.js"
 date: 2019-09-20
-description: This article shows how to use google analytics api to build a customized dashboard using javascript library dc.js.
+description: This article shows how to use google analytics api to build a customized dashboard using javascript library dc.js and deploy them using Github Actions
 categories: d3.js dc.js visualization google analytics
 image: /assets/img/analytics-google/main-crop.jpg
 ligthbox: true
@@ -17,9 +17,10 @@ website by giving the owner insights about:
 - how many time people spend in the website ;
 - and also the path that they follow in the website.
 
-All this information is available in the google analytics website, where you kind find a sort of predefined charts. 
-Sometimes you want to personalize this charts and use them at your own will.
-In this article I will tell you how to:
+All this information is available in the google analytics website, where you 
+can find a sort of predefined charts.  Sometimes you want to personalize this 
+charts and use them at your own will.
+In this article I will show you how to:
 - connect to the google analytics api to fetch your analytics data ;
 - make interactive charts using the popular javascript library d3.js and dc.js ;
 - deploy your dashboard automatically in github pages serveless architecture by using github actions.
@@ -109,25 +110,29 @@ In order to fetch your analytics data, you have to:
 
 </div>
 
-All this information is available in [analytics developer guide](https://developers.google.com/analytics/devguides/reporting/core/v4/authorization).
-But they don't provide screenshots there.
+All this information is also available in [analytics developer guide](https://developers.google.com/analytics/devguides/reporting/core/v4/authorization).
 
 After downloading the `json` service account key, you can use it in python or nodejs API to fetch your data.
-I used the example show in the [google documentation](https://developers.google.com/analytics/devguides/config/mgmt/v3/quickstart/service-py).
+I used the example shown in the [google 
+documentation](https://developers.google.com/analytics/devguides/config/mgmt/v3/quickstart/service-py).
 I [modified the example](https://github.com/cristianpb/analytics-google/blob/master/analytics.py) to:
 - save results in a `csv` file
-- use a service account key in a `dict` form instead of reading it from a file. This will allows us to read the token from an environment variable.
+- use a service account key in a `dict` form instead of reading it from a file. 
+  This will allow us to read the token from an environment variable.
 
 ## Create a dashboard
 
-Javascript libraries like d3 allows us to create interactive visualizations, where the reader is able to define his own story by making his own data explorations.
+Javascript libraries like d3 allow us to create interactive visualizations, 
+where the reader is able to define his own story by making his own data 
+explorations.
 
 - import the `js` libraries in the html
 - create a script section in the html for visualizations
 - define the `div` place holder in the html where the figures will be drawn.
 
 
-For the ones that like to see some code, here I present a simplified extraction from my js code to show you how is simple to create the interactive figures.
+For the ones that like to see some code, here I present a simplified extraction 
+from my js code to show you how it is simple to create the interactive figures.
 
 ```js
 // Reading data
@@ -202,14 +207,18 @@ d3.csv("data.csv").then(function(data) {
 
 In a few words:
 - Read data from a `csv` file (other formats can be used `csv`, `json`, `tsv`, ..) ;
-- Create a crossfilter instance from the data. Using this the filter used in one graph would be applied to all of the graph that use the same crossfilter ;
+- Create a crossfilter instance from the data. Using this, the filter used in 
+  one graph would be applied to all of the graphs that use the same crossfilter 
+  ;
 - Create dimensions using different available variables, like date, device, etc ;
 - Group data using dimensions an reducing using a defined parameter. I used the number of sessions.
 
 
 ## Github Actions
 
-Deploying the code in github pages allows to deploy static page and removes completely the server dependency. In addition github actions allows to have a complete CI/CD that can be configure in a `yaml` file like the following:
+Deploying the code in github pages allows to deploy static page and removes 
+completely the server dependency. In addition github actions allows to have a 
+complete CI/CD that can be configured in a `yaml` file like the following:
 
 ```yaml
 on:
@@ -247,7 +256,8 @@ jobs:
 ```
 
 In this way, I will:
-- fetch the data everyday in order to keep an update dashboard and copy it to the `dist` folder ;
+- fetch the data everyday in order to keep an updated dashboard and copy it to 
+  the `dist` folder ;
 - render my html and copy it to the `dist` folder ;
 - copy my `js` script to the `dist` folder ;
 - copy my `dist` folder to the `gh-pages` branch so that github can publish it in github-pages.
@@ -259,7 +269,7 @@ beta phase but it will be released to the public in November 2019.
 ## Conclusions
 
 Github actions are a great way to publish content in a serverless architecture.
-It's schedule option opens greats opportunities like the ones publish in their
+It's schedule option opens great opportunities like the ones published in their
 [repository](https://github.com/sdras/awesome-actions).
 
 The interactive dashboard uses only `div` elements in the html page. The
@@ -269,6 +279,8 @@ responsive designs.
 From my dashboard I can conclude that people visit mostly:
 - my [image rotation article](https://cristianpb.github.io/blog/image-rotation-opencv) is one of the most popular articles. It's because I wrote the article to solve a [stackoverflow question](https://stackoverflow.com/questions/42354804/find-x-y-rotated-coordinates-locations-in-image-opencv-python/47956005#47956005) and put the link to my article there. Stackoverflow is a very popular website!
 - my [ssd yolo article](https://cristianpb.github.io/blog/ssd-yolo) is very popular too. It's because deep learning applications are a big hype right now, so I get a lot of organic traffic coming mostly from google. My website is well ranked by google search algorithm, I think [AMP standard](https://cristianpb.github.io/blog/bulma-amp) helps a lot.
-- People visits mostly form desktop devices, but that my change in the future. I let you have your own conclusions by exploring the chart by yourself at [this page](https://cristianpb.github.io/analytics-google) 
+- People visit mostly form desktop devices, but that may change in the future.  
+  I let you have your own conclusions by exploring the chart by yourself at 
+  [this page](https://cristianpb.github.io/analytics-google) 
 
 As always, the code is available at [github](https://github.com/cristianpb/analytics-google). Don't forget to 🌟.
