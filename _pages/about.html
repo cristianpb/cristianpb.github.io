@@ -4,13 +4,55 @@ title: About me
 permalink: /about/
 navigation: true
 leaflet: false
+animation: true
 visjs: false
 
 ---
 
+<amp-animation id="showAnim"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": "#scrollToTopButton",
+        "keyframes": [{
+          "opacity": "1",
+          "visibility": "visible"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+
+<amp-animation id="hideAnim"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": "#scrollToTopButton",
+        "keyframes": [{
+          "opacity": "0",
+          "visibility": "hidden"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+
 <section class="hero is-primary is-small">
   <div class="hero-body is-centered">
     <div class="container">
+      <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
+                             layout="nodisplay">
+      </amp-position-observer>
       <h1 class="title">
         {{ site.title }}
       </h1>
@@ -33,6 +75,7 @@ visjs: false
 
 <section class="section" id="experience">
   <div class="container">
+
     <div class="columns">
 
       <div class="column">
@@ -245,6 +288,10 @@ visjs: false
   </div>
 </section>
 
+<button id="scrollToTopButton"
+        on="tap:top.scrollTo(duration=200)"
+        class="scrollToTop">⌃
+</button>
 
 <section class="section" id="education">
   <div class="container">

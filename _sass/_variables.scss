@@ -20,10 +20,6 @@ samp {
   white-space: pre-wrap; /* force long lines to break */
 }
 
-
-.has-bg-img { background: url('/assets/images/GSWAI_withoutlogo.jpg')center 
-center; background-size:cover;  opacity: 1.00; filter: alpha(opacity=1.00); }
-
 .is-horizontal-center {
   justify-content: center;
 }
@@ -108,4 +104,26 @@ $primary: $lightblue;
 
 .play-icon:hover, .play-icon:focus {
     opacity: 1;
+}
+
+$box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+$color-text-light: #fff;
+$space: 1rem;
+
+.scrollToTop {
+    color: $color-text-light;
+    font-size: 1.4em;
+    box-shadow: $box-shadow;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: $primary;
+    z-index: 9999;
+    bottom: $space;
+    right: $space;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
 }
