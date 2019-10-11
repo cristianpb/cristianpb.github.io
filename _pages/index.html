@@ -1,6 +1,7 @@
 ---
 layout: default
 carousel: true
+animation: true
 permalink: /
 ---
 
@@ -126,7 +127,29 @@ permalink: /
       {% assign everything = site.posts | concat: site.articles %}
       {% assign sorted = (everything | sort: 'date') | reverse %}
 
-      <amp-carousel height="500" layout="fixed-height" type="carousel"  controls>
+      <amp-animation id="carouselTransition"
+                     layout="nodisplay">
+        <script type="application/json">
+          {
+      "duration": "500ms",
+      "fill": "both",
+      "easing": "ease-in",
+      "delay": "200ms",
+      "animations": [{
+        "selector": ".card",
+        "keyframes": [{
+          "transform": "translateX(-60%)"
+        }]
+      }]
+    }
+        </script>
+      </amp-animation>
+
+      <amp-carousel class="carousel-component" height="500" layout="fixed-height" type="carousel"  controls>
+        <amp-position-observer on="enter:carouselTransition.start"
+                               intersection-ratios="0.8"
+                               layout="nodisplay">
+        </amp-position-observer>
         {% for post in sorted limit: 9 %}
         <div class="card">
           {% if post.image %}
@@ -159,7 +182,6 @@ permalink: /
         </div>
         {% endfor %}
       </amp-carousel>
-
       <br>
       <center><a class="button"  href="{{ site.baseurl | append: '/blog/'}}">More at my blog</a></center>
     </div>
