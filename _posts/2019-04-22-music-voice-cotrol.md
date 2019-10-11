@@ -38,7 +38,7 @@ and I have the following concerns:
   height="535"
   src="/assets/img/music-voice-control/radio.webm"
   poster="/assets/img/music-voice-control/main.jpg"
-  layout="intrinsic"
+  layout="responsive"
   controls
   loop
   autoplay>
