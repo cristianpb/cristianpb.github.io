@@ -3,12 +3,11 @@ layout: post
 title: "Kaggle exercise: Talking data"
 date:   2016-11-16 21:01:25 +0200
 categories: ["kaggle", "r"]
+description: Le but de cette exercice est de construire un modèle pour prédire les caractéristiques démographiques (âge et genre) des utilisateurs de smartphones avec les applications installées, géolocalisation et les caractéristiques des portables. 
 
 ---
 
 ## Introduction
-
-----
 
 <amp-img src="/assets/img/talking_data/logotalking.png" alt="Logo talking data" height="289" width="862" layout="responsive"></amp-img>
 
