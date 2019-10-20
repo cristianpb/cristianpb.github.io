@@ -1,0 +1,108 @@
+---
+layout: iframe
+leaflet: false
+sitemap: false
+chartjs: true
+
+---
+
+<canvas id="velibs_hour" width="400" height="300"></canvas>
+
+<script>
+var ctx = document.getElementById("velibs_hour").getContext('2d');
+var data_velib = {{ site.data.velib.velibs.hourly | jsonify }} 
+var SpeedAltitudeChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+            labels: data_velib.monday.hour,
+        datasets: [{
+            label: "Monday",
+            fill: false,
+            borderColor: '#8dd3c7',
+            backgroundColor: '#8dd3c7',
+            lineTension: 0,
+            data: data_velib.monday.velibs
+        },{
+            label: "Tuesday",
+            fill: false,
+            borderColor: '#ffffb3',
+            backgroundColor: '#ffffb3',
+            lineTension: 0,
+            data: data_velib.tuesday.velibs
+        },{
+            label: "Wednesday",
+            fill: false,
+            borderColor: '#bebada',
+            backgroundColor: '#bebada',
+            lineTension: 0,
+            data: data_velib.wednesday.velibs
+        },{
+            label: "Thursday",
+            fill: false,
+            borderColor: '#fb8072',
+            backgroundColor: '#fb8072',
+            lineTension: 0,
+            data: data_velib.thursday.velibs
+        },{
+            label: "Friday",
+            fill: false,
+            borderColor: '#80b1d3',
+            backgroundColor: '#80b1d3',
+            lineTension: 0,
+            data: data_velib.friday.velibs
+        },{
+            label: "Saturday",
+            fill: false,
+            borderColor: '#fdb462',
+            backgroundColor: '#fdb462',
+            lineTension: 0,
+            data: data_velib.saturday.velibs
+        },{
+            label: "Sunday",
+            fill: false,
+            borderColor: '#b3de69',
+            backgroundColor: '#b3de69',
+            lineTension: 0,
+            data: data_velib.sunday.velibs
+        },
+        ]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                label: 'Date',
+                position: 'bottom',
+                scaleLabel: {
+                    display: true,
+                    //fontColor: '#FF6384',
+                    labelString: 'Hour'
+                },
+            }],
+            yAxes: [{
+                position: 'left',
+                        scaleLabel: {
+                            display: true,
+                            //fontColor: '#FF6384',
+                            labelString: 'Average Number of velibs'
+                        },
+                ticks: {
+                userCallback: function(value, index, values) {
+                return parseInt(value);
+                }
+                }
+            }]},
+               title:{
+                    display: false,
+                   text: 'Chart.js Time Scale'
+               },
+            tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+			hover: {
+					mode: 'index',
+					intersect: false
+				}
+              }
+});
+</script>

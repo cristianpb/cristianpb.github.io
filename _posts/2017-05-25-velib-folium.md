@@ -4,7 +4,6 @@ title: "Analysis of Paris bike systems Velib"
 date: 2017-05-25
 description: "This post shows how to query data from Paris Open Data base, make some geographical plots using folium and also some analysis about the bike utilisation depending on the date"
 categories: ["folium", "python", "Open Data"]
-chartjs: true
 image: /assets/img/velib-folium/main.jpg
 
 ---
@@ -151,7 +150,7 @@ counting twice the utilisation of a bike (i.e when a bike is taken from a
 station and put in an other station we have +1, -1 for each station
 respectively)
 
-<canvas id="velibs_hour" width="400" height="200"></canvas>
+<amp-iframe width="100" height="85" sandbox="allow-scripts" layout="responsive" src="/iframes/velib-hour"></amp-iframe>
 
 During weekdays, there is a peak of utilisation at 8am and 7pm. When people is going to work. 
 The peak of utilisation is 4552 bikes, which is around  30 % of the available bikes in the city (~15593).
@@ -160,102 +159,3 @@ On weekend, the peak is at 6pm, maybe because people is coming back home.
 The complete code can be found at in [this
 notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/velib-folium/02-Exploration.ipynb).
 
-
-<script>
-var ctx = document.getElementById("velibs_hour").getContext('2d');
-var data_velib = {{ site.data.velib.velibs.hourly | jsonify }} 
-var SpeedAltitudeChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-            labels: data_velib.monday.hour,
-        datasets: [{
-            label: "Monday",
-            fill: false,
-            borderColor: '#8dd3c7',
-            backgroundColor: '#8dd3c7',
-            lineTension: 0,
-            data: data_velib.monday.velibs
-        },{
-            label: "Tuesday",
-            fill: false,
-            borderColor: '#ffffb3',
-            backgroundColor: '#ffffb3',
-            lineTension: 0,
-            data: data_velib.tuesday.velibs
-        },{
-            label: "Wednesday",
-            fill: false,
-            borderColor: '#bebada',
-            backgroundColor: '#bebada',
-            lineTension: 0,
-            data: data_velib.wednesday.velibs
-        },{
-            label: "Thursday",
-            fill: false,
-            borderColor: '#fb8072',
-            backgroundColor: '#fb8072',
-            lineTension: 0,
-            data: data_velib.thursday.velibs
-        },{
-            label: "Friday",
-            fill: false,
-            borderColor: '#80b1d3',
-            backgroundColor: '#80b1d3',
-            lineTension: 0,
-            data: data_velib.friday.velibs
-        },{
-            label: "Saturday",
-            fill: false,
-            borderColor: '#fdb462',
-            backgroundColor: '#fdb462',
-            lineTension: 0,
-            data: data_velib.saturday.velibs
-        },{
-            label: "Sunday",
-            fill: false,
-            borderColor: '#b3de69',
-            backgroundColor: '#b3de69',
-            lineTension: 0,
-            data: data_velib.sunday.velibs
-        },
-        ]
-    },
-    options: {
-        scales: {
-            xAxes: [{
-                label: 'Date',
-                position: 'bottom',
-                scaleLabel: {
-                    display: true,
-                    //fontColor: '#FF6384',
-                    labelString: 'Hour'
-                },
-            }],
-            yAxes: [{
-                position: 'left',
-                        scaleLabel: {
-                            display: true,
-                            //fontColor: '#FF6384',
-                            labelString: 'Average Number of velibs'
-                        },
-                ticks: {
-                userCallback: function(value, index, values) {
-                return parseInt(value);
-                }
-                }
-            }]},
-               title:{
-                    display: false,
-                   text: 'Chart.js Time Scale'
-               },
-            tooltips: {
-					mode: 'index',
-					intersect: false,
-				},
-			hover: {
-					mode: 'index',
-					intersect: false
-				}
-              }
-});
-</script>
