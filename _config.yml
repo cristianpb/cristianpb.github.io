@@ -85,7 +85,8 @@ exclude:
  
 defaults:
     - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title'}}
-    - {scope: {path: "", layout: default, type: "pages"}, values: {image: '/assets/img/avatar.png'}}
+    - {scope: {path: "", layout: default, type: "pages"}, values: {image: {
+      path: '/assets/img/avatar.png', width: 200, height: 200}}}
     - {scope: {path: "blog/"}, values: {permalink: '/blog/:title'}}
 
 include:
