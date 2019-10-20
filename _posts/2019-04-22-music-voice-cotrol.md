@@ -6,6 +6,7 @@ description: I'm tired to search for my phone to put/change/stop music. Instead 
 categories: snips raspberrypi nodejs
 image: /assets/img/music-voice-control/main-crop.jpg
 ligthbox: true
+video: true
 
 ---
 
