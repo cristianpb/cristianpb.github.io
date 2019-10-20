@@ -6,7 +6,10 @@ description: "A marathon needs to be prepared for at least 3 months. This post s
 categories: ["run", "python", "chartjs", "folium", "withings"]
 calheatmap: true
 chartjs: true
-image: /assets/img/marathon-mirabelle/main-crop.png
+image:
+  path: /assets/img/marathon-mirabelle/main-crop.png
+  height: 200
+  width: 300
 
 ---
 

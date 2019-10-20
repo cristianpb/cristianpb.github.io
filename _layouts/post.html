@@ -72,7 +72,7 @@ layout: default
       {% if post.image %}
       <figure class="media-left">
         <a class="image is-128x128" href="{{ post.url }}">
-          <amp-img src="{{ post.image }}" width="128" height="128" alt="{{ post.title }}"></amp-img>
+          <amp-img src="{{ post.image.path }}" width="128" height="128" alt="{{ post.title }}"></amp-img>
         </a>
       </figure>
       {% endif %}
@@ -105,7 +105,7 @@ layout: default
       {% if post.image %}
       <figure class="media-left">
         <a class="image is-128x128" href="{{ post.url }}">
-          <amp-img src="{{ post.image }}" width="128" height="128" alt="{{ post.title }}"></amp-img>
+          <amp-img src="{{ post.image.path }}" width="128" height="128" alt="{{ post.title }}"></amp-img>
         </a>
       </figure>
       {% endif %}

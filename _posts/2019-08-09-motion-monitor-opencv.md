@@ -4,7 +4,10 @@ title: "Real time motion detection in Raspberry Pi"
 date: 2019-08-09
 description: In this article I show how to use a Raspberry Pi with motion detection algorithms and schedule task to detect objects using SSD Mobilenet and Yolo models.
 categories: opencv raspberrypi python
-image: /assets/img/motion-monitor/main-crop.jpg
+image:
+  path: /assets/img/motion-monitor/main-crop.jpg
+  height: 200
+  width: 300
 ligthbox: true
 
 ---

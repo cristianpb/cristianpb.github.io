@@ -4,7 +4,10 @@ title: "Price minister NLP project"
 date: 2018-01-05
 description: "This projects uses NLP to classify a user review as useful or not useful. Best practices for a data science project such as document structure, documentation and virtual environment are used"
 categories: ["nlp", "python", "cookie-cutter", "sphinx"]
-image: /assets/img/priceminister/main-crop.png
+image:
+  path: /assets/img/priceminister/main-crop.png
+  height: 200
+  width: 300
 
 ---
 

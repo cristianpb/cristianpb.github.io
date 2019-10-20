@@ -6,7 +6,10 @@ description: "In this post I use the javascript library Chartjs to illustrate in
 categories: ["run", "python", "chartjs", "folium"]
 chartjs: true
 calheatmap: true
-image: /assets/img/santorini-experience/main-crop.png
+image:
+  path: /assets/img/santorini-experience/main-crop.png
+  height: 200
+  width: 300
 
 ---
 

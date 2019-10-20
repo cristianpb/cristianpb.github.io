@@ -6,7 +6,10 @@ description: "This post shows how to recalculate bounding box coordinates when t
 categories: ["opencv", "python"]
 mathjax: false
 mathml: true
-image: /assets/img/image-rotation-opencv/main-crop.jpg
+image:
+  path: /assets/img/image-rotation-opencv/main-crop.jpg
+  height: 200
+  width: 300
 
 ---
 

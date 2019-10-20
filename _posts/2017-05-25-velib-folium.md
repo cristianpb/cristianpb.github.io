@@ -4,7 +4,10 @@ title: "Analysis of Paris bike systems Velib"
 date: 2017-05-25
 description: "This post shows how to query data from Paris Open Data base, make some geographical plots using folium and also some analysis about the bike utilisation depending on the date"
 categories: ["folium", "python", "Open Data"]
-image: /assets/img/velib-folium/main.jpg
+image:
+  path: /assets/img/velib-folium/main-crop.jpg
+  height: 200
+  width: 300
 video: true
 
 ---

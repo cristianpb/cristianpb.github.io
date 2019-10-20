@@ -4,7 +4,10 @@ title: "Interactive dashboard using Google Analytics, Github Actions and Dc.js"
 date: 2019-09-20
 description: This article shows how to use google analytics api to build a customized dashboard using javascript library dc.js and deploy them using Github Actions
 categories: d3.js dc.js visualization google analytics
-image: /assets/img/analytics-google/main-crop.jpg
+image:
+  path: /assets/img/analytics-google/main-crop.jpg
+  height: 200
+  width: 300
 ligthbox: true
 
 ---

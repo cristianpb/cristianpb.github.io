@@ -157,7 +157,7 @@ permalink: /
             <figure class="image">
               <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}">
                 <center>
-                  <amp-img src="{{ post.image }}" alt="{{ post.title }}"  height="220" width="350" layout="intrinsic"></amp-img>
+                  <amp-img src="{{ post.image.path }}" alt="{{ post.title }}"  height="220" width="350" layout="intrinsic"></amp-img>
                 </center>
               </a>
             </figure>

@@ -4,7 +4,10 @@ title: "Control music using voice"
 date: 2019-04-22
 description: I'm tired to search for my phone to put/change/stop music. Instead I use snips technology to control music using voice (radio, podcast, files)
 categories: snips raspberrypi nodejs
-image: /assets/img/music-voice-control/main-crop.jpg
+image:
+  path: /assets/img/music-voice-control/main-crop.jpg
+  height: 200
+  width: 300
 ligthbox: true
 video: true
 

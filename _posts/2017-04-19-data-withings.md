@@ -4,7 +4,10 @@ title: "Data analysis for withings smart watch"
 date:   2017-04-19 21:01:25 +0200
 description: "Analysis of one year data of my daily sleep time and number of steps."
 categories: ['withings', 'r']
-image: /assets/img/data_withings/main.svg
+image:
+  path: /assets/img/data_withings/main-crop.png
+  height: 200
+  width: 300
 
 ---
 
