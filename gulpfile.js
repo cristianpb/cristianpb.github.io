@@ -5,16 +5,37 @@ var purify = require('gulp-purifycss');
 let cleanCSS = require('gulp-clean-css');
 var responsive = require('gulp-responsive');
 var concat = require('gulp-concat');
+var replace = require('gulp-replace');
 var rename = require('gulp-rename');
+var del = require('del');
 
-gulp.task('responsive', function () {
-  return gulp.src('./assets/img/**/{main.png,main.jpg}')
+var paths = {
+  styles: {
+    src: '_sass/main.scss',
+    tmp: 'assets/css/dist',
+    dest: '_includes'
+  },
+  images: {
+    src: 'assets/img',
+    dest: 'assets/img'
+  }
+};
+
+function thumbnails() {
+  return gulp.src(`${paths.images.src}/**/{main.png,main.jpg}`)
     .pipe(responsive({
       // Resize all images to 100 pixels wide and add suffix -thumbnail
-      '*/main.{jpg,png}': {
+      '*/main.{jpg,jpeg}': {
         width: 300,
         height: 200,
-        rename: { suffix: '-crop' },
+        format: 'jpg',
+        rename: { suffix: '-crop'},
+      },
+      '*/main.png': {
+        width: 300,
+        height: 200,
+        format: 'png',
+        rename: { suffix: '-crop'},
       },
     }, {
       // Global configuration for all images
@@ -39,11 +60,12 @@ gulp.task('responsive', function () {
         ]
       })
     ], {verbose: true}))
-    .pipe(gulp.dest('./assets/img'));
-});
+    .pipe(gulp.dest(paths.images.dest));
+}
 
-gulp.task('image', function () {
-  gulp.src('assets/img/**/{*.png,*.jpg,*.jpeg,*.gif}')
+
+function images() {
+  return gulp.src(`${paths.images.src}/**/{*.png,*.jpg,*.jpeg,*.gif}`)
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
@@ -55,35 +77,45 @@ gulp.task('image', function () {
         ]
       })
     ], {verbose: true}))
-    .pipe(gulp.dest('assets/img'))
-});
-
-gulp.task('sass', function () {
-  return gulp.src('./_sass/main.scss')
+    .pipe(gulp.dest(paths.images.dest))
+}
+ 
+function clean() {
+  return del([ paths.styles.tmp ]);
+}
+ 
+function purification() {
+  return gulp.src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./assets/css/dist'));
-});
-
-// purify removes unused CSS classes
-gulp.task('purify', ['sass'],  function() {
-  return gulp.src('./assets/css/dist/main.css')
     .pipe(purify(['./_includes/**.html', './_layouts/**.html', './_pages/**.html', './blog/**.html'], {info: true}))
     .pipe(replace(/!important/gm, ''))
-    .pipe(gulp.dest('./assets/css/dist'));
-});
- 
-gulp.task('concat', ['purify'], function() {
-  //return gulp.src(['./assets/css/dist/main.css', './assets/css/syntax.css'])
-  return gulp.src(['./assets/css/dist/main.css'])
+    .pipe(gulp.dest(paths.styles.tmp));
+}
+
+function concatenation() {
+  return gulp.src([`${paths.styles.tmp}/main.css`, 'assets/css/github.css'])
     .pipe(concat('main.css'))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8'}, (details) => {
+      console.log(`Minification of ${details.name}: ${details.stats.originalSize} -> ${details.stats.minifiedSize} b`);
+    }))
     .pipe(rename({ suffix: '-min' }))
     .pipe(gulp.dest('./_includes/'));
-});
+}
+ 
+var build = gulp.series(clean, purification, concatenation, clean);
 
-gulp.task("watch", ["purify", "sass", "concat"], function() {
-  gulp.watch(["./_sass/main.scss", "./_sass/_variables.scss"], ["sass", "purify", "concat"])
-  gulp.watch(["./_pages/**", "./_layouts/**", "./_includes/**.html", "./blog/*"], ["purify"]);
-})
-
-gulp.task('default', ['watch'], function(){});
+function watch() {
+  gulp.watch(["_pages/**", "_layouts/**", "_includes/**.html", "blog/*", "_sass/*"], build);
+}
+ 
+exports.images = images;
+exports.thumbnails = thumbnails;
+exports.clean = clean;
+exports.purification = purification;
+exports.concatenation = concatenation;
+exports.build = build;
+exports.watch = watch;
+/*
+ * Define default task that can be called by just running `gulp` from cli
+ */
+exports.default = build;

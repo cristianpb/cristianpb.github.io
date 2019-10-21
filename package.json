@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/cristianpb/cristianpb.github.io#readme",
   "devDependencies": {
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
@@ -27,6 +28,7 @@
     "gulp-responsive": "^2.11.0",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
+    "gulp-rename": "^1.4.0",
     "npm": "^6.4.0"
   }
 }
