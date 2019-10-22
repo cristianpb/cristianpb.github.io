@@ -7,6 +7,7 @@ var responsive = require('gulp-responsive');
 var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 var rename = require('gulp-rename');
+var gulpAmpValidator = require('gulp-amphtml-validator');
 var del = require('del');
 
 var paths = {
@@ -18,6 +19,9 @@ var paths = {
   images: {
     src: 'assets/img',
     dest: 'assets/img'
+  },
+  html: {
+    src: '_site/**/*.html'
   }
 };
 
@@ -79,6 +83,13 @@ function images() {
     ], {verbose: true}))
     .pipe(gulp.dest(paths.images.dest))
 }
+
+function amp_validator() {
+  return gulp.src(paths.html.src)
+    .pipe(gulpAmpValidator.validate())
+    .pipe(gulpAmpValidator.format())
+    .pipe(gulpAmpValidator.failAfterError());
+}
  
 function clean() {
   return del([ paths.styles.tmp ]);
@@ -110,6 +121,7 @@ function watch() {
  
 exports.images = images;
 exports.thumbnails = thumbnails;
+exports.amp_validator = amp_validator;
 exports.clean = clean;
 exports.purification = purification;
 exports.concatenation = concatenation;
