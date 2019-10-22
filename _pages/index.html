@@ -113,7 +113,7 @@ permalink: /
       </div>
     </div>
 
-    <center><a class="button"  href="{{ site.baseurl | append: '/about/'}}">More about me</a></center>
+    <center><a class="button is-primary"  href="{{ site.baseurl | append: '/about/'}}">More about me</a></center>
   </div>
 </section>
 
@@ -173,7 +173,7 @@ permalink: /
             <div class="content apretaito">
               <p> {{ post.description | truncate: 70, ".." }} </p>
               <div class="tags has-addons">
-                <span class="tag">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
                 <span class="tag is-link">{{ post.categories | join: ", " | truncate: 30, ".."}}</span>
               </div>
             </div>
@@ -183,14 +183,14 @@ permalink: /
         {% endfor %}
       </amp-carousel>
       <br>
-      <center><a class="button"  href="{{ site.baseurl | append: '/blog/'}}">More at my blog</a></center>
+      <center><a class="button is-white"  href="{{ site.baseurl | append: '/blog/'}}">More at my blog</a></center>
     </div>
   </div>
 </section>
 
 
 <section class="section">
-  <div class="container" id="last_articles">
+  <div class="container">
     <h2 class="title">
       Technical Stack
     </h2>
