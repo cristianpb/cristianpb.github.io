@@ -4,7 +4,8 @@
   "description": "With Jekyll and Github Pages",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "bundle exec jekyll serve --livereload",
+    "test": "./node_modules/.bin/gulp amp_validator",
     "watch": "./node_modules/.bin/gulp watch"
   },
   "repository": {
