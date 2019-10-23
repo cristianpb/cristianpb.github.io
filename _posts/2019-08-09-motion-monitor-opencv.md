@@ -9,6 +9,7 @@ image:
   height: 200
   width: 300
 ligthbox: true
+video: true
 
 ---
 

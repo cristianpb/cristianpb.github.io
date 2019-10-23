@@ -194,7 +194,7 @@ app.get('*', function(req, res) {
 The `index.html` file interacts directly with angularjs using the module and the controller defined before. It shows:
 * The images from the ingredients.
 * The number and type of potion made
-* The name and the number of available ingredients in terms of emojis :relaxed:.
+* The name and the number of available ingredients in terms of emojis ☺️:.
 * The ingredients of the available recipes.
 * The **mix** button.
 
