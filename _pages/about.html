@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About me
+description: This page shows information about me
 permalink: /about/
 navigation: true
 leaflet: false
@@ -53,9 +54,19 @@ visjs: false
       <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
                              layout="nodisplay">
       </amp-position-observer>
-      <h1 class="title">
-        {{ site.title }}
-      </h1>
+      <div class="columns is-mobile is-horizontal-center is-multiline">
+        <div class="column is-3-desktop is-12-mobile has-text-centered">
+          <h1 class="title">
+            {{ site.title }}
+          </h1>
+        </div>
+        <div class="column is-4-desktop is-12-mobile has-text-centered">
+          <h2 class="subtitle">
+            {{ page.description }}
+          </h2>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="hero-foot">

@@ -3,19 +3,29 @@
     <div class="content">
 
 
-      <div class="columns">
-        <div class="column">
+      <div class="columns is-mobile is-horizontal-center is-multiline">
+        <div class="column is-4-desktop is-6-mobile">
           <aside class="menu">
-          <p class="menu-label">
-            <a href="/">{{ site.title }}</a>
-          </p>
-          <ul class="menu-list no-bullets">
-            <li><a href="/about">About me</a></li>
-            <li><a href="/blog">Blog</a>
+          <a href="/about" class="menu-label">About me</a>
+          <ul class="menu-list">
+            <li><a href="/about/#experience">Experience</a></li>
+            <li><a href="/about/#education">Education</a></li>
+            <li><a href="/assets/pdf/cv.pdf">CV</a></li>
           </ul>
           </aside>
         </div>
-        <div class="column">
+        <div class="column is-4-desktop is-6-mobile">
+          <aside class="menu">
+          <a href="/blog" class="menu-label">Blog</a>
+          <ul class="menu-list no-bullets">
+            <li><a href="/blog/tags">Tags</a></li>
+            <li><a href="/blog/external">External Articles</a></li>
+            <li><a href="/feed.xml"><i class="fas fa-rss"></i>&nbsp;RSS</a></li>
+          
+          </ul>
+          </aside>
+        </div>
+        <div class="column is-4-desktop is-12-mobile has-text-centered">
           <p class="menu-label">
             Find me in:
           </p>
