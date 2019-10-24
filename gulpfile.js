@@ -21,7 +21,7 @@ var paths = {
     dest: 'assets/img'
   },
   html: {
-    src: '_site/**/*.html'
+    src: '_site/{blog,about,}/*.html'
   }
 };
 
