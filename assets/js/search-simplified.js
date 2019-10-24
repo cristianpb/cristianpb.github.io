@@ -94,17 +94,24 @@ search.addWidget({
 
       // Will display time in 10:30:23 format
       var formattedTime = month + ' ' + day + ', ' + year;
-
-      let img_template = ('image' in h) ? `
+      let external_tag = ('link' in h) ? `<span class="tag is-danger"><i class="fas fa-external-link-alt"></i></span>`: '' ;
+      let img_template;
+      if ('image' in h) {
+        let image_path = ('link' in h) ? h.image: h.image.path ;
+        img_template = `
       <div class="card-image">
         <figure class="image">
-          <a href="${h.url}">
+          <a href="${('link' in h) ? h.link : h.url}">
             <center>
-              <amp-img src="${h.image.path}" width="368" height="245" alt="${h.title}" layout="intrinsic"></amp-img>
+              <amp-img src="${image_path}" width="368" height="245" alt="${h.title}" layout="intrinsic"></amp-img>
             </center>
           </a>
         </figure>
-      </div>` : ''
+      </div>`
+      } else {
+        img_template = '';
+      }
+
       return `
     <div class="column is-one-third">
     <div class="card">
@@ -112,7 +119,7 @@ search.addWidget({
       <div class="card-content">
         <div class="media apretaito">
           <div class="media-content">
-            <a href="${h.url}" class="title is-4">${h.title}</a>
+            <a href="${('link' in h) ? h.link : h.url}" ${('link' in h) ? "target=\"_blank\"" : ''} class="title is-4">${h.title}</a>
           </div>
         </div>
         <div class="content apretaito">
@@ -121,7 +128,8 @@ search.addWidget({
           </p>
           <div class="tags has-addons">
             <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;${ formattedTime }</span>
-            <span class="tag is-link">${ h.categories.join(", ")}</span>
+            <span class="tag is-link">${ h.categories.join(", ")}</span>`
+      + external_tag + `
           </div>
         </div>
       </div>

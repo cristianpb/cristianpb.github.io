@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blog
+description: I like to write about artificial intelligence, data science, computer science, web development and technology in general.
 algolia: true
 
 ---
@@ -8,25 +9,21 @@ algolia: true
 <section class="hero is-primary is-small">
   <div class="hero-body is-centered">
     <div class="container">
-      <h1 class="title">
-        My own articles
-      </h1>
+      <div class="columns is-mobile is-horizontal-center is-multiline">
+        <div class="column is-3-desktop is-12-mobile has-text-centered">
+          <h1 class="title">
+            My own articles
+          </h1>
+        </div>
+        <div class="column is-4-desktop is-12-mobile has-text-centered">
+          <h2 class="subtitle">
+            {{ page.description }}
+          </h2>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="hero-foot">
-    <nav class="tabs is-boxed is-centered">
-      <div class="container">
-        <ul>
-          <li><a href="/blog/">Articles</a></li>
-          <li><a href="/blog/tags">Categories</a></li>
-          <li><a href="/blog/external">External articles</a></li>
-          <li><a href="/feed.xml"><i class="fas fa-rss"></i>&nbsp;Atom</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
 </section>
-
 
 <section class="section">
   <div class="container">
