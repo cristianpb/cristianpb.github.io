@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blog
+algolia: true
 
 ---
 
@@ -29,6 +30,16 @@ title: Blog
 
 <section class="section">
   <div class="container">
+
+    <div class="field">
+      <div class="control">
+        <input id="searchBox" class="input" type="text" placeholder="Search">
+      </div>
+    </div>
+    <div id="hits" class="columns is-multiline"></div>
+
+    <div id="pagination"></div>
+
     
   <div class="columns is-multiline">
     {% for post in paginator.posts  %}

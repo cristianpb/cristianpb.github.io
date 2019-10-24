@@ -15,6 +15,12 @@ $font-display: auto;
 $white: #ffffff;
 $navbar-burger-color: $white;
 
+input#searchBox {
+    background-image: url(/assets/img/blog/search-by-algolia-light-background.png);
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+}
+
 code,
 pre,
 samp {
