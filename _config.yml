@@ -92,6 +92,8 @@ exclude:
  
 defaults:
     - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title'}}
+    - {scope: {type: iframes}, values: {layout: iframe, sitemap: false}}
+    - {scope: {type: external}, values: {sitemap: false}}
     - {scope: {path: "", layout: default, type: "pages"}, values: {image: {
       path: '/assets/img/avatar.png', width: 200, height: 200}}}
     - {scope: {path: "blog/"}, values: {permalink: '/blog/:title'}}
