@@ -98,7 +98,7 @@ function clean() {
 function purification() {
   return gulp.src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
-    .pipe(purify(['./_includes/**.html', './_layouts/**.html', './_pages/**.html', './blog/**.html'], {info: true}))
+    .pipe(purify(['_includes/*.html', '_layouts/*.html', 'jekyll_collections/_pages/*.html', 'jekyll_collections/_blog/*.html'], {info: true}))
     .pipe(replace(/!important/gm, ''))
     .pipe(gulp.dest(paths.styles.tmp));
 }
@@ -116,7 +116,7 @@ function concatenation() {
 var build = gulp.series(clean, purification, concatenation, clean);
 
 function watch() {
-  gulp.watch(["_pages/**", "_layouts/**", "_includes/**.html", "blog/*", "_sass/*"], build);
+  gulp.watch(["_layouts/**", "_includes/**.html", "jekyll_collections/**", "_sass/*"], build);
 }
  
 exports.images = images;

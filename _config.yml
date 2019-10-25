@@ -48,9 +48,10 @@ algolia:
   application_id: 'Z1GMX6PWB9'
   index_name: cristianpb
   files_to_exclude:
-    - _pages/*.html
-    - _iframes/*.html
-    - blog/*.html
+    - jekyll_collections/_blog/*.html
+    - jekyll_collections/_drafts/*.html
+    - jekyll_collections/_iframes/*.html
+    - jekyll_collections/_pages/*.html
 
 # Color the browser elements #
 color-browser: "#03abea"
