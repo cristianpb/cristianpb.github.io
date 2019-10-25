@@ -14,8 +14,6 @@ logo: '/assets/img/avatar.png'
 linkedin_username: cristianperezbrokate
 github_username:  cristianpb
 researchgate_username:  Cristian_Perez_Brokate
-disqus:
-  shortname: cristianpb-github-io
 social:
   name: Cristian Perez Brokate
   links:
@@ -71,21 +69,29 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
 
+collections_dir: jekyll_collections
 collections:
+  blog:
+    output: true
+    permalink: /:collection/:name
   iframes:
     output: true
     permalink: /:collection/:name
   external:
     output: true
     permalink: /:collection/:name
+  pages:
+    output: true
+    permalink: /:name
 
 exclude:
-  - drafts
   - CNAME
   - Gemfile
   - Gemfile.lock
   - README.md
+  - LICENSE.md
   - node_modules
+  - npm-debug.log
   - gulpfile.js
   - package.json
   - package-lock.json
@@ -96,8 +102,11 @@ defaults:
     - {scope: {type: external}, values: {sitemap: false}}
     - {scope: {path: "", layout: default, type: "pages"}, values: {image: {
       path: '/assets/img/avatar.png', width: 200, height: 200}}}
-    - {scope: {path: "blog/"}, values: {permalink: '/blog/:title'}}
 
-include:
-  - _pages
+feed:
+  collections:
+    external:
+      path: feed/external.xml
+    posts:
+      path: feed.xml
 

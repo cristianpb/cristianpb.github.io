@@ -129,7 +129,7 @@ image:
       </div>
     </div>
 
-    <center><a class="button is-primary"  href="{{ site.baseurl | append: '/about/'}}">More about me</a></center>
+    <center><a class="button is-primary"  href="{{ site.baseurl | append: '/about'}}">More about me</a></center>
   </div>
 </section>
 
@@ -141,7 +141,8 @@ image:
       <h2 class="title"> Last articles </h2>
 
       {% assign everything = site.posts | concat: site.external %}
-      {% assign sorted = (everything | sort: 'date') | reverse %}
+      {% assign sorted = everything | sort: 'date' %}
+      {% assign sorted_reverse = sorted | reverse %}
 
       <amp-animation id="carouselTransition"
                      layout="nodisplay">
@@ -166,7 +167,7 @@ image:
                                intersection-ratios="0.8"
                                layout="nodisplay">
         </amp-position-observer>
-        {% for post in sorted limit: 9 %}
+        {% for post in sorted_reverse limit: 9 %}
         <div class="card">
           {% if post.image %}
           <div class="card-image">

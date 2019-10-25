@@ -5,3 +5,4 @@ Gemfile.lock
 _includes/main.css
 node_modules
 assets/css/dist
+npm-debug.log

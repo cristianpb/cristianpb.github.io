@@ -7,7 +7,8 @@
     "serve": "bundle exec jekyll serve --livereload",
     "algolia": "bundle exec jekyll algolia",
     "test": "./node_modules/.bin/gulp amp_validator",
-    "watch": "./node_modules/.bin/gulp watch"
+    "watch": "./node_modules/.bin/gulp watch",
+    "build": "./node_modules/.bin/gulp build"
   },
   "repository": {
     "type": "git",
