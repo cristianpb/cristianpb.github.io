@@ -5,6 +5,7 @@ on: [push]
 
 jobs:
   build:
+    name: Algolia push records
 
     runs-on: ubuntu-latest
 
@@ -14,7 +15,7 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
-      - name: Build and test with Rake
+      - name: Install dependencies and push records
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
