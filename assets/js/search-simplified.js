@@ -65,6 +65,7 @@ search.addWidgets([
   })
 ]);
 
+// Listen changes from input element
 search.addWidget({
   init: function(opts) {
     const helper = opts.helper;
@@ -76,26 +77,28 @@ search.addWidget({
   }
 });
 
+function date_unix_str(date_unix) {
+  const date = new Date(date_unix*1000);
+  // Year
+  const year = date.getFullYear();
+  // Month
+  const months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const month = months_arr[date.getMonth()];
+  // Day number 
+  const day = date.getDate();
+  const formattedTime = month + ' ' + day + ', ' + year;
+  return formattedTime
+}
+
+// Render results in hits element
 search.addWidget({
   render: function(opts) {
     const results = opts.results;
     // read the hits from the results and transform them into HTML.
     document.querySelector('#hits').innerHTML = results.hits.map(function(h) {
-      var date = new Date(h.date*1000);
-      // Year
-      var year = date.getFullYear();
-
-      // Month
-      var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      var month = months_arr[date.getMonth()];
-
-      // Day
-      var day = date.getDate();
-
-      // Will display time in 10:30:23 format
-      var formattedTime = month + ' ' + day + ', ' + year;
+      let formattedTime = date_unix_str(h.date);
       let external_tag = ('link' in h) ? `<span class="tag is-danger"><i class="fas fa-external-link-alt"></i></span>`: '' ;
-      let img_template;
+      let img_template = '';
       if ('image' in h) {
         img_template = `
       <div class="card-image">
@@ -107,35 +110,33 @@ search.addWidget({
           </a>
         </figure>
       </div>`
-      } else {
-        img_template = '';
-      }
+      } 
 
       return `
     <div class="column is-one-third">
-    <div class="card">
-    ` + img_template  + `
-      <div class="card-content">
-        <div class="media apretaito">
-          <div class="media-content">
-            <a href="${('link' in h) ? h.link : h.url}" ${('link' in h) ? "target=\"_blank\"" : ''} class="title is-4">${h.title}</a>
+      <div class="card">` + img_template  + `
+        <div class="card-content">
+          <div class="media apretaito">
+            <div class="media-content">
+              <a href="${('link' in h) ? h.link : h.url}" ${('link' in h) ? "target=\"_blank\"" : ''} class="title is-4">${h.title}</a>
+            </div>
           </div>
-        </div>
-        <div class="content apretaito">
-          <p>
-            ${h.description}
-          </p>
-          <div class="tags has-addons">
-            <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;${ formattedTime }</span>
-            <span class="tag is-link">${ h.categories.join(", ")}</span>`
-      + external_tag + `
+          <div class="content apretaito">
+            <p>
+              ${h.description}
+            </p>
+            <div class="tags has-addons">
+              <span class="tag">
+                <i class="fas fa-calendar-alt"></i>&nbsp;${ formattedTime }
+              </span>
+              <span class="tag is-link">
+                ${ h.categories.join(", ")}
+              </span>` + external_tag + `
+            </div>
           </div>
         </div>
       </div>
-      
-    </div>
-    </div>
-      `
+    </div>`
     }).join('');
   }
 });
