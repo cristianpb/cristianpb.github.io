@@ -3,7 +3,9 @@ layout: post
 title: "Image rotation using OpenCV"
 date: 2017-05-13
 description: "This post shows how to recalculate bounding box coordinates when the image rotate. An example using OpenCV in python is provided."
-categories: ["opencv", "python"]
+categories:
+  - data science
+tags: ["opencv", "python"]
 mathjax: false
 mathml: true
 image:

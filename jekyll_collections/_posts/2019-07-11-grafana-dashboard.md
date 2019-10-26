@@ -3,7 +3,9 @@ layout: post
 title: "Creating parametrisable dashboards using Grafana"
 date: 2019-07-11
 description: Grafana propose great quantity of options to monitor data. This posts shows how to build plots using parameters form queries.
-categories: grafana docker influxdb telegraf aws
+categories:
+  - system management
+tags: grafana docker influxdb telegraf aws
 image:
   path: /assets/img/grafana-dashboard/main-crop.jpg
   height: 200

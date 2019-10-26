@@ -3,7 +3,9 @@ layout: post
 title: "Document detection"
 date: 2017-12-03
 description: "This post shows how to implemented a simple algorithm to detect a document inside and scanned image using python and the image processing library opencv"
-categories: ["opencv", "python"]
+categories:
+  - data science
+tags: ["opencv", "python"]
 image:
   path: /assets/img/document-detection/main-crop.png
   height: 200

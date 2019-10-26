@@ -3,7 +3,9 @@ layout: post
 title: "Withings data"
 date: 2017-08-13
 description: "Steps data from my smart watch"
-categories: ["run", "python", "chartjs"]
+categories:
+  - visualization
+tags: ["run", "python", "chartjs"]
 calheatmap: true
 chartjs: true
 

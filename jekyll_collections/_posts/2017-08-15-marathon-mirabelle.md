@@ -1,9 +1,13 @@
 ---
+
 layout: post
 title: "Marathon training program"
 date: 2017-08-13
 description: "A marathon needs to be prepared for at least 3 months. This post shows my preparation training and a prediction of my time for the Metz Marathon 2017"
-categories: ["run", "python", "chartjs", "folium", "withings"]
+categories:
+  - data science
+  - visualization
+tags: ["run", "python", "chartjs", "leaflet", "withings"]
 calheatmap: true
 chartjs: true
 image:

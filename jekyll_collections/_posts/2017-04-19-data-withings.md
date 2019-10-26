@@ -3,7 +3,10 @@ layout: post
 title: "Data analysis for withings smart watch"
 date:   2017-04-19 21:01:25 +0200
 description: "Analysis of one year data of my daily sleep time and number of steps."
-categories: ['withings', 'r']
+categories:
+  - data science
+  - visualization
+tags: ['withings', 'r']
 image:
   path: /assets/img/data_withings/main-crop.png
   height: 200

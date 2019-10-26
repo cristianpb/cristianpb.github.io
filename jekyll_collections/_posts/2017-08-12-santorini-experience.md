@@ -3,7 +3,9 @@ layout: post
 title: "Running statistics from Santorini experience"
 date: 2017-08-12
 description: "In this post I use the javascript library Chartjs to illustrate interactively the statistics of a running activity at Santorini experience 2016"
-categories: ["run", "python", "chartjs", "folium"]
+categories:
+  - visualization
+tags: ["run", "python", "chartjs", "leaflet"]
 chartjs: true
 calheatmap: true
 image:

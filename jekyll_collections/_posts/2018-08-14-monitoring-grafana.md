@@ -5,7 +5,9 @@ date: 2018-08-14
 description: "Docker allows to easily deploy a monitoring system using beautiful 
 Grafana dashboards and connected with optimized data sources with Influxdb and 
 Collectd"
-categories: ["grafana", "docker", "influxdb", "collectd", "aws"]
+categories:
+  - system management
+tags: ["grafana", "docker", "influxdb", "collectd", "aws"]
 image:
   path: /assets/img/monitoring-grafana/main-crop.jpg
   height: 200

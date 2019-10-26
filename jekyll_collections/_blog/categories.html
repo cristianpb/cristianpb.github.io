@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog tags
+title: Blog categories
 
 ---
 
@@ -17,9 +17,14 @@ title: Blog tags
 
 <section class="section">
   <div class="container">
-    <div class="tags is-centered">
-      {% for category in site.tags %}
-      <a class="tag" href="/blog/tags#{{ category | first }}" target="_blank">{{ category | first }}</a>{% unless forloop.last %}{% endunless %}
+    <div class="columns is-multiline">
+      {% for category in site.categories %}
+      <div class="column">
+      <div class="tags has-addons">
+        <a class="tag" href="/blog/categories#{{ category | first }}">{{ category | first }}</a>{% unless forloop.last %}{% endunless %}
+        <span class="tag is-primary">{{ category[1].size }}</span>
+      </div>
+      </div>
       {% endfor %}
     </div>
   </div>
@@ -29,12 +34,12 @@ title: Blog tags
 <section class="section">
   <div class="container">
     <div class="columns is-multiline">
-      {% for category in site.tags %}
+      {% for category in site.categories %}
       <div class="column is-one-third">
         {% capture category_name %}{{ category | first }}{% endcapture %}
         <div id="{{ category_name | slugize }}"></div>
-        <h2 class="title">{{ category_name }} ({{ category[1].size }})</h2>
-        {% for post in site.tags[category_name] %}
+        <h2 class="title">{{ category_name }}</h2>
+        {% for post in site.categories[category_name] %}
         <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a> {{ post.date | date: "%b %-d, %Y" }}<br>
         {% endfor %}
         <br>
