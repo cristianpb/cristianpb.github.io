@@ -97,13 +97,12 @@ search.addWidget({
       let external_tag = ('link' in h) ? `<span class="tag is-danger"><i class="fas fa-external-link-alt"></i></span>`: '' ;
       let img_template;
       if ('image' in h) {
-        let image_path = ('link' in h) ? h.image: h.image.path ;
         img_template = `
       <div class="card-image">
         <figure class="image">
           <a href="${('link' in h) ? h.link : h.url}">
             <center>
-              <amp-img src="${image_path}" width="368" height="245" alt="${h.title}" layout="intrinsic"></amp-img>
+              <amp-img src="${h.image.path}" width="368" height="245" alt="${h.title}" layout="intrinsic"></amp-img>
             </center>
           </a>
         </figure>

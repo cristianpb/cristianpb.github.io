@@ -76,15 +76,12 @@ collections:
     output: true
   iframes:
     output: true
-  external:
-    output: true
   pages:
     output: true
 
 defaults:
     - {scope: {type: blog}, values: {layout: page, permalink: '/blog/:title'}}
     - {scope: {type: iframes}, values: {layout: iframe, sitemap: false}}
-    - {scope: {type: external}, values: {sitemap: false, permalink: '/external/:title'}}
     - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title'}}
     - {scope: {path: "", layout: default, type: "pages"}, values: {image: {
       path: '/assets/img/avatar.png', width: 200, height: 200}}}
@@ -103,8 +100,5 @@ exclude:
 
 feed:
   collections:
-    external:
-      path: external/feed.xml
     posts:
       path: feed.xml
-
