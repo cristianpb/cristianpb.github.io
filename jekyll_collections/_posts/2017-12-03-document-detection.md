@@ -7,7 +7,7 @@ categories:
   - data science
 tags: ["opencv", "python"]
 image:
-  path: /assets/img/document-detection/main-crop.png
+  path: /assets/img/document-detection/main-crop.jpg
   height: 200
   width: 300
 

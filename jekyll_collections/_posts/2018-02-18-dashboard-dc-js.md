@@ -7,7 +7,7 @@ categories:
   - visualization
 tags: ["d3.js", "dc.js", "bulma", "leaflet"]
 image:
-  path: /assets/img/dashboard-dc-js/main-crop.png
+  path: /assets/img/dashboard-dc-js/main-crop.jpg
   height: 200
   width: 300
 

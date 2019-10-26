@@ -26,21 +26,16 @@ var paths = {
 };
 
 function thumbnails() {
-  return gulp.src(`${paths.images.src}/**/{main.png,main.jpg}`)
+  return gulp.src(`${paths.images.src}/**/main{.png,.jpg,jpeg}`)
     .pipe(responsive({
       // Resize all images to 100 pixels wide and add suffix -thumbnail
-      '*/main.{jpg,jpeg}': {
+      '*/*': {
         width: 300,
         height: 200,
         format: 'jpg',
         rename: { suffix: '-crop'},
-      },
-      '*/main.png': {
-        width: 300,
-        height: 200,
-        format: 'png',
-        rename: { suffix: '-crop'},
-      },
+        //crop: 'attention'
+      }
     }, {
       // Global configuration for all images
       // The output quality for JPEG, WebP and TIFF output formats

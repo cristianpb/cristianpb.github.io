@@ -8,7 +8,7 @@ categories:
   - programming
 tags: ["nlp", "python", "cookie-cutter", "sphinx"]
 image:
-  path: /assets/img/priceminister/main-crop.png
+  path: /assets/img/priceminister/main-crop.jpg
   height: 200
   width: 300
 
