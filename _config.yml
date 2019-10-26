@@ -54,7 +54,7 @@ algolia:
     - jekyll_collections/_pages/*.html
 
 # Color the browser elements #
-color-browser: "#03abea"
+color-browser: "#247da6"
 apple-status-bar-style: "black-translucent"
  
 # Build settings
