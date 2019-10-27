@@ -2,33 +2,28 @@
   layout="nodisplay"
   side="right">
   <amp-img class="amp-close-image"
-    src="/assets/img/close.png"
-    width="30"
-    height="30"
-    alt="close sidebar"
-    on="tap:sidebar.close"
-    role="button"
-    tabindex="0"></amp-img>
-
-
+           src="/assets/img/close.png"
+           width="30"
+           height="30"
+           alt="close sidebar"
+           on="tap:sidebar.close"
+           role="button"
+           tabindex="0"></amp-img>
+  <br>
+  <br>
   {% for page in site.pages %}
     {% if page.title and page.navigation %}
-    <a class="navbar-item is-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+    <a class="button is-fullwidth is-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
     {% endif %}
   {% endfor %}
-    <a class="navbar-item is-link" href="/blog">Blog</a>
-  <div class="navbar-item has-dropdown is-hoverable">
-    <div class="navbar-dropdown is-boxed">
-
-      {% for link in site.socialnetworks %}
-        <a class="navbar-item bd-tw-button button" href="{{ link[1] }}">
-          <i class="fab fa-{{ link[0] }}"></i>
-          &nbsp;{{ link[0] }}
-        </a>
-      {% endfor %}
-
-
-
-    </div>
-  </div>
+  <br>
+  <a class="button is-fullwidth is-info" href="/blog">Blog</a>
+  <br>
+  <span class="button is-white is-fullwidth">Find me in:</span>
+  {% for link in site.socialnetworks %}
+    <a class="button is-fullwidth is-white" href="{{ link[1] }}">
+      <i class="fab fa-{{ link[0] }}"></i>
+      &nbsp;{{ link[0] }}
+    </a>
+  {% endfor %}
 </amp-sidebar>
