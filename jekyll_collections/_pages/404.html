@@ -1,35 +1,58 @@
 ---
 layout: default
 title: 404 | Page Not Found
+description: Sorry, it seems that the page your are looking for doesn't not exists. Still do you want to take a look at my blog articles ?
 permalink: /404.html
+
 ---
 
 <section class="hero is-primary is-small">
   <div class="hero-body is-centered">
     <div class="container">
       <h1 class="title">
-        {{ site.title }}
+        {{ page.title }}
       </h1>
       <h2 class="subtitle">
-        {{ site. description }}
+        {{ page.description }}
       </h2>
     </div>
   </div>
-  <div class="hero-foot">
-    <nav class="tabs is-boxed is-centered">
-      <div class="container">
-        <ul>
-       <li>
-         <a href="/">Home</a>
-      </li>
-       <li>
-         <a href="/about">About me</a>
-      </li>
-       <li>
-         <a href="/blog">Blog</a>
-      </li>
-        </ul>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title">Last articles</h2>
+    <div class="columns">
+      {% for post in site.posts limit: 3 %}
+      <div class="column is-4">
+        <div class="card">
+          {% if post.image %}
+          <div class="card-image">
+            <amp-img src="{{ post.image.path }}" alt="{{ post.title }}"  height="220" width="350" layout="responsive"></amp-img>
+          </div>
+          {% endif %}
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">{{ post.title | truncate: 40, ".."}}</p>
+              </div>
+            </div>
+            <div class="content">
+              <p> {{ post.description | truncate: 70, ".." }} </p>
+              <div class="tags has-addons">
+                <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
+                <span class="tag is-link">{{ post.categories | join: ", " | truncate: 30, ".."}}</span>
+                {% if post.link %}
+                <span class="tag is-danger"><i class="fas fa-external-link-alt"></i></span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+      {% endfor %}
+    </div>
+    <br>
+    <center><a class="button is-primary"  href="{{ site.baseurl | append: '/blog/'}}">More at my blog</a></center>
   </div>
 </section>
