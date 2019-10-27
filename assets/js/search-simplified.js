@@ -9,6 +9,86 @@ const search = instantsearch({
   }
 });
 
+// 1. Create a render function
+const renderRefinementList = (renderOptions, isFirstRender) => {
+  const {
+    items,
+    isFromSearch,
+    refine,
+    createURL,
+    isShowingMore,
+    canToggleShowMore,
+    searchForItems,
+    toggleShowMore,
+    widgetParams,
+  } = renderOptions;
+
+  if (isFirstRender) {
+    const div = document.createElement('div');
+    const button = document.createElement('button');
+    button.textContent = 'Show more';
+    button.classList.add('button');
+    button.classList.add('is-fullwidth');
+
+    button.addEventListener('click', () => {
+      toggleShowMore();
+    });
+
+    widgetParams.container.appendChild(div);
+    widgetParams.container.appendChild(button);
+  }
+
+  widgetParams.container.querySelector('div').innerHTML = items
+    .map(
+      item => `
+          <a
+            class="button is-fullwidth ${item.isRefined ? 'is-info' : 'is-white'}"
+            href="${createURL(item.value)}"
+            data-value="${item.value}"
+            style="font-weight: ${item.isRefined ? 'bold' : ''}"
+          >
+            ${item.label} (${item.count})
+          </a>
+      `
+    )
+    .join('');
+
+  [...widgetParams.container.querySelectorAll('a')].forEach(element => {
+    element.addEventListener('click', event => {
+      event.preventDefault();
+      refine(event.currentTarget.dataset.value);
+    });
+  });
+
+  const button = widgetParams.container.querySelector('button');
+
+  button.disabled = !canToggleShowMore;
+  button.textContent = isShowingMore ? 'Show less' : 'Show more';
+};
+
+// 2. Create the custom widget
+const customRefinementList = instantsearch.connectors.connectRefinementList(
+  renderRefinementList
+);
+
+// 3. Instantiate
+search.addWidgets([
+  customRefinementList({
+    container: document.querySelector("#refinement-tags"),
+    attributeName: "tags",
+    showMoreLimit: 20
+  })
+]);
+
+// Categories
+search.addWidgets([
+  customRefinementList({
+    container: document.querySelector("#refinement-categories"),
+    attributeName: "categories",
+    showMoreLimit: 20
+  })
+]);
+
 // Create the render function
 const renderPagination = (renderOptions, isFirstRender) => {
   const {
