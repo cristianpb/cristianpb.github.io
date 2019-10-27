@@ -6,7 +6,9 @@ description: "Analysis of one year data of my daily sleep time and number of ste
 categories:
   - data science
   - visualization
-tags: ['withings', 'r']
+tags:
+  - withings
+  - r
 image:
   path: /assets/img/data_withings/main-crop.png
   height: 200

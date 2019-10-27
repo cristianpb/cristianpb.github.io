@@ -92,6 +92,7 @@ for you.
 
 Since my blog is already in github, I chose [Github Actions](https://github.com/features/actions) to leverage this action for me. I just have to create the following `yaml` in the `.github/workflows` folder:
 
+{% raw %}
 ```yaml
 # .github/workflows/jekyll-algolia.yml
 on: [push]
@@ -116,6 +117,7 @@ jobs:
         env:
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
 ```
+{% endraw %}
 
 As you can see it this will install the dependencies and launch the command to push the data to Algolia. Please note that the `ALGOLIA_API_KEY` needs to be defined in the github secrets.
 
