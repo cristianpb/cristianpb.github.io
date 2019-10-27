@@ -226,6 +226,7 @@ Deploying the code in github pages allows to deploy static page and removes
 completely the server dependency. In addition github actions allows to have a 
 complete CI/CD that can be configured in a `yaml` file like the following:
 
+{% raw %}
 ```yaml
 on:
   schedule:
@@ -260,6 +261,7 @@ jobs:
           PUBLISH_DIR: ./dist
 
 ```
+{% endraw %}
 
 In this way, I will:
 - fetch the data everyday in order to keep an updated dashboard and copy it to 

@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Marathon training program"
+title: "Marathon training program analysis using python and chartjs"
 date: 2017-08-13
 description: "A marathon needs to be prepared for at least 3 months. This post shows my preparation training and a prediction of my time for the Metz Marathon 2017"
 categories:

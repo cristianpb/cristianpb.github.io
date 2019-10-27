@@ -288,14 +288,14 @@ I'm satisfied with the results. It's has been almost 5 months since I started to
 <amp-img on="tap:lightbox5"
   role="button"
   tabindex="0"
-  aria-describedby="SpongeBob1"
+  aria-describedby="SpongeBob5"
   alt="Tree evolution during spring transition"
   title="Tree evolution during spring transition"
   src="/assets/img/motion-monitor/tree_evolution.jpg"
   layout="responsive"
   width="960"
   height="480"></amp-img>
-<div id="SpongeBob1">
+<div id="SpongeBob5">
   Tree evolution during spring transition
 </div>
 
