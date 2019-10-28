@@ -206,18 +206,18 @@ I'm very happy with the results. I'm able to control my music with my voice and
 I don't even have to be near my phone. I uploaded a video that illustrates my
 results, my code is available on [github](https://github.com/cristianpb/snipshandler).
 
-<amp-image-lightbox id="lightbox1"
+<amp-image-lightbox id="lightbox2"
   layout="nodisplay"></amp-image-lightbox>
-<amp-img on="tap:lightbox1"
+<amp-img on="tap:lightbox2"
   role="button"
   tabindex="0"
-  aria-describedby="imageDescription2"
+  aria-describedby="imageDescription3"
   alt="Picture of a dog"
   title="Picture of a dog, view in lightbox"
   src="/assets/img/music-voice-control/main.jpg"
   layout="intrinsic"
   width="432"
   height="575"></amp-img>
-<div id="imageDescription2">
+<div id="imageDescription3">
   My snips handler
 </div>

@@ -36,10 +36,10 @@ description: This is a detailled classification of my blog posts.
       {% for category in site.tags %}
       <div class="column is-one-third">
         {% capture category_name %}{{ category | first }}{% endcapture %}
-        <div id="{{ category_name | slugize }}"></div>
-        <h2 class="title">{{ category_name }} ({{ category[1].size }})</h2>
+        <div id="{{ category_name | slugize  }}"></div>
+        <h2 class="title">{{ category_name | capitalize }} ({{ category[1].size }})</h2>
         {% for post in site.tags[category_name] %}
-          <div class="columns">
+          <div class="columns is-mobile">
             <div class="column is-3">
               <p class="is-size-7">
                 {{ post.date | date: "%-d %b %Y" }}

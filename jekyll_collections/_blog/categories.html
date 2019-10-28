@@ -23,28 +23,12 @@ description: These are general categories to separete my blog posts.
   <div class="container">
     <div class="columns is-multiline">
       {% for category in site.categories %}
-      <div class="column">
-      <div class="tags has-addons">
-        <a class="tag" href="/blog/categories#{{ category | first }}">{{ category | first }}</a>{% unless forloop.last %}{% endunless %}
-        <span class="tag is-primary">{{ category[1].size }}</span>
-      </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container">
-    <div class="columns is-multiline">
-      {% for category in site.categories %}
       <div class="column is-one-third">
         {% capture category_name %}{{ category | first }}{% endcapture %}
         <div id="{{ category_name | slugize }}"></div>
-        <h3 class="title">{{ category_name | capitalize }}</h3>
+        <h3 class="title">{{ category_name | capitalize }} ({{ category[1].size }})</h3>
         {% for post in site.categories[category_name] %}
-          <div class="columns">
+          <div class="columns is-mobile">
             <div class="column is-3">
               <p class="is-size-7">
                 {{ post.date | date: "%-d %b %Y" }}
