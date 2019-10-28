@@ -15,7 +15,7 @@ image:
 ---
 
 This post explains my solution for a data science competition on NLP. I use best practices for organization and documentation in a data sicence project. The competition was hosted by 
-[ChallengeData.ens.fr](https://challengedata.ens.fr/en/challenge/26/prediction_of_products_reviews_interests.html).
+[ChallengeData.ens.fr](https://challengedata.ens.fr).
 The partner for this competition was French company Price Minister, a 
 subsidiary of the Rakouten Group, a major e-commerce player.
 
@@ -122,7 +122,7 @@ The results are cleaner jupyter notebooks, with organized functions that can be 
 
 ### Virtualenv
 
-The python package management is keeped clean using a virtual environement. I prefer to use [virtualenv wrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) since it has a higher level of abstraction of your virtual env, it place all the virtual env in one place and also you can implement rules to use a specific virtual env when you are in a directory.   
+The python package management is keeped clean using a virtual environement. I prefer to use [virtualenv wrapper](https://virtualenvwrapper.readthedocs.io/en/latest) since it has a higher level of abstraction of your virtual env, it place all the virtual env in one place and also you can implement rules to use a specific virtual env when you are in a directory.   
 
 
 ### Sphinx

@@ -134,7 +134,7 @@ function mainController($scope, $http) {
 
 ## Nodejs server
 
-The `server.js` file exposes the application at [http://localhost:8080/](http://localhost:8080/)
+The `server.js` file exposes the application at http://localhost:8080
 
 ```js
 // listen (start app with node server.js) ======================================
@@ -291,4 +291,4 @@ The application can be found at my [github](https://github.com/cristianpb/alchem
 * Clone the repo: `git clone git@github.com:cristianpb/alchemy-machine.git`
 * Install the application: `npm install`
 * Start the server: `node server.js`
-* View in your browser at [http://localhost:8080](http://localhost:8080)
+* View in your browser at http://localhost:8080

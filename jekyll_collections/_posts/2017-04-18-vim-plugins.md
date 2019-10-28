@@ -146,7 +146,7 @@ nmap ga <Plug>(EasyAlign)
 
 I use [surround](https://github.com/tpope/vim-surround) to modify any time of parentheses.
 
-I use [ultisnips](https://github.com/sirver/ultisnips) to use predefined snippets. There are several snippets for each programming language. It is also possible to create very modular snippets. I have added a path where I put my own snippets inside `~/.vim/`.
+I use [ultisnips](https://github.com/SirVer/ultisnips) to use predefined snippets. There are several snippets for each programming language. It is also possible to create very modular snippets. I have added a path where I put my own snippets inside `~/.vim/`.
 
 ```vim
 " UltiSnips

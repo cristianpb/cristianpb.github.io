@@ -18,7 +18,7 @@ video: true
 
 ---
 
-Paris Open Data platform proposes databases of the bike rental system [Velib](http://en.velib.paris.fr/). They propose an API to download the data in real-time. The file can be obtained using a http query to the [API](https://opendata.paris.fr/explore/dataset/stations-velib-disponibilites-en-temps-reel/) and saved in `csv` or `json` format.
+Paris Open Data platform proposes databases of the bike rental system [Velib](https://www.velib-metropole.fr). They propose an API to download the data in real-time. The file can be obtained using a http query to the [API](https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-reel/) and saved in `csv` or `json` format.
 We will use `python` in this post to obtain some insights about the rental systems.
 
 ## Obtaining the data
@@ -74,7 +74,7 @@ bike_stands_arron = velibs.groupby('arron')['bike_stands'].sum()
 
 This information can be bind to a geojson file that contains the coordinates of each _arrondisement_. This information has been 
 posted in [github](https://github.com/codeforamerica/click_that_hood/raw/master/public/data/paris.geojson).
-We can use [Folium](https//github.com/python-visualization/foliumm) to plot this information using the following command:
+We can use [Folium](https://github.com/python-visualization/folium) to plot this information using the following command:
 
 ```python
 # https://github.com/codeforamerica/click_that_hood/raw/master/public/data/paris.geojson
