@@ -6,6 +6,10 @@ categories:
   - data science
 tags: ["opencv", "python"]
 description: A presentation slide for how to use reveal.js in Jekyll
+image: 
+  path: /assets/img/image-preprocessing/main-crop.jpg
+  width: 300
+  height: 200
 
 ---
 

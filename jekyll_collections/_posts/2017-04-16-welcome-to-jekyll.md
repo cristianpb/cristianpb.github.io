@@ -6,6 +6,10 @@ categories:
   - programming
 tags: ['jekyll']
 description: "How do I create this blog with Jekyll. Including functionalities like disqus comments and google analytics"
+image: 
+  path: /assets/img/welcome-jekyll/main-crop.jpg
+  width: 300
+  height: 200
 
 ---
 
