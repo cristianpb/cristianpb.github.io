@@ -1,6 +1,7 @@
 ---
 title: A fish tale into data science
 link: https://www.kernix.com/blog/a-fish-tale-into-data-science_p15
+redirect_to: https://www.kernix.com/blog/a-fish-tale-into-data-science_p15
 sitemap: false
 source: Kernix blog
 date: 2017-06-23

@@ -1,6 +1,7 @@
 ---
 title: World Summit AI 2017
 link: https://www.kernix.com/blog/world-summit-ai-2017_p18
+redirect_to: https://www.kernix.com/blog/world-summit-ai-2017_p18
 sitemap: false
 source: Kernix blog
 date: 2017-11-22
