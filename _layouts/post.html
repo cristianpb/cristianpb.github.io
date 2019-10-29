@@ -31,12 +31,6 @@ layout: default
         <div class="content">
           {{ content }}
         </div>
-
-        <nav class="pagination" role="navigation" aria-label="pagination">
-          {% if page.previous.url %} <a href="{{ page.previous.url | prepend: site.baseurl }}" class="pagination-previous is-left">← Previous post</a> {% endif %}
-          {% if page.next.url %} <a href="{{ page.next.url | prepend: site.baseurl }}" class="pagination-next is-right">Next post →</a>{% endif %}
-        </nav>
-
       </div>
     </div>
   </div>
@@ -141,6 +135,9 @@ layout: default
 
 <section class="section is-small">
   <div class="container has-text-centered">
+    <p class="subtitle">
+      If you like it don't forget to share
+    </p>
     {% include amp-social-share.html %}
   </div>
 </section>
