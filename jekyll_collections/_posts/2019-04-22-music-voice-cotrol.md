@@ -164,7 +164,7 @@ function volumeDown () {
 * I also created a function to download the episodes from my favorite podcast
   whenever I'm connected to the internet.
 
-```
+```javascript
 async function downloadPostcast(url) {
   let feed = await parser.parseURL(url);
   console.log("RSS: ", feed.title);

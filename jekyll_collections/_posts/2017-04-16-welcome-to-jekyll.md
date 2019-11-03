@@ -52,7 +52,7 @@ Info > Tracking Code_.
 Now you need to reference your *Tracking ID* in your `_config.yml` file.
 Replace UA—XXXXXXXX-X with your own unique *Tracking ID*:
 
-```
+```yaml
 # Google services
 google_analytics: UA—XXXXXXXX-X
 ```
@@ -69,7 +69,7 @@ your site to the trusted domains feature in your
 Then I open `config.yml` and add the following code. Remember to change
 `my_disqus_shortname` to your own Disqus shortname.
 
-```
+```yaml
 # Disqus Comments
 disqus:
     # Leave shortname blank to disable comments site-wide.
@@ -82,7 +82,7 @@ development environment. They are only available in production environment.
 To run Jekyll in production environment use the following command to view your
 site.
 
-```
+```bash
 JEKYLL_ENV=production bundle exec jekyll serve
 ```
 
