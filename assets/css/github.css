@@ -67,3 +67,4 @@
 .highlight .vi { color: #24292e } /* Name.Variable.Instance */
 .highlight .vm { color: #005cc5 } /* Name.Variable.Magic */
 .highlight .il { color: #005cc5 } /* Literal.Number.Integer.Long */
+.highlight { overflow-x: auto }
