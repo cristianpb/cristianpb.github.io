@@ -111,7 +111,7 @@ function concatenation() {
 var build = gulp.series(clean, purification, concatenation, clean);
 
 function watch() {
-  gulp.watch(["_layouts/**", "_includes/**.html", "jekyll_collections/**", "_sass/*"], build);
+  gulp.watch(["_layouts/**", "_includes/**.html", "jekyll_collections/**", "_sass/*", "assets/css/*"], build);
 }
  
 exports.images = images;
