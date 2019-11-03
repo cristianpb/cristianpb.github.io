@@ -29,7 +29,7 @@ description: These are general categories to separete my blog posts.
         <h3 class="title">{{ category_name | capitalize }} ({{ category[1].size }})</h3>
         {% for post in site.categories[category_name] %}
           <div class="columns is-mobile">
-            <div class="column is-3">
+            <div class="column is-narrow">
               <p class="is-size-7">
                 {{ post.date | date: "%-d %b %Y" }}
               </p>
