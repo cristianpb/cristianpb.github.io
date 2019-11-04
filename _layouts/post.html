@@ -2,6 +2,44 @@
 layout: default
 ---
 
+<amp-animation id="showAnim"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": "#content-toc",
+        "keyframes": [{
+          "opacity": "1",
+          "visibility": "visible"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+
+<amp-animation id="hideAnim"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": "#content-toc",
+        "keyframes": [{
+          "opacity": "0",
+          "visibility": "hidden"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+
 <section class="section">
   <div class="container has-text-centered">
     <h1 class="title">{{ page.title }}</h1>
@@ -25,12 +63,25 @@ layout: default
 
 <section class="section is-small">
   <div class="container">
-    <div class="columns is-centered">
+    <div class="columns">
+
+      <div class="column is-2">
+      </div>
       <div class="column is-8">
-        <div class="content">
+        <div class="content has-text-justified">
+
+      <amp-position-observer on="enter:showAnim.start; exit:hideAnim.start"
+                             layout="nodisplay">
+      </amp-position-observer>
           {{ content }}
         </div>
       </div>
+      <div class="column is-2">
+        <div id="content-toc" class="content"  style="position:fixed;">
+          {% include toc.html html=content anchor_class="title.is-7"%}
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
