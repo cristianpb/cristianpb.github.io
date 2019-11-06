@@ -181,7 +181,7 @@ image:
           <div class="card-content">
             <div class="media apretaito ">
               <div class="media-content">
-                <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}" {% if post.link %}target="_blank"{% else %}{% endif %} class="title is-4">{{ post.title | truncate: 40, ".."}}</a>
+                <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}" {% if post.link %}target="_blank"{% else %}{% endif %} >{{ post.title | truncate: 40, ".."}}</a>
               </div>
             </div>
 
