@@ -102,8 +102,8 @@ const renderPagination = (renderOptions, isFirstRender) => {
   } = renderOptions;
 
   const container = document.querySelector('#pagination');
-  let previous_button = (currentRefinement > 0) ? `<a href="href="${createURL(currentRefinement - 1)}" data-value="${currentRefinement - 1}" class="pagination-previous">← Previous page</a>`: ''
-  let next_button = ((currentRefinement + 1) < nbPages) ? `<a href="${createURL(currentRefinement + 1)}" data-value="${currentRefinement + 1}" class="pagination-next">Next page →</a>` : ''
+  let previous_button = (currentRefinement > 0) ? `<a href="href="${createURL(currentRefinement - 1)}" data-value="${currentRefinement - 1}" class="button">← Previous page</a>&nbsp;`: ''
+  let next_button = ((currentRefinement + 1) < nbPages) ? `<a href="${createURL(currentRefinement + 1)}" data-value="${currentRefinement + 1}" class="button">Next page →</a>` : ''
   let first_page = (currentRefinement > 1) ?  `<li><a class="pagination-link"  href="${createURL(0)}" data-value="${0}"
   aria-label="Goto page 1">1</a></li> <li><span class="pagination-ellipsis">&hellip;</span></li>`: ''
   let previous_page = (currentRefinement > 0) ?  `<li><a class="pagination-link"  href="${createURL(currentRefinement - 1)}" data-value="${currentRefinement - 1}"
