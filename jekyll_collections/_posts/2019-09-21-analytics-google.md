@@ -253,13 +253,12 @@ jobs:
       - name: build html
         run: make build
       - name: deploy
-        uses: peaceiris/actions-gh-pages@v2.2.0
+        uses: docker://peaceiris/gh-pages:v2.3.2
         if: success()
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./dist
-
 ```
 {% endraw %}
 
@@ -268,7 +267,7 @@ In this way, I will:
   the `dist` folder ;
 - render my html and copy it to the `dist` folder ;
 - copy my `js` script to the `dist` folder ;
-- copy my `dist` folder to the `gh-pages` branch so that github can publish it in github-pages.
+- copy my `dist` folder to the `gh-pages` branch so that github can publish it in github-pages. I use [@peaceiris github action](https://github.com/peaceiris/actions-gh-pages) to publish to github-pages.
 
 This file is put in the `.github/workflows` folder. It's automatically taken
 into account if you have github actions active for you account. It's still in
