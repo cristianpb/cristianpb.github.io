@@ -6,9 +6,8 @@ permalink: /about
 redirect_from:
   - /about/
 navigation: true
-leaflet: false
 animation: true
-visjs: false
+carousel: true
 
 ---
 
@@ -131,6 +130,7 @@ visjs: false
                     <span class="tag is-primary">10 months</span>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -347,11 +347,11 @@ visjs: false
   <div class="container">
     <h2 class="title"><i class="fas fa-graduation-cap"></i>Education</h2>
     <center>
-    <amp-img width="358" height="858" alt="Technical stack vertical" 
-      layout="intrinsic" src="/assets/img/about/timeline-ver.png" 
+    <amp-img width="430" height="534" alt="Technical stack vertical" 
+      layout="intrinsic" src="/assets/img/about/education-vert.svg" 
       media="(max-width: 768px)"></amp-img>
-    <amp-img width="739" height="509" alt="Technical stack horizontal" layout="intrinsic" 
-      src="/assets/img/about/timeline.png" media="(min-width: 769px)"></amp-img>
+    <amp-img width="696" height="314" alt="Technical stack horizontal" layout="intrinsic" 
+      src="/assets/img/about/education-horz.svg" media="(min-width: 769px)"></amp-img>
     </center>
 
   </div>
@@ -360,68 +360,95 @@ visjs: false
 <section class="section" id="prix">
   <div class="container">
     <h2 class="title"><i class="fas fa-star"></i>  Prix</h2>
+    <div class="has-text-centered">
 
-    <div class="columns is-centered">
-
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-image is-centered">
-            <figure class="image">
-              <a href="http://www.robertorocca.org/en/fellowships/fellows15.aspx" target="_blank">
-              <amp-img src="/assets/img/about/roberto_rocca.jpg" width="434" height="244" layout="responsive" alt="roberto rocca fellowship program"></amp-img>
-              </a>
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <a class="title is-4" href="http://www.robertorocca.org/en/fellowships/fellows15.aspx" target="_blank">Roberto Rocca Fellowship</a>
-                <p class="subtitle is-6">2015</p>
-              </div>
-            </div>
-
-            <div class="content">
-              Awarded to exceptional university graduates from developing countries
-              to help fund studies towards the Ph.D. degree at a university outside
-              his home country
-              <br>
-            </div>
-          </div>
+      <amp-carousel
+        height="400"
+        layout="fixed-height"
+        type="slides"
+        autoplay
+        delay="3000"
+        controls
+        >
+        <figure>
+        <amp-img
+          role="button"
+          aria-describedby="prix hackster sigfox"
+          alt="Prix hackster sigfox"
+          title="Prix hackster Sigfox"
+          src="/assets/img/about/prix-hackster.jpg"
+          layout="intrinsic"
+          width="450"
+          height="244"></amp-img>
+        <div>
+          <a class="title is-4" href="https://www.hackster.io/cristianpb/smart-compost-monitoring-cd122e" target="_blank">Sigfox Universities Challenge</a>
+          <p class="subtitle is-6">2019</p>
+          <p>
+            Each winner was awarded a Hardware + Mentorship ($200 value)
+          </p>
         </div>
-      </div>
-
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-image">
-            <a href="http://artsetsciences.doc-up.info/archives/edition-2014/" target="_blank">
-            <figure class="image">
-              <amp-img src="/assets/img/about/arts.jpg" width="450" height="300" layout="responsive" alt="concours arts et sciences"></amp-img>
-            </figure>
-            </a>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <a class="title is-4" href="http://artsetsciences.doc-up.info/archives/edition-2014/" target="_blank">Arts et Sciences</a>.
-                <p class="subtitle is-6">2014</p>
-              </div>
-            </div>
-
-            <div class="content">
-              Artistic contest related to science, organized by Doctoral
-              association of Sorbonne University and UPMC.
-              <br>
-            </div>
-          </div>
+        </figure>
+        <figure>
+        <amp-img
+          role="button"
+          aria-describedby="Prix eurocorr 2016"
+          alt="Prix Eurocorr 2016"
+          title="Prix Eurocorr 2016"
+          src="/assets/img/about/prix-eurocorr.jpg"
+          layout="intrinsic"
+          width="314"
+          height="244"></amp-img>
+        <div>
+          <a class="title is-4" href="http://eurocorr.org/EFC+Awards+and+Prizes-p-71440.html" target="_blank">Best presentation award</a>
+          <p class="subtitle is-6">2016</p>
+          <p>
+            The two best oral presentations of the Nuclear Corrosion session during EUROCORR 2016 in Montpellier.
+          </p>
         </div>
-      </div>
-
+        </figure>
+        <figure>
+        <amp-img
+          role="button"
+          aria-describedby="Prix Roberto Rocca"
+          alt="Prix Roberto Rocca"
+          title="Prix Roberto Rocca"
+          src="/assets/img/about/roberto_rocca.jpg"
+          layout="intrinsic"
+          width="450"
+          height="244"></amp-img>
+        <div>
+          <a class="title is-4" href="http://www.robertorocca.org/en/fellowships/fellows15.aspx" target="_blank">Roberto Rocca Fellowship</a>
+          <p class="subtitle is-6">2015</p>
+          <p>
+            Awarded to exceptional university graduates from developing countries
+            to help fund studies towards the Ph.D. degree at a university outside
+            his home country
+          </p>
+        </div>
+        </figure>
+        <figure>
+        <amp-img
+          role="button"
+          aria-describedby="Prix arts et sciences"
+          alt="Prix arts et sciences"
+          title="Prix arts et sciences"
+          src="/assets/img/about/arts.jpg"
+          layout="intrinsic"
+          width="350"
+          height="244"></amp-img>
+        <div>
+          <a class="title is-4" href="http://artsetsciences.doc-up.info/archives/edition-2014/" target="_blank">Arts et Sciences</a>.
+          <p class="subtitle is-6">2014</p>
+          <p class="content">
+            Artistic contest related to science, organized by Doctoral
+            association of Sorbonne University and UPMC.
+          </p>
+        </div>
+        </figure>
+      </amp-carousel>
     </div>
   </div>
 </section>
-
-
-
 
 
 <section class="section hero is-primary" id="communications">
@@ -438,11 +465,11 @@ visjs: false
         <div class="content">
           <ul>
             <li>2016	Oral presentation in WP Nuclear Corrosion EUROCORR 2016
-              Montpelier, France (<a href="http://eurocorr.org/EFC+Awards+and+Prizes-p-71440.html" target="_blank"><strong>best presentation award</strong></a>). "Pitting corrosion modelling by means of a stochastic cellular automata based model"
+              Montpelier, France. "Pitting corrosion modelling by means of a stochastic cellular automata based model"
             </li>
             <li>
               2016	Oral presentation CORROSION 2016
-              Vancouver, Canada. <p><strong>Corrosion modeling using 3D probabilistic cellular automata based model</strong></p>
+              Vancouver, Canada. "Corrosion modeling using 3D probabilistic cellular automata based model"
             </li>
             <li>
               2015	Poster EUROCORR 2015

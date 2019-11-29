@@ -64,7 +64,7 @@ function thumbnails() {
 
 
 function images() {
-  return gulp.src(`${paths.images.src}/**/{*.png,*.jpg,*.jpeg,*.gif}`)
+  return gulp.src(`${paths.images.src}/**/*.{png,jpg,jpeg,gif}`)
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
