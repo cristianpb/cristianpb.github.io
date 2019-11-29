@@ -104,6 +104,34 @@ carousel: true
                     </figure>
                   </div>
                   <div class="media-content">
+                    <a class="title is-4" href="https://entrepreneur-interet-general.etalab.gouv.fr/defis/2019/iaflash.html">Innovation Lab First Data Scientist</a><br>
+                    <a class="subtitle is-6" href="https://www.interieur.gouv.fr">French interior ministry</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <p>
+
+                  </p>
+                  {%   assign today = site.time | date: '%s'      %}
+                  {%   assign start = '28-11-2019 04:00:00' | date: '%s'  %}
+                  {%   assign secondsSince = today | minus: start     %}
+                  {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+                  {%   assign daysSince = hoursSince | divided_by: 24  %}
+                  {%   assign monthsSince = daysSince | divided_by: 29  %}
+                  {%   assign modulus = daysSince | modulo: 29 | times: 10 | divided_by: 29  %}
+                  <div class="tags has-addons">
+                    <span class="tag">Dec 2019 - Present</span>
+                    <span class="tag is-primary">{{monthsSince}}.{{modulus}} months</span>
+                  </div>
+                </div>
+                <hr class="navbar-divider">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <amp-img src="/assets/img/about/ministere_interieur.png" layout="responsive" width="48" height="48" alt="Ministère de l'interieur"></amp-img>
+                    </figure>
+                  </div>
+                  <div class="media-content">
                     <a class="title is-4" href="https://entrepreneur-interet-general.etalab.gouv.fr/defis/2019/iaflash.html">Entrepreneur d'Intérêt Général</a><br>
                     <a class="subtitle is-6" href="https://www.interieur.gouv.fr">French interior ministry</a>
                   </div>
