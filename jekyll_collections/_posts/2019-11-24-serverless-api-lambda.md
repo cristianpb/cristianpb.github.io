@@ -300,7 +300,7 @@ assert any(['BMW SERIE 5' in vehicule['label'] for vehicule in eval(body)[0] + e
 
 These test can be added to the test folder and launched with PyTest. A good
 practice is also to automate testing using github actions, in order to launch
-a lint tool and testing for each push to the repository. You can take a look at [our test github action](https://github.com/ia-flash/matchvec/blob/master/.github/workflows/python.ym://github.com/ia-flash/matchvec/blob/master/.github/workflows/python.yml).
+a lint tool and testing for each push to the repository. You can take a look at [our test github action](https://github.com/ia-flash/matchvec/blob/master/.github/workflows/python.yml).
 
 ## Conclusions
 
