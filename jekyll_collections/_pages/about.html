@@ -88,13 +88,13 @@ carousel: true
 <section class="section" id="experience">
   <div class="container">
 
+    <h2 class="title"><i class="fas fa-briefcase"></i>  Experience</h2>
     <div class="columns is-multiline">
 
       <div class="column is-6">
 
         <div class="columns is-multiline">
           <div class="column is-12">
-            <h2 class="title"><i class="fas fa-briefcase"></i>  Experience</h2>
             <div class="card">
               <div class="card-content">
                 <div class="media">
@@ -104,16 +104,66 @@ carousel: true
                     </figure>
                   </div>
                   <div class="media-content">
-                    <a class="title is-4" href="https://entrepreneur-interet-general.etalab.gouv.fr/defis/2019/iaflash.html">Innovation Lab First Data Scientist</a><br>
-                    <a class="subtitle is-6" href="https://www.interieur.gouv.fr">French interior ministry</a>
+                    <a class="title is-4" href="#">First Data Scientist</a><br>
+                    <a class="subtitle is-6" href="https://www.interieur.gouv.fr">French interior ministry - Innovation and Digital Transformation department</a>
                   </div>
                 </div>
                 <div class="content">
                   <p>
-
+                    I'm inside a structure that promotes digital transformation of the French Ministry.
+                    My team helps other ministries to use data in a most effective way.
+                    My main tasks are the following:
+                    <a class="button is-small is-fullwidth" id="readmore-button-ministry" on="tap:readmore-button-ministry.hide, readmore-text-ministry.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
                   </p>
+                  <ul id="readmore-text-ministry" hidden="">
+                    <li>
+                      System administration:
+                      <ul>
+                        <li>
+                          Server management with UNIX commands
+                        </li>
+                        <li>
+                          Server deployment in private cloud private infrastructures using Ansible
+                        </li>
+                        <li>
+                          Deploy AWS services like Lambda, EC2, API GateWay, Cloud Formation.
+                        </li>
+                        <li>
+                          Routing applications using NGINX or Traefik
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Data science:
+                      <ul>
+                        <li>
+                          Data mining
+                        </li>
+                        <li>
+                          Data cleaning and preparation
+                        </li>
+                        <li>
+                          Processing textual data, semantic analysis, search engine development
+                        </li>
+                        <li>
+                          Process government private and public data
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Visualization: 
+                      <ul>
+                        <li>
+                          Build dashboards and web applications
+                        </li>
+                        <li>
+                          Make cartographic representations and geo-code data
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                   {%   assign today = site.time | date: '%s'      %}
-                  {%   assign start = '28-11-2019 04:00:00' | date: '%s'  %}
+                  {%   assign start = '01-12-2019 04:00:00' | date: '%s'  %}
                   {%   assign secondsSince = today | minus: start     %}
                   {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
                   {%   assign daysSince = hoursSince | divided_by: 24  %}
@@ -146,7 +196,7 @@ carousel: true
                     <a class="button is-small is-fullwidth" id="readmore-button-eig" on="tap:readmore-button-eig.hide, readmore-text1.toggleVisibility, readmore-text2.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
                   </p>
                   <p id="readmore-text1" hidden="">
-                    I'm implementing image recognition algorithms using deep
+                    I implemented image recognition algorithms using deep
                     learning for the French national agency for automated offence
                     processing (ANTAI).
                   </p>
@@ -162,6 +212,12 @@ carousel: true
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="column is-6">
+
+        <div class="columns is-multiline">
           <div class="column is-12">
             <div class="card">
               <div class="card-content">
@@ -222,8 +278,15 @@ carousel: true
                   </div>
                 </div>
                 <div class="content">
-                  The scientific results of my PhD can be found at <a on="tap:publications.scrollTo(duration=200)" target="_blank">my PhD dissertation</a>, my main tasks were: 
-                  <ul> 
+                  <p>
+                    The CEA is a structure that regulates Atomic Energy in
+                    France. During my PhD I used numerical simulations to predict
+                    the corrosion behaviour of metal structures for nuclear
+                    applications.
+                    The scientific results of my PhD can be found at <a on="tap:publications.scrollTo(duration=200)" target="_blank">my PhD dissertation</a>, my main tasks were: 
+                    <a class="button is-small is-fullwidth" id="readmore-button-phd" on="tap:readmore-button-phd.hide, readmore-text-phd.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
+                  </p>
+                  <ul id="readmore-text-phd" hidden=""> 
                     <li> Study of the competition between general and localized corrosion with stochastic numerical modelling.  </li> 
                     <li> Parallel programming using CUDA language in NVIDIA GPU </li> 
                     <li> Data analysis and visualization using python <i class="fab fa-python"></i>, Gnuplot and R / <i class="fab fa-r-project"></i> </li> 
@@ -237,129 +300,124 @@ carousel: true
           </div>
         </div>
       </div>
+    </div>
 
+    <h2 class="title"><i class="fas fa-hourglass-end"></i>  Part time</h2>
+    <div class="columns is-multiline">
+      <div class="column is-4">
 
-      <div class="column is-6">
-
-        <div class="columns is-multiline">
-          <div class="column is-12">
-
-            <h2 class="title"><i class="fas fa-hourglass-end"></i>  Part time</h2>
-            <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <amp-img src="/assets/img/about/cityai.jpg" layout="responsive" width="48" height="48" alt="City AI logo"></amp-img>
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <a class="title is-4" href="https://city.ai/paris">Content expert</a><br>
-                    <a class="subtitle is-6" href="https://city.ai/">City AI</a>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>City AI is a global community that brings practitioners and stakeholders of applied artificial intelligence together. I represent the Paris community regarding the international community of City AI. My main tasks in are:
-                    <a class="button is-small is-fullwidth" id="readmore-button-cityai" on="tap:readmore-button-cityai.hide, readmore-text-cityai.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
-                  </p>
-                  <ul id="readmore-text-cityai" hidden="">
-                    <li>
-                      Write content about AI from a specialized point of view. The articles can be found <a href="/blog/external">here</a>
-                    </li>
-                    <li>
-                      Development of an application to collect news in the AI fields and share them with the community. The frontend of the application can be found <a href="https://cristianpb.github.io/newsapp">here</a> and the code can be found <a href="https://github.com/cristianpb/newsapp" target="_blank">here</a>.
-                    </li>
-                    <li>
-                      French AI ecosystem mapping using Crunchbase API, which can be found <a href="https://cristianpb.github.io/iframes/dashboard" target="_blank">here</a>.
-                    </li>
-                    <li>
-                      Development of an application that combines content fetched from externals API (Meetup, Crunchbase and Twitter) and an internal Wiki updated by the community. The code for the application can be found <a href="https://github.com/cityai/ecowiki" target="_blank">here</a>.
-                    </li>
-                  </ul>
-                  {%   assign today = site.time | date: '%s'      %}
-                  {%   assign start = '01-05-2018 04:00:00' | date: '%s'  %}
-                  {%   assign secondsSince = today | minus: start     %}
-                  {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-                  {%   assign daysSince = hoursSince | divided_by: 24  %}
-                  {%   assign yearsSince = daysSince | divided_by: 365  %}
-                  {%   assign k = 10   %}
-                  {%   assign divisor = 365   %}
-                  {%   assign modulus = daysSince | modulo: 365 | times: k | divided_by: divisor  %}
-                  <div class="tags has-addons">
-                    <span class="tag">2018 - Present</span>
-                    <span class="tag is-primary">{{yearsSince}}.{{modulus}} years</span>
-                  </div>
-                </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <amp-img src="/assets/img/about/cityai.jpg" layout="responsive" width="48" height="48" alt="City AI logo"></amp-img>
+                </figure>
               </div>
-
-
+              <div class="media-content">
+                <a class="title is-4" href="https://city.ai/paris">Content expert</a><br>
+                <a class="subtitle is-6" href="https://city.ai/">City AI</a>
+              </div>
             </div>
-          </div>
-          <div class="column is-12">
-            <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <amp-img src="/assets/img/about/gswai.jpg" layout="responsive" width="48" height="48" alt="global startup weekend AI"></amp-img>
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <a class="title is-4" href="http://globalswai.co/team">Technical expert</a><br>
-                    <a class="subtitle is-6" href="http://globalswai.co">Global Startup Weekend AI</a>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>The objective of this movement is to organize simultaneous Startup Weekends around the world focused on artificial intelligence. I worked as a technical expert in the field, my main tasks were:
-                  <a class="button is-small is-fullwidth" id="readmore-button-gswai" on="tap:readmore-button-gswai.hide, readmore-text-gswai.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
-                  </p>
-                  <ul id="readmore-text-gswai" hidden="">
-                    <li>
-                      Website development of <a href="https://globalswai.co" target="_blank">globalswai.co</a> using accelerated mobile pages (AMP) and jekyll static site generator.
-                    </li>
-                    <li>
-                      Development of this <a href="http://ng-tweet.herokuapp.com/dashboard" target="_blank">tweet wall</a> using mongodb, express, <i class="fab fa-angular"></i> and <i class="fab fa-node"></i>. The code can be found <a href="https://github.com/cristianpb/ngTwitterApp" target="_blank">here</a>.
-                    </li>
-                    <li>
-                      Mentor local participants in artificial intelligence field.
-                    </li>
-                  </ul>
-                  <div class="tags has-addons">
-                    <span class="tag">2017 - 2018</span>
-                    <span class="tag is-primary">1 year</span>
-                  </div>
-                </div>
+            <div class="content">
+              <p>City AI is a global community that brings practitioners and stakeholders of applied artificial intelligence together. I represent the Paris community regarding the international community of City AI. My main tasks in are:
+                <a class="button is-small is-fullwidth" id="readmore-button-cityai" on="tap:readmore-button-cityai.hide, readmore-text-cityai.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
+              </p>
+              <ul id="readmore-text-cityai" hidden="">
+                <li>
+                  Write content about AI from a specialized point of view. The articles can be found <a href="/blog/external">here</a>
+                </li>
+                <li>
+                  Development of an application to collect news in the AI fields and share them with the community. The frontend of the application can be found <a href="https://cristianpb.github.io/newsapp">here</a> and the code can be found <a href="https://github.com/cristianpb/newsapp" target="_blank">here</a>.
+                </li>
+                <li>
+                  French AI ecosystem mapping using Crunchbase API, which can be found <a href="https://cristianpb.github.io/iframes/dashboard" target="_blank">here</a>.
+                </li>
+                <li>
+                  Development of an application that combines content fetched from externals API (Meetup, Crunchbase and Twitter) and an internal Wiki updated by the community. The code for the application can be found <a href="https://github.com/cityai/ecowiki" target="_blank">here</a>.
+                </li>
+              </ul>
+              {%   assign today = site.time | date: '%s'      %}
+              {%   assign start = '01-05-2018 04:00:00' | date: '%s'  %}
+              {%   assign secondsSince = today | minus: start     %}
+              {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+              {%   assign daysSince = hoursSince | divided_by: 24  %}
+              {%   assign yearsSince = daysSince | divided_by: 365  %}
+              {%   assign k = 10   %}
+              {%   assign divisor = 365   %}
+              {%   assign modulus = daysSince | modulo: 365 | times: k | divided_by: divisor  %}
+              <div class="tags has-addons">
+                <span class="tag">2018 - Present</span>
+                <span class="tag is-primary">{{yearsSince}}.{{modulus}} years</span>
               </div>
             </div>
           </div>
-          <div class="column is-12">
-            <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <amp-img src="/assets/img/about/enscp.svg" layout="responsive" width="48" height="48" alt="école nationale supérieure de chimie de paris"></amp-img>
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <a class="title is-4" href="https://www.chimieparistech.psl.eu/">Substitute teacher</a><br>
-                    <a class="subtitle is-6" href="https://www.chimieparistech.psl.eu/">École Nationale Supérieure de Chimie de Paris</a>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>
-                    Teaching of practical courses on thermodynamics (heat exchangers and centrifugal pumps)
-                  </p>
-                  <div class="tags has-addons">
-                    <span class="tag">2014 - 2016</span>
-                    <span class="tag is-primary">2 years</span>
-                  </div>
-                </div>
+
+
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <amp-img src="/assets/img/about/gswai.jpg" layout="responsive" width="48" height="48" alt="global startup weekend AI"></amp-img>
+                </figure>
+              </div>
+              <div class="media-content">
+                <a class="title is-4" href="http://globalswai.co/team">Technical expert</a><br>
+                <a class="subtitle is-6" href="http://globalswai.co">Global Startup Weekend AI</a>
+              </div>
+            </div>
+            <div class="content">
+              <p>The objective of this movement is to organize simultaneous Startup Weekends around the world focused on artificial intelligence. I worked as a technical expert in the field, my main tasks were:
+                <a class="button is-small is-fullwidth" id="readmore-button-gswai" on="tap:readmore-button-gswai.hide, readmore-text-gswai.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
+              </p>
+              <ul id="readmore-text-gswai" hidden="">
+                <li>
+                  Website development of <a href="https://globalswai.co" target="_blank">globalswai.co</a> using accelerated mobile pages (AMP) and jekyll static site generator.
+                </li>
+                <li>
+                  Development of this <a href="http://ng-tweet.herokuapp.com/dashboard" target="_blank">tweet wall</a> using mongodb, express, <i class="fab fa-angular"></i> and <i class="fab fa-node"></i>. The code can be found <a href="https://github.com/cristianpb/ngTwitterApp" target="_blank">here</a>.
+                </li>
+                <li>
+                  Mentor local participants in artificial intelligence field.
+                </li>
+              </ul>
+              <div class="tags has-addons">
+                <span class="tag">2017 - 2018</span>
+                <span class="tag is-primary">1 year</span>
               </div>
             </div>
           </div>
         </div>
-
+      </div>
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <amp-img src="/assets/img/about/enscp.svg" layout="responsive" width="48" height="48" alt="école nationale supérieure de chimie de paris"></amp-img>
+                </figure>
+              </div>
+              <div class="media-content">
+                <a class="title is-4" href="https://www.chimieparistech.psl.eu/">Substitute teacher</a><br>
+                <a class="subtitle is-6" href="https://www.chimieparistech.psl.eu/">École Nationale Supérieure de Chimie de Paris</a>
+              </div>
+            </div>
+            <div class="content">
+              <p>
+                Teaching of practical courses on thermodynamics (heat exchangers and centrifugal pumps)
+              </p>
+              <div class="tags has-addons">
+                <span class="tag">2014 - 2016</span>
+                <span class="tag is-primary">2 years</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
