@@ -1,7 +1,10 @@
 ---
 name: Algolia push records
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -15,7 +18,7 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
-      - name: Install dependencies and push records
+      - name: Install dependencies
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
