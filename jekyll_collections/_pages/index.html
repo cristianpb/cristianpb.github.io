@@ -181,12 +181,14 @@ image:
           <div class="card-content">
             <div class="media apretaito ">
               <div class="media-content">
+                <strong>
                 <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}" {% if post.link %}target="_blank"{% else %}{% endif %} >{{ post.title | truncate: 40, ".."}}</a>
+                </strong>
               </div>
             </div>
 
             <div class="content apretaito">
-              <p> {{ post.description | truncate: 70, ".." }} </p>
+              <p class="is-size-7"> {{ post.description | truncate: 140, ".." }} </p>
               <div class="tags has-addons">
                 <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
                 <span class="tag is-link">{{ post.categories | join: ", " | truncate: 30, ".."}}</span>

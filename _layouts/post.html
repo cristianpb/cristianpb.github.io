@@ -55,7 +55,7 @@ layout: default
       <a class="tag" href="/blog/categories#{{ cat }}"> {{ cat }}</a>
       {% endfor %}
       {% for cat in page.tags %}
-      <a class="tag is-link" href="/blog/tags#{{ cat }}"> {{ cat }}</a>
+      <a class="tag is-link" href="/blog/tags#{{ cat }}">🏷️  &nbsp; {{ cat }}</a>
       {% endfor %}
     </div>
   </div>
@@ -115,7 +115,7 @@ layout: default
           {% unless recoList contains post.url %}
             {% assign recoList = recoList | append: post.url %}
             {% if recNum == 0 %}
-              <h3 class="subtitle">In relation with {{ page.tags | join: ", " }}:</h3>
+              <h3 class="subtitle">In relation with 🏷️ {{ page.tags | join: ", " }}:</h3>
             {% endif %}
             <div class="box">
               <div class="columns is-multiline">
@@ -188,7 +188,7 @@ layout: default
 <section class="section is-small">
   <div class="container has-text-centered">
     <a target="_blank" href="https://feedburner.google.com/fb/a/mailverify?uri=cristianpb&amp;loc=en_US" class="button is-primary">
-      Subscribe to my newsletter
+      Subscribe to my newsletter 📰
     </a>
     <br>
     <br>
