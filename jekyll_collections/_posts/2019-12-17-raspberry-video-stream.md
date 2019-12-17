@@ -2,7 +2,7 @@
 layout: post
 title: "SSD object detection for video streaming using a Raspberry Pi"
 date: 2019-12-17
-description: Serverless functions are the new normal. No more worries about server management, just push your code and forget about the rest.
+description: This post shows how to combine resources from a Raspberry pi with object detection algorithms in video streaming application. 
 categories:
   - programming
 tags: python angular nginx raspberrypi
