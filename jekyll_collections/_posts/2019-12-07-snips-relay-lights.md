@@ -10,6 +10,7 @@ image:
   path: /assets/img/snips-relay-lights/main-crop.jpg
   height: 200
   width: 300
+video: true
 
 ---
 
