@@ -432,14 +432,12 @@ carousel: true
 <section class="section" id="education">
   <div class="container">
     <h2 class="title"><i class="fas fa-graduation-cap"></i>Education</h2>
-    <center>
-    <amp-img width="430" height="534" alt="Technical stack vertical" 
-      layout="intrinsic" src="/assets/img/about/education-vert.svg" 
-      media="(max-width: 768px)"></amp-img>
-    <amp-img width="696" height="314" alt="Technical stack horizontal" layout="intrinsic" 
-      src="/assets/img/about/education-horz.svg" media="(min-width: 769px)"></amp-img>
-    </center>
-
+    <div class="svg-container is-hidden-mobile">
+      {% include education-horz.svg %}
+    </div>
+    <div class="svg-container is-hidden-tablet">
+      {% include education-vert.svg %}
+    </div>
   </div>
 </section>
 
