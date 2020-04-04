@@ -33,12 +33,50 @@ mustache: true
 <section class="section">
   <div class="container">
 
-    <amp-state id="allArticles"
-               src="/api/github-pages.json"></amp-state>
     <input class="input" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ) })" placeholder="🔍 Search">
 
+
+    <div class="columns is-multiline ">
+
+      <div class="column is-3-desktop is-12-mobile">
+        <aside class="menu  is-hidden-mobile">
+          <br>
+          <ul class="menu-list">
+            <p class="menu-label">
+              Categories
+            </p>
+            <li>
+              <ul>
+                {% for category in site.categories %}
+                {% capture category_name %}{{ category | first }}{% endcapture %}
+                <li>
+                  <a on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.categories[0].toLowerCase() == '{{ category_name }}' )})">{{ category_name | capitalize }} ({{ category[1].size }})</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+            <p class="menu-label">
+              Tags
+            </p>
+            <li>
+              <ul>
+                {% for tag in site.tags %}
+                <li><a on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.tags.join(' ').toLowerCase().indexOf('{{ tag | first }}') != -1 )})">{{ tag | first }} ({{ tag[1].size }})</a></li>{% unless forloop.last %}{% endunless %}
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
+        </aside>
+
+      </div>
+      <div class="column is-9-desktop is-12-mobile has-text-centered">
+
+    <amp-state id="allArticles"
+               src="/api/github-pages.json"></amp-state>
+
     <amp-list height="500"
-      layout="flex-item"
+      [height]="(200) * filteredArticles.length"
+      layout="fixed-height"
       items="."
       src="/api/github-pages.json"
       [src]="filteredArticles"
@@ -69,6 +107,8 @@ mustache: true
       </template>
     </amp-list>
 
+      </div>
+    </div>
 
   </div>
 </section>
