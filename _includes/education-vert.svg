@@ -1,52 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="813.623"
    height="100%"
    viewBox="0 0 215.271 267.588"
    version="1.1"
-   id="svg827"
-   sodipodi:docname="education-vert.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   id="svg827">
   <metadata
      id="metadata344">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
   </metadata>
   <defs
      id="defs342" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1364"
-     inkscape:window-height="732"
-     id="namedview340"
-     showgrid="false"
-     inkscape:zoom="0.52299385"
-     inkscape:cx="115.05754"
-     inkscape:cy="487.676"
-     inkscape:window-x="0"
-     inkscape:window-y="35"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg827" />
   <path
      stroke-miterlimit="4"
      id="path5216"
@@ -78,7 +40,7 @@
        stroke-dashoffset="0" />
     <g
        aria-label="2016"
-       style="line-height:1.25;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
+       style="line-height:1.25;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
        id="text5158"
        font-style="normal"
        font-variant="normal"
@@ -113,7 +75,7 @@
        stroke-dashoffset="0" />
     <g
        aria-label="2013"
-       style="line-height:1.25;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
+       style="line-height:1.25;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
        id="text5164"
        font-style="normal"
        font-variant="normal"
@@ -148,7 +110,7 @@
        stroke-dashoffset="0" />
     <g
        aria-label="2012"
-       style="line-height:1.25;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
+       style="line-height:1.25;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
        id="text5180"
        font-style="normal"
        font-variant="normal"
@@ -278,7 +240,7 @@
        fill="#247da6" />
     <g
        aria-label="2010"
-       style="line-height:1.25;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
+       style="line-height:1.25;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
        id="text5194"
        font-style="normal"
        font-variant="normal"
@@ -333,7 +295,7 @@
        stroke-dashoffset="0" />
     <g
        aria-label="2007"
-       style="line-height:1.25;-inkscape-font-specification:Ubuntu;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
+       style="line-height:1.25;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start"
        id="text5212"
        font-style="normal"
        font-variant="normal"
@@ -358,12 +320,10 @@
        style="line-height:0.89999998;stroke-width:0.10874137;font-size:8.81944365px"
        y="93.967041"
        x="40.412056"
-       sodipodi:role="line"
        id="tspan298">Ecole Nationale Supérieure des </tspan><tspan
        style="line-height:0.89999998;stroke-width:0.10874137;font-size:8.81944365px"
        y="101.10178"
        x="40.412056"
-       sodipodi:role="line"
        id="tspan374">Mines de Paris</tspan></text>
   <text
      xml:space="preserve"
@@ -371,12 +331,10 @@
      y="113.20205"
      id="text306"
      style="font-size:7.67937899px;line-height:0.89999998;stroke-width:0.63994825"><tspan
-       sodipodi:role="line"
        x="40.351353"
        y="113.20205"
        style="line-height:0.89999998;stroke-width:0.10533812;font-size:8.81944365px"
        id="tspan313">Master in Materials, Processing </tspan><tspan
-       sodipodi:role="line"
        x="40.351353"
        y="120.11349"
        style="line-height:0.89999998;stroke-width:0.10533812;font-size:8.81944365px"
@@ -389,7 +347,6 @@
      class="title"
      style="font-size:7.92748308px;line-height:0.89999998;stroke-width:0.66062355"><tspan
        id="tspan390"
-       sodipodi:role="line"
        x="39.340965"
        y="161.71338"
        style="line-height:0.89999998;stroke-width:0.10874137;font-size:8.81944365px">Ecole Nationale d'Ingénieurs de Metz</tspan></text>
@@ -403,11 +360,10 @@
        style="line-height:0.89999998;stroke-width:0.10533812;font-size:8.81944365px"
        y="173.71855"
        x="39.815811"
-       sodipodi:role="line">Engineer degree + Master in Materials</tspan><tspan
+       >Engineer degree + Master in Materials</tspan><tspan
        style="line-height:0.89999998;stroke-width:0.10533812;font-size:8.81944365px"
        y="180.62999"
        x="39.815811"
-       sodipodi:role="line"
        id="tspan404">and Production</tspan></text>
   <text
      style="font-size:7.92748308px;line-height:0.89999998;stroke-width:0.66062355"
@@ -419,7 +375,6 @@
        style="font-size:8.8194437px;line-height:0.89999998;stroke-width:0.10874137"
        y="225.39842"
        x="39.60236"
-       sodipodi:role="line"
        id="tspan416">Universidad Industrial de Santander</tspan></text>
   <text
      xml:space="preserve"
@@ -427,7 +382,6 @@
      y="237.40359"
      id="text424"
      style="font-size:7.67937899px;line-height:0.89999998;stroke-width:0.63994825"><tspan
-       sodipodi:role="line"
        x="39.537682"
        y="237.40359"
        style="font-size:8.8194437px;line-height:0.89999998;stroke-width:0.10533812"
@@ -440,7 +394,6 @@
      class="title"
      style="font-size:8.82544708px;line-height:0.89999998;stroke-width:0.7354539"><tspan
        id="tspan434"
-       sodipodi:role="line"
        x="41.130951"
        y="33.633217"
        style="line-height:0.89999998;stroke-width:0.12105875;font-size:8.81944365px">Université Pierre et Marie Curie</tspan></text>
@@ -454,14 +407,13 @@
        style="line-height:0.89999998;stroke-width:0.1186827;font-size:8.81944365px"
        y="47.395542"
        x="41.04884"
-       sodipodi:role="line">PhD in Physical Chemistry</tspan></text>
+       >PhD in Physical Chemistry</tspan></text>
   <text
      xml:space="preserve"
      x="5.5518618"
      y="264.19934"
      id="text105"
      style="font-size:9.14593697px;line-height:0.89999998;stroke-width:0.76216125"><tspan
-       sodipodi:role="line"
        id="tspan103"
        x="5.5518618"
        y="264.19934"
@@ -476,14 +428,13 @@
        y="202.78223"
        x="6.6026831"
        id="tspan91"
-       sodipodi:role="line">2010</tspan></text>
+       >2010</tspan></text>
   <text
      xml:space="preserve"
      x="6.5715823"
      y="140.94345"
      id="text97"
      style="font-size:9.14593697px;line-height:0.89999998;stroke-width:0.76216125"><tspan
-       sodipodi:role="line"
        id="tspan95"
        x="6.5715823"
        y="140.94345"
@@ -498,14 +449,13 @@
        y="72.438866"
        x="6.3480029"
        id="tspan99"
-       sodipodi:role="line">2013</tspan></text>
+       >2013</tspan></text>
   <text
      xml:space="preserve"
      x="5.7825871"
      y="10.143645"
      id="text106"
      style="font-size:9.14593697px;line-height:0.89999998;stroke-width:0.76216125"><tspan
-       sodipodi:role="line"
        id="tspan104"
        x="5.7825871"
        y="10.143645"
