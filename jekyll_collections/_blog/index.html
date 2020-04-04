@@ -6,7 +6,6 @@ redirect_from:
   - /blog/
   - /blog/external
 description: I like to write about artificial intelligence, data science, computer science, web development and technology in general.
-algolia: true
 mustache: true
 
 ---
@@ -70,45 +69,6 @@ mustache: true
       </template>
     </amp-list>
 
-
-  </div>
-</section>
-
-
-
-<!----
-<select on="change:AMP.setState({
-    filteredArticles: allArticles.filter(a => event.value == 'all' ? true : a.country == event.value)
-  })">
-  <option value="all"
-    selected>All</option>
-  <option value="Italy">Italy</option>
-  <option value="Spain">Spain</option>
-  <option value="France">France</option>
-</select>
---->
-
-
-<section class="section">
-  <div class="container">
-
-    <div class="columns">
-      <div class="column is-4">
-        <input id="searchBox" class="input" type="text" placeholder="🔍">
-      </div>
-      <div class="column is-4">
-        <span class="button is-fullwidth" on="tap:refinement-tags.toggleVisibility" role="" tabindex="">🏷️ Tags</span>
-        <div id="refinement-tags" hidden=""></div>
-      </div>
-      <div class="column is-4">
-        <span class="button is-fullwidth" on="tap:refinement-categories.toggleVisibility" role="" tabindex="">🔖 Categories</span>
-        <div id="refinement-categories" hidden=""></div>
-      </div>
-    </div>
-
-    <div id="hits" class="columns is-multiline"></div>
-
-    <div id="pagination"></div>
 
   </div>
 </section>
