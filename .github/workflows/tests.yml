@@ -27,11 +27,14 @@ jobs:
             ${{ runner.os }}-node-
       - name: install node requirements
         run: npm ci
-      - name: Install dependencies and build
+      - name: Install ruby dependencies
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
-          npm run build
+      - name: Build HTML
+        run: npm run build
+      - name: Build css
+        run: npm run css:build
       - name: Test AMP support
         run: npm run test
       - name: Test html
