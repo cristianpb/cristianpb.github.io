@@ -35,7 +35,7 @@ mustache: true
 
     <amp-state id="allArticles"
                src="/api/github-pages.json"></amp-state>
-    <input class="input" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => (a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1)) })" placeholder="🔍 Search">
+    <input class="input" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ) })" placeholder="🔍 Search">
 
     <amp-list height="500"
       layout="flex-item"
@@ -47,20 +47,20 @@ mustache: true
         <div class="box">
           <div class="columns is-multiline">
             <div class="column is-3-desktop is-12-mobile has-text-centered">
-              <a class="image" href="{% raw %}{{ url }}{% endraw %}">
+              <a class="image" href="{% raw %}{{ url }}{% endraw %}" data-proofer-ignore>
                 <amp-img src="{% raw %}{{ image }}{% endraw %}" width="300" height="200" alt="{% raw %}{{ title }}{% endraw %}" layout="responsive"></amp-img>
               </a>
             </div>
             <div class="column is-9-desktop is-12-mobile">
               <div class="content">
-                <a class="title is-6" href="{% raw %}{{ url }}{% endraw %}">{% raw %}{{ title }}{% endraw %}</a>
+                <a class="title is-6" href="{% raw %}{{ url }}{% endraw %}" data-proofer-ignore>{% raw %}{{ title }}{% endraw %}</a>
                 <p class="is-size-7">
                   {% raw %}{{ description }}{% endraw %}
                 </p>
                 <div class="tags has-addons">
                   <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{% raw %}{{ date }}{% endraw %}</span>
-                  <a class="tag is-info" href="/blog/tags#TAG"> {% raw %}{{ tags }}{% endraw %}</a>
-                  <a class="tag is-danger" href="/blog/tags#TAG"> {% raw %}{{ categories }}{% endraw %}</a>
+                  <a class="tag is-info" href="/blog/tags"> {% raw %}{{ tags }}{% endraw %}</a>
+                  <a class="tag is-danger" href="/blog/tags"> {% raw %}{{ categories }}{% endraw %}</a>
                 </div>
               </div>
             </div>
