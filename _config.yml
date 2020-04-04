@@ -78,6 +78,8 @@ collections:
     output: true
   pages:
     output: true
+  api:
+    output: true
 
 defaults:
     - {scope: {type: blog}, values: {layout: page, permalink: '/blog/:title'}}

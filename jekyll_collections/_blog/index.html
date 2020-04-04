@@ -7,6 +7,7 @@ redirect_from:
   - /blog/external
 description: I like to write about artificial intelligence, data science, computer science, web development and technology in general.
 algolia: true
+mustache: true
 
 ---
 
@@ -28,6 +29,65 @@ algolia: true
     </div>
   </div>
 </section>
+
+
+<section class="section">
+  <div class="container">
+
+    <amp-state id="allArticles"
+               src="/api/github-pages.json"></amp-state>
+    <input class="input" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => (a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1)) })" placeholder="🔍 Search">
+
+    <amp-list height="500"
+      layout="flex-item"
+      items="."
+      src="/api/github-pages.json"
+      [src]="filteredArticles"
+      binding="no">
+      <template type="amp-mustache">
+        <div class="box">
+          <div class="columns is-multiline">
+            <div class="column is-3-desktop is-12-mobile has-text-centered">
+              <a class="image" href="{% raw %}{{ url }}{% endraw %}">
+                <amp-img src="{% raw %}{{ image }}{% endraw %}" width="300" height="200" alt="{% raw %}{{ title }}{% endraw %}" layout="responsive"></amp-img>
+              </a>
+            </div>
+            <div class="column is-9-desktop is-12-mobile">
+              <div class="content">
+                <a class="title is-6" href="{% raw %}{{ url }}{% endraw %}">{% raw %}{{ title }}{% endraw %}</a>
+                <p class="is-size-7">
+                  {% raw %}{{ description }}{% endraw %}
+                </p>
+                <div class="tags has-addons">
+                  <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{% raw %}{{ date }}{% endraw %}</span>
+                  <a class="tag is-info" href="/blog/tags#TAG"> {% raw %}{{ tags }}{% endraw %}</a>
+                  <a class="tag is-danger" href="/blog/tags#TAG"> {% raw %}{{ categories }}{% endraw %}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </amp-list>
+
+
+  </div>
+</section>
+
+
+
+<!----
+<select on="change:AMP.setState({
+    filteredArticles: allArticles.filter(a => event.value == 'all' ? true : a.country == event.value)
+  })">
+  <option value="all"
+    selected>All</option>
+  <option value="Italy">Italy</option>
+  <option value="Spain">Spain</option>
+  <option value="France">France</option>
+</select>
+--->
+
 
 <section class="section">
   <div class="container">
