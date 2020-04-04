@@ -10,16 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '8.x'
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: install node requirements
+        run: npm ci
       - name: Install dependencies and build
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
-          bundle exec jekyll build
+          npm run build
+      - name: Test AMP support
+        run: npm run test
       - name: Test html
         run: |
           gem install html-proofer

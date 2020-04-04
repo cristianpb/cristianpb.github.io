@@ -21,7 +21,12 @@ var paths = {
     dest: 'assets/img'
   },
   html: {
-    src: '_site/{blog,about,}/*.html'
+    src: [
+      '_site/{about,blog}/*.html',
+      '!_site/blog/withings-data.html',
+      '!_site/blog/santorini-experience.html',
+      '!_site/blog/marathon-mirabelle.html'
+    ]
   }
 };
 
