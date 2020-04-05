@@ -69,43 +69,47 @@ mustache: true
         </aside>
 
       </div>
-      <div class="column is-9-desktop is-12-mobile has-text-centered">
+      <div class="column is-9-desktop is-12-mobile">
+        <amp-state id="allArticles"
+                   src="/api/github-pages.json"></amp-state>
 
-    <amp-state id="allArticles"
-               src="/api/github-pages.json"></amp-state>
-
-    <amp-list height="500"
-      [height]="(200) * filteredArticles.length"
-      layout="fixed-height"
-      items="."
-      src="/api/github-pages.json"
-      [src]="filteredArticles"
-      binding="no">
-      <template type="amp-mustache">
-        <div class="box">
-          <div class="columns is-multiline">
-            <div class="column is-3-desktop is-12-mobile has-text-centered">
-              <a class="image" href="{% raw %}{{ url }}{% endraw %}" data-proofer-ignore>
-                <amp-img src="{% raw %}{{ image }}{% endraw %}" width="300" height="200" alt="{% raw %}{{ title }}{% endraw %}" layout="responsive"></amp-img>
-              </a>
-            </div>
-            <div class="column is-9-desktop is-12-mobile">
-              <div class="content">
-                <a class="title is-6" href="{% raw %}{{ url }}{% endraw %}" data-proofer-ignore>{% raw %}{{ title }}{% endraw %}</a>
-                <p class="is-size-7">
-                  {% raw %}{{ description }}{% endraw %}
-                </p>
-                <div class="tags has-addons">
-                  <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{% raw %}{{ date }}{% endraw %}</span>
-                  <a class="tag is-info" href="/blog/tags"> {% raw %}{{ tags }}{% endraw %}</a>
-                  <a class="tag is-danger" href="/blog/tags"> {% raw %}{{ categories }}{% endraw %}</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </template>
-    </amp-list>
+                 <amp-list height="500"
+                           [height]="(200) * filteredArticles.length"
+                           layout="fixed-height"
+                           items="."
+                           src="/api/github-pages.json"
+                           [src]="filteredArticles"
+                           binding="no">
+                   <template type="amp-mustache">
+                     {% raw %}
+                     <div class="box">
+                       <div class="columns is-multiline">
+                         <div class="column is-3-desktop is-12-mobile">
+                           <a class="image" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>
+                             <amp-img src="{{ image }}" width="300" height="200" alt="{{ title }}" layout="responsive"></amp-img>
+                           </a>
+                         </div>
+                         <div class="column is-9-desktop is-12-mobile">
+                           <div class="content">
+                             <a class="title is-6" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>{{ title }}</a>
+                             <p class="is-size-7">
+                               {{ description }}
+                             </p>
+                             <div class="tags has-addons">
+                               <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{{ date }}</span>
+                               {{#tags}}<a class="tag" href="/blog/tags#{{.}}"> {{.}}</a>{{/tags}}
+                               {{#categories}}<a class="tag is-link" href="/blog/categories#{{.}}"> {{.}}</a>{{/categories}}
+                               {{#source}}
+                               <span class="tag is-danger"><i class="fas fa-external-link-alt"></i>&nbsp; {{ source }}</span>
+                               {{/source}}
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                     {% endraw %}
+                   </template>
+                 </amp-list>
 
       </div>
     </div>

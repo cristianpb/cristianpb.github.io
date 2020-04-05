@@ -7,7 +7,9 @@ permalink: /api/github-pages.json
   "title": "{{ post.title }}",
   "description": "{{ post.description }}",
   "image": "{{ post.image.path }}",
-  "date"     : "{{ post.date | date: "%B %d, %Y" }}",
+  "date": "{{ post.date | date: "%B %d, %Y" }}",
+  {% if post.source %}"source": "{{ post.source }}",{% endif %}
+  {% if post.link %}"link": "{{ post.link }}",{% endif %}
   {% if post.categories %} "categories"  : [
     {% for category in post.categories %} "{{ category }}"
     {% if forloop.last %}{% else %},{% endif %}
