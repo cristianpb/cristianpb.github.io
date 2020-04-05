@@ -36,7 +36,6 @@ mustache: true
 
       <div class="column is-3-desktop is-12-mobile">
         <aside class="menu  is-hidden-mobile">
-          <br>
           <ul class="menu-list">
             <p class="menu-label">
               Categories
@@ -70,7 +69,7 @@ mustache: true
                    src="/api/github-pages.json"></amp-state>
 
                  <amp-list height="500"
-                           [height]="(300) * filteredArticles.length"
+                           [height]="(400) * filteredArticles.length"
                            layout="fixed-height"
                            items="."
                            src="/api/github-pages.json"
@@ -113,7 +112,16 @@ mustache: true
     </div>
 
     <div class="box  search-bar" id="search-bar" >
-      <input class="input" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ) }), top-blog-page.scrollTo(duration=200)" placeholder="🔍 Search">
+      <div class="columns is-mobile">
+        <div class="column">
+          <input class="input" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.categories.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ), inputValue: event.value }), top-blog-page.scrollTo(duration=200)" placeholder="🔍 Search" [value]="inputValue">
+        </div>
+        <div class="column is-narrow">
+          <button class="button is-danger" on="tap:AMP.setState({inputValue: '', filteredArticles: allArticles}),top-blog-page.scrollTo(duration=200)">
+            X
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
