@@ -50,6 +50,15 @@ $space: 1rem;
     visibility: hidden;
 }
 
+#search-bar {
+    z-index: 9999;
+    bottom: $space;
+    right: $space;
+    position: fixed;
+    width: 80%;
+    background: $primary;
+}
+
 .carousel-component {
     margin-right: -60%;
     margin-left: 60%;

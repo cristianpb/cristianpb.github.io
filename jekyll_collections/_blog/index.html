@@ -29,12 +29,8 @@ mustache: true
   </div>
 </section>
 
-
-<section class="section">
+<section class="section" id="top-blog-page">
   <div class="container">
-
-    <input class="input" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ) })" placeholder="🔍 Search">
-
 
     <div class="columns is-multiline ">
 
@@ -74,12 +70,14 @@ mustache: true
                    src="/api/github-pages.json"></amp-state>
 
                  <amp-list height="500"
-                           [height]="(200) * filteredArticles.length"
+                           [height]="(300) * filteredArticles.length"
                            layout="fixed-height"
                            items="."
                            src="/api/github-pages.json"
                            [src]="filteredArticles"
                            binding="no">
+                   <div placeholder>Loading ...</div>
+                   <div fallback>Failed to load data.</div>
                    <template type="amp-mustache">
                      {% raw %}
                      <div class="box">
@@ -114,5 +112,8 @@ mustache: true
       </div>
     </div>
 
+    <div class="box  search-bar" id="search-bar" >
+      <input class="input" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ) }), top-blog-page.scrollTo(duration=200)" placeholder="🔍 Search">
+    </div>
   </div>
 </section>
