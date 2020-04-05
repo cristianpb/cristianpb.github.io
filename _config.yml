@@ -52,6 +52,7 @@ algolia:
     - jekyll_collections/_drafts/*.html
     - jekyll_collections/_iframes/*.html
     - jekyll_collections/_pages/*.html
+    - jekyll_collections/_api/github-pages.html
 
 # Color the browser elements #
 color-browser: "#247da6"

@@ -97,8 +97,8 @@ mustache: true
                              </p>
                              <div class="tags has-addons">
                                <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{{ date }}</span>
-                               {{#tags}}<a class="tag" href="/blog/tags#{{.}}"> {{.}}</a>{{/tags}}
-                               {{#categories}}<a class="tag is-link" href="/blog/categories#{{.}}"> {{.}}</a>{{/categories}}
+                               {{#tags}}<a class="tag" href="/blog/tags#{{.}}" data-proofer-ignore> {{.}}</a>{{/tags}}
+                               {{#categories}}<a class="tag is-link" href="/blog/categories#{{.}}" data-proofer-ignore> {{.}}</a>{{/categories}}
                                {{#source}}
                                <span class="tag is-danger"><i class="fas fa-external-link-alt"></i>&nbsp; {{ source }}</span>
                                {{/source}}
