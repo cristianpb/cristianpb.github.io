@@ -12,9 +12,13 @@ tags:
   - AI
   - opendata
 source: Medium
-image: 
-  path: /assets/img/external_articles/open-datasets.jpg
-  width: 300
+image:
+  path: /assets/img/external-articles-responsive/open-datasets-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/external-articles-responsive/open-datasets-thumb.jpg
   height: 200
+  width: 300
 
 ---

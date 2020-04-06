@@ -7,7 +7,11 @@ categories:
   - programming
 tags: ['angularjs', 'nodejs', 'express']
 image:
-  path: /assets/img/alchemy-machine/main-crop.png
+  path: /assets/img/alchemy-machine/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/alchemy-machine/main-thumb.jpg
   height: 200
   width: 300
 

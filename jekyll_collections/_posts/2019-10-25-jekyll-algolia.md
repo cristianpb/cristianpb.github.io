@@ -7,7 +7,11 @@ categories:
   - programming
 tags: jekyll algolia github-actions bulma
 image:
-  path: /assets/img/jekyll-algolia/main-crop.jpg
+  path: /assets/img/jekyll-algolia/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/jekyll-algolia/main-thumb.jpg
   height: 200
   width: 300
 

@@ -10,7 +10,11 @@ categories:
   - programming
 tags: ["raspberrypi", "python"]
 image: 
-  path: /assets/img/external_articles/digital-photo-frame.gif
+  path: /assets/img/external-articles/digital-photo-frame.gif
+  width: 300
+  height: 200
+thumb: 
+  path: /assets/img/external-articles/digital-photo-frame.gif
   width: 300
   height: 200
 

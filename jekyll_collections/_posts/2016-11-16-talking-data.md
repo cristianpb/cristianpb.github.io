@@ -7,9 +7,13 @@ categories:
 tags: ["kaggle", "r"]
 description: Le but de cette exercice est de construire un modèle pour prédire les caractéristiques démographiques (âge et genre) des utilisateurs de smartphones avec les applications installées, géolocalisation et les caractéristiques des portables. 
 image:
-  path: /assets/img/talking_data/unnamed-chunk-28-1.png
-  width: 500
-  height: 500
+  path: /assets/img/talking_data/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/talking_data/main-thumb.jpg
+  height: 200
+  width: 300
 
 ---
 

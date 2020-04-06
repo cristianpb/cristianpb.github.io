@@ -12,9 +12,13 @@ tags:
   - python
   - cookie-cutter
   - opencv
-image: 
-  path: /assets/img/external_articles/fish-tale.jpg
-  width: 300
+image:
+  path: /assets/img/external-articles-responsive/fish-tale-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/external-articles-responsive/fish-tale-thumb.jpg
   height: 200
+  width: 300
 
 ---

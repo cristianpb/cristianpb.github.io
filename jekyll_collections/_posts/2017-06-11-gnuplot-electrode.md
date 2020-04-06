@@ -7,7 +7,11 @@ categories:
   - visualization
 tags: ["gnuplot"]
 image:
-  path: /assets/img/gnuplot-electrode/main-crop.png
+  path: /assets/img/gnuplot-electrode/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/gnuplot-electrode/main-thumb.jpg
   height: 200
   width: 300
 

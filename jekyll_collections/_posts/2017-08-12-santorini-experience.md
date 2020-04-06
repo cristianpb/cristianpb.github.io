@@ -9,7 +9,11 @@ tags: ["run", "python", "chartjs", "leaflet"]
 chartjs: true
 calheatmap: true
 image:
-  path: /assets/img/santorini-experience/main-crop.jpg
+  path: /assets/img/santorini-experience/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/santorini-experience/main-thumb.jpg
   height: 200
   width: 300
 

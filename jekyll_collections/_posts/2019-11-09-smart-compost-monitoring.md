@@ -14,7 +14,11 @@ tags:
   - nodejs
   - chartjs
 image:
-  path: /assets/img/smart-compost-monitoring/main-crop.jpg
+  path: /assets/img/external-articles-responsive/smart-compost-monitoring-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/external-articles-responsive/smart-compost-monitoring-thumb.jpg
   height: 200
   width: 300
 

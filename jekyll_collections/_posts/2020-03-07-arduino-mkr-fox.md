@@ -7,9 +7,14 @@ categories:
   - programming
 tags: arduino nodejs serverless chartjs
 image:
-  path: /assets/img/arduino-sigfox-mkr1200/main-crop.jpg
+  path: /assets/img/arduino-sigfox-mkr1200/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/arduino-sigfox-mkr1200/main-thumb.jpg
   height: 200
   width: 300
+
 
 ---
 

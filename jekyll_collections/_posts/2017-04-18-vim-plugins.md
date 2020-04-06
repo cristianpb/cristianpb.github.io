@@ -6,7 +6,11 @@ categories: programming
 tags: vim 
 description: "My vim workflow. Description of some plugins and functionlities."
 image:
-  path: /assets/img/vim-plugins/main-crop.jpg
+  path: /assets/img/vim-plugins/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/vim-plugins/main-thumb.jpg
   height: 200
   width: 300
 

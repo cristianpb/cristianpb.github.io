@@ -7,7 +7,11 @@ categories:
   - programming
 tags: raspberrypi nodejs snips
 image:
-  path: /assets/img/snips-relay-lights/main-crop.jpg
+  path: /assets/img/snips-relay-lights/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/snips-relay-lights/main-thumb.jpg
   height: 200
   width: 300
 video: true

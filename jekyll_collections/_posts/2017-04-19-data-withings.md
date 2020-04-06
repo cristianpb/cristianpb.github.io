@@ -10,7 +10,11 @@ tags:
   - withings
   - r
 image:
-  path: /assets/img/data_withings/main-crop.png
+  path: /assets/img/data_withings/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/data_withings/main-thumb.jpg
   height: 200
   width: 300
 

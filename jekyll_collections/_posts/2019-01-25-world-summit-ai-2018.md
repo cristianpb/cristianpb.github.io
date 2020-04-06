@@ -10,9 +10,13 @@ categories:
   - events
 tags:
   - AI
-image: 
-  path: /assets/img/external_articles/wsai2018.jpg
-  width: 300
+image:
+  path: /assets/img/external-articles-responsive/wsai2018-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/external-articles-responsive/wsai2018-thumb.jpg
   height: 200
+  width: 300
 
 ---

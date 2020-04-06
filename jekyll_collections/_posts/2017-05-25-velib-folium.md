@@ -11,9 +11,14 @@ tags:
   - python
   - opendata
 image:
-  path: /assets/img/velib-folium/main-crop.jpg
+  path: /assets/img/velib-folium/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/velib-folium/main-thumb.jpg
   height: 200
   width: 300
+
 video: true
 
 ---

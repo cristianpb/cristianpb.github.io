@@ -8,7 +8,11 @@ categories:
   - programming
 tags: aws python serverless swagger
 image:
-  path: /assets/img/serverless-api-lambda/main-crop.jpg
+  path: /assets/img/serverless-api-lambda/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/serverless-api-lambda/main-thumb.jpg
   height: 200
   width: 300
 

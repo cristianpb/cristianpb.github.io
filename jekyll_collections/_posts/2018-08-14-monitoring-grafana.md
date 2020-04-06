@@ -9,11 +9,16 @@ categories:
   - system management
 tags: ["grafana", "docker", "influxdb", "collectd", "aws"]
 image:
-  path: /assets/img/monitoring-grafana/main-crop.jpg
+  path: /assets/img/monitoring-grafana/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/monitoring-grafana/main-thumb.jpg
   height: 200
   width: 300
 
 ---
+
 System monitoring is important to understand the global performance of a
 machine. For instance, unix systems provide command lines tools like `top`,
 `free` or `df`. Which gives simple and accurate functionalities but it

@@ -8,7 +8,11 @@ categories:
   - visualization
 tags: d3.js dc.js google-analytics github-actions
 image:
-  path: /assets/img/analytics-google/main-crop.jpg
+  path: /assets/img/analytics-google/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/analytics-google/main-thumb.jpg
   height: 200
   width: 300
 ligthbox: true

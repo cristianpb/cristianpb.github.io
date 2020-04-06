@@ -172,7 +172,13 @@ image:
             <figure class="image">
               <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}">
                 <center>
-                  <amp-img src="{{ post.image.path }}" alt="{{ post.title }}"  height="220" width="350" layout="intrinsic"></amp-img>
+                  <amp-img 
+                    height="220" width="350" 
+                    src="{{ post.thumb.path }}"
+                    alt="{{ post.title }}"  
+                    srcset="{{ post.thumb.path }} 400w, {{ post.image.path }} 900w"
+                    layout="intrinsic">
+                  </amp-img>
                 </center>
               </a>
             </figure>

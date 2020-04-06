@@ -7,7 +7,11 @@ categories:
   - system management
 tags: grafana docker influxdb telegraf aws
 image:
-  path: /assets/img/grafana-dashboard/main-crop.jpg
+  path: /assets/img/grafana-dashboard/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/grafana-dashboard/main-thumb.jpg
   height: 200
   width: 300
 ligthbox: true

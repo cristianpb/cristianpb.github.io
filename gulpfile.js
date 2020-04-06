@@ -31,28 +31,56 @@ var paths = {
 };
 
 function thumbnails() {
-  return gulp.src(`${paths.images.src}/**/main{.png,.jpg,jpeg}`)
-    .pipe(responsive({
-      // Resize all images to 100 pixels wide and add suffix -thumbnail
-      '*/*': {
-        width: 300,
-        height: 200,
-        format: 'jpg',
-        rename: { suffix: '-crop'},
-        //crop: 'attention'
-      }
-    }, {
-      // Global configuration for all images
-      // The output quality for JPEG, WebP and TIFF output formats
-      quality: 70,
-      // Use progressive (interlace) scan for JPEG and PNG output
-      progressive: true,
-      // Zlib compression level of PNG output format
-      compressionLevel: 6,
-      // Strip all metadata
-      withMetadata: false,
-      crop: 'entropy'
-    }))
+  return gulp.src([`${paths.images.src}/**/main.{png,jpg,jpeg,svg}`, `${paths.images.src}/external-articles/*.{png,jpg,jpeg,svg}`])
+    .pipe(
+      responsive({
+        '*': [
+          {
+            width: 300,
+            height: 200,
+            format: 'jpg',
+            rename: { 
+              suffix: '-thumb',
+              dirname: 'external-articles-responsive'
+            },
+          },
+          {
+            width: 1400,
+            height: 1050,
+            format: 'jpg',
+            rename: { 
+              suffix: '-4x3',
+              dirname: 'external-articles-responsive'
+            },
+          }
+        ],
+        '*/main.*': [
+          {
+            width: 300,
+            height: 200,
+            format: 'jpg',
+            rename: { suffix: '-thumb'},
+          },
+          {
+            width: 1400,
+            height: 1050,
+            format: 'jpg',
+            rename: { suffix: '-4x3'},
+          }
+        ],
+      }, {
+        // Global configuration for all images
+        // The output quality for JPEG, WebP and TIFF output formats
+        quality: 70,
+        // Use progressive (interlace) scan for JPEG and PNG output
+        progressive: true,
+        // Zlib compression level of PNG output format
+        compressionLevel: 6,
+        // Strip all metadata
+        withMetadata: false,
+        errorOnEnlargement: false,
+        crop: 'entropy'
+      }))
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),

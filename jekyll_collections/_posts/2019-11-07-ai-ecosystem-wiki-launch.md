@@ -10,9 +10,14 @@ categories:
   - events
 tags: AI
 image:
-  path: /assets/img/ecowiki-launch/main-crop.jpg
+  path: /assets/img/external-articles-responsive/ecowiki-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/external-articles-responsive/ecowiki-thumb.jpg
   height: 200
   width: 300
+
 
 ---
 

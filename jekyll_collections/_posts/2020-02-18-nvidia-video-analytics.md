@@ -15,7 +15,11 @@ tags:
   - angular
   - chartjs
 image:
-  path: /assets/img/nvidia-video-analytics/main-crop.jpg
+  path: /assets/img/external-articles-responsive/nvidia-video-analytics-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/external-articles-responsive/nvidia-video-analytics-thumb.jpg
   height: 200
   width: 300
 

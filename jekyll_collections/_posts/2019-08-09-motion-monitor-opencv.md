@@ -8,7 +8,11 @@ categories:
   - programming
 tags: opencv raspberrypi python
 image:
-  path: /assets/img/motion-monitor/main-crop.jpg
+  path: /assets/img/motion-monitor/main-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/motion-monitor/main-thumb.jpg
   height: 200
   width: 300
 ligthbox: true

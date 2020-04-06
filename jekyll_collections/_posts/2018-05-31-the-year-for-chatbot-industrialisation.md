@@ -12,10 +12,13 @@ tags:
   - AI
   - chatbot
 source: Medium
-image: 
-  path: /assets/img/external_articles/chatbot.jpg
-  width: 300
+image:
+  path: /assets/img/external-articles-responsive/chatbot-4x3.jpg
+  height: 1050
+  width: 1400
+thumb:
+  path: /assets/img/external-articles-responsive/chatbot-thumb.jpg
   height: 200
-
+  width: 300
 
 ---
