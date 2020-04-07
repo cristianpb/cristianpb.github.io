@@ -65,8 +65,6 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 plugins:
-  - jekyll-redirect-from
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
