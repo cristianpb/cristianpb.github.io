@@ -689,7 +689,7 @@ melted_cormat <- melt(confusionmat)
 ggplot(data = melted_cormat, aes(x=var1, y=var2, fill=value)) + geom_tile()
 ```
 
-<amp-img src="/assets/img/talking_data/unnamed-chunk-28-1.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
+<amp-img src="/assets/img/talking_data/main.png" alt="Talking data description" height="504" width="504" layout="responsive"></amp-img>
 
 ```r
 library(caret)
