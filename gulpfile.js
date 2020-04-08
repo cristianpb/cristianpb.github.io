@@ -123,10 +123,10 @@ function clean() {
   return del([ paths.styles.tmp ]);
 }
  
-function purification() {
+function purificationPosts() {
   return gulp.src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
-    .pipe(purify(['_includes/*.html', '_layouts/*.html', 'jekyll_collections/_pages/*.html', 'jekyll_collections/_blog/*.html'], {info: true}))
+    .pipe(purify(['_includes/*.html', '_layouts/default.html', '_layouts/post.html', 'jekyll_collections/_blog/*.html'], {info: true}))
     .pipe(replace(/!important/gm, ''))
     .pipe(gulp.dest(paths.styles.tmp));
 }
@@ -135,13 +135,25 @@ function concatenation() {
   return gulp.src([`${paths.styles.tmp}/main.css`, 'assets/css/github.css'])
     .pipe(concat('main.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}, (details) => {
+      console.log(`Minification of ${details.name} posts: ${details.stats.originalSize} -> ${details.stats.minifiedSize} b`);
+    }))
+    .pipe(rename({ suffix: '-post-min' }))
+    .pipe(gulp.dest('./_includes/'));
+}
+
+function purificationDefault() {
+  return gulp.src(paths.styles.src)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(purify(['_includes/*.html', '_layouts/default.html', 'jekyll_collections/_pages/*.html'], {info: true}))
+    .pipe(replace(/!important/gm, ''))
+    .pipe(cleanCSS({compatibility: 'ie8'}, (details) => {
       console.log(`Minification of ${details.name}: ${details.stats.originalSize} -> ${details.stats.minifiedSize} b`);
     }))
     .pipe(rename({ suffix: '-min' }))
     .pipe(gulp.dest('./_includes/'));
 }
  
-var build = gulp.series(clean, purification, concatenation, clean);
+var build = gulp.series(clean, purificationPosts, concatenation, purificationDefault, clean);
 
 function watch() {
   gulp.watch(["_layouts/**", "_includes/**.html", "jekyll_collections/**", "_sass/*", "assets/css/*"], build);
@@ -151,7 +163,6 @@ exports.images = images;
 exports.thumbnails = thumbnails;
 exports.amp_validator = amp_validator;
 exports.clean = clean;
-exports.purification = purification;
 exports.concatenation = concatenation;
 exports.build = build;
 exports.watch = watch;
