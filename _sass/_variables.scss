@@ -5,7 +5,7 @@ $font-display: auto;
 //$navbar-item-img-max-height: 4.75rem;
 
 $white: #ffffff;
-$navbar-burger-color: $white;
+//$navbar-burger-color: $white;
 
 div#content-toc {
   position:fixed;
@@ -72,4 +72,8 @@ $space: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#sidebar {
+    background: $white;
 }

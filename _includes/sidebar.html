@@ -13,17 +13,30 @@
   <br>
   {% for page in site.pages %}
     {% if page.title and page.navigation %}
-    <a class="button is-fullwidth is-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+    <a class="button is-fullwidth" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
     {% endif %}
   {% endfor %}
   <br>
-  <a class="button is-fullwidth is-info" href="/blog">Blog</a>
+  <a class="button is-fullwidth" href="/blog">Blog</a>
   <br>
-  <span class="button is-white is-fullwidth">Find me in:</span>
-  {% for link in site.socialnetworks %}
-    <a class="button is-fullwidth is-white" href="{{ link[1] }}">
-      <i class="fab fa-{{ link[0] }}"></i>
-      &nbsp;{{ link[0] }}
-    </a>
-  {% endfor %}
+
+  <aside class="menu">
+    <ul class="menu-list">
+      <li><a>Find me in:</a></li>
+    </ul>
+    <ul class="menu-list">
+      <li>
+        <ul>
+          {% for link in site.socialnetworks %}
+          <li>
+            <a href="{{ link[1] }}">
+              <i class="fab fa-{{ link[0] }}"></i>
+              &nbsp;{{ link[0] }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </aside>
 </amp-sidebar>

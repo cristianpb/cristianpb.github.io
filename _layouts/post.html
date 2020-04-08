@@ -131,7 +131,7 @@ layout: default
                       {{ post.description }}
                     </p>
                     <div class="tags has-addons">
-                      <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
+                      <span class="tag">📅&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
                       {% if post.link %}
                       <span class="tag is-danger"><i class="fas fa-external-link-alt"></i>&nbsp;{{ post.source }}</span>
                       {% endif %}

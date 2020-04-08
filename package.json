@@ -10,7 +10,8 @@
     "css:build": "gulp build",
     "test": "gulp amp_validator",
     "watch": "gulp watch",
-    "images": "gulp images"
+    "images": "gulp images",
+    "thumbnails": "gulp thumbnails"
   },
   "repository": {
     "type": "git",
