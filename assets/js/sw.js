@@ -8,6 +8,7 @@ self.addEventListener('install',event => {
   .then(cache => cache.addAll([
     {% for page in site.pages %}{% if page.layout %}'{{ page.url | prepend: site.baseurl }}',{% endif %}
     {% endfor %}{% for post in site.posts limit:9 %}'{{ post.url | prepend: site.baseurl }}',{% endfor %}
+    '/blog', '/manifest.json'
   ]))
 );
 });
