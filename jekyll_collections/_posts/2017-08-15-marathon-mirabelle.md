@@ -11,8 +11,8 @@ tags: ["run", "python", "chartjs", "leaflet", "withings"]
 calheatmap: true
 chartjs: true
 image:
-  path: /assets/img/marathon-mirabelle/main-4x3.jpg
-  height: 1050
+  path: /assets/img/marathon-mirabelle/main-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/marathon-mirabelle/main-thumb.jpg

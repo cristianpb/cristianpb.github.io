@@ -11,8 +11,8 @@ categories:
 tags:
   - AI
 image:
-  path: /assets/img/external-articles-responsive/wsai2017-4x3.jpg
-  height: 1050
+  path: /assets/img/external-articles-responsive/wsai2017-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/external-articles-responsive/wsai2017-thumb.jpg

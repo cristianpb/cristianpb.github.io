@@ -8,8 +8,8 @@ categories:
   - visualization
 tags: d3.js dc.js google-analytics github-actions
 image:
-  path: /assets/img/analytics-google/main-4x3.jpg
-  height: 1050
+  path: /assets/img/analytics-google/main-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/analytics-google/main-thumb.jpg

@@ -12,8 +12,8 @@ tags:
   - AI
   - ecology
 image:
-  path: /assets/img/external-articles-responsive/planet-great-again-4x3.jpg
-  height: 1050
+  path: /assets/img/external-articles-responsive/planet-great-again-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/external-articles-responsive/planet-great-again-thumb.jpg

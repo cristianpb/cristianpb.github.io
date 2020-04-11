@@ -7,8 +7,8 @@ categories:
   - data science
 tags: ["opencv", "python"]
 image:
-  path: /assets/img/document-detection/main-4x3.jpg
-  height: 1050
+  path: /assets/img/document-detection/main-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/document-detection/main-thumb.jpg

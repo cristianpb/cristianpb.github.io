@@ -13,8 +13,8 @@ tags:
   - cookie-cutter
   - opencv
 image:
-  path: /assets/img/external-articles-responsive/fish-tale-4x3.jpg
-  height: 1050
+  path: /assets/img/external-articles-responsive/fish-tale-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/external-articles-responsive/fish-tale-thumb.jpg

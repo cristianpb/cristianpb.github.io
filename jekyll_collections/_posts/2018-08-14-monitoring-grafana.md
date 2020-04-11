@@ -9,8 +9,8 @@ categories:
   - system management
 tags: ["grafana", "docker", "influxdb", "collectd", "aws"]
 image:
-  path: /assets/img/monitoring-grafana/main-4x3.jpg
-  height: 1050
+  path: /assets/img/monitoring-grafana/main-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/monitoring-grafana/main-thumb.jpg

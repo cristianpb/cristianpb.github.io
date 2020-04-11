@@ -9,8 +9,8 @@ tags: ["opencv", "python"]
 mathjax: false
 mathml: true
 image:
-  path: /assets/img/image-rotation-opencv/main-4x3.jpg
-  height: 1050
+  path: /assets/img/image-rotation-opencv/main-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/image-rotation-opencv/main-thumb.jpg

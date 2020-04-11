@@ -13,8 +13,8 @@ tags:
   - opendata
 source: Medium
 image:
-  path: /assets/img/external-articles-responsive/open-datasets-4x3.jpg
-  height: 1050
+  path: /assets/img/external-articles-responsive/open-datasets-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/external-articles-responsive/open-datasets-thumb.jpg

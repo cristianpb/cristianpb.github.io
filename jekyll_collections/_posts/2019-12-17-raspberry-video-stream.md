@@ -7,8 +7,8 @@ categories:
   - programming
 tags: python angular nginx raspberrypi
 image:
-  path: /assets/img/raspberry-video-stream/main-4x3.jpg
-  height: 1050
+  path: /assets/img/raspberry-video-stream/main-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/raspberry-video-stream/main-thumb.jpg

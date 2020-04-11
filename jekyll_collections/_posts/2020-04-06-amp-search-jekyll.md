@@ -8,8 +8,8 @@ categories:
 tags: amphtml jekyll bulma
 video: true
 image:
-  path: /assets/img/amp-search-jekyll/main-4x3.jpg
-  height: 1050
+  path: /assets/img/amp-search-jekyll/main-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/amp-search-jekyll/main-thumb.jpg
@@ -45,7 +45,7 @@ and implement a search bar which allows searching for content in a static
 website hosted in Github pages.
 
 <center>
-<amp-img src="/assets/img/amp-search-jekyll/main-4x3.jpg" width="1400" height="1050" layout="intrinsic" alt="amp search in jekyll"></amp-img>
+<amp-img src="/assets/img/amp-search-jekyll/main-16x9.jpg" width="1400" height="788" layout="intrinsic" alt="amp search in jekyll"></amp-img>
 <br><i>AMP search bar integration in static website made with Jekyll</i>
 </center>
 

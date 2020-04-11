@@ -68,7 +68,7 @@ mustache: true
                    src="/api/github-pages.json"></amp-state>
 
                  <amp-list height="500"
-                           [height]="(400) * filteredArticles.length"
+                           [height]="(350) * filteredArticles.length"
                            layout="fixed-height"
                            items="."
                            src="/api/github-pages.json"
@@ -83,7 +83,7 @@ mustache: true
                          <div class="column is-3-desktop is-12-mobile">
                            <a class="image" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>
                              <amp-img 
-                               width="300" height="200" 
+                               width="400" height="225" 
                                src="{{ thumb }}" 
                                srcset="{{ thumb }} 400w, {{ image }} 900w"
                                alt="{{ title }}" layout="responsive"></amp-img>

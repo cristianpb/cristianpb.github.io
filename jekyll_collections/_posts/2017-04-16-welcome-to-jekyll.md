@@ -7,8 +7,8 @@ categories:
 tags: ['jekyll']
 description: "How do I create this blog with Jekyll. Including functionalities like disqus comments and google analytics"
 image:
-  path: /assets/img/welcome-jekyll/main-4x3.jpg
-  height: 1050
+  path: /assets/img/welcome-jekyll/main-16x9.jpg
+  height: 788
   width: 1400
 thumb:
   path: /assets/img/welcome-jekyll/main-thumb.jpg

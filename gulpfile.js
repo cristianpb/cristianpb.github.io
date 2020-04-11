@@ -7,6 +7,7 @@ var responsive = require('gulp-responsive');
 var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 var rename = require('gulp-rename');
+var webp = require("imagemin-webp");
 var gulpAmpValidator = require('gulp-amphtml-validator');
 var del = require('del');
 
@@ -36,8 +37,8 @@ function thumbnails() {
       responsive({
         '*': [
           {
-            width: 300,
-            height: 200,
+            width: 400,
+            height: 225,
             format: 'jpg',
             rename: { 
               suffix: '-thumb',
@@ -45,27 +46,57 @@ function thumbnails() {
             },
           },
           {
+            width: 400,
+            height: 225,
+            format: 'webp',
+            rename: { 
+              suffix: '-thumb',
+              dirname: 'external-articles-responsive'
+            },
+          },
+          {
             width: 1400,
-            height: 1050,
+            height: 788,
             format: 'jpg',
             rename: { 
-              suffix: '-4x3',
+              suffix: '-16x9',
+              dirname: 'external-articles-responsive'
+            },
+          },
+          {
+            width: 1400,
+            height: 788,
+            format: 'webp',
+            rename: { 
+              suffix: '-16x9',
               dirname: 'external-articles-responsive'
             },
           }
         ],
         '*/main.*': [
           {
-            width: 300,
-            height: 200,
+            width: 400,
+            height: 225,
             format: 'jpg',
             rename: { suffix: '-thumb'},
           },
           {
+            width: 400,
+            height: 225,
+            format: 'webp',
+            rename: { suffix: '-thumb'},
+          },
+          {
             width: 1400,
-            height: 1050,
+            height: 788,
             format: 'jpg',
-            rename: { suffix: '-4x3'},
+            rename: { suffix: '-16x9'},
+          },
+          {
+            width: 1400,
+            height: 788,
+            format: 'webp',
+            rename: { suffix: '-16x9'},
           }
         ],
       }, {
@@ -82,6 +113,9 @@ function thumbnails() {
         crop: 'entropy'
       }))
     .pipe(imagemin([
+      webp({
+        quality: 75
+      }),
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
       imagemin.optipng({optimizationLevel: 5}),
@@ -107,6 +141,9 @@ function images() {
           {removeViewBox: true},
           {cleanupIDs: false}
         ]
+      }),
+      webp({
+        quality: 75
       })
     ], {verbose: true}))
     .pipe(gulp.dest(paths.images.dest))

@@ -172,12 +172,19 @@ image:
             <figure class="image">
               <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}">
                 <center>
-                  <amp-img 
-                    height="220" width="350" 
-                    src="{{ post.thumb.path }}"
+                  <amp-img
+                    height="196" width="350" 
                     alt="{{ post.title }}"  
-                    srcset="{{ post.thumb.path }} 400w, {{ post.image.path }} 900w"
-                    layout="intrinsic">
+                    srcset="{{ post.thumb.path | replace: 'jpg','webp' }} 400w, {{ post.image.path | replace: 'jpg','webp' }} 900w"
+                    >
+                    <amp-img 
+                      height="196" width="350" 
+                      fallback
+                      src="{{ post.thumb.path }}"
+                      alt="{{ post.title }}"  
+                      srcset="{{ post.thumb.path }} 400w, {{ post.image.path }} 900w"
+                      layout="intrinsic">
+                    </amp-img>
                   </amp-img>
                 </center>
               </a>
@@ -188,7 +195,7 @@ image:
             <div class="media apretaito ">
               <div class="media-content">
                 <strong>
-                <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}" {% if post.link %}target="_blank"{% else %}{% endif %} >{{ post.title | truncate: 40, ".."}}</a>
+                <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}" {% if post.link %}target="_blank"{% else %}{% endif %} >{{ post.title | truncate: 35, ".."}}</a>
                 </strong>
               </div>
             </div>
