@@ -18,13 +18,13 @@ thumb:
 
 ---
 
-The dream of every web page is to appear naturally in the first place of the
-Google search bar.
+Everyone wants that their web page appears naturally at the first position on 
+Google search.
 Google's sorting algorithm takes into account the structure of the page, the
 metadata, the contents of the page,  the mobile compatibility and also how fast the
 page loads.
-Google works in a web standard called AMP, which imposes some restrictions to
-the web page, but also guaranties fast page loading.
+Google worked on a web standard called AMP, which imposes some restrictions to
+the web page, but guaranties fast page loading.
 
 These restriction are:
 * **No external js**: Only AMP components are allowed
@@ -35,14 +35,14 @@ Not having external javascript calls makes really difficult to include some
 dynamic functionalities like fetching external content or calling API services.
 It's the case for a search bar which needs to fetch some content and render
 the results.
-This gets more complicated for static web content that it's hosted in servers
+This gets more complicated for static web content that is hosted in servers
 like Netlify, Gitlab or Github Pages. These options don't provide any
 backend and thus no dynamic content.
 
 Even if it seems complicated, it's not impossible. One can adapt a website to AMP format and include dynamic functionalities.
-For example, this post shows how to implement a javascript calls in AMP pages
+For example, this post shows how to implement a javascript call in AMP pages
 and implement a search bar which allows searching for content in a static
-website hosted in Github pages.
+website hosted on Github pages.
 
 <center>
 <amp-img src="/assets/img/amp-search-jekyll/main-16x9.jpg" width="1400" height="788" layout="intrinsic" alt="amp search in jekyll"></amp-img>
@@ -53,19 +53,19 @@ website hosted in Github pages.
 
 There are various alternatives to integrate a search function in a static website:
 * Client side options like [Lunr.js](https://www.npmjs.com/package/lunr) or [SimpleJekyllSearch](https://github.com/christian-fei/Simple-Jekyll-Search) provide some javascript functions to search indexed content, but these are not compatible with AMP because of the external javascript libraries restriction.
-* Services like Algolia, Swifttype or Google's Custom Search Engine, which uses external API services, but which are not compatible with AMP due to CORS endpoint restrictions.
+* Services like Algolia, Swifttype or Google's Custom Search Engine, which use external API services, but which are not compatible with AMP due to CORS endpoint restrictions.
 
 I personally prefer the approach from SimpleJekyllSearch which exposes an
 endpoint with the posts information and which can be then used in AMP
 components. 
-The front-matter tells Jekyll that is a special page so it takes into account
+The front-matter informs Jekyll that is a special page so it takes into account
 the defined parameters in order to render it.
 The front-matter defines the following properties:
 * **limit**, which is used to limit the number of posts that will be iterated in the loop. 
 * **permalink**, to overwrite the default URL of the file, so the endpoint can be found at the URL `/api/github-pages.json`.
 
 Jekyll allows looping over the posts using the `site.posts` array and get data from each post.
-Here's how my endpoint file looks:
+Here's how my endpoint file looks like:
 
 {% raw %}
 ```yaml
@@ -87,10 +87,10 @@ The content of the file uses the [liquid](https://shopify.github.io/liquid/) syn
 ## AMP search
 
 There are AMP components that can use the static API:
-* The [amp-state]() component allows to fetch a JSON from a CORS compatibility endpoint. The fetch is done once the page load and then it's binned to the component.
+* The [amp-state]() component allows to fetch a JSON from a CORS compatible endpoint. The fetch is done once the page loads and then it's binned to the component.
 * The binned element can be filtered using the [amp-bind]() component, which listen to DOM events like clicks in buttons on writing in input fields.
 
-For example, if we define an HTML *input* element, it's possible to add a listener that takes the input value and it filters the results using some javascript functions (not all ES6 are allowed). The javascript [indexOf](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/indexOf) function returns an `int` larger than -1 if the input element is found, so one can use it as a simple search like this:
+For example, if we define an HTML *input* element, it's possible to add a listener that takes the input value and filters the results using some javascript functions (not all ES6 are allowed). The javascript [indexOf](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/indexOf) function returns an `int` larger than -1 if the input element is found, so one can use it as a simple search like this:
 
 `allArticles.filter(a => a.title.indexOf(event.value) != -1)`
 
@@ -106,7 +106,7 @@ For more complex research, in multiple fields, the components looks like the fol
 
 AMP provides some components to process the JSON object that is binned with [amp-bind](https://amp.dev/documentation/components/amp-bind/?format=websites):
 * The [amp-list](https://amp.dev/documentation/components/amp-list/?format=websites) component dynamically downloads data and creates a list of items using a template.
-* The [amp-mustache](https://amp.dev/documentation/examples/components/amp-mustache) component renders and element using [mustache](https://mustache.github.io/) syntax.
+* The [amp-mustache](https://amp.dev/documentation/examples/components/amp-mustache) component renders an element using [mustache](https://mustache.github.io/) syntax.
 
 ### AMP lists
 
@@ -119,15 +119,15 @@ it's possible to configure the location of the *items* list using the *items* pa
 
 Mustache syntax allows to filter properties of the component using the conditional notation. Here are the definition of the special characters:
 {% raw %}
-* {{variable}}: A variable tag. It outputs the the HTML-escaped value of a variable.
+* {{variable}}: A variable tag. It outputs the HTML-escaped value of a variable.
 * {{#section}} {{/section}}: A section tag. It can test the existence of a variable and iterate over it if it's an array.
 * {{^section}} {{/section}}: An inverted tag. It can test the non-existence of a variable.
 * {{{unescaped}}}: Unescaped HTML. It's restricted in the markup it may output (see "Restrictions" below).
 {% endraw %}
 
-Please note that static websites generator like Jekyll needs to escape mustache templates using
+Please note that static websites generators like Jekyll need to escape mustache templates using
 {% raw %}{ raw } and { endraw }{% endraw %} elements. Otherwise the results would not be rendered.
-Here is how it look the final combination of the two elements:
+Here is how looks like the final combination of the two elements:
 
 {% raw %}
 ```html
@@ -181,8 +181,7 @@ Here is how it look the final combination of the two elements:
 
 The final version of the search bar can be seen in the following
 video. The search bar filters the posts at every key stroke. An
-additional AMP event is called to place the window at the top of the list
-results and the amp list height is controlled by the number of posts that are
+additional AMP event is called to place the window at the top of results list and the amp list height is controlled by the number of posts that are
 shown. 
 
 The search bar is always visible using a `position: fixed` css property.
@@ -203,8 +202,8 @@ The code can be found at [the github repository of this page](https://github.com
 
 ## Conclusions
 
-I have found separated opinions on the effect of using AMP format.
-For my personal point of view, my SEO has increased since I started using this format and also the page load speed. The AMP rules impose good web format that guaranties the best performances. The traffic data of my website can be found [this github page](https://cristianpb.github.io/analytics-google/).
+I have seen different opinions on the effect of using AMP format.
+For my personal point of view, my SEO has increased since I started using this format and also the page load speed. The AMP rules impose good web format that guaranties the best performances. The traffic data of my website can be found at [this github page](https://cristianpb.github.io/analytics-google/).
 
 AMP integrates smoothly with API endpoints defined in static website build
 tools like Jekyll. The endpoint with the contents of the blog is a small json,
