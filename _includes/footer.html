@@ -29,16 +29,17 @@
         </aside>
       </div>
       <div class="column is-4-desktop is-12-mobile has-text-centered">
-        <p class="menu-label">
-          Find me in:
-        </p>
-        {% for link in site.socialnetworks %}
-        <a href="{{ link[1] }}">
-          <i class="fab fa-{{ link[0] }}"></i>
-          &nbsp;
-        </a>
-        {% endfor %}
-
+        <aside class="menu">
+          <p class="menu-label">
+            Find me in:
+          </p>
+          {% for link in site.socialnetworks %}
+          <a class="icon is-medium" href="{{ link[1] }}" target="_blank" rel="noreferrer">
+            <i class="fab fa-{{ link[0] }} fa-lg"></i>
+            &nbsp;
+          </a>
+          {% endfor %}
+        </aside>
       </div>
     </div>
 

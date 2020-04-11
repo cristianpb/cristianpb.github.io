@@ -40,7 +40,7 @@ image:
         <ul>
       {% for link in site.socialnetworks %}
        <li>
-         <a href="{{ link[1] }}"><i class="fab fa-{{ link[0] }}"></i></a>
+         <a class="icon" href="{{ link[1] }}" target="_blank" rel="noreferrer"><i class="fab fa-{{ link[0] }}"></i></a>
       </li>
       {% endfor %}
         </ul>
@@ -160,7 +160,7 @@ image:
         </script>
       </amp-animation>
 
-      <amp-carousel class="carousel-component" height="500" layout="fixed-height" type="carousel"  controls>
+      <amp-carousel class="carousel-component" height="400" layout="fixed-height" type="carousel"  controls>
         <amp-position-observer on="enter:carouselTransition.start"
                                intersection-ratios="0.8"
                                layout="nodisplay">
@@ -170,7 +170,7 @@ image:
           {% if post.image %}
           <div class="card-image">
             <figure class="image">
-              <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}">
+              <a {% if post.link %}href="{{post.link}}" target="_blank" rel="noreferrer"{% else %}href="{{ post.url }}"{% endif %}>
                 <center>
                   <amp-img
                     height="196" width="350" 
@@ -195,7 +195,8 @@ image:
             <div class="media apretaito ">
               <div class="media-content">
                 <strong>
-                <a href="{% if post.link %}{{post.link}}{% else %}{{ post.url }}{% endif %}" {% if post.link %}target="_blank"{% else %}{% endif %} >{{ post.title | truncate: 35, ".."}}</a>
+                <a {% if post.link %}href="{{post.link}}" target="_blank" rel="noreferrer"{% else %}href="{{ post.url }}"{% endif %}>
+                  {{ post.title | truncate: 35, ".."}}</a>
                 </strong>
               </div>
             </div>
