@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Apollo: Mopidy web client with Snapcast support"
+title: "Muse: Mopidy web client with Snapcast support"
 date: 2020-04-26
 description: Services like Mopidy and Snapcast are ideal to create a multiroom streaming audio player using devices like the RaspberryPi or android telephones. This posts presents a web interface that uses the state of the art web technologies and integrates nicely with Mopidy and Snapcast.
 categories:
@@ -8,11 +8,11 @@ categories:
 tags: mopidy svelte sapper bulma github-actions
 video: true
 image:
-  path: /assets/img/mopidy-apollo/main-16x9.jpg
+  path: /assets/img/mopidy-muse/main-16x9.jpg
   height: 788
   width: 1400
 thumb:
-  path: /assets/img/mopidy-apollo/main-thumb.jpg
+  path: /assets/img/mopidy-muse/main-thumb.jpg
   height: 200
   width: 300
 
@@ -42,8 +42,8 @@ Then, I decided to develop my own web interface using the state of the art web
 technologies which are described in this post.
 
 <center>
-<amp-img src="/assets/img/mopidy-apollo/main-16x9.jpg" width="901" height="450" layout="intrinsic" alt="mopidy apollo home page"></amp-img>
-<br><i>Apollo webclient homepage</i>
+<amp-img src="/assets/img/mopidy-muse/main-16x9.jpg" width="901" height="450" layout="intrinsic" alt="mopidy muse home page"></amp-img>
+<br><i>Muse webclient homepage</i>
 </center>
 
 ## Web developpemnt technologies
@@ -81,8 +81,8 @@ you can see in the following video:
 
 <amp-video width="1024"
   height="610"
-  src="/assets/img/mopidy-apollo/drag-drop.mp4"
-  poster="/assets/img/mopidy-apollo/main.png"
+  src="/assets/img/mopidy-muse/drag-drop.mp4"
+  poster="/assets/img/mopidy-muse/main.png"
   layout="responsive"
   controls
   loop
@@ -159,38 +159,38 @@ websockets. This protocol provides a continuous link between the client and the
 server. Messages are send when there are changes or events, which allows the
 client to have a notification when there are change in the server.
 
-I implemented this communication in Apollo, so that one can control the volume
+I implemented this communication in Muse, so that one can control the volume
 of the Snapcast clients. The following image shows the Snapcast control panel
 and the sound from three devices: *raspi*, *raspimov* and *raspicam*.
 
 <center>
-<amp-img src="/assets/img/mopidy-apollo/snapcast.png" width="300" height="651" layout="intrinsic" alt="snapcast controls in Apollo"></amp-img>
-<br><i>Snapcasts controls in Apollo</i>
+<amp-img src="/assets/img/mopidy-muse/snapcast.png" width="300" height="651" layout="intrinsic" alt="snapcast controls in Muse"></amp-img>
+<br><i>Snapcasts controls in Muse</i>
 </center>
 
 ## Github Actions CI/CD worflow
 
-There are two main components of Apollo web client:
+There are two main components of Muse web client:
 
 * The html produced by Sapper
 * The python package that connects the web interface with Mopidy.
 
 The final destination of the python extension is the [PyPi
-repository](https://pypi.org/project/Mopidy-Apollo/), where
-python users can download and install Apollo. The publishing action can be
+repository](https://pypi.org/project/Mopidy-Muse/), where
+python users can download and install Muse. The publishing action can be
 made manually using python wrappers like
 [twine](https://github.com/pypa/twine). However, there is always the risk of
 making a human mistake, like publishing the wrong version. This is why I prefer
 to delegate this action to Github.
 
-Here is a description of the deploying pipeline of the Apollo package using
+Here is a description of the deploying pipeline of the Muse package using
 Github Actions:
 
 * At every push to the github repository a build of the html and the python
   package is made in order to check for errors.
 * At every push to master branch there is a publication of the html to github
   pages in order to validate the test the actual version in different devices
-  using [this url of the github pages](https://cristianpb.github.io/apollo/).
+  using [this url of the github pages](https://cristianpb.github.io/muse/).
 * The git tags control the version of the package, so when a tag is pushed, the
   following actions are run:
   * The package version is upgraded in `setup.cfg` and `package.json`
@@ -200,17 +200,17 @@ Github Actions:
 
 ## Conclusions
 
-There is still plenty of room for improvement for Apollo. I would like to add
+There is still plenty of room for improvement for Muse. I would like to add
 features like integrating third party services like Discogs or Genius,
 improving user experience or improving the design. If you think about other
 nice features to add, you can open an issue on [the github page of the
-project](https://github.com/cristianpb/apollo/issues).
+project](https://github.com/cristianpb/muse/issues).
 
 I'm also satisfied of having an automatic deploying workflow. I used different
 github actions developed by others and also contributed to [improve one of
 them](https://github.com/stefanzweifel/git-auto-commit-action/pull/65).
 
-The code of Apollo is available at [this github
-repository](https://github.com/cristianpb/apollo/) and the python [package is
-available at PyPi](https://pypi.org/project/Mopidy-Apollo/), you can install it
-with `sudo python -m pip install Mopidy-Apollo`, use it without restriction.
+The code of Muse is available at [this github
+repository](https://github.com/cristianpb/muse/) and the python [package is
+available at PyPi](https://pypi.org/project/Mopidy-Muse/), you can install it
+with `sudo python -m pip install Mopidy-Muse`, use it without restriction.
