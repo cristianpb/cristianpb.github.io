@@ -195,12 +195,12 @@ image:
               <a {% if post.link %}href="{{post.link}}" target="_blank" rel="noreferrer"{% else %}href="{{ post.url }}"{% endif %}>
                 <center>
                   <amp-img
-                    height="196" width="350" 
+                    height="197" width="350" 
                     alt="{{ post.title }}"  
                     srcset="{{ post.thumb.path | replace: 'jpg','webp' }} 400w, {{ post.image.path | replace: 'jpg','webp' }} 900w"
                     >
                     <amp-img 
-                      height="196" width="350" 
+                      height="197" width="350" 
                       fallback
                       src="{{ post.thumb.path }}"
                       alt="{{ post.title }}"  
