@@ -40,7 +40,29 @@ image:
         <ul>
       {% for link in site.socialnetworks %}
        <li>
-         <a class="icon" href="{{ link[1] }}" target="_blank" rel="noreferrer"><i class="fab fa-{{ link[0] }}"></i></a>
+         <a href="{{ link[1] }}"  target="_blank" rel="noreferrer">
+         {% if link[0] == 'github' %}
+           {% include logos/github.svg color='#ffffff' %}
+         {% endif %}
+         {% if link[0] == 'medium' %}
+           {% include logos/medium.svg color='#ffffff' %}
+         {% endif %}
+         {% if link[0] == 'twitter' %}
+           {% include logos/twitter.svg color='#ffffff' %}
+         {% endif %}
+         {% if link[0] == 'linkedin' %}
+           {% include logos/linkedin.svg color='#ffffff' %}
+         {% endif %}
+         {% if link[0] == 'kaggle' %}
+           {% include logos/kaggle.svg color='#ffffff' %}
+         {% endif %}
+         {% if link[0] == 'researchgate' %}
+           {% include logos/researchgate.svg color='#ffffff' %}
+         {% endif %}
+         {% if link[0] == 'google' %}
+           {% include logos/google.svg color='#ffffff' %}
+         {% endif %}
+         </a>
       </li>
       {% endfor %}
         </ul>
@@ -57,7 +79,7 @@ image:
     </h2>
     <div class="columns is-mobile is-multiline is-horizontal-center">
       <div class="column is-3-desktop is-12-mobile">
-        <h3 class="subtitle"><i class="fab fa-python"></i> Data modelling</h3>
+        <h3 class="subtitle">Data modelling</h3>
         <center>
           <amp-img src="/assets/img/about/model.svg" alt="data modelling" height="100" width="150" layout="intrinsic"></amp-img>
         </center>
@@ -76,7 +98,7 @@ image:
         </div>
       </div>
       <div class="column is-3-desktop is-12-mobile">
-        <h3 class="subtitle"><i class="fas fa-database"></i> Data engineering</h3>
+        <h3 class="subtitle">Data engineering</h3>
         <center>
           <amp-img src="/assets/img/about/engineer.svg" alt="data engineer" height="100" width="150" layout="intrinsic"></amp-img>
         </center>
@@ -95,7 +117,7 @@ image:
         </div>
       </div>
       <div class="column is-3-desktop is-12-mobile">
-        <h3 class="subtitle"><i class="fas fa-desktop"></i> System management</h3>
+        <h3 class="subtitle">System management</h3>
         <center>
           <amp-img src="/assets/img/about/system.svg" alt="system management" height="100" width="150" layout="intrinsic"></amp-img>
         </center>
@@ -114,7 +136,7 @@ image:
         </div>
       </div>
       <div class="column is-3-desktop is-12-mobile">
-        <h3 class="subtitle"><i class="fas fa-mobile-alt"></i> Visualization</h3>
+        <h3 class="subtitle">Visualization</h3>
         <center>
           <amp-img src="/assets/img/about/visualization.svg" alt="visualization" height="100" width="150" layout="intrinsic"></amp-img>
         </center>
@@ -204,10 +226,14 @@ image:
             <div class="content apretaito">
               <p class="is-size-7"> {{ post.description | truncate: 140, ".." }} </p>
               <div class="tags has-addons">
-                <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
+                <span class="tag">
+                  📅 
+                  &nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
                 <span class="tag is-link">{{ post.categories | join: ", " | truncate: 30, ".."}}</span>
                 {% if post.link %}
-                <span class="tag is-danger"><i class="fas fa-external-link-alt"></i></span>
+                <span class="tag is-danger">
+                  {% include logos/external-link.svg color='#ffffff' %}
+                </span>
                 {% else %}{% endif %}
               </div>
             </div>

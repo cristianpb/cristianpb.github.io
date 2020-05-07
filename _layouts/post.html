@@ -133,7 +133,9 @@ layout: default
                     <div class="tags has-addons">
                       <span class="tag">📅&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
                       {% if post.link %}
-                      <span class="tag is-danger"><i class="fas fa-external-link-alt"></i>&nbsp;{{ post.source }}</span>
+                      <span class="tag is-danger">
+                        {% include logos/external-link.svg color='#ffffff' %}
+                        &nbsp;{{ post.source }}</span>
                       {% endif %}
                       {% for tag in post.tags %}
                       <a class="tag {% if page.tags contains tag %}is-info{% endif %}" href="/blog/tags#{{ tag }}"> {{ tag }}</a>
@@ -166,9 +168,11 @@ layout: default
                 {{ post.description }}
               </p>
               <div class="tags has-addons">
-                <span class="tag"><i class="fas fa-calendar-alt"></i>&nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
+                <span class="tag"> 📅 &nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
                 {% if post.link %}
-                <span class="tag is-danger"><i class="fas fa-external-link-alt"></i>&nbsp;{{ post.source }}</span>
+                <span class="tag is-danger"> 
+                  {% include logos/external-link.svg color='#ffffff' %}
+                  &nbsp;{{ post.source }}</span>
                 {% endif %}
                 {% for tag in post.tags %}
                 <a class="tag {% if page.tags contains tag %}is-info{% endif %}" href="/blog/tags#{{ tag }}"> {{ tag }}</a>

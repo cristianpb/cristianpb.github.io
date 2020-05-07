@@ -76,7 +76,9 @@ carousel: true
           <li><a on="tap:education.scrollTo(duration=500)">Education</a></li>
           <li><a on="tap:prix.scrollTo(duration=500)">Prix</a></li>
           <li><a on="tap:publications.scrollTo(duration=500)">Publications</a></li>
-          <li><a href="/assets/pdf/cv.pdf"><i class="fas fa-file-download"></i>&nbsp;CV</a></li>
+          <li><a href="/assets/pdf/cv.pdf">
+              {% include logos/download.svg color='#ffffff' %}
+              &nbsp;CV</a></li>
         </ul>
       </div>
     </nav>
@@ -86,7 +88,7 @@ carousel: true
 <section class="section" id="experience">
   <div class="container">
 
-    <h2 class="title"><i class="fas fa-briefcase"></i>  Experience</h2>
+    <h2 class="title">💼 Experience</h2>
     <div class="columns is-multiline">
 
       <div class="column is-6">
@@ -111,7 +113,9 @@ carousel: true
                     I'm inside a structure that promotes digital transformation of the French Ministry.
                     My team helps other ministries to use data in a most effective way.
                     My main tasks are the following:
-                    <a class="button is-small is-fullwidth" id="readmore-button-ministry" on="tap:readmore-button-ministry.hide, readmore-text-ministry.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
+                    <a class="button is-small is-fullwidth" id="readmore-button-ministry" on="tap:readmore-button-ministry.hide, readmore-text-ministry.toggleVisibility" role="" tabindex="">
+                      {% include logos/chevron-down.svg color='#000015' %} 
+                      </a>
                   </p>
                   <ul id="readmore-text-ministry" hidden="">
                     <li>
@@ -191,7 +195,9 @@ carousel: true
                     Entrepreneurs for a 10 months mission, in order to bring
                     digital transformation in the French Administration and make
                     use of public Data. 
-                    <a class="button is-small is-fullwidth" id="readmore-button-eig" on="tap:readmore-button-eig.hide, readmore-text1.toggleVisibility, readmore-text2.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
+                    <a class="button is-small is-fullwidth" id="readmore-button-eig" on="tap:readmore-button-eig.hide, readmore-text1.toggleVisibility, readmore-text2.toggleVisibility" role="" tabindex="">
+                      {% include logos/chevron-down.svg color='#000015' %}
+                    </a>
                   </p>
                   <p id="readmore-text1" hidden="">
                     I implemented image recognition algorithms using deep
@@ -233,7 +239,9 @@ carousel: true
                 <div class="content">
                   <p>
                     Kernix is an agency that builds personalized digital and data products. I worked with the data team to build entire data products using machine learning tools and visualizations. I had the opportunity to work with clients from diverse fields and develop personalized data products for each one, my main realisations were:
-                      <a class="button is-small is-fullwidth" id="readmore-button-kernix" on="tap:readmore-button-kernix.hide, readmore-text-kernix.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
+                      <a class="button is-small is-fullwidth" id="readmore-button-kernix" on="tap:readmore-button-kernix.hide, readmore-text-kernix.toggleVisibility" role="" tabindex="">
+                        {% include logos/chevron-down.svg color='#000015' %}
+                        </a>
                   </p>
                   <ul id="readmore-text-kernix" hidden="">
                     <li>
@@ -282,7 +290,9 @@ carousel: true
                     the corrosion behaviour of metal structures for nuclear
                     applications.
                     The scientific results of my PhD can be found at <a on="tap:publications.scrollTo(duration=200)" target="_blank">my PhD dissertation</a>, my main tasks were: 
-                    <a class="button is-small is-fullwidth" id="readmore-button-phd" on="tap:readmore-button-phd.hide, readmore-text-phd.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
+                    <a class="button is-small is-fullwidth" id="readmore-button-phd" on="tap:readmore-button-phd.hide, readmore-text-phd.toggleVisibility" role="" tabindex="">
+                      {% include logos/chevron-down.svg color='#000015' %}
+                      </a>
                   </p>
                   <ul id="readmore-text-phd" hidden=""> 
                     <li> Study of the competition between general and localized corrosion with stochastic numerical modelling.  </li> 
@@ -300,7 +310,7 @@ carousel: true
       </div>
     </div>
 
-    <h2 class="title"><i class="fas fa-hourglass-end"></i>  Part time</h2>
+    <h2 class="title"> ⌛ Part time</h2>
     <div class="columns is-multiline">
       <div class="column is-4">
 
@@ -319,7 +329,9 @@ carousel: true
             </div>
             <div class="content">
               <p>City AI is a global community that brings practitioners and stakeholders of applied artificial intelligence together. I represent the Paris community regarding the international community of City AI. My main tasks in are:
-                <a class="button is-small is-fullwidth" id="readmore-button-cityai" on="tap:readmore-button-cityai.hide, readmore-text-cityai.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
+                <a class="button is-small is-fullwidth" id="readmore-button-cityai" on="tap:readmore-button-cityai.hide, readmore-text-cityai.toggleVisibility" role="" tabindex="">
+                  {% include logos/chevron-down.svg color='#000015' %} 
+                </a>
               </p>
               <ul id="readmore-text-cityai" hidden="">
                 <li>
@@ -370,7 +382,9 @@ carousel: true
             </div>
             <div class="content">
               <p>The objective of this movement is to organize simultaneous Startup Weekends around the world focused on artificial intelligence. I worked as a technical expert in the field, my main tasks were:
-                <a class="button is-small is-fullwidth" id="readmore-button-gswai" on="tap:readmore-button-gswai.hide, readmore-text-gswai.toggleVisibility" role="" tabindex=""><i class="fas fa-chevron-down"></i></a>
+                <a class="button is-small is-fullwidth" id="readmore-button-gswai" on="tap:readmore-button-gswai.hide, readmore-text-gswai.toggleVisibility" role="" tabindex="">
+                  {% include logos/chevron-down.svg color='#000015' %} 
+                </a>
               </p>
               <ul id="readmore-text-gswai" hidden="">
                 <li>
@@ -429,7 +443,7 @@ carousel: true
 
 <section class="section" id="education">
   <div class="container">
-    <h2 class="title"><i class="fas fa-graduation-cap"></i>Education</h2>
+    <h2 class="title"> 🎓 Education</h2>
     <div class="svg-container is-hidden-mobile">
       {% include education-horz.svg %}
     </div>
@@ -441,7 +455,7 @@ carousel: true
 
 <section class="section" id="prix">
   <div class="container">
-    <h2 class="title"><i class="fas fa-star"></i>  Prix</h2>
+    <h2 class="title">⭐Prix</h2>
     <div class="has-text-centered">
 
       <amp-carousel
@@ -535,7 +549,7 @@ carousel: true
 
 <section class="section hero is-primary" id="communications">
   <div class="container">
-    <h2 class="title"><i class="fas fa-microphone-alt"></i>  Communications</h2>
+    <h2 class="title">🎙️  Communications</h2>
 
     <div class="columns is-gapless">
       <div class="column is-4">
@@ -572,80 +586,62 @@ carousel: true
 
 <section class="section" id="publications">
   <div class="container">
-    <h2 class="title"><i class="fas fa-book-open"></i>  Publications</h2>
+    <h2 class="title">📖  Publications</h2>
     <p>Citations of my articles might be found at <a class="icon" href="{{ site.socialnetworks.google }}">
-          <i class="fab fa-google"></i>
+          {% include logos/google.svg color='#247da6' %}
         </a> Google Scholar and 
         <a class="icon" href="{{ site.socialnetworks.researchgate }}">
-          <i class="fab fa-researchgate"></i>
+          {% include logos/researchgate.svg color='#247da6' %}
         </a> Research Gate.
         
     </p>
     <br>
     <h3 class="subtitle" id="phdthesis">PhD Thesis</h3>
     
+
     <div class="box">
-    
-    <article class="media">
-      <figure class="media-left">
-        <p class="image is-64x64">
-          <amp-img src="/assets/img/about/phd.jpg" width="64" height="90" alt="phd thesis cristian perez"></amp-img>
-        </p>
-      </figure>
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <span>Uniform and localized corrosion modelling by means of probabilistic cellular automata</span>
-            <br>
-            <strong>Cristian Perez Brokate</strong> <small>Université Pierre et Marie Curie - Paris VI, 2016</small> 
-          </p>
+      <div class="columns is-multiline">
+        <div class="column is-1-desktop is-12-mobile has-text-centered">
+          <a href="https://tel.archives-ouvertes.fr/tel-01561596" class="image">
+            <amp-img src="/assets/img/about/phd.jpg" width="64" height="90" alt="phd thesis cristian perez"></amp-img>
+          </a>
         </div>
-        <nav class="level is-mobile">
-          <div class="level-left">
-            <a class="level-item">
-              <a class="icon is-small" href="https://tel.archives-ouvertes.fr/tel-01561596"><i class="fas fa-book"></i>
-              </a>
-            </a>
-            <a class="level-item">
-              <a class="icon is-small" href="https://tel.archives-ouvertes.fr/tel-01561596/document"><i class="fas fa-file-pdf"></i>
-              </a>
-            </a>
+        <div class="column is-11-desktop is-12-mobile">
+          <div class="content">
+            <p>
+              <a href="https://tel.archives-ouvertes.fr/tel-01561596">Uniform and localized corrosion modelling by means of probabilistic cellular automata</a>
+              <br>
+              <strong>Cristian Perez Brokate</strong>
+              <br>
+              <small>Université Pierre et Marie Curie - Paris VI, 2016</small> 
+            </p>
           </div>
-        </nav>
+        </div>
       </div>
-    </article>
-      
     </div>
-
-
 
     <h3 class="subtitle" id="journalarticles">Journal Articles</h3>
 
     {% for article in site.data.about.articles %}
     <div class="box">
-    
-    <article class="media">
-      <figure class="media-left">
-        <p class="image is-64x64">
-          <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}"></amp-img>
-        </p>
-      </figure>
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <span>{{ article.title }}</span>
-            <br>
-            {{ article.authors }}
-            <br>
-            <small>{{ article.journal }}</small> <small><i> {{ article.date }}</i></small>
-          </p>
+      <div class="columns is-multiline">
+        <div class="column is-1-desktop is-12-mobile has-text-centered">
+          <a href="{{ article.url }}" class="image">
+            <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}"></amp-img>
+          </a>
+        </div>
+        <div class="column is-11-desktop is-12-mobile">
+          <div class="content">
+            <p>
+              <a href="{{ article.url }}">{{ article.title }}</a>
+              <br>
+              {{ article.authors }}
+              <br>
+              <small>{{ article.journal }}</small> <small><i> {{ article.date }}</i></small>
+            </p>
+          </div>
         </div>
       </div>
-      <div class="media-right">
-        <a class="icon is-small" href="{{ article.url }}"><i class="fas fa-file-pdf fa-2x"></i></a>
-      </div>
-    </article>
-      
     </div>
     {% endfor %}
 
@@ -654,31 +650,24 @@ carousel: true
 
     {% for article in site.data.about.conference_proceedings %}
     <div class="box">
-    
-    <article class="media">
-      {% if article.img %}
-      <figure class="media-left">
-        <p class="image is-64x64">
-          <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}"></amp-img>
-        </p>
-      </figure>
-      {% endif %}
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <span>{{ article.title }}</span>
-            <br>
-            {{ article.authors }}
-            <br>
-            <small>{{ article.journal }}</small>  <small><i>{{ article.date }}</i></small>
-          </p>
+      <div class="columns is-multiline">
+        <div class="column is-1-desktop is-12-mobile has-text-centered">
+          <a href="{{ article.url }}" class="image">
+            <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}"></amp-img>
+          </a>
+        </div>
+        <div class="column is-11-desktop is-12-mobile">
+          <div class="content">
+            <p>
+              <a href="{{ article.url }}">{{ article.title }}</a>
+              <br>
+              {{ article.authors }}
+              <br>
+              <small>{{ article.journal }}</small> <small><i> {{ article.date }}</i></small>
+            </p>
+          </div>
         </div>
       </div>
-      <div class="media-right">
-        <a class="icon is-small" href="{{ article.url }}"><i class="fas fa-file-pdf fa-2x"></i></a>
-      </div>
-    </article>
-      
     </div>
     {% endfor %}
 
