@@ -603,18 +603,24 @@ carousel: true
       <div class="columns is-multiline">
         <div class="column is-1-desktop is-12-mobile has-text-centered">
           <a href="https://tel.archives-ouvertes.fr/tel-01561596" class="image">
-            <amp-img src="/assets/img/about/phd.jpg" width="64" height="90" alt="phd thesis cristian perez"></amp-img>
+            <amp-img src="/assets/img/about/phd-horz.png" layout="responsive" width="230" height="128" alt="phd thesis cristian perez" media="(max-width: 768px)"></amp-img>
+            <amp-img src="/assets/img/about/phd.jpg" width="64" height="90" alt="phd thesis cristian perez" media="(min-width: 769px)"></amp-img>
           </a>
         </div>
         <div class="column is-11-desktop is-12-mobile">
           <div class="content">
+            <a class="title is-6" href="https://tel.archives-ouvertes.fr/tel-01561596">Uniform and localized corrosion modelling by means of probabilistic cellular automata</a>
             <p>
-              <a href="https://tel.archives-ouvertes.fr/tel-01561596">Uniform and localized corrosion modelling by means of probabilistic cellular automata</a>
-              <br>
-              <strong>Cristian Perez Brokate</strong>
-              <br>
-              <small>Université Pierre et Marie Curie - Paris VI, 2016</small> 
+              Cristian Perez Brokate
             </p>
+            <div class="tags has-addons">
+              <span class="tag">
+                Université Pierre et Marie Curie - Paris VI
+              </span>
+              <span class="tag">
+                2016
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -627,18 +633,32 @@ carousel: true
       <div class="columns is-multiline">
         <div class="column is-1-desktop is-12-mobile has-text-centered">
           <a href="{{ article.url }}" class="image">
-            <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}"></amp-img>
+            <amp-img src="{{ article.img-horz }}" width="200" height="128" layout="responsive" alt="{{ article.title }}" media="(max-width: 768px)"></amp-img>
+            <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}" media="(min-width: 769px)"></amp-img>
           </a>
         </div>
         <div class="column is-11-desktop is-12-mobile">
           <div class="content">
             <p>
-              <a href="{{ article.url }}">{{ article.title }}</a>
-              <br>
-              {{ article.authors }}
-              <br>
-              <small>{{ article.journal }}</small> <small><i> {{ article.date }}</i></small>
+              <a class="title is-6" href="{{ article.url }}">{{ article.title }}</a>
             </p>
+            <p class="is-size-7">
+              {{ article.authors }}
+            </p>
+            <div class="tags has-addons">
+              <span class="tag">
+                {{ article.journal }}
+              </span>
+              <span class="tag">
+                {{ article.volume }}
+              </span>
+              <span class="tag">
+                {{ article.page }}
+              </span>
+              <span class="tag">
+                {{ article.date }}
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -653,18 +673,29 @@ carousel: true
       <div class="columns is-multiline">
         <div class="column is-1-desktop is-12-mobile has-text-centered">
           <a href="{{ article.url }}" class="image">
-            <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}"></amp-img>
+            <amp-img src="{{ article.img-horz }}" width="200" height="128" layout="responsive" alt="{{ article.title }}" media="(max-width: 768px)"></amp-img>
+            <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}" media="(min-width: 769px)"></amp-img>
           </a>
         </div>
         <div class="column is-11-desktop is-12-mobile">
           <div class="content">
             <p>
-              <a href="{{ article.url }}">{{ article.title }}</a>
-              <br>
-              {{ article.authors }}
-              <br>
-              <small>{{ article.journal }}</small> <small><i> {{ article.date }}</i></small>
+              <a class="title is-6" href="{{ article.url }}">{{ article.title }}</a>
             </p>
+            <p class="is-size-7">
+              {{ article.authors }}
+            </p>
+            <div class="tags has-addons">
+              <span class="tag">
+                {{ article.journal }}
+              </span>
+              <span class="tag">
+                {{ article.page }}
+              </span>
+              <span class="tag">
+                {{ article.date }}
+              </span>
+            </div>
           </div>
         </div>
       </div>

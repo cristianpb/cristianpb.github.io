@@ -141,9 +141,6 @@ function images() {
           {removeViewBox: true},
           {cleanupIDs: false}
         ]
-      }),
-      webp({
-        quality: 75
       })
     ], {verbose: true}))
     .pipe(gulp.dest(paths.images.dest))
@@ -181,7 +178,7 @@ function concatenation() {
 function purificationDefault() {
   return gulp.src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
-    .pipe(purgecss({ content: ['_includes/*.html', '_layouts/default.html', 'jekyll_collections/_pages/*.html'] }))
+    .pipe(purgecss({ content: ['_includes/*.html', '_layouts/default.html', 'jekyll_collections/_pages/*.html', '_data/about/*.yml'] }))
     .pipe(replace(/!important/gm, ''))
     .pipe(cleanCSS({compatibility: 'ie8'}, (details) => {
       console.log(`Minification of ${details.name}: ${details.stats.originalSize} -> ${details.stats.minifiedSize} b`);
