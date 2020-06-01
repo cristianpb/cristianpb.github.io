@@ -195,12 +195,12 @@ image:
               <a {% if post.link %}href="{{post.link}}" target="_blank" rel="noreferrer"{% else %}href="{{ post.url }}"{% endif %}>
                 <center>
                   <amp-img
-                    height="197" width="350" 
+                    height="203" width="304" 
                     alt="{{ post.title }}"  
                     srcset="{{ post.thumb.path | replace: 'jpg','webp' }} 400w, {{ post.image.path | replace: 'jpg','webp' }} 900w"
                     >
                     <amp-img 
-                      height="197" width="350" 
+                      height="203" width="304" 
                       fallback
                       src="{{ post.thumb.path }}"
                       alt="{{ post.title }}"  
@@ -214,16 +214,11 @@ image:
           </div>
           {% endif %}
           <div class="card-content">
-            <div class="media apretaito ">
-              <div class="media-content">
-                <strong>
-                <a {% if post.link %}href="{{post.link}}" target="_blank" rel="noreferrer"{% else %}href="{{ post.url }}"{% endif %}>
-                  {{ post.title | truncate: 35, ".."}}</a>
-                </strong>
-              </div>
-            </div>
-
             <div class="content apretaito">
+              <strong>
+                <a {% if post.link %}href="{{post.link}}" target="_blank" rel="noreferrer"{% else %}href="{{ post.url }}"{% endif %}>
+                {{ post.title | truncate: 35, ".."}}</a>
+              </strong>
               <p class="is-size-7"> {{ post.description | truncate: 140, ".." }} </p>
               <div class="tags has-addons">
                 <span class="tag">
