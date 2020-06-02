@@ -119,17 +119,22 @@ mustache: true
       </div>
     </div>
 
-    <div class="box  search-bar" id="search-bar" >
-      <div class="columns is-mobile">
-        <div class="column">
-          <input class="input" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.categories.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ), inputValue: event.value }), top-blog-page.scrollTo(duration=200)" placeholder="🔍 Search" [value]="inputValue">
+    <nav class="navbar is-light something" id="search-bar">
+      <div class="navbar-item">
+        <div class="field has-addons">
+          <div class="control">
+            <input class="input is-primary" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.categories.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ), inputValue: event.value }), top-blog-page.scrollTo(duration=200)" placeholder="🔍 Search" [value]="inputValue">
+          </div>
+          <div class="control">
+            <button class="button is-primary" on="tap:AMP.setState({inputValue: '', filteredArticles: allArticles}),top-blog-page.scrollTo(duration=200)">
+              X
+            </button>
+          </div>
         </div>
-        <div class="column is-narrow">
-          <button class="button is-danger" on="tap:AMP.setState({inputValue: '', filteredArticles: allArticles}),top-blog-page.scrollTo(duration=200)">
-            X
-          </button>
-        </div>
+
+
       </div>
-    </div>
+    </nav>
+
   </div>
 </section>

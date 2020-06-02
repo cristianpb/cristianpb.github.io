@@ -1,8 +1,8 @@
 $font-display: auto;
 
 //$body-bg: #000;
-//$navbar-height: 5.25rem;
-//$navbar-item-img-max-height: 4.75rem;
+$navbar-height: 3.95rem;
+//$navbar-item-img-max-height: 3.75rem;
 
 $white: #ffffff;
 //$navbar-burger-color: $white;
@@ -52,11 +52,9 @@ $space: 1rem;
 
 #search-bar {
     z-index: 9999;
-    bottom: $space;
-    right: $space;
+    bottom: 0;
+    right: 0;
     position: fixed;
-    width: 80%;
-    background: $primary;
 }
 
 .carousel-component {
