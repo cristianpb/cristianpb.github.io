@@ -129,19 +129,45 @@ mustache: true
     </div>
 
     <nav class="navbar is-light something" id="search-bar">
-      <div class="navbar-item">
-        <div class="field has-addons">
-          <div class="control">
-            <input class="input is-primary" type="text" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.categories.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ), inputValue: event.value }), top-blog-page.scrollTo(duration=200)" placeholder="🔍 Search" [value]="inputValue">
-          </div>
-          <div class="control">
-            <button class="button is-primary" on="tap:AMP.setState({inputValue: '', filteredArticles: allArticles}),top-blog-page.scrollTo(duration=200)">
-              X
-            </button>
+      <div class="navbar-item columns is-mobile">
+        <div class="column is-narrow">
+          <div class="select">
+            <select on="change:AMP.setState({filteredArticles: allArticles.filter(a => a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1 )}),top-blog-page.scrollTo(duration=200)">
+              <option value>Choose tag</option>
+              {% capture tags %}
+              {% for tag in site.tags %}
+              |{{ tag | first }}#{{ tag[1].size }}
+              {% endfor %}
+              {% endcapture %}
+              {% assign sortedtags = tags | split: '|' | sort %}
+              {% for tag in sortedtags %}
+              {% assign tagitems = tag | split: '#' %}
+              {% if tagitems[1] != null %}
+              <option>{{ tagitems[0] }}</option>
+              {% unless forloop.last %}{% endunless %}
+              {% endif %}
+              {% endfor %}
+            </select>
           </div>
         </div>
 
 
+        <div class="column">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input is-primary" type="search" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.categories.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ), inputValue: event.value }), top-blog-page.scrollTo(duration=200)" placeholder="🔍 Search" [value]="inputValue">
+            </div>
+            <div class="control">
+              <button 
+                class="button is-primary"
+                hidden 
+                [hidden]="inputValue.length == 0"
+                on="tap:AMP.setState({inputValue: '', filteredArticles: allArticles}),top-blog-page.scrollTo(duration=200)">
+                X
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
 
