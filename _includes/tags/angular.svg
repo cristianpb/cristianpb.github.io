@@ -1,0 +1,38 @@
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="16"
+   height="16"
+   viewBox="0 0 15.71993 16.65193"
+>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-18.59837,-125.38832)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#b3b3b3;stroke-width:0.99999553"
+       d="m 26.43333,125.38832 -7.83496,2.75799 1.23799,10.26396 6.60497,3.62998 6.63997,-3.67898 1.237,-10.26396 z"
+       id="path256" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#a6120d;stroke-width:0.99999553"
+       d="m 33.5363,128.69031 -7.12097,-2.42899 v 14.91193 l 5.96798,-3.30298 z"
+       id="path258" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#dd1b16;stroke-width:0.99999553"
+       d="m 19.47736,128.73431 1.061,9.17996 5.87597,3.25998 v -14.91393 l -6.93697,2.47499 z"
+       id="path260" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#f2f2f2;stroke-width:0.99999553"
+       d="m 28.37532,134.20029 -1.95999,0.91599 h -2.06699 l -0.96999,2.42999 -1.80699,0.033 4.84397,-10.77595 z m -0.18999,-0.462 -1.757,-3.47999 -1.44199,3.41999 h 1.42899 z"
+       id="path262" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#b3b3b3;stroke-width:0.99999553"
+       d="m 26.41533,126.80332 0.012,3.45498 1.637,3.42299 h -1.646 l -0.003,1.43299 2.27499,0.002 1.063,2.46399 1.72899,0.032 z"
+       id="path264" />
+  </g>
+</svg>

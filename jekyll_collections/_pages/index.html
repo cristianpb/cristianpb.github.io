@@ -247,12 +247,58 @@ image:
 <section class="section">
   <div class="container">
     <h2 class="title">
-      Technical Stack
+      Featured projects
     </h2>
-    <amp-img width="105" height="193" alt="Technical stack vertical" 
-      layout="responsive" src="/assets/img/about/stack-ver.svg" 
-      media="(max-width: 768px)"></amp-img>
-    <amp-img height="220" alt="Technical stack horizontal" layout="fixed-height" 
-      src="/assets/img/about/stack.svg" media="(min-width: 769px)"></amp-img>
+      <amp-carousel
+        height="440"
+        layout="fixed-height"
+        type="slides"
+        autoplay
+        delay="3000"
+        controls>
+        {% for realisation in site.data.about.realisations limit: 9 %}
+                <center>
+        <div class="card smallcard">
+          {% if realisation.image %}
+          <div class="card-image">
+            <figure class="image">
+              <a href="{{realisation.link}}" target="_blank" rel="noreferrer">
+                    <amp-img 
+                      height="203" width="304" 
+                      fallback
+                      src="{{ realisation.image }}"
+                      alt="{{ realisation.title }}"  
+                      layout="intrinsic">
+                    </amp-img>
+              </a>
+            </figure>
+          </div>
+          {% endif %}
+          <div class="card-content">
+            <div class="content">
+              <strong>
+                <a href="{{realisation.link}}" target="_blank" rel="noreferrer">
+                {{ realisation.title | truncate: 35, ".."}}</a>
+              </strong>
+              <p class="is-size-7"> {{ realisation.description | truncate: 140, ".." }} </p>
+              <div class="tags has-addons">
+                {% for category in realisation.categories %}
+
+                <span class="tag"> 
+                  {% include tags/{{category}}.svg %}
+                  &nbsp;
+                  {{ category }}
+                </span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+                </center>
+        {% endfor %}
+      </amp-carousel>
+
   </div>
 </section>

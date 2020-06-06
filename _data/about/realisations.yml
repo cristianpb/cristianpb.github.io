@@ -1,0 +1,51 @@
+- title: API Personnes décédées
+  link: https://github.com/matchid-project/deces-backend
+  description: API for people who died in France from 1970. It has a bulk mode, to process csv files with multiple identities, which can be used to clean death identities from databases.
+  image: /assets/img/realisation/api-personnes-decedees.png
+  categories:
+    - typescript
+    - express
+    - swagger
+
+- title: IA Flash
+  link: https://iaflash.fr
+  description: This artificial intelligence application detects a vehicle, its make and model in a photo and a video. It's currently used by French Government.
+  image: /assets/img/realisation/iaflash.svg
+  categories:
+    - python
+    - opencv
+    - pytorch
+    - sphinx
+
+- title: Object detection application
+  link: https://github.com/cristianpb/object-detection
+  description: This application implements state of the art algorithms for object detection with a frontend application to interact with results. It can run on Jetson Nano, Raspberry Pi or PC.
+  image: /assets/img/realisation/object-detection.jpg
+  categories:
+    - python
+    - opencv
+    - angular
+    - raspberrypi
+    - chartjs
+
+- title: Muse
+  link: https://github.com/cristianpb/muse
+  description: A mopidy web interface with snapcast support. The perfect excuse to use state of the art web frameworks and CI/CD workflows.
+  image: /assets/img/realisation/muse.jpg
+  categories:
+    - svelte
+    - sapper
+    - bulma
+    - github-actions
+    - mopidy
+
+- title: Grafana system monitoring
+  link: https://github.com/cristianpb/telegraf-influxdb-grafana-docker
+  description: I adapted multiple monitoring components to deploy easily a monitoring system using tools like Telegraf, Collectd, Influxdb and Grafana. 
+  image: /assets/img/realisation/grafana.jpg
+  categories:
+    - grafana
+    - docker
+    - influxdb
+    - telegraf
+    - aws
