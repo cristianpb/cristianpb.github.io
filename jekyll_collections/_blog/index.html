@@ -125,6 +125,19 @@ mustache: true
                    </template>
                  </amp-list>
 
+        <div class="box"
+             hidden 
+             [hidden]="filteredArticles.length > 0"
+             >
+             <div class="content">
+               <p class="title is-6">No results</p>
+               <p class="is-size-7">
+                 Why don't you try with other word or tags ? 
+                 <br>
+                 Maybe "python" ? 
+               </p>
+             </div>
+        </div>
       </div>
     </div>
 
