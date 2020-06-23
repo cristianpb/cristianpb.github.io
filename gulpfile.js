@@ -7,7 +7,6 @@ var purgecss = require('gulp-purgecss')
 var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 var rename = require('gulp-rename');
-var webp = require("imagemin-webp");
 var gulpAmpValidator = require('gulp-amphtml-validator');
 var del = require('del');
 
@@ -113,9 +112,6 @@ function thumbnails() {
         crop: 'entropy'
       }))
     .pipe(imagemin([
-      webp({
-        quality: 75
-      }),
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
       imagemin.optipng({optimizationLevel: 5}),
