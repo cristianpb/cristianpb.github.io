@@ -70,10 +70,10 @@ layout: default
     <br>
     <div class="tags is-centered">
       {% for cat in page.categories %}
-      <a class="tag" href="/blog/categories#{{ cat }}"> {{ cat }}</a>
+      <a class="tag is-link" href="/blog/categories#{{ cat }}"> {{ cat }}</a>
       {% endfor %}
       {% for cat in page.tags %}
-      <a class="tag is-link" href="/blog/tags#{{ cat }}">🏷️  &nbsp; {{ cat }}</a>
+      <a class="tag" href="/blog/tags#{{ cat }}">{% include tags/{{ cat }}.svg %} &nbsp; {{ cat }}</a>
       {% endfor %}
     </div>
   </div>
@@ -157,7 +157,7 @@ layout: default
                         &nbsp;{{ post.source }}</span>
                       {% endif %}
                       {% for tag in post.tags %}
-                      <a class="tag {% if page.tags contains tag %}is-info{% endif %}" href="/blog/tags#{{ tag }}"> {{ tag }}</a>
+                      <a class="tag {% if page.tags contains tag %}is-info{% endif %}" href="/blog/tags#{{ tag }}">{% include tags/{{ tag }}.svg %} &nbsp; {{ tag }}</a>
                       {% endfor %}
                     </div>
                   </div>

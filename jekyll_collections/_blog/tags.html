@@ -23,7 +23,9 @@ description: This is a detailled classification of my blog posts.
   <div class="container">
     <div class="tags is-centered">
       {% for category in site.tags %}
-      <a class="tag" href="/blog/tags#{{ category | first }}" target="_blank">{{ category | first }}</a>{% unless forloop.last %}{% endunless %}
+      <a class="tag" href="/blog/tags#{{ category | first }}" target="_blank">
+        {% include tags/{{ category | first }}.svg %} &nbsp;
+        {{ category | first }}</a>{% unless forloop.last %}{% endunless %}
       {% endfor %}
     </div>
   </div>
@@ -37,7 +39,10 @@ description: This is a detailled classification of my blog posts.
       <div class="column is-one-third">
         {% capture category_name %}{{ category | first }}{% endcapture %}
         <div id="{{ category_name | slugize  }}"></div>
-        <h2 class="title">{{ category_name | capitalize }} ({{ category[1].size }})</h2>
+        <h2 class="title">
+          {% include tags/{{ category_name }}.svg %}
+          {{ category_name | capitalize }} 
+          ({{ category[1].size }})</h2>
         {% for post in site.tags[category_name] %}
           <div class="columns is-mobile">
             <div class="column is-narrow">
