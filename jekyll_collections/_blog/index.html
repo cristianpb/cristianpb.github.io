@@ -62,8 +62,11 @@ mustache: true
                 {% assign sortedtags = tags | split: '|' | sort %}
                 {% for tag in sortedtags %}
                 {% assign tagitems = tag | split: '#' %}
+                {% assign tagname = tagitems[0] %}
                 {% if tagitems[1] != null %}
-                <li><a on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.tags.join(' ').toLowerCase().indexOf('{{ tagitems[0] | downcase }}') != -1 )}),top-blog-page.scrollTo(duration=200)">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>{% unless forloop.last %}{% endunless %}
+                <li><a on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.tags.join(' ').toLowerCase().indexOf('{{ tagitems[0] | downcase }}') != -1 )}),top-blog-page.scrollTo(duration=200)">
+                    {% include tags/{{ tagname }}.svg %}
+                    {{ tagitems[0] }} ({{ tagitems[1] }})</a></li>{% unless forloop.last %}{% endunless %}
                 {% endif %}
                 {% endfor %}
               </ul>
