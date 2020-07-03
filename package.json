@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "build": "bundle exec jekyll build",
-    "serve": "bundle exec jekyll serve --livereload",
+    "serve": "bundle exec jekyll serve",
+    "dev": "bundle exec jekyll serve --livereload",
     "algolia": "bundle exec jekyll algolia",
     "css:build": "gulp build",
     "test": "gulp amp_validator",

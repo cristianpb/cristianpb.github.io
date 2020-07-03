@@ -22,7 +22,8 @@ var paths = {
   },
   html: {
     src: [
-      '_site/{about,blog}/*.html',
+      '_site/*.html',
+      '_site/blog/*.html',
       '!_site/blog/withings-data.html',
       '!_site/blog/santorini-experience.html',
       '!_site/blog/marathon-mirabelle.html'
