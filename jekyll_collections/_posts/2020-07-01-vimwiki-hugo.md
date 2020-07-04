@@ -24,7 +24,7 @@ notebooks, which worked fine, but it's complicated to search things when you
 have a lot of things. As a die hard Vim user, I decided to give a try to
 [Vimwiki](https://github.com/vimwiki/vimwiki) to help me organize my notes and ideas.
 
-Vimwiki makes easy for you create a personal wiki using the Vim text editor.
+Vimwiki makes easy for you to create a personal wiki using the Vim text editor.
 A wiki is a collection of text documents linked together and formatted with
 plain text syntax that can be highlighted for readability using Vim's
 syntax highlighting feature.
@@ -33,8 +33,8 @@ The plain text notes can be exported to HTML, which improves readability. In
 addition, it's possible to connect external HTML converters like Jekyll or
 Hugo.
 
-In this post I will show the main functionalities from Vimwiki and how to
-connect Hugo fast markdown static generator.
+In this post I will show the main functionalities of Vimwiki and how to
+connect the Hugo fast markdown static generator.
 
 <div class="columns is-mobile is-multiline is-horizontal-center">
 <div class="column is-6-desktop is-12-mobile">
@@ -74,18 +74,18 @@ connect Hugo fast markdown static generator.
 ## Vimwiki ##
 
 With Vimwiki you can:
-* organize your notes and ideas in files that are linked together ;
-* manage todo lists ;
-* maintain a diary, writing notes for every day ;
-* write documentation in simple markdown files ;
-* export your documents to HTML
+* organize your notes and ideas in files that are linked together;
+* manage todo lists;
+* maintain a diary, writing notes for every day;
+* write documentation in simple markdown files;
+* export your documents to HTML.
 
 ### Vim shortcuts ###
 
-One of the main Vim advantage is the fact that is a modal editor,
+One of the main Vim advantages is the fact that it's a modal editor,
 which means that it has different edition modes. 
 Each edition mode gives different functionalities to each key.
-This increases the number of shortcuts without having to include multiple keyboard combinations. In Vimwiki this is allows to write notes with ease.
+This increases the number of shortcuts without having to include multiple keyboard combinations. In Vimwiki this allows to write notes with ease.
 
 When I want to write some notes, I just open Vim and then I use
 `<Leader>w<Leader>w` to create a new note for today with a name based on the
@@ -95,12 +95,12 @@ If I want to look at my notes I can use `<Leader>ww` to open the wiki index
 file. I can use Enter key to follow links in the index. Backspace acts a return
 to the previous page.
 
-I use [CoC snippets](https://github.com/neoclide/coc-snippets) to improve autocompletion. In markdown, I find this plugging very useful to create tables, code blocks and links. You can use snippets for almost every programming language, just take a look at the documentation.
+I use [CoC snippets](https://github.com/neoclide/coc-snippets) to improve autocompletion. In markdown, I find this plugin very useful to create tables, code blocks and links. You can use snippets for almost every programming language, just take a look at the documentation.
 
-When I want to preview the markdown file, I use `<Leader>wh` to convert current
-wiki page to HTML and I added also a shortcut to open the browser with the html.
+When I want to preview the markdown file, I use `<Leader>wh` to convert the current
+wiki page to HTML and I added also a shortcut to open HTML with the browser.
 
-In the following video you can see and example of this workflow in action.
+In the following video you can see an example of this workflow in action.
 
 <amp-video width="1024"
   height="610"
@@ -117,17 +117,17 @@ In the following video you can see and example of this workflow in action.
 
 ### Searching in your notes ###
 
-One of the advantages from digital notes are the fact that you can search quickly in multiple files using queries.
+One of the advantages of digital notes are the fact that you can search quickly in multiple files using queries.
 
 Vimwiki comes with a *VimWikiSearch* command (`VWS`) which is only a wrapper
-for unix *grep* command. This command can search for patterns in case insensitive mode in all your notes.
+for Unix *grep* command. This command can search for patterns in case insensitive mode in all your notes.
 
 An excellent way to implement labels and contexts for cross-correlating
 information is to assign tags to headlines. If you add tags to your Vimwiki
 notes, you can also use a *VimwikiSearchTags* command.
 
 In both cases, when you are searching in your notes, the results will populate
-your local list, where you can explore using Vim commands `lopen` to open the list, `lnext` to go to the next occurence and `lnext` for the previous occurence.
+your local list, where you can move using Vim commands `lopen` to open the list, `lnext` to go to the next occurence and `lnext` for the previous occurence.
 
 ## Hugo ##
 
@@ -135,8 +135,8 @@ Vimwiki has a custom filetype called *wiki*, which is a little bit different
 from markdown.  The native vimwiki2html command only works for *wiki*
 filetypes. If you want to transform your files to HTML using other filetypes, like markdown, you have to use a custom parser. Even if I'm not able to use Vimwiki native parser, I prefer markdown format because it's very popular and simple.
 
-These are some options to use as a external markdown parser:
-* *Pandoc*, which I think works pretty good, but require a lot of haskell dependencies. 
+These are some options to use as an external markdown parser:
+* *Pandoc*, which I think works pretty good, but requires a lot of haskell dependencies. 
 * [Python vimwiki markdown](https://github.com/WnP/vimwiki_markdown/) libraries, which I think has a lot of potential.
 * Static website generators like Jekyll, Hugo or Hexo.
 
@@ -195,8 +195,8 @@ The complete version of my `~/.vimrc` can be found in [my dotfiles repository](h
 ### Deploy Vimwiki to Github Pages ###
 
 Hugo projects can be easily published to Github using Github Actions. The
-following script, tells GitHub worker to use Hugo to build html at each push
-and publish HTML to Github pages.
+following script tells GitHub worker to use Hugo to build html at each push
+and publish the HTML files to Github pages.
 
 ```yaml
 name: 🚀 Publish Github Pages
@@ -227,10 +227,10 @@ jobs:
           force_orphan: true
 ```
 
-I like having one part of my notes published in Github Pages, at least the
+I like having one part of my notes published on Github Pages, at least the
 configuration notes, which can be found in [my Github
 page](https://cristianpb.github.io/vimwiki). But there is also a part of notes
-that a keep private, for example my diary notes, where I may have some sensible
+that I keep private, for example my diary notes, where I may have some sensible
 information, so I keep it away from publication just by adding it to the
 `.gitignore` file. Here you can find [my Github notes
 repository](https://github.com/cristianpb/vimwiki).
@@ -244,10 +244,10 @@ benchmarks in the internet.
 
 I have been using Vimwiki very often, it allows me to take notes very easily
 and also find information about things that happen in the past. When people ask
-things about last month meeting I can find what I have wrote easily by
+things about last month meeting I can find what I have written easily by
 searching by dates, tags or just words.
 
 Publishing my notes to github allows me to have a have a place where I can keep
 track of my vimwiki configuration and also publish simple notes that are not
-ment to be a blog post, like my install for arch linux or my text editor
+meant to be a blog post, like my install for arch linux or my text editor
 configuration.
