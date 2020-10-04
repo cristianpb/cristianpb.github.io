@@ -23,7 +23,7 @@ thumb:
 ## Introduction
 
 Last year my friends gave me a [withings
-steel](https://www.withings.com/us/en/steel) as a birthday
+steel](https://www.withings.com) as a birthday
 gift. It records automatically the number of steps and the sleep time. In
 general, It has very good accuracy and It does not require too much
 interaction. In addition, thanks to recent updates, it is able to know whether I
