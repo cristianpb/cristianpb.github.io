@@ -347,18 +347,9 @@ carousel: true
                   Development of an application that combines content fetched from externals API (Meetup, Crunchbase and Twitter) and an internal Wiki updated by the community. The code for the application can be found <a href="https://github.com/cityai/ecowiki" target="_blank">here</a>.
                 </li>
               </ul>
-              {%   assign today = site.time | date: '%s'      %}
-              {%   assign start = '01-05-2018 04:00:00' | date: '%s'  %}
-              {%   assign secondsSince = today | minus: start     %}
-              {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-              {%   assign daysSince = hoursSince | divided_by: 24  %}
-              {%   assign yearsSince = daysSince | divided_by: 365  %}
-              {%   assign k = 10   %}
-              {%   assign divisor = 365   %}
-              {%   assign modulus = daysSince | modulo: 365 | times: k | divided_by: divisor  %}
               <div class="tags has-addons">
-                <span class="tag">2018 - Present</span>
-                <span class="tag is-primary">{{yearsSince}}.{{modulus}} years</span>
+                <span class="tag">2018 - 2020</span>
+                <span class="tag is-primary">2 years</span>
               </div>
             </div>
           </div>
