@@ -148,7 +148,7 @@ grafana:
 Grafana is specially designed to monitor data sources, it has the following
 advantages:
   - Community provides many *dashboards layouts* in the [website](https://grafana.com/dashboards). 
-  - Several input [datasources](http://docs.grafana.org/features/datasources/)
+  - Several input [datasources](https://grafana.com/docs/grafana/latest/datasources/)
   - *Monitor alerts*, which can send notification through email, slack, APIs.
 
 The grafana interface can be reached at port 3000. The default username is admin and the password is admin.
