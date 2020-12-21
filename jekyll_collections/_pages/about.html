@@ -169,11 +169,13 @@ carousel: true
                   {%   assign secondsSince = today | minus: start     %}
                   {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
                   {%   assign daysSince = hoursSince | divided_by: 24  %}
-                  {%   assign monthsSince = daysSince | divided_by: 29  %}
-                  {%   assign modulus = daysSince | modulo: 29 | times: 10 | divided_by: 29  %}
+                  {%   assign yearsSince = daysSince | divided_by: 365  %}
+                  {%   assign k = 10   %}
+                  {%   assign divisor = 365   %}
+                  {%   assign modulus = daysSince | modulo: 365 | times: k | divided_by: divisor  %}
                   <div class="tags has-addons">
                     <span class="tag">Dec 2019 - Present</span>
-                    <span class="tag is-primary">{{monthsSince}}.{{modulus}} months</span>
+                    <span class="tag is-primary">{{yearsSince}}.{{modulus}} years</span>
                   </div>
                 </div>
                 <hr class="navbar-divider">
