@@ -3,7 +3,10 @@
 title: Cristian Perez Brokate
 email: cperez at kernix.com
 description: > # this means to ignore newlines until "baseurl:"
-        Data scientist in Paris area. I use machine learning, data science and deep learning for data projects using python, javascript & R. I build interactive dashboards and web applications using nodejs, flask, python, Angular, docker.
+  I use data science tools to process multiple source of data and build robust data process pipelines.
+  I build web applications with modern frontend javascript frameworks.
+  I'm also in charge of IT management for large compute servers.
+  In my free time I build IoT applications.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cristianpb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: https://twitter.com/cris_perez_b
