@@ -66,6 +66,9 @@ layout: default
             itemprop="datePublished"> 
         📅 {{ page.date | date: "%b %-d, %Y" }}</time>
       ⏳ {% include read_time.html %} read time 
+      <amp-state id="currentViews" src="/stats/analytics-pages.json"></amp-state>
+      <a on="tap:currentViews.refresh;" [hidden]="currentViews.length > 0">❤️ Views</a>
+      <span [text]="'🔭 ' + currentViews.filter(a => a.url == '{{ page.url }}' )[0].users + ' views this week'"></span>
     </p>
     <br>
     <div class="tags is-centered">
