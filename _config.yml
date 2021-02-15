@@ -85,7 +85,7 @@ collections:
 defaults:
     - {scope: {type: blog}, values: {layout: page, permalink: '/blog/:title'}}
     - {scope: {type: iframes}, values: {layout: iframe, sitemap: false}}
-    - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title', animation: true}}
+    - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title', animation: true, bind: true}}
     - {scope: {path: "", layout: default}, values: {image: {
       path: '/assets/img/avatar.png', width: 200, height: 200}}}
 
