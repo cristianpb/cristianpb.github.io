@@ -172,5 +172,5 @@ The peak of utilisation is 4552 bikes, which is around  30 % of the available bi
 On weekend, the peak is at 6pm, maybe because people is coming back home.
 
 The complete code can be found at in [this
-notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/velib-folium/02-Exploration.ipynb).
+notebook](https://gist.github.com/cristianpb/c41d2ac99b8a54818e8b821b1febeca7).
 

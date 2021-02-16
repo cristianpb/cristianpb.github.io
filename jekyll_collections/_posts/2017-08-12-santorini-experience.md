@@ -37,7 +37,7 @@ a `xml` format from Garmin, I converted to a `csv` file using [a script from
 Corey
 Siegel](https://github.com/coreysiegel/tcx-gpx-csv/blob/master/tcx2csv.py).
 Then, I used pandas to pre-process the `csv` file. The details can be found in the 
-[python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/runner-up/03-Export_json.ipynb).
+[python notebook](https://gist.github.com/cristianpb/bafe95b769f694d83baec93342842d76).
 The coordinates latitude and longitude can be used to plot the trajectory of
 the race using folium library with a back end of Leaflet.
 

@@ -74,7 +74,7 @@ This chart shows the number of daily steps grouped by month. You might notice so
 
 This data helps me to know myself more. Mondays are not my days. Saturdays and Summer are the periods of the time when I walk more.
 
-The code to process data and plot the chatjs graphs can be found in this [python notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/withings/01-Withings.ipynb).
+The code to process data and plot the chatjs graphs can be found in this [python notebook](https://gist.github.com/cristianpb/219069facc7a29e8bd2f4d9768096513).
 
 <script type="text/javascript">
 var data_steps = {{ site.data.withings.withings_steps | jsonify }}

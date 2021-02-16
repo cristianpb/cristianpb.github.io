@@ -107,4 +107,4 @@ masked_bg = cv2.bitwise_and(background, mask)
 
 
 The complete code can be found on this 
-[notebook](https://nbviewer.jupyter.org/url/cristianpb.github.io/assets/img/document-detection/DocuementDetection.ipynb).
+[notebook](https://gist.github.com/cristianpb/4ed3b3a692e0059c4d0c7361653f0cbb).
