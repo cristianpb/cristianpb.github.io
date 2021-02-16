@@ -103,4 +103,4 @@ jobs:
       - name: Test html
         run: |
           gem install html-proofer
-          htmlproofer --url-ignore "/www.linkedin.com/"  --http-status-ignore "0"  --check_opengraph --assume-extension  ./_site
+          htmlproofer --url-ignore "/www.linkedin.com/,/twitter.com/" --http-status-ignore "0"  --check_opengraph --assume-extension  ./_site

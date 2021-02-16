@@ -67,7 +67,7 @@ layout: default
         📅 {{ page.date | date: "%b %-d, %Y" }}</time>
       ⏳ {% include read_time.html %} read time 
       <amp-state id="currentViews" src="/stats/analytics-pages.json"></amp-state>
-      <a on="tap:currentViews.refresh;" [hidden]="currentViews.length > 0" data-proofer-ignore>❤️ Views</a>
+      <span class="under" on="tap:currentViews.refresh;" [hidden]="currentViews.length > 0" role="button" tabindex="">❤️ Views</span>
       <span [text]="'🔭 ' + currentViews.filter(a => a.url == '{{ page.url }}' )[0].users + ' views this week'"></span>
     </p>
     <br>
