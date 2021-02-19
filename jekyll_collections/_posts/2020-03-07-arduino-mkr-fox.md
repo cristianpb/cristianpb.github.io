@@ -93,6 +93,13 @@ think might be possible using the low power mode between sending messages.
 <br><i>Production environment using 2 AA batteries. The orange lights means that a message is being transmitted.</i>
 </center>
 
+The following image shows a Fritzing schema, which shows clearly how to connect
+each wire. This is very useful when you want to recreate the project.
+
+<center>
+<amp-img src="/assets/img/arduino-sigfox-mkr1200/fritzing.png" width="900" height="756" layout="intrinsic"></amp-img>
+<br><i>Detailled pin connection schema.</i>
+</center>
 
 ### Send information to the Cloud using Sigfox
 
@@ -224,3 +231,21 @@ dashboard architecture.
 I would like to thank Sigfox's team for organizing the Hackster.io Sigfox
 Universities Challenge 2019, where I got the top 10 price and obtained an
 Arduino MKR FOX 1200.
+
+
+---
+
+## Update 2021
+
+I tried the device on prudction environment and having the debug mode on (which
+means that the led light is turned every time that there is a message
+transmission) and the battery lasted 3 months.
+I guess that the led lights reduce the expected life of 6 months.
+
+Having the debug mode off (no led light) the device battery should last more
+than 4 months, I didn't get to know how much more it lasted because my Sigfox
+subscription year ended, so I could use the network any more.
+
+When debug mode was off, I had some issues to wake up the device after entering to the power saving
+issue. Hopefully, I found this useful [post in the Arduino forum](https://forum.arduino.cc/index.php?topic=629227.0) which solved
+the problem.
