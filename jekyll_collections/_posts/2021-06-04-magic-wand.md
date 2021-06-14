@@ -19,6 +19,7 @@ thumb:
   path: /assets/img/magic-wand/main-thumb.jpg
   height: 225
   width: 400
+video: true
 
 ---
 
@@ -181,8 +182,8 @@ learning model can be trained in order to recognise the patterns automatically.
 The following picture shows data for W, O and Z patterns.
 
 <center>
-<amp-img src="/assets/img/magic-wand/matplotlib-data.png" width="1200" height="350" layout="intrinsic" alt="mopidy muse home page"></amp-img>
-<br><i>Muse webclient homepage</i>
+<amp-img src="/assets/img/magic-wand/matplotlib-data.png" width="1200" height="350" layout="intrinsic" alt="labelled data plotted using matplotlib"></amp-img>
+<br><i>Labelled data for W, O and Z gestures</i>
 </center>
 
 ## Training a model using SensiML
