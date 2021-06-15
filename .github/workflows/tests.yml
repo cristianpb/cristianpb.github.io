@@ -36,6 +36,7 @@ jobs:
             ${{ runner.os }}-gems-
       - name: Install ruby dependencies
         run: |
+          sed -i "/\b\(redirect\)\b/d" Gemfile
           gem install bundler
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
@@ -93,6 +94,7 @@ jobs:
             ${{ runner.os }}-gems-
       - name: Install ruby dependencies
         run: |
+          sed -i "/\b\(redirect\)\b/d" Gemfile
           gem install bundler
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
