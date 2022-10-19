@@ -35,10 +35,10 @@
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-responsive": "^2.11.0",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.1",
     "imagemin-webp": "^5.1.0",
-    "npm": "^6.4.0"
+    "npm": "^6.14.17"
   },
   "dependencies": {}
 }
