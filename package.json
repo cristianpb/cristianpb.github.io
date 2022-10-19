@@ -31,7 +31,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^6.1.1",
-    "gulp-purgecss": "^2.2.0",
+    "gulp-purgecss": "^5.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-responsive": "^2.11.0",
