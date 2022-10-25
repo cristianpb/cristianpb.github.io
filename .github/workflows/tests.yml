@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Ruby 2.6
+      - name: Set up Ruby 3.0
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 3.0.x
       - uses: actions/setup-node@v1
         with:
           node-version: '8.x'
@@ -54,10 +54,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Set up Ruby 2.6
+      - name: Set up Ruby 3.0
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 3.0.x
       - uses: actions/cache@v1
         with:
           path: vendor/bundle
@@ -82,10 +82,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Ruby 2.6
+      - name: Set up Ruby 3.0
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: 3.0.x
       - uses: actions/cache@v1
         with:
           path: vendor/bundle
@@ -102,4 +102,4 @@ jobs:
       - name: Test html
         run: |
           gem install html-proofer
-          htmlproofer --url-ignore "/www.linkedin.com/,/twitter.com/" --http-status-ignore "0"  --check_opengraph --assume-extension  ./_site
+          htmlproofer  --ignore-urls "/www.linkedin.com/,/twitter.com/" --ignore-status-codes "0"  --assume-extension  ./_site
