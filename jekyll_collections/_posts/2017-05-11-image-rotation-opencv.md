@@ -121,7 +121,7 @@ The result is a `json` like this:
 ]
 ```
 
-I load the image `original_image.jpg` and rotate it using a function detailled in `http://www.pyimagesearch.com/2017/01/02/rotate-images-correctly-with-opencv-and-python/`. It is faster than [scipy fonctions](http://www.scipy-lectures.org/advanced/image_processing/#id5).
+I load the image `original_image.jpg` and rotate it using a function detailled in `https://www.pyimagesearch.com/2017/01/02/rotate-images-correctly-with-opencv-and-python/`. It is faster than [scipy fonctions](https://www.scipy-lectures.org/advanced/image_processing/#id5).
 
 ```python
 # Original image

@@ -284,7 +284,7 @@ It's schedule option opens great opportunities like the ones published in their
 [repository](https://github.com/sdras/awesome-actions).
 
 The interactive dashboard uses only `div` elements in the html page. The
-frontend part can be controlled from libraries such as [bulma](http://bulma.io) in order to create
+frontend part can be controlled from libraries such as [bulma](https://bulma.io) in order to create
 responsive designs.
 
 From my dashboard I can conclude that people visit mostly:

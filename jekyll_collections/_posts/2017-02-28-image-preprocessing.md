@@ -29,7 +29,7 @@ Revealjs presentation available in [GitPitch](https://gitpitch.com/cristianpb/Pr
 ### Deskew
 
 Align an image to a reference assits the classification algorithm 
-[1](http://docs.opencv.org/trunk/dd/d3b/tutorial_py_svm_opencv.html),
+[1](https://docs.opencv.org/trunk/dd/d3b/tutorial_py_svm_opencv.html),
 [2](https://www.learnopencv.com/handwritten-digits-classification-an-opencv-c-python-tutorial/).
 
 <amp-img src="/assets/img/image-preprocessing/deskew1.jpg" alt="Deskew" height="200" width="100" ></amp-img>

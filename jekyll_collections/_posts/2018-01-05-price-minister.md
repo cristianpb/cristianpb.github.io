@@ -112,7 +112,7 @@ LightGBM | 0.704 | 0.717
 
 I didn't spend too much time doing parameters optimization.
 
-The resulting algorithms can be combined sing ensemble technique. I use the [ensemble function](https://github.com/abhishekkrthakur/pysembler) from Abhishek Thakur. His function trains several models using [cross validation](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html), and them stack them together in a way that it optimizes a given function.  The result is a more robust model with the best characteristics of its components.
+The resulting algorithms can be combined sing ensemble technique. I use the [ensemble function](https://github.com/abhishekkrthakur/pysembler) from Abhishek Thakur. His function trains several models using [cross validation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html), and them stack them together in a way that it optimizes a given function.  The result is a more robust model with the best characteristics of its components.
 
 The details of the modelling and ensembling can be found at this [notebook](https://nbviewer.jupyter.org/url/github.com/cristianpb/priceminister/blob/master/notebooks/04-Ensembling.ipynb).
 
@@ -131,4 +131,4 @@ The python package management is keeped clean using a virtual environement. I pr
 
 ### Sphinx
 
-Cookiecutter have also a `docs` folder, where the documentation can be placed and compiled using [Sphinx](http://www.sphinx-doc.org/en/stable/). This package can fill automatically the documentation using the docstrings inside the python code. Additionally, Sphinx documentation can be deployed using [Read the docs](https://readthedocs.org/), I test this feature as you can see [here](http://priceminister.rtfd.io/).
+Cookiecutter have also a `docs` folder, where the documentation can be placed and compiled using [Sphinx](https://www.sphinx-doc.org/en/stable/). This package can fill automatically the documentation using the docstrings inside the python code. Additionally, Sphinx documentation can be deployed using [Read the docs](https://readthedocs.org/), I test this feature as you can see [here](https://priceminister.rtfd.io/).

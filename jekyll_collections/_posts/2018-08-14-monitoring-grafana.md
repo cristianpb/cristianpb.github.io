@@ -155,7 +155,7 @@ The grafana interface can be reached at port 3000. The default username is admin
 
 <amp-img src="/assets/img/monitoring-grafana/dashboard.png" alt="grafana dashboard" height="150" width="300" layout="responsive"></amp-img>
 
-Grafana has many ways to be customized and also an [explicit documentation](http://docs.grafana.org/guides/getting_started/).
+Grafana has many ways to be customized and also an [explicit documentation](https://docs.grafana.org/guides/getting_started/).
 
 ## Conclusion
 

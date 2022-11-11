@@ -46,7 +46,7 @@ I use the following files for this application:
 * The file `core.js` contains the angularjs module
 * `index.html` contains the external webpage
 * `package.json` contains the `npm` node modules used for the application.
-* `server.js` include all javascript code executed using nodejs. I use [express.js](http://expressjs.com/) to create a small server which sends the data to the `index.html` file in the front-end. 
+* `server.js` include all javascript code executed using nodejs. I use [express.js](https://expressjs.com/) to create a small server which sends the data to the `index.html` file in the front-end. 
 
 ```bash
 ├── public

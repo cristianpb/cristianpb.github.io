@@ -20,7 +20,7 @@ thumb:
 ---
 
 Last year I participated to the trial race [Santorini
-Experience](http://www.santorini-experience.com/). It started at
+Experience](https://www.santorini-experience.com/). It started at
 [Oia](https://en.wikipedia.org/wiki/Oia%2C_Greece) and depending on the number
 of kilometres that you wanted to run, it may have 5, 10 or 15 kilometres.  I
 ran 15 km of the magical path that connects Oia to Fira, overlooking the
@@ -50,7 +50,7 @@ the race using folium library with a back end of Leaflet.
 The race trajectory was symmetrical: 7.5 kilometres forwards to Fira and 7.5 kilometres backwards to Oia.
 It has 189 meters from the lowest point to the highest one. During the 15 km I have climbed 1486 meters. 
 
-I used [ChartJS](http://www.chartjs.org/) to plot my speed performance. My maximal speed was around 15
+I used [ChartJS](https://www.chartjs.org/) to plot my speed performance. My maximal speed was around 15
 kilometres per hour and there are some parts of the race where I almost walked
 because the relief was too steep. 
 

@@ -127,7 +127,7 @@ As you can see it this will install the dependencies and launch the command to p
 
 ## Frontend application
 
-Algolia offers multilingual implementation to query their API. I chose the vanilla [instantsearch.js](https://www.algolia.com/doc/guides/building-search-ui/getting-started/js/) to adapt the elements with the [bulma css](http://bulma.io) that I use in my website.
+Algolia offers multilingual implementation to query their API. I chose the vanilla [instantsearch.js](https://www.algolia.com/doc/guides/building-search-ui/getting-started/js/) to adapt the elements with the [bulma css](https://bulma.io) that I use in my website.
 
 In order to add a functional search bar I need to put an `input` and `hits` elements in the html page and add a javascript function to render them:
 

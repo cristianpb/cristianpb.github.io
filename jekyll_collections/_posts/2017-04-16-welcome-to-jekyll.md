@@ -47,7 +47,7 @@ add new icons and accounts.
 ## Google analytics
 
 I can also use [Google
-analytics](https://www.google.com/analytics/#?modal_active=none) to track the
+analytics](https://www.google.com/analytics/) to track the
 traffic of my website (_They are watching us!_).  Login to Google Analytics and
 create a new property to receive a *Tracking ID* for your website. You will
 find your Universal Analytics tracking code under _Admin > Property > Tracking

@@ -30,7 +30,7 @@ We will use `python` in this post to obtain some insights about the rental syste
 
 ```python
 import requests
-response = requests.get("http://opendata.paris.fr/api/records/1.0/download/?dataset=stations-velib-disponibilites-en-temps-reel&facet=banking&facet=bonus&facet=status&facet=contract_name&rows=-1")
+response = requests.get("https://opendata.paris.fr/api/records/1.0/download/?dataset=stations-velib-disponibilites-en-temps-reel&facet=banking&facet=bonus&facet=status&facet=contract_name&rows=-1")
 txt = response.text
 f = open('velib.csv', 'w+')
 f.write(txt)
@@ -78,7 +78,7 @@ bike_stands_arron = velibs.groupby('arron')['bike_stands'].sum()
 ```
 
 This information can be bind to a geojson file that contains the coordinates of each _arrondisement_. This information has been 
-posted in [github](https://github.com/codeforamerica/click_that_hood/raw/master/public/data/paris.geojson).
+posted in [github](https://github.com/codeforgermany/click_that_hood/raw/gh-pages/data/paris.geojson).
 We can use [Folium](https://github.com/python-visualization/folium) to plot this information using the following command:
 
 ```python

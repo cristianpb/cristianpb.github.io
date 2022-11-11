@@ -27,7 +27,7 @@ We use an example image found on the internet that is similar to scanned image w
 
 We use opencv **3.3** to read the image, transform it in grey level, then we
 use a [bilateral
-filter](http://opencvexamples.blogspot.com/2013/10/applying-bilateral-filter.html)
+filter](https://opencvexamples.blogspot.com/2013/10/applying-bilateral-filter.html)
 to remove noise and keep information of the borders, then we apply a equalized
 filter
 to increase the contrast of the image and finally we use [canny edge

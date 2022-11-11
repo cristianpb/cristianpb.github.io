@@ -140,7 +140,7 @@ Sigfox API allows to obtain messages from all of the registered devices within
 a maximum date history of 3 days and a maximum of 100 messages.  The endpoint
 correspond to the route `/devices/${DEVICE_ID}/messages`, where `DEVICE_ID` is
 the id of the device. More information about can be found at the [Sigfox endpoint
-documentation](https://support.sigfox.com/apidocs#operation/getDeviceMessagesListForDevice).
+documentation](https://support.sigfox.com/apidocs).
 I used the library Axios in Javascript to do a get request to the API:
 
 ```js
