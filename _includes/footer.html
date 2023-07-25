@@ -69,16 +69,13 @@
   </div>
 </footer>
 {% if jekyll.environment == "production" %}
-<amp-analytics type="googleanalytics" id="analytics1">
+<amp-analytics type="gtag" data-credentials="include">
 <script type="application/json">
 {
-  "vars": {
-    "account": "{{ site.google_analytics }}"
-  },
-  "triggers": {
-    "trackPageview": {
-      "on": "visible",
-      "request": "pageview"
+  "vars" : {
+    "gtag_id": "{{ site.google_analytics }}",
+    "config" : {
+      "{{ site.google_analytics }}": { "groups": "default" }
     }
   }
 }
