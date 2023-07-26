@@ -190,7 +190,7 @@ The following picture shows data for W, O and Z patterns.
 
 SensiML provides a python package to build a data pipeline which can be used to
 train a machine learning model. One need to create a free account in order to
-use it. There is a lot of [documentation and examples](https://sensiml.com/documentation/application-tutorials/tensorflow-lite-tutorial.html)
+use it. There is a lot of [documentation and examples](https://sensiml.com/tensorflow-lite/)
 available online.
 
 ### Pipeline
@@ -392,7 +392,7 @@ Challenge](https://www.hackster.io/climate-change-challengers/hydroponic-agricul
 
 SensiML provides provides nice tools to simplify machine learning
 implementation for microcontrollers. They provide software like [Data Capture
-Lab](https://sensiml.com/products/data-capture-lab/), which capture data and
+Lab](https://sensiml.com/services/toolkit/data-capture-lab/), which capture data and
 also provides a labelling module. However, for this case I prefer to use Label
 Studio, which is more generic tool, that works for most use cases.
 

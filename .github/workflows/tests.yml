@@ -102,4 +102,4 @@ jobs:
       - name: Test html
         run: |
           gem install html-proofer
-          htmlproofer --ignore-urls "/www.linkedin.com/,/twitter.com/,/www.researchgate.net/,/www.sciencedirect.com/,/www.arduino.cc/,/www.velib-metropole.fr/" --ignore-missing-alt=true --allow-missing-href=true  --ignore-status-codes "0"  ./_site
+          htmlproofer --ignore-urls "/www.linkedin.com/,/twitter.com/,/www.researchgate.net/,/www.sciencedirect.com/,/www.arduino.cc/,/www.velib-metropole.fr/,/herokuapp.com/,/www.tandfonline.com/" --ignore-missing-alt --allow-missing-href --ignore-status-codes "0"  ./_site

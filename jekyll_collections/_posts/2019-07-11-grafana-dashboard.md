@@ -74,7 +74,7 @@ WHERE $timeFilter
 GROUP BY time($__interval), "container_name" fill(null)
 ```
 
-The group by `container_name` allows to separate values for each available container and then we can use [grafana alias pattern](https://grafana.com/docs/features/datasources/influxdb/#alias-patterns) options in order to have give nice names to each line.
+The group by `container_name` allows to separate values for each available container and then we can use [grafana alias pattern](https://grafana.com/docs/features/datasources/influxdb/) options in order to have give nice names to each line.
 
 <amp-image-lightbox id="lightbox2"
   layout="nodisplay"></amp-image-lightbox>

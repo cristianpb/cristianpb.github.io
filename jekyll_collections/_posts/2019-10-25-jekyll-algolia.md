@@ -86,7 +86,7 @@ end
 Then download all the dependencies using `bundle install`and push
 information about your html files using the command `bundle exec jekyll algolia`. This package sends the structured data from your `html`/`md` like title, description, image, categories, tags, content, etc.
 
-You can customize the information that you want to send in your `_config.yml` file as stated in the [jekyll-algolia documentation](https://community.algolia.com/jekyll-algolia/options.html). For example, I exclude pages from my home page and drafts.
+You can customize the information that you want to send in your `_config.yml` file as stated in the [jekyll-algolia documentation](https://github.com/algolia/jekyll-algolia). For example, I exclude pages from my home page and drafts.
 
 ## Github Actions for Algolia CI
 
