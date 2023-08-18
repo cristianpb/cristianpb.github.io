@@ -1,36 +1,22 @@
 {% include sidebar.html %}
-<nav class="navbar is-fixed-top is-primary">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-        <amp-img src="{{ site.baseurl | append:'/assets/img/avatar-small.png'}}" 
-          alt="{{ site.title }}"
-          width="30" height="30"></amp-img>
-    </a>
-    <div class="navbar-item" >
-      <a class="button is-primary is-hidden-desktop " href="{{ page.url | prepend: site.baseurl }}">
+<div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="text-xl normal-case btn btn-ghost" href="/">
+      <amp-img src="{{ site.baseurl | append:'/assets/img/avatar-small.png'}}" 
+               alt="{{ site.title }}"
+               width="30" height="30"></amp-img>
+      </a>
+  </div>
+  <div class="flex-1">
+    <a class="text-xl normal-case btn btn-ghost" href="{{ page.url | prepend: site.baseurl }}">
         {{ page.title | | truncate: 30 }}
       </a>
-    </div>
-    <a class="navbar-burger burger" on='tap:sidebar.toggle' data-target="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </a>
   </div>
-
-  <div id="navMenu" class="navbar-menu">
-    <div class="navbar-start">
-      {% if page.title %}
-        <a class="navbar-item" href="{{ page.url | prepend: site.baseurl }}">
-          {{ page.title }}
-        </a>
-      {% endif %}
-    </div>
-
-    <div class="navbar-end">
-        <a class="navbar-item" href="/about">About me</a>
-        <a class="navbar-item" href="/blog">Blog</a>
-        <a class="navbar-item" href="https://cristianpb.github.io/analytics-google">Analytics</a>
-    </div>
+  <div class="flex-none">
+    <ul class="px-1 menu menu-horizontal">
+      <li><a href="/about">About me</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="https://cristianpb.github.io/analytics-google">Analytics</a></li>
+    </ul>
   </div>
-</nav>
+</div>

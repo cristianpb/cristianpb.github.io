@@ -43,11 +43,11 @@
     {% feed_meta %}
   {% if page.path contains '_posts' or page.path contains '_blog' %}
     <style amp-custom>
-    {% include main-post-min.css %}
+    {% include main.css %}
     </style>
   {% else %}
     <style amp-custom>
-    {% include main-min.css %}
+    {% include main.css %}
     </style>
   {% endif %}
     {% include colors.html %}

@@ -605,11 +605,13 @@ carousel: true
 <section class="section" id="publications">
   <div class="container">
     <h2 class="title">📖  Publications</h2>
-    <p>Citations of my articles might be found at <a href="{{ site.socialnetworks.google }}">
-          {% include logos/google.svg color='#247da6' %}
+    {% assign google = site.data.about.socialnetworks[5] %}
+    <p>Citations of my articles might be found at <a href="{{ google.link }}">
+          {% include logos/logo-generic.svg width='24' height='24' svg=google.svg  %}
         </a> Google Scholar and 
-        <a href="{{ site.socialnetworks.researchgate }}">
-          {% include logos/researchgate.svg color='#247da6' %}
+        {% assign researchgate = site.data.about.socialnetworks[6] %}
+        <a href="{{ researchgate.link }}">
+          {% include logos/logo-generic.svg width='24' height='24' svg=researchgate.svg  %}
         </a> Research Gate.
         
     </p>

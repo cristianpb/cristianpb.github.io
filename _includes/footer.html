@@ -1,70 +1,24 @@
-<footer class="footer">
-  <div class="container">
-
-    <div class="columns is-mobile is-horizontal-center is-multiline">
-      <div class="column is-4-desktop is-6-mobile">
-        <aside class="menu">
-          <ul class="menu-list">
-            <li><a href="/about" class="menu-label">About me</a></li>
-            <li>
-              <ul>
-            <li><a href="/about#experience">My career</a></li>
-              </ul>
-            </li>
-          </ul>
-        </aside>
-      </div>
-      <div class="column is-4-desktop is-6-mobile">
-        <aside class="menu">
-          <ul class="menu-list">
-            <li><a href="/blog"  class="menu-label">Blog</a></li>
-            <li>
-              <ul>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/feed.xml"> {% include logos/rss.svg color='#363636' %}Atom</a></li>
-              </ul>
-            </li>
-          </ul>
-        </aside>
-      </div>
-      <div class="column is-4-desktop is-12-mobile has-text-centered">
-        <aside class="menu">
-          <p class="menu-label">
-            Find me in:
-          </p>
-          {% for link in site.socialnetworks %}
-          <a class="button is-text" href="{{ link[1] }}" target="_blank" rel="noreferrer">
-           {% if link[0] == 'github' %}
-             {% include logos/github.svg color='#247da6' %}
-           {% endif %}
-           {% if link[0] == 'medium' %}
-             {% include logos/medium.svg color='#247da6' %}
-           {% endif %}
-           {% if link[0] == 'twitter' %}
-             {% include logos/twitter.svg color='#247da6' %}
-           {% endif %}
-           {% if link[0] == 'linkedin' %}
-             {% include logos/linkedin.svg color='#247da6' %}
-           {% endif %}
-           {% if link[0] == 'kaggle' %}
-             {% include logos/kaggle.svg color='#247da6' %}
-           {% endif %}
-           {% if link[0] == 'researchgate' %}
-             {% include logos/researchgate.svg color='#247da6' %}
-           {% endif %}
-           {% if link[0] == 'google' %}
-             {% include logos/google.svg color='#247da6' %}
-           {% endif %}
-          </a>
-          {% endfor %}
-        </aside>
-      </div>
-    </div>
-
-    <div class="has-text-centered">
-      <p>
-        {{ site.time | date: '%Y' }} - {{ site.title }}
-      </p>
+<footer class="p-10 footer bg-base-300 text-base-content">
+  <div>
+    <span class="footer-title">Projects</span> 
+    {% for realisation in site.data.about.realisations limit: 4 %}
+    <a class="link link-hover" href="{{realisation.link}}">{{ realisation.title | truncate: 35, ".."}}</a> 
+    {% endfor %}
+  </div> 
+  <div>
+    <span class="footer-title">Cristian</span> 
+    <a class="link link-hover" href="/about#experience">About me</a> 
+    <a class="link link-hover" href="/blog">Blog</a>
+    <a class="link link-hover" href="/feed.xml">{% include logos/rss.svg %}</a>
+  </div> 
+  <div>
+    <span class="footer-title">Social</span> 
+    <div class="grid grid-flow-col gap-4">
+      {% for socialnetwork in site.data.about.socialnetworks %}
+      <a href="{{ socialnetwork.link }}" target="_blank" rel="noreferrer">
+        {% include logos/logo-generic.svg width='24' height='24' svg=socialnetwork.svg  %}
+      </a>
+      {% endfor %}
     </div>
   </div>
 </footer>

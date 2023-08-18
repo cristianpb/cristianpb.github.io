@@ -7,9 +7,8 @@
     "build": "bundle exec jekyll build --config _config.yml,_config_algolia.yml",
     "serve": "bundle exec jekyll serve --livereload --config _config.yml,_config_algolia.yml",
     "algolia": "bundle exec jekyll algolia --config _config.yml,_config_algolia.yml",
-    "css:build": "gulp build",
-    "test": "gulp amp_validator",
-    "watch": "gulp watch",
+    "css:build": "tailwindcss -i _sass/main.scss -o _includes/main.css",
+    "watch": "tailwindcss -i _sass/main.scss -o _includes/main.css --watch",
     "images": "gulp images",
     "thumbnails": "gulp thumbnails"
   },
@@ -25,20 +24,7 @@
   "homepage": "https://github.com/cristianpb/cristianpb.github.io#readme",
   "devDependencies": {
     "bulma": "^0.9.4",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-amphtml-validator": "^1.0.6",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^6.1.1",
-    "gulp-purgecss": "^2.2.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-responsive": "^2.11.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
-    "imagemin-webp": "^5.1.0",
-    "npm": "^6.14.17"
-  },
-  "dependencies": {}
+    "daisyui": "^3.5.0",
+    "tailwindcss": "^3.3.3"
+  }
 }

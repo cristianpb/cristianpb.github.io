@@ -12,74 +12,26 @@ image:
 
 ---
 
-<section class="hero is-primary is-small">
-  <div class="hero-body is-centered">
-    <div class="container">
-      <div class="columns is-mobile is-horizontal-center is-multiline">
-        <div class="column is-12-mobile is-4-desktop">
-          <amp-img src="/assets/img/cristian-perez.png" 
-                   alt="Photo of {{ site.title }}"
-                   title="{{ site.title }}"
-                   layout="intrinsic"
-                   width="250" height="250" media="(min-width: 769px)"></amp-img>
-        </div>
-        <div class="column is-4-desktop is-12-mobile has-text-centered">
-          <h1 class="title">
-            {{ site.title }}
-          </h1>
-          <h2 class="subtitle">
-            {{ site.description }}
-          </h2>
-        </div>
-      </div>
+<div class="min-h-screen hero" style="background-image: url(/assets/img/about/developpement.jpg);">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="text-center hero-content text-neutral-content">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-5xl font-bold">Cristian</h1>
+      <p class="mb-5">I use data science tools to process multiple source of data and build robust data process pipelines. I build web applications with modern frontend javascript frameworks. I'm also in charge of IT management for large compute servers. In my free time I build IoT applications.</p>
     </div>
   </div>
-  <div class="hero-foot">
-    <nav class="tabs is-boxed is-centered">
-      <div class="container">
-        <ul>
-      {% for link in site.socialnetworks %}
-       <li>
-         <a href="{{ link[1] }}"  target="_blank" rel="noreferrer">
-         {% if link[0] == 'github' %}
-           {% include logos/github.svg color='#ffffff' %}
-         {% endif %}
-         {% if link[0] == 'medium' %}
-           {% include logos/medium.svg color='#ffffff' %}
-         {% endif %}
-         {% if link[0] == 'twitter' %}
-           {% include logos/twitter.svg color='#ffffff' %}
-         {% endif %}
-         {% if link[0] == 'linkedin' %}
-           {% include logos/linkedin.svg color='#ffffff' %}
-         {% endif %}
-         {% if link[0] == 'kaggle' %}
-           {% include logos/kaggle.svg color='#ffffff' %}
-         {% endif %}
-         {% if link[0] == 'researchgate' %}
-           {% include logos/researchgate.svg color='#ffffff' %}
-         {% endif %}
-         {% if link[0] == 'google' %}
-           {% include logos/google.svg color='#ffffff' %}
-         {% endif %}
-         </a>
-      </li>
-      {% endfor %}
-        </ul>
-      </div>
-    </nav>
-  </div>
-</section>
+</div>
 
-<section class="section">
-  <div class="container">
 
-    <h2 class="title">
+
+<section class="px-8 dark:bg-gray-900 dark:text-gray-300">
+  <div class="w-full">
+    <h2 class="mb-5 text-3xl font-bold">
       What I do:
     </h2>
-    <div class="columns is-mobile is-multiline is-horizontal-center">
-      <div class="column is-3-desktop is-12-mobile">
-        <h3 class="subtitle">Data modelling</h3>
+    <div class="grid grid-cols-4 gap-5">
+      <div class="col-span-3 sm:col-span-1">
+        <h3 class="mb-5 text-3xl">Data modelling</h3>
         <center>
           <amp-img src="/assets/img/about/model.svg" alt="data modelling" height="100" width="150" layout="intrinsic"></amp-img>
         </center>
@@ -97,8 +49,8 @@ image:
           </ul>
         </div>
       </div>
-      <div class="column is-3-desktop is-12-mobile">
-        <h3 class="subtitle">Data engineering</h3>
+      <div class="col-span-3 sm:col-span-1">
+        <h3 class="mb-5 text-3xl">Data engineering</h3>
         <center>
           <amp-img src="/assets/img/about/engineer.svg" alt="data engineer" height="100" width="150" layout="intrinsic"></amp-img>
         </center>
@@ -116,8 +68,8 @@ image:
           </ul>
         </div>
       </div>
-      <div class="column is-3-desktop is-12-mobile">
-        <h3 class="subtitle">System management</h3>
+      <div class="col-span-3 sm:col-span-1">
+        <h3 class="text-3xl smb-5">System management</h3>
         <center>
           <amp-img src="/assets/img/about/system.svg" alt="system management" height="100" width="150" layout="intrinsic"></amp-img>
         </center>
@@ -135,8 +87,8 @@ image:
           </ul>
         </div>
       </div>
-      <div class="column is-3-desktop is-12-mobile">
-        <h3 class="subtitle">Visualization</h3>
+			<div class="col-span-3 sm:col-span-1">
+        <h3 class="text-3xl smb-5">Visualization</h3>
         <center>
           <amp-img src="/assets/img/about/visualization.svg" alt="visualization" height="100" width="150" layout="intrinsic"></amp-img>
         </center>
@@ -152,11 +104,55 @@ image:
         </div>
       </div>
     </div>
-
-    <center><a class="button is-primary"  href="{{ site.baseurl | append: '/about'}}">More about me</a></center>
+    <center><a class="btn"  href="{{ site.baseurl | append: '/about'}}">More about me</a></center>
   </div>
 </section>
 
+<div class="container bg-cyan-500">
+  <h2 class="mb-5 text-3xl font-bold text-white"> Last articles </h2>
+
+
+
+
+
+
+
+
+
+  <div class="w-full carousel">
+    {% for post in site.posts limit: 9 %}
+
+  <div id="slide1" class="relative w-full carousel-item">
+                  <amp-img
+                    class="w-full"
+                    height="203" width="304" 
+                    alt="{{ post.title }}"  
+                    srcset="{{ post.thumb.path | replace: 'jpg','webp' }} 400w, {{ post.image.path | replace: 'jpg','webp' }} 900w"
+                    >
+                    <amp-img 
+                      height="203" width="304" 
+                      fallback
+                      src="{{ post.thumb.path }}"
+                      alt="{{ post.title }}"  
+                      srcset="{{ post.thumb.path }} 400w, {{ post.image.path }} 900w"
+                      layout="intrinsic">
+                    </amp-img>
+                  </amp-img>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide4" class="btn btn-circle">❮</a> 
+      <a href="#slide2" class="btn btn-circle">❯</a>
+    </div>
+  </div> 
+
+    {% endfor %}
+  </div> 
+  <div class="flex justify-center w-full py-2 gap-2">
+    <a href="#item1" class="btn btn-xs">1</a> 
+    <a href="#item2" class="btn btn-xs">2</a> 
+    <a href="#item3" class="btn btn-xs">3</a> 
+    <a href="#item4" class="btn btn-xs">4</a>
+  </div>
+</div>
 
 <section class="hero is-primary">
   <div class="hero-body">
