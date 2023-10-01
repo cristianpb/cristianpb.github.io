@@ -1,22 +1,39 @@
 {% include sidebar.html %}
-<div class="navbar bg-base-100">
-  <div class="flex-1">
-    <a class="text-xl normal-case btn btn-ghost" href="/">
-      <amp-img src="{{ site.baseurl | append:'/assets/img/avatar-small.png'}}" 
-               alt="{{ site.title }}"
-               width="30" height="30"></amp-img>
+<nav class="bg-sky-500 dark:bg-gray-900">
+  <div class="flex flex-wrap items-center justify-between p-4 mx-auto max-w-screen-xl">
+    <a href="/" class="flex items-center">
+      <img src="/assets/img/avatar-small.png" class="h-8 mr-3" alt="favicon" />
+    </a>
+    <div class="flex items-center justify-between w-auto" id="navbar-search" >
+      {% if page.title %}
+      <a class="hidden text-stone-50 dark:text-gray-400 md:block" href="{{ page.url | prepend: site.baseurl }}">
+        {{ page.title }}
       </a>
-  </div>
-  <div class="flex-1">
-    <a class="text-xl normal-case btn btn-ghost" href="{{ page.url | prepend: site.baseurl }}">
+      <a class="text-stone-50 dark:text-gray-400 md:hidden" href="{{ page.url | prepend: site.baseurl }}">
         {{ page.title | | truncate: 30 }}
       </a>
+      {% endif %}
+    </div>
+    <div class="flex">
+      <div class="relative hidden md:block">
+        <ul class="flex flex-col p-4 mt-4 font-medium rounded-lg md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-sky-500 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 text-stone-50">
+          <li>
+            <a href="/about" class="block py-2 pl-3 pr-4 rounded md:p-0 " aria-current="page">About me</a>
+          </li>
+          <li>
+            <a href="/blog" class="block py-2 pl-3 pr-4 rounded md:p-0 ">Blog</a>
+          </li>
+          <li>
+            <a href="https://cristianpb.github.io/analytics-google" class="block py-2 pl-3 pr-4 rounded md:p-0 ">Analytics</a>
+          </li>
+        </ul>
+      </div>
+      <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false" on='tap:sidebar.toggle'>
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+    </div>
   </div>
-  <div class="flex-none">
-    <ul class="px-1 menu menu-horizontal">
-      <li><a href="/about">About me</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="https://cristianpb.github.io/analytics-google">Analytics</a></li>
-    </ul>
-  </div>
-</div>
+</nav>
