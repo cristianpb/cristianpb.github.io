@@ -82,225 +82,228 @@ carousel: true
   </div>
 </section>
 
-<section class="section" id="experience">
-  <div class="container">
+<div class="container px-4 mt-4">
 
-    <h2 class="title">💼 Experience</h2>
-    <div class="columns is-multiline">
+  <h2 class="title">💼 Experience</h2>
+  <div class="flex">
 
-      <div class="column is-6">
+    <div class="flex-auto w-0 md:w-6/12">
+          <div class="shadow-xl card w-96 bg-base-100">
+            <div class="card-body">
+              <h2 class="card-title">Full stack Data Scientist</h2>
+              <p>French interior ministry - Innovation and Digital Transformation department</p>
+              <div class="justify-end card-actions">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
 
-        <div class="columns is-multiline">
-          <div class="column is-12">
-            <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <amp-img src="/assets/img/about/ministere_interieur.png" layout="responsive" width="48" height="48" alt="Ministère de l'interieur"></amp-img>
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <a class="title is-4">Full stack Data Scientist</a><br>
-                    <a class="subtitle is-6" href="https://www.interieur.gouv.fr">French interior ministry - Innovation and Digital Transformation department</a>
-                  </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <amp-img src="/assets/img/about/ministere_interieur.png" layout="responsive" width="48" height="48" alt="Ministère de l'interieur"></amp-img>
+                  </figure>
                 </div>
-                <div class="content">
-                  <p>
-                    I'm inside a structure that promotes digital transformation of the French Interior Ministry.
-                    We help French administrations to use data in a most effective way.
-                    I accomplish several roles:
-                    <a class="button is-small is-fullwidth" id="readmore-button-ministry" on="tap:readmore-button-ministry.hide, readmore-text-ministry.toggleVisibility" role="button" tabindex="">
-                      {% include logos/chevron-down.svg color='#000015' %} 
-                      </a>
-                  </p>
-                  <ul id="readmore-text-ministry" hidden="">
-                    <li>
-                      IT management:
-                      <ul>
-                        <li>
-                          Responsible for internal compute infrastructure including a GPU server
-                        </li>
-                        <li>
-                          Deploying and dimensioning databases such as Vertica, Postgres or Elasticsearch noeuds
-                        </li>
-                        <li>
-                          Deploying ETL services like Tableau, DSS or Kibana
-                        </li>
-                        <li>
-                          Server deployment in private cloud infrastructures
-                        </li>
-                        <li>
-                          Deploy public cloud services in AWS using Lambda, EC2, API GateWay, Cloud Formation
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      Data science:
-                      <ul>
-                        <li>
-                          Stablish robust data preparation pipelines
-                        </li>
-                        <li>
-                          Use computer vision and optimized deep learning for production applications
-                        </li>
-                        <li>
-                          Process textual data to develop conversational interfaces
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      Web development:
-                      <ul>
-                        <li>Develop web interfaces using modern frontend javascript frameworks like Svelte or Angular
-                        </li>
-                        <li>Build insightful dashboards to filter data
-                        </li>
-                        <li>Use cartographic libraries like leaflet or mapbox to build geographic representations. 
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  {%   assign today = site.time | date: '%s'      %}
-                  {%   assign start = '01-12-2019 04:00:00' | date: '%s'  %}
-                  {%   assign secondsSince = today | minus: start     %}
-                  {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-                  {%   assign daysSince = hoursSince | divided_by: 24  %}
-                  {%   assign yearsSince = daysSince | divided_by: 365  %}
-                  {%   assign k = 10   %}
-                  {%   assign divisor = 365   %}
-                  {%   assign modulus = daysSince | modulo: 365 | times: k | divided_by: divisor  %}
-                  <div class="tags has-addons">
-                    <span class="tag">Dec 2019 - Present</span>
-                    <span class="tag is-primary">{{yearsSince}}.{{modulus}} years</span>
-                  </div>
+                <div class="media-content">
+                  <a class="title is-4">Full stack Data Scientist</a><br>
+                  <a class="subtitle is-6" href="https://www.interieur.gouv.fr">French interior ministry - Innovation and Digital Transformation department</a>
                 </div>
-                <hr class="navbar-divider">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <amp-img src="/assets/img/about/ministere_interieur.png" layout="responsive" width="48" height="48" alt="Ministère de l'interieur"></amp-img>
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <a class="title is-4" href="https://entrepreneur-interet-general.etalab.gouv.fr/defis/2019/iaflash.html">Entrepreneur d'Intérêt Général</a><br>
-                    <a class="subtitle is-6" href="https://www.interieur.gouv.fr">French interior ministry</a>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>
-                    Entrepreneur d'Intérêt Général is equivalent to the
-                    Presidential Innovation Fellows in the US. This program hires
-                    Entrepreneurs for a 10 months mission, in order to bring
-                    digital transformation in the French Administration and make
-                    use of public Data. 
-                    <a class="button is-small is-fullwidth" id="readmore-button-eig" on="tap:readmore-button-eig.hide, readmore-text1.toggleVisibility, readmore-text2.toggleVisibility" role="button" tabindex="">
-                      {% include logos/chevron-down.svg color='#000015' %}
+              </div>
+              <div class="content">
+                <p>
+                  I'm inside a structure that promotes digital transformation of the French Interior Ministry.
+                  We help French administrations to use data in a most effective way.
+                  I accomplish several roles:
+                  <a class="button is-small is-fullwidth" id="readmore-button-ministry" on="tap:readmore-button-ministry.hide, readmore-text-ministry.toggleVisibility" role="button" tabindex="">
+                    {% include logos/chevron-down.svg color='#000015' %} 
                     </a>
-                  </p>
-                  <p id="readmore-text1" hidden="">
-                    I implemented image recognition algorithms using deep
-                    learning for the French national agency for automated offence
-                    processing (ANTAI).
-                  </p>
-                  <p id="readmore-text2" hidden="">
-                    The results of the project can be found at <a href="https://iaflash.fr" target="_blank">iaflash.fr</a>
-                  </p>
-                  <div class="tags has-addons">
-                    <span class="tag">Jan 2019 - Nov 2019</span>
-                    <span class="tag is-primary">10 months</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="column is-6">
-
-        <div class="columns is-multiline">
-          <div class="column is-12">
-            <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <amp-img src="/assets/img/about/kernix.png" layout="responsive" width="48" height="48" alt="Kernix logo"></amp-img>
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <a class="title is-4" href="https://www.kernix.com/">Data scientist</a><br>
-                    <a class="subtitle is-6" href="https://www.kernix.com/">Kernix</a>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>
-                    Kernix is an agency that builds personalized digital and data products. I worked with the data team to build entire data products using machine learning tools and visualizations. I had the opportunity to work with clients from diverse fields and develop personalized data products for each one, my main realisations were:
-                      <a class="button is-small is-fullwidth" id="readmore-button-kernix" on="tap:readmore-button-kernix.hide, readmore-text-kernix.toggleVisibility" role="button" tabindex="">
-                        {% include logos/chevron-down.svg color='#000015' %}
-                        </a>
-                  </p>
-                  <ul id="readmore-text-kernix" hidden="">
-                    <li>
-                      Prediction models for finance and insurance French companies
-                    </li>
-                    <li>
-                      Implement a deep learning object detection algorithm for a British start-up
-                    </li>
-                    <li>
-                      Develop a movement prediction model for a robot using a LSTM model
-                    </li>
-                    <li>
-                      Create a recommendation system for French bank website
-                    </li>
-                    <li>
-                      Build interactive dashboards and web apps using <i class="fab fa-js"></i>
-                    </li>
-                  </ul>
-                  <div class="tags has-addons">
-                    <span class="tag">Jan 2017 - Jan 2019</span>
-                    <span class="tag is-primary">2 years</span>
-                  </div>
+                </p>
+                <ul id="readmore-text-ministry" hidden="">
+                  <li>
+                    IT management:
+                    <ul>
+                      <li>
+                        Responsible for internal compute infrastructure including a GPU server
+                      </li>
+                      <li>
+                        Deploying and dimensioning databases such as Vertica, Postgres or Elasticsearch noeuds
+                      </li>
+                      <li>
+                        Deploying ETL services like Tableau, DSS or Kibana
+                      </li>
+                      <li>
+                        Server deployment in private cloud infrastructures
+                      </li>
+                      <li>
+                        Deploy public cloud services in AWS using Lambda, EC2, API GateWay, Cloud Formation
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Data science:
+                    <ul>
+                      <li>
+                        Stablish robust data preparation pipelines
+                      </li>
+                      <li>
+                        Use computer vision and optimized deep learning for production applications
+                      </li>
+                      <li>
+                        Process textual data to develop conversational interfaces
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Web development:
+                    <ul>
+                      <li>Develop web interfaces using modern frontend javascript frameworks like Svelte or Angular
+                      </li>
+                      <li>Build insightful dashboards to filter data
+                      </li>
+                      <li>Use cartographic libraries like leaflet or mapbox to build geographic representations. 
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                {%   assign today = site.time | date: '%s'      %}
+                {%   assign start = '01-12-2019 04:00:00' | date: '%s'  %}
+                {%   assign secondsSince = today | minus: start     %}
+                {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+                {%   assign daysSince = hoursSince | divided_by: 24  %}
+                {%   assign yearsSince = daysSince | divided_by: 365  %}
+                {%   assign k = 10   %}
+                {%   assign divisor = 365   %}
+                {%   assign modulus = daysSince | modulo: 365 | times: k | divided_by: divisor  %}
+                <div class="tags has-addons">
+                  <span class="tag">Dec 2019 - Present</span>
+                  <span class="tag is-primary">{{yearsSince}}.{{modulus}} years</span>
                 </div>
               </div>
+              <hr class="navbar-divider">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <amp-img src="/assets/img/about/ministere_interieur.png" layout="responsive" width="48" height="48" alt="Ministère de l'interieur"></amp-img>
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <a class="title is-4" href="https://entrepreneur-interet-general.etalab.gouv.fr/defis/2019/iaflash.html">Entrepreneur d'Intérêt Général</a><br>
+                  <a class="subtitle is-6" href="https://www.interieur.gouv.fr">French interior ministry</a>
+                </div>
+              </div>
+              <div class="content">
+                <p>
+                  Entrepreneur d'Intérêt Général is equivalent to the
+                  Presidential Innovation Fellows in the US. This program hires
+                  Entrepreneurs for a 10 months mission, in order to bring
+                  digital transformation in the French Administration and make
+                  use of public Data. 
+                  <a class="button is-small is-fullwidth" id="readmore-button-eig" on="tap:readmore-button-eig.hide, readmore-text1.toggleVisibility, readmore-text2.toggleVisibility" role="button" tabindex="">
+                    {% include logos/chevron-down.svg color='#000015' %}
+                  </a>
+                </p>
+                <p id="readmore-text1" hidden="">
+                  I implemented image recognition algorithms using deep
+                  learning for the French national agency for automated offence
+                  processing (ANTAI).
+                </p>
+                <p id="readmore-text2" hidden="">
+                  The results of the project can be found at <a href="https://iaflash.fr" target="_blank">iaflash.fr</a>
+                </p>
+                <div class="tags has-addons">
+                  <span class="tag">Jan 2019 - Nov 2019</span>
+                  <span class="tag is-primary">10 months</span>
+                </div>
+              </div>
+
             </div>
           </div>
-          <div class="column is-12">
-            <div class="card">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <amp-img src="/assets/img/about/cea.jpg" layout="responsive" 
-                                                               width="48" height="48" alt="cea logo"></amp-img>
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <a class="title is-4" href="https://www.cea.fr/">PhD Physical Chemistry</a><br>
-                    <a class="subtitle is-6" href="https://www.cea.fr/">CEA</a>
-                  </div>
+    </div>
+
+    <div class="column is-6">
+
+      <div class="columns is-multiline">
+        <div class="column is-12">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <amp-img src="/assets/img/about/kernix.png" layout="responsive" width="48" height="48" alt="Kernix logo"></amp-img>
+                  </figure>
                 </div>
-                <div class="content">
-                  <p>
-                    The CEA is a structure that regulates Atomic Energy in
-                    France. During my PhD I used numerical simulations to predict
-                    the corrosion behaviour of metal structures for nuclear
-                    applications.
-                    The scientific results of my PhD can be found at <a on="tap:publications.scrollTo(duration=200)">my PhD dissertation</a>, my main tasks were: 
-                    <a class="button is-small is-fullwidth" id="readmore-button-phd" on="tap:readmore-button-phd.hide, readmore-text-phd.toggleVisibility" role="button" tabindex="">
+                <div class="media-content">
+                  <a class="title is-4" href="https://www.kernix.com/">Data scientist</a><br>
+                  <a class="subtitle is-6" href="https://www.kernix.com/">Kernix</a>
+                </div>
+              </div>
+              <div class="content">
+                <p>
+                  Kernix is an agency that builds personalized digital and data products. I worked with the data team to build entire data products using machine learning tools and visualizations. I had the opportunity to work with clients from diverse fields and develop personalized data products for each one, my main realisations were:
+                    <a class="button is-small is-fullwidth" id="readmore-button-kernix" on="tap:readmore-button-kernix.hide, readmore-text-kernix.toggleVisibility" role="button" tabindex="">
                       {% include logos/chevron-down.svg color='#000015' %}
                       </a>
-                  </p>
-                  <ul id="readmore-text-phd" hidden=""> 
-                    <li> Study of the competition between general and localized corrosion with stochastic numerical modelling.  </li> 
-                    <li> Parallel programming using CUDA language in NVIDIA GPU </li> 
-                    <li> Data analysis and visualization using python <i class="fab fa-python"></i>, Gnuplot and R / <i class="fab fa-r-project"></i> </li> 
-                  </ul> 
-                  <div class="tags has-addons"> 
-                    <span class="tag">Nov 2013 - Oct 2016</span> <span class="tag is-primary">3 years</span>
-                  </div>
+                </p>
+                <ul id="readmore-text-kernix" hidden="">
+                  <li>
+                    Prediction models for finance and insurance French companies
+                  </li>
+                  <li>
+                    Implement a deep learning object detection algorithm for a British start-up
+                  </li>
+                  <li>
+                    Develop a movement prediction model for a robot using a LSTM model
+                  </li>
+                  <li>
+                    Create a recommendation system for French bank website
+                  </li>
+                  <li>
+                    Build interactive dashboards and web apps using <i class="fab fa-js"></i>
+                  </li>
+                </ul>
+                <div class="tags has-addons">
+                  <span class="tag">Jan 2017 - Jan 2019</span>
+                  <span class="tag is-primary">2 years</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-12">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <amp-img src="/assets/img/about/cea.jpg" layout="responsive" 
+                                                             width="48" height="48" alt="cea logo"></amp-img>
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <a class="title is-4" href="https://www.cea.fr/">PhD Physical Chemistry</a><br>
+                  <a class="subtitle is-6" href="https://www.cea.fr/">CEA</a>
+                </div>
+              </div>
+              <div class="content">
+                <p>
+                  The CEA is a structure that regulates Atomic Energy in
+                  France. During my PhD I used numerical simulations to predict
+                  the corrosion behaviour of metal structures for nuclear
+                  applications.
+                  The scientific results of my PhD can be found at <a on="tap:publications.scrollTo(duration=200)">my PhD dissertation</a>, my main tasks were: 
+                  <a class="button is-small is-fullwidth" id="readmore-button-phd" on="tap:readmore-button-phd.hide, readmore-text-phd.toggleVisibility" role="button" tabindex="">
+                    {% include logos/chevron-down.svg color='#000015' %}
+                    </a>
+                </p>
+                <ul id="readmore-text-phd" hidden=""> 
+                  <li> Study of the competition between general and localized corrosion with stochastic numerical modelling.  </li> 
+                  <li> Parallel programming using CUDA language in NVIDIA GPU </li> 
+                  <li> Data analysis and visualization using python <i class="fab fa-python"></i>, Gnuplot and R / <i class="fab fa-r-project"></i> </li> 
+                </ul> 
+                <div class="tags has-addons"> 
+                  <span class="tag">Nov 2013 - Oct 2016</span> <span class="tag is-primary">3 years</span>
                 </div>
               </div>
             </div>
@@ -308,123 +311,123 @@ carousel: true
         </div>
       </div>
     </div>
+  </div>
 
-    <h2 class="title"> ⌛ Part time</h2>
-    <div class="columns is-multiline">
-      <div class="column is-4">
+  <h2 class="title"> ⌛ Part time</h2>
+  <div class="columns is-multiline">
+    <div class="column is-4">
 
-        <div class="card">
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-48x48">
-                  <amp-img src="/assets/img/about/cityai.jpg" layout="responsive" width="48" height="48" alt="City AI logo"></amp-img>
-                </figure>
-              </div>
-              <div class="media-content">
-                <a class="title is-4" href="https://city.ai/paris">Content expert</a><br>
-                <a class="subtitle is-6" href="https://city.ai/">City AI</a>
-              </div>
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <amp-img src="/assets/img/about/cityai.jpg" layout="responsive" width="48" height="48" alt="City AI logo"></amp-img>
+              </figure>
             </div>
-            <div class="content">
-              <p>City AI is a global community that brings practitioners and stakeholders of applied artificial intelligence together. I represent the Paris community regarding the international community of City AI. My main tasks in are:
-                <a class="button is-small is-fullwidth" id="readmore-button-cityai" on="tap:readmore-button-cityai.hide, readmore-text-cityai.toggleVisibility" role="button" tabindex="">
-                  {% include logos/chevron-down.svg color='#000015' %} 
-                </a>
-              </p>
-              <ul id="readmore-text-cityai" hidden="">
-                <li>
-                  Write content about AI from a specialized point of view. The articles can be found <a href="/blog">here</a>
-                </li>
-                <li>
-                  Development of an application to collect news in the AI fields and share them with the community. The frontend of the application can be found <a href="https://cristianpb.github.io/newsapp">here</a> and the code can be found <a href="https://github.com/cristianpb/newsapp" target="_blank">here</a>.
-                </li>
-                <li>
-                  French AI ecosystem mapping using Crunchbase API, which can be found <a href="https://cristianpb.github.io/iframes/dashboard" target="_blank">here</a>.
-                </li>
-                <li>
-                  Development of an application that combines content fetched from externals API (Meetup, Crunchbase and Twitter) and an internal Wiki updated by the community. The code for the application can be found <a href="https://github.com/cityai/ecowiki" target="_blank">here</a>.
-                </li>
-              </ul>
-              <div class="tags has-addons">
-                <span class="tag">2018 - 2020</span>
-                <span class="tag is-primary">2 years</span>
-              </div>
+            <div class="media-content">
+              <a class="title is-4" href="https://city.ai/paris">Content expert</a><br>
+              <a class="subtitle is-6" href="https://city.ai/">City AI</a>
             </div>
           </div>
-
-
-        </div>
-      </div>
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-48x48">
-                  <amp-img src="/assets/img/about/gswai.jpg" layout="responsive" width="48" height="48" alt="global startup weekend AI"></amp-img>
-                </figure>
-              </div>
-              <div class="media-content">
-                <a class="title is-4" href="https://gswai.github.io/team">Technical expert</a><br>
-                <a class="subtitle is-6" href="https://gswai.github.io">Global Startup Weekend AI</a>
-              </div>
-            </div>
-            <div class="content">
-              <p>The objective of this movement is to organize simultaneous Startup Weekends around the world focused on artificial intelligence. I worked as a technical expert in the field, my main tasks were:
-                <a class="button is-small is-fullwidth" id="readmore-button-gswai" on="tap:readmore-button-gswai.hide, readmore-text-gswai.toggleVisibility" role=button"" tabindex="">
-                  {% include logos/chevron-down.svg color='#000015' %} 
-                </a>
-              </p>
-              <ul id="readmore-text-gswai" hidden="">
-                <li>
-                  Website development of <a href="https://gswai.github.io" target="_blank">for Global SWAI</a> using accelerated mobile pages (AMP) and jekyll static site generator.
-                </li>
-                <li>
-                  Development of this <a href="https://ng-tweet.herokuapp.com/dashboard" target="_blank">tweet wall</a> using mongodb, express, <i class="fab fa-angular"></i> and <i class="fab fa-node"></i>. The code can be found <a href="https://github.com/cristianpb/ngTwitterApp" target="_blank">here</a>.
-                </li>
-                <li>
-                  Mentor local participants in artificial intelligence field.
-                </li>
-              </ul>
-              <div class="tags has-addons">
-                <span class="tag">2017 - 2018</span>
-                <span class="tag is-primary">1 year</span>
-              </div>
+          <div class="content">
+            <p>City AI is a global community that brings practitioners and stakeholders of applied artificial intelligence together. I represent the Paris community regarding the international community of City AI. My main tasks in are:
+              <a class="button is-small is-fullwidth" id="readmore-button-cityai" on="tap:readmore-button-cityai.hide, readmore-text-cityai.toggleVisibility" role="button" tabindex="">
+                {% include logos/chevron-down.svg color='#000015' %} 
+              </a>
+            </p>
+            <ul id="readmore-text-cityai" hidden="">
+              <li>
+                Write content about AI from a specialized point of view. The articles can be found <a href="/blog">here</a>
+              </li>
+              <li>
+                Development of an application to collect news in the AI fields and share them with the community. The frontend of the application can be found <a href="https://cristianpb.github.io/newsapp">here</a> and the code can be found <a href="https://github.com/cristianpb/newsapp" target="_blank">here</a>.
+              </li>
+              <li>
+                French AI ecosystem mapping using Crunchbase API, which can be found <a href="https://cristianpb.github.io/iframes/dashboard" target="_blank">here</a>.
+              </li>
+              <li>
+                Development of an application that combines content fetched from externals API (Meetup, Crunchbase and Twitter) and an internal Wiki updated by the community. The code for the application can be found <a href="https://github.com/cityai/ecowiki" target="_blank">here</a>.
+              </li>
+            </ul>
+            <div class="tags has-addons">
+              <span class="tag">2018 - 2020</span>
+              <span class="tag is-primary">2 years</span>
             </div>
           </div>
         </div>
+
+
       </div>
-      <div class="column is-4">
-        <div class="card">
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-48x48">
-                  <amp-img src="/assets/img/about/enscp.svg" layout="responsive" width="48" height="48" alt="école nationale supérieure de chimie de paris"></amp-img>
-                </figure>
-              </div>
-              <div class="media-content">
-                <a class="title is-4" href="https://www.chimieparistech.psl.eu/">Substitute teacher</a><br>
-                <a class="subtitle is-6" href="https://www.chimieparistech.psl.eu/">École Nationale Supérieure de Chimie de Paris</a>
-              </div>
+    </div>
+    <div class="column is-4">
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <amp-img src="/assets/img/about/gswai.jpg" layout="responsive" width="48" height="48" alt="global startup weekend AI"></amp-img>
+              </figure>
             </div>
-            <div class="content">
-              <p>
-                Teaching of practical courses on thermodynamics (heat exchangers and centrifugal pumps)
-              </p>
-              <div class="tags has-addons">
-                <span class="tag">2014 - 2016</span>
-                <span class="tag is-primary">2 years</span>
-              </div>
+            <div class="media-content">
+              <a class="title is-4" href="https://gswai.github.io/team">Technical expert</a><br>
+              <a class="subtitle is-6" href="https://gswai.github.io">Global Startup Weekend AI</a>
+            </div>
+          </div>
+          <div class="content">
+            <p>The objective of this movement is to organize simultaneous Startup Weekends around the world focused on artificial intelligence. I worked as a technical expert in the field, my main tasks were:
+              <a class="button is-small is-fullwidth" id="readmore-button-gswai" on="tap:readmore-button-gswai.hide, readmore-text-gswai.toggleVisibility" role=button"" tabindex="">
+                {% include logos/chevron-down.svg color='#000015' %} 
+              </a>
+            </p>
+            <ul id="readmore-text-gswai" hidden="">
+              <li>
+                Website development of <a href="https://gswai.github.io" target="_blank">for Global SWAI</a> using accelerated mobile pages (AMP) and jekyll static site generator.
+              </li>
+              <li>
+                Development of this <a href="https://ng-tweet.herokuapp.com/dashboard" target="_blank">tweet wall</a> using mongodb, express, <i class="fab fa-angular"></i> and <i class="fab fa-node"></i>. The code can be found <a href="https://github.com/cristianpb/ngTwitterApp" target="_blank">here</a>.
+              </li>
+              <li>
+                Mentor local participants in artificial intelligence field.
+              </li>
+            </ul>
+            <div class="tags has-addons">
+              <span class="tag">2017 - 2018</span>
+              <span class="tag is-primary">1 year</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="column is-4">
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <amp-img src="/assets/img/about/enscp.svg" layout="responsive" width="48" height="48" alt="école nationale supérieure de chimie de paris"></amp-img>
+              </figure>
+            </div>
+            <div class="media-content">
+              <a class="title is-4" href="https://www.chimieparistech.psl.eu/">Substitute teacher</a><br>
+              <a class="subtitle is-6" href="https://www.chimieparistech.psl.eu/">École Nationale Supérieure de Chimie de Paris</a>
+            </div>
+          </div>
+          <div class="content">
+            <p>
+              Teaching of practical courses on thermodynamics (heat exchangers and centrifugal pumps)
+            </p>
+            <div class="tags has-addons">
+              <span class="tag">2014 - 2016</span>
+              <span class="tag is-primary">2 years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
+
+</div>
 
 <button id="scrollToTopButton"
         on="tap:top.scrollTo(duration=200)"

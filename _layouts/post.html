@@ -139,7 +139,7 @@ layout: default
           <div class="my-4 shadow-xl card lg:card-side bg-base-100">
             <figure>
               <a class="image" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
-              <img src="{{ post.image.path }}" alt="Album"/>
+                <img src="{{ post.image.path }}" alt="{{ post.title }}"/>
               </a>
             </figure>
             <div class="card-body">

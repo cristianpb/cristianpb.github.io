@@ -10,33 +10,11 @@ bind: true
 
 ---
 
-<section class="hero is-primary is-small">
-  <div class="hero-body is-centered">
-    <div class="container">
-      <div class="columns is-mobile is-horizontal-center is-multiline">
-        <div class="column is-3-desktop is-12-mobile has-text-centered">
-          <h1 class="title">
-            My own articles
-          </h1>
-        </div>
-        <div class="column is-4-desktop is-12-mobile has-text-centered">
-          <h2 class="subtitle">
-            {{ page.description }}
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="section" id="top-blog-page">
-  <div class="container">
-
-    <div class="columns is-multiline ">
-
-      <div class="column is-3-desktop is-12-mobile">
-        <aside class="menu  is-hidden-mobile">
-          <ul class="menu-list">
+<div class="container px-4 mt-4">
+<div class="flex" id="top-blog-page">
+      <div class="flex-auto w-0 md:w-3/12">
+          <ul class="fixed hidden text-xs font-semibold md:contents">
             <p class="menu-label">
               Categories
             </p>
@@ -73,10 +51,8 @@ bind: true
               </ul>
             </li>
           </ul>
-        </aside>
-
       </div>
-      <div class="column is-9-desktop is-12-mobile">
+      <div class="flex-auto w-full md:w-9/12">
         <amp-state id="allArticles"
                    src="/api/github-pages.json"></amp-state>
 
@@ -91,6 +67,40 @@ bind: true
                    <div fallback>Failed to load data.</div>
                    <template type="amp-mustache">
                      {% raw %}
+                     <div class="my-4 shadow-xl card lg:card-side bg-base-100">
+                      <figure>
+                        <a class="image" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}">
+                             <amp-img 
+                               width="400" height="225" 
+                               src="{{ thumb }}" 
+                               srcset="{{ thumb }} 400w, {{ image }} 900w"
+                               alt="{{ title }}" layout="responsive"></amp-img>
+                        </a>
+                      </figure>
+                       <div class="card-body">
+                         <h2 class="card-title">
+                           <a href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>
+                           {{ title }}
+                           </a>
+                         </h2>
+                         <p>{{ description }}</p>
+                         <div class="justify-end card-actions">
+                           <div class="mb-4">
+                               <span class="text-xs badge"> 📅 &nbsp;{{ date }}</span>
+                               {{#tags}}<a class="text-xs badge badge-info" href="/blog/tags#{{.}}" data-proofer-ignore> {{.}}</a>{{/tags}}
+                               {{#categories}}<a class="text-xs badge badge-sucess" href="/blog/categories#{{.}}" data-proofer-ignore> {{.}}</a>{{/categories}}
+                               {{#source}}
+                               <span class="text-xs badge badge-info gap-2">
+                                 {% endraw %}
+                                 {% include logos/external-link.svg color='#ffffff' %}
+                                 {% raw %}
+                                 &nbsp; {{ source }}</span>
+                               {{/source}}
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                     <!---
                      <div class="box">
                        <div class="columns is-multiline">
                          <div class="column is-3-desktop is-12-mobile">
@@ -125,6 +135,7 @@ bind: true
                          </div>
                        </div>
                      </div>
+                     --->
                      {% endraw %}
                    </template>
                  </amp-list>
@@ -143,8 +154,9 @@ bind: true
              </div>
         </div>
       </div>
-    </div>
 
+
+    <!---
     <nav class="navbar is-light something" id="search-bar">
       <div class="navbar-item columns is-mobile">
         <div class="column is-narrow">
@@ -187,6 +199,7 @@ bind: true
         </div>
       </div>
     </nav>
+    --->
 
-  </div>
-</section>
+</div>
+</div>

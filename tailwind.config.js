@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./_includes/*.{html,js}", "./jekyll_collections/_pages/*.html"],
+  content: ["./_includes/*.{html,js}", "./_layouts/*.{html,js}", "./jekyll_collections/_pages/*.html", "./jekyll_collections/_blog/*.html"],
   theme: {
     extend: {},
   },
