@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./_includes/*.{html,js}", "./_layouts/*.{html,js}", "./jekyll_collections/_pages/*.html", "./jekyll_collections/_blog/*.html"],
   theme: {
+    //colors: {
+    //  primary: '#5c6ac4',
+    //},
     extend: {},
   },
   plugins: [require("daisyui")],

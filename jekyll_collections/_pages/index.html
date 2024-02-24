@@ -12,6 +12,14 @@ image:
 
 ---
 
+<div class="w-full py-32 bg-blue-900">
+  <h1 class="mb-5 text-5xl font-bold text-center text-white">Cristian</h1>
+  <div class="w-10/12 m-auto sm:w-5/12">
+    <p class="text-center text-white">I use data science tools to process multiple source of data and build robust data process pipelines. I build web applications with modern frontend javascript frameworks. I'm also in charge of IT management for large compute servers. In my free time I build IoT applications.</p>
+  </div>
+</div>
+
+<!---
 <div class="min-h-screen hero" style="background-image: url(/assets/img/about/developpement.jpg);">
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="text-center hero-content text-neutral-content">
@@ -21,12 +29,12 @@ image:
     </div>
   </div>
 </div>
+--->
 
 
-
-<section class="px-8 dark:bg-gray-900 dark:text-gray-300">
-  <div class="w-full">
-    <h2 class="mb-5 text-3xl font-bold">
+<section class="dark:bg-gray-900 dark:text-gray-300">
+  <div class="w-11/12 py-8 m-auto sm:w-9/12">
+    <h2 class="mb-5 text-3xl font-bold text-center">
       What I do:
     </h2>
     <div class="grid grid-cols-4 gap-5">
@@ -108,57 +116,11 @@ image:
   </div>
 </section>
 
-<div class="container bg-cyan-500">
+
+
+<div class="bg-blue-900">
+  <div class="px-8 py-8 mt-8 text-center md:px-32">
   <h2 class="mb-5 text-3xl font-bold text-white"> Last articles </h2>
-
-
-
-
-
-
-
-
-
-  <div class="w-full carousel">
-    {% for post in site.posts limit: 9 %}
-
-  <div id="slide1" class="relative w-full carousel-item">
-                  <amp-img
-                    class="w-full"
-                    height="203" width="304" 
-                    alt="{{ post.title }}"  
-                    srcset="{{ post.thumb.path | replace: 'jpg','webp' }} 400w, {{ post.image.path | replace: 'jpg','webp' }} 900w"
-                    >
-                    <amp-img 
-                      height="203" width="304" 
-                      fallback
-                      src="{{ post.thumb.path }}"
-                      alt="{{ post.title }}"  
-                      srcset="{{ post.thumb.path }} 400w, {{ post.image.path }} 900w"
-                      layout="intrinsic">
-                    </amp-img>
-                  </amp-img>
-    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide4" class="btn btn-circle">❮</a> 
-      <a href="#slide2" class="btn btn-circle">❯</a>
-    </div>
-  </div> 
-
-    {% endfor %}
-  </div> 
-  <div class="flex justify-center w-full py-2 gap-2">
-    <a href="#item1" class="btn btn-xs">1</a> 
-    <a href="#item2" class="btn btn-xs">2</a> 
-    <a href="#item3" class="btn btn-xs">3</a> 
-    <a href="#item4" class="btn btn-xs">4</a>
-  </div>
-</div>
-
-<section class="hero is-primary">
-  <div class="hero-body">
-    <div class="container" id="last_articles">
-
-      <h2 class="title"> Last articles </h2>
 
       <amp-animation id="carouselTransition"
                      layout="nodisplay">
@@ -170,9 +132,6 @@ image:
       "delay": "0ms",
       "animations": [{
         "selector": ".carousel-component",
-        "keyframes": [{
-          "transform": "translateX(-60%)"
-        }]
       }]
     }
         </script>
@@ -180,14 +139,14 @@ image:
 
       <amp-carousel class="carousel-component" height="400" layout="fixed-height" type="carousel"  controls>
         <amp-position-observer on="enter:carouselTransition.start"
-                               intersection-ratios="0.8"
+                               intersection-ratios="1.0"
                                layout="nodisplay">
         </amp-position-observer>
         {% for post in site.posts limit: 9 %}
-        <div class="card">
+        <div class="bg-white card">
           {% if post.image %}
           <div class="card-image">
-            <figure class="image">
+            <figure class="mt-2 image">
               <a {% if post.link %}href="{{post.link}}" target="_blank" rel="noreferrer"{% else %}href="{{ post.url }}"{% endif %}>
                 <center>
                   <amp-img
@@ -209,18 +168,20 @@ image:
             </figure>
           </div>
           {% endif %}
-          <div class="card-content">
-            <div class="content apretaito">
+          <div class="card-body">
+            <div class="content">
               <strong>
                 <a {% if post.link %}href="{{post.link}}" target="_blank" rel="noreferrer"{% else %}href="{{ post.url }}"{% endif %}>
                 {{ post.title | truncate: 35, ".."}}</a>
               </strong>
-              <p class="is-size-7"> {{ post.description | truncate: 140, ".." }} </p>
+              <div class="w-80">
+                <p class="mb-0 whitespace-normal"> {{ post.description | truncate: 140, ".." }} </p>
+              </div>
               <div class="tags has-addons">
                 <span class="tag">
                   📅 
                   &nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
-                <span class="tag is-link">{{ post.categories | join: ", " | truncate: 30, ".."}}</span>
+                <span class="text-xs badge badge-info gap-2">{{ post.categories | join: ", " | truncate: 30, ".."}}</span>
                 {% if post.link %}
                 <span class="tag is-danger">
                   {% include logos/external-link.svg color='#ffffff' %}
@@ -234,11 +195,10 @@ image:
         {% endfor %}
       </amp-carousel>
       <br>
-      <center><a class="button is-white"  href="{{ site.baseurl | append: '/blog'}}">More at my blog</a></center>
-    </div>
-  </div>
-</section>
+      <center><button class="btn"  href="{{ site.baseurl | append: '/blog'}}">More at my blog</button></center>
 
+  </div>
+</div>
 
 <section class="section">
   <div class="container">
