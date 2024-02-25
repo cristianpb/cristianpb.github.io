@@ -21,8 +21,7 @@ thumb:
 
 ---
 
-I wanted to run a marathon at least once in my life, then I chose to do the
-[Marathon de Metz](https://www.marathon-metz.fr).
+I wanted to run a marathon at least once in my life, then I chose to do the Marathon de Metz.
 
 ## Running calendar
 

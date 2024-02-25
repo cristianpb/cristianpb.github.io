@@ -35,7 +35,7 @@ control them with voice commands.
 ## Control lights using a relay
 
 I already had a Snips developer kit, so I just need to add two more components:
-* Christmas lights: I choose a [5 meter USB powered lights](https://www.ebay.com/itm/5M-10M-USB-LED-Copper-Wire-String-Fairy-Light-Strip-Lamp-Xmas-Party-Waterproof-/282404057310) which cost me 2.7 USD.
+* Christmas lights: I choose a 5 meter USB powered lights which cost me 2.7 USD.
 * [Grove relay](https://www.seeedstudio.com/Grove-Relay.html), which allows to open and close a circuit, which cost me 3 USD. It can be plugged easily to the [ReSpeaker Pi hat](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html).
 
 I had to cut the lights cable and insert then into the relay so that it can be
