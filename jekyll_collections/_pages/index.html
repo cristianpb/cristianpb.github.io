@@ -200,9 +200,9 @@ image:
   </div>
 </div>
 
-<section class="section">
-  <div class="container">
-    <h2 class="title">
+<section class="">
+  <div class="px-8 py-8 mt-8 text-center md:px-32">
+    <h2 class="mb-5 text-3xl font-bold">
       Featured projects
     </h2>
       <amp-carousel
@@ -236,14 +236,14 @@ image:
                 <a href="{{realisation.link}}" target="_blank" rel="noreferrer">
                 {{ realisation.title | truncate: 35, ".."}}</a>
               </strong>
-              <p class="is-size-7"> {{ realisation.description | truncate: 140, ".." }} </p>
+              <div class="w-80">
+              <p class="mb-0 whitespace-normal"> {{ realisation.description | truncate: 140, ".." }} </p>
+              </div>
               <div class="tags has-addons">
                 {% for category in realisation.categories %}
 
-                <span class="tag"> 
-                  {% include tags/{{category}}.svg %}
-                  &nbsp;
-                  {{ category }}
+                <span class="text-xs badge gap-2"> 
+                  {% include tags/{{category}}.svg %} {{ category }}
                 </span>
                 {% endfor %}
               </div>

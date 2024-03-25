@@ -1,4 +1,4 @@
-<footer class="p-10 footer bg-base-300 text-base-content">
+<footer class="footer bg-base-300 text-base-content px-8 py-8 mt-8 text-center md:px-32">
   <div>
     <span class="footer-title">Projects</span> 
     {% for realisation in site.data.about.realisations limit: 4 %}
@@ -15,8 +15,7 @@
     <span class="footer-title">Social</span> 
     <div class="grid grid-flow-col gap-4">
       {% for socialnetwork in site.data.about.socialnetworks %}
-      <a href="{{ socialnetwork.link }}" target="_blank" rel="noreferrer">
-        {% include logos/logo-generic.svg width='24' height='24' svg=socialnetwork.svg  %}
+      <a class="dark:fill-base-300" href="{{ socialnetwork.link }}" target="_blank" rel="noreferrer"> {% include logos/logo-generic.svg width='24' height='24' svg=socialnetwork.svg  %}
       </a>
       {% endfor %}
     </div>
