@@ -1,14 +1,16 @@
 var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
-var sass = require('gulp-sass');
+//var imagemin = require('gulp-imagemin');
+const imagemin = import('gulp-imagemin')
+const sass = require('gulp-sass')(require('sass'));
 let cleanCSS = require('gulp-clean-css');
-var responsive = require('gulp-responsive');
+//var responsive = require('gulp-responsive');
 var purgecss = require('gulp-purgecss')
 var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 var rename = require('gulp-rename');
 var gulpAmpValidator = require('gulp-amphtml-validator');
-var del = require('del');
+//var del = require('del');
+var del = import('del');
 
 var paths = {
   styles: {
@@ -33,85 +35,85 @@ var paths = {
 
 function thumbnails() {
   return gulp.src([`${paths.images.src}/**/main.{png,jpg,jpeg,svg}`, `${paths.images.src}/external-articles/*.{png,jpg,jpeg,svg}`])
-    .pipe(
-      responsive({
-        '*': [
-          {
-            width: 400,
-            height: 225,
-            format: 'jpg',
-            rename: { 
-              suffix: '-thumb',
-              dirname: 'external-articles-responsive'
-            },
-          },
-          {
-            width: 400,
-            height: 225,
-            format: 'webp',
-            rename: { 
-              suffix: '-thumb',
-              dirname: 'external-articles-responsive'
-            },
-          },
-          {
-            width: 1400,
-            height: 788,
-            format: 'jpg',
-            rename: { 
-              suffix: '-16x9',
-              dirname: 'external-articles-responsive'
-            },
-          },
-          {
-            width: 1400,
-            height: 788,
-            format: 'webp',
-            rename: { 
-              suffix: '-16x9',
-              dirname: 'external-articles-responsive'
-            },
-          }
-        ],
-        '*/main.*': [
-          {
-            width: 400,
-            height: 225,
-            format: 'jpg',
-            rename: { suffix: '-thumb'},
-          },
-          {
-            width: 400,
-            height: 225,
-            format: 'webp',
-            rename: { suffix: '-thumb'},
-          },
-          {
-            width: 1400,
-            height: 788,
-            format: 'jpg',
-            rename: { suffix: '-16x9'},
-          },
-          {
-            width: 1400,
-            height: 788,
-            format: 'webp',
-            rename: { suffix: '-16x9'},
-          }
-        ],
-      }, {
-        // Global configuration for all images
-        // The output quality for JPEG, WebP and TIFF output formats
-        quality: 70,
-        // Use progressive (interlace) scan for JPEG and PNG output
-        progressive: true,
-        // Zlib compression level of PNG output format
-        compressionLevel: 6,
-        // Strip all metadata
-        withMetadata: false,
-        errorOnEnlargement: false,
-        crop: 'entropy'
-      }))
+    //.pipe(
+    //  responsive({
+    //    '*': [
+    //      {
+    //        width: 400,
+    //        height: 225,
+    //        format: 'jpg',
+    //        rename: { 
+    //          suffix: '-thumb',
+    //          dirname: 'external-articles-responsive'
+    //        },
+    //      },
+    //      {
+    //        width: 400,
+    //        height: 225,
+    //        format: 'webp',
+    //        rename: { 
+    //          suffix: '-thumb',
+    //          dirname: 'external-articles-responsive'
+    //        },
+    //      },
+    //      {
+    //        width: 1400,
+    //        height: 788,
+    //        format: 'jpg',
+    //        rename: { 
+    //          suffix: '-16x9',
+    //          dirname: 'external-articles-responsive'
+    //        },
+    //      },
+    //      {
+    //        width: 1400,
+    //        height: 788,
+    //        format: 'webp',
+    //        rename: { 
+    //          suffix: '-16x9',
+    //          dirname: 'external-articles-responsive'
+    //        },
+    //      }
+    //    ],
+    //    '*/main.*': [
+    //      {
+    //        width: 400,
+    //        height: 225,
+    //        format: 'jpg',
+    //        rename: { suffix: '-thumb'},
+    //      },
+    //      {
+    //        width: 400,
+    //        height: 225,
+    //        format: 'webp',
+    //        rename: { suffix: '-thumb'},
+    //      },
+    //      {
+    //        width: 1400,
+    //        height: 788,
+    //        format: 'jpg',
+    //        rename: { suffix: '-16x9'},
+    //      },
+    //      {
+    //        width: 1400,
+    //        height: 788,
+    //        format: 'webp',
+    //        rename: { suffix: '-16x9'},
+    //      }
+    //    ],
+    //  }, {
+    //    // Global configuration for all images
+    //    // The output quality for JPEG, WebP and TIFF output formats
+    //    quality: 70,
+    //    // Use progressive (interlace) scan for JPEG and PNG output
+    //    progressive: true,
+    //    // Zlib compression level of PNG output format
+    //    compressionLevel: 6,
+    //    // Strip all metadata
+    //    withMetadata: false,
+    //    errorOnEnlargement: false,
+    //    crop: 'entropy'
+    //  }))
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
@@ -150,9 +152,9 @@ function amp_validator() {
     .pipe(gulpAmpValidator.failAfterError());
 }
  
-function clean() {
-  return del([ paths.styles.tmp ]);
-}
+// function clean() {
+//   return del([ paths.styles.tmp ]);
+// }
  
 function purificationPosts() {
   return gulp.src(paths.styles.src)
@@ -184,7 +186,8 @@ function purificationDefault() {
     .pipe(gulp.dest('./_includes/'));
 }
  
-var build = gulp.series(clean, purificationPosts, concatenation, purificationDefault, clean);
+//var build = gulp.series(clean, purificationPosts, concatenation, purificationDefault, clean);
+var build = gulp.series(purificationPosts, concatenation, purificationDefault );
 
 function watch() {
   gulp.watch(["_layouts/**", "_includes/**.html", "jekyll_collections/**", "_sass/*", "assets/css/*"], build);
@@ -193,7 +196,7 @@ function watch() {
 exports.images = images;
 exports.thumbnails = thumbnails;
 exports.amp_validator = amp_validator;
-exports.clean = clean;
+//exports.clean = clean;
 exports.concatenation = concatenation;
 exports.build = build;
 exports.watch = watch;
