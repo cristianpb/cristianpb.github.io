@@ -11,195 +11,192 @@ bind: true
 ---
 
 
-<div class="container px-4 mt-4">
-<div class="flex" id="top-blog-page">
-      <div class="flex-auto w-0 md:w-3/12">
-          <ul class="fixed hidden text-xs font-semibold md:contents">
-            <p class="menu-label">
-              Categories
-            </p>
+<div class="w-full px-4 mt-4">
+  <div class="flex" id="top-blog-page">
+    <div class="flex-auto w-0 md:w-3/12">
+      <ul class="fixed hidden text-xs font-semibold md:contents">
+        <p class="menu-label">
+          Categories
+        </p>
+        <li>
+          <ul>
+            {% for category in site.categories %}
+            {% capture category_name %}{{ category | first }}{% endcapture %}
             <li>
-              <ul>
-                {% for category in site.categories %}
-                {% capture category_name %}{{ category | first }}{% endcapture %}
-                <li>
-                  <a on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.categories[0].toLowerCase() == '{{ category_name }}' )})">{{ category_name | capitalize }} ({{ category[1].size }})</a>
-                </li>
-                {% endfor %}
-              </ul>
+              <a  on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.categories[0].toLowerCase() == '{{ category_name }}' )})">{{ category_name | capitalize }} ({{ category[1].size }})</a>
             </li>
-            <p class="menu-label">
-              Tags
-            </p>
-            <li>
-              <ul>
-                {% capture tags %}
-                {% for tag in site.tags %}
-                |{{ tag | first }}#{{ tag[1].size }}
-                {% endfor %}
-                {% endcapture %}
-                {% assign sortedtags = tags | split: '|' | sort %}
-                {% for tag in sortedtags %}
-                {% assign tagitems = tag | split: '#' %}
-                {% assign tagname = tagitems[0] %}
-                {% if tagitems[1] != null %}
-                <li><a on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.tags.join(' ').toLowerCase().indexOf('{{ tagitems[0] | downcase }}') != -1 )}),top-blog-page.scrollTo(duration=200)">
-                    {% include tags/{{ tagname }}.svg %}
-                    {{ tagitems[0] }} ({{ tagitems[1] }})</a></li>{% unless forloop.last %}{% endunless %}
-                {% endif %}
-                {% endfor %}
-              </ul>
-            </li>
+            {% endfor %}
           </ul>
-      </div>
-      <div class="flex-auto w-full md:w-9/12">
-        <amp-state id="allArticles"
-                   src="/api/github-pages.json"></amp-state>
+        </li>
+        <p class="menu-label">
+          Tags
+        </p>
+          <ul>
+            {% capture tags %}
+            {% for tag in site.tags %}
+            |{{ tag | first }}#{{ tag[1].size }}
+            {% endfor %}
+            {% endcapture %}
+            {% assign sortedtags = tags | split: '|' | sort %}
+            {% for tag in sortedtags %}
+            {% assign tagitems = tag | split: '#' %}
+            {% assign tagname = tagitems[0] %}
+            {% if tagitems[1] != null %}
+            <a class="mb-2 text-xs badge gap-2" on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.tags.join(' ').toLowerCase().indexOf('{{ tagitems[0] | downcase }}') != -1 )}),top-blog-page.scrollTo(duration=200)">
+                {% include tags/{{ tagname }}.svg %}
+                {{ tagitems[0] }} ({{ tagitems[1] }})</a> <br>{% unless forloop.last %}{% endunless %}
+            {% endif %}
+            {% endfor %}
+          </ul>
+      </ul>
+    </div>
+    <div class="flex-auto w-full md:w-9/12">
+      <amp-state id="allArticles"
+                 src="/api/github-pages.json">
+      </amp-state>
 
-                 <amp-list height="500"
-                           [height]="(350) * filteredArticles.length"
-                           layout="fixed-height"
-                           items="."
-                           src="/api/github-pages.json"
-                           [src]="filteredArticles"
-                           binding="no">
-                   <div placeholder>Loading ...</div>
-                   <div fallback>Failed to load data.</div>
-                   <template type="amp-mustache">
-                     {% raw %}
-                     <div class="my-4 shadow-xl card lg:card-side bg-base-100">
-                      <figure>
-                        <a class="image" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}">
-                             <amp-img 
-                               width="400" height="225" 
-                               src="{{ thumb }}" 
-                               srcset="{{ thumb }} 400w, {{ image }} 900w"
-                               alt="{{ title }}" layout="responsive"></amp-img>
-                        </a>
-                      </figure>
-                       <div class="card-body">
-                         <h2 class="card-title">
-                           <a href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>
-                           {{ title }}
-                           </a>
-                         </h2>
-                         <p>{{ description }}</p>
-                         <div class="justify-end card-actions">
-                           <div class="mb-4">
-                               <span class="text-xs badge"> 📅 &nbsp;{{ date }}</span>
-                               {{#tags}}<a class="text-xs badge badge-info" href="/blog/tags#{{.}}" data-proofer-ignore> {{.}}</a>{{/tags}}
-                               {{#categories}}<a class="text-xs badge badge-sucess" href="/blog/categories#{{.}}" data-proofer-ignore> {{.}}</a>{{/categories}}
-                               {{#source}}
-                               <span class="text-xs badge badge-info gap-2">
-                                 {% endraw %}
-                                 {% include logos/external-link.svg color='#ffffff' %}
-                                 {% raw %}
-                                 &nbsp; {{ source }}</span>
-                               {{/source}}
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                     <!---
-                     <div class="box">
-                       <div class="columns is-multiline">
-                         <div class="column is-3-desktop is-12-mobile">
-                           <a class="image" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>
-                             <amp-img 
-                               width="400" height="225" 
-                               src="{{ thumb }}" 
-                               srcset="{{ thumb }} 400w, {{ image }} 900w"
-                               alt="{{ title }}" layout="responsive"></amp-img>
-                           </a>
-                         </div>
-                         <div class="column is-9-desktop is-12-mobile">
-                           <div class="content">
-                             <a class="title is-6" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>{{ title }}</a>
-                             <p class="is-size-7">
-                               {{ description }}
-                             </p>
-                             <div class="tags has-addons">
-                               <span class="tag">
-                                 📅 &nbsp;{{ date }}</span>
-                               {{#tags}}<a class="tag" href="/blog/tags#{{.}}" data-proofer-ignore> {{.}}</a>{{/tags}}
-                               {{#categories}}<a class="tag is-link" href="/blog/categories#{{.}}" data-proofer-ignore> {{.}}</a>{{/categories}}
-                               {{#source}}
-                               <span class="tag is-danger">
-                                 {% endraw %}
-                                 {% include logos/external-link.svg color='#ffffff' %}
-                                 {% raw %}
-                                 &nbsp; {{ source }}</span>
-                               {{/source}}
-                             </div>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                     --->
-                     {% endraw %}
-                   </template>
-                 </amp-list>
+      <amp-list height="500"
+                [height]="(350) * filteredArticles.length"
+                layout="fixed-height"
+                items="."
+                src="/api/github-pages.json"
+                [src]="filteredArticles"
+                binding="no">
+        <div placeholder>Loading ...</div>
+        <div fallback>Failed to load data.</div>
+        <template type="amp-mustache">
+          {% raw %}
+          <div class="my-4 shadow-xl card lg:card-side bg-base-100">
+            <figure>
+              <a class="image" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}">
+                <amp-img 
+                  width="400" height="225" 
+                              src="{{ thumb }}" 
+                              srcset="{{ thumb }} 400w, {{ image }} 900w"
+                              alt="{{ title }}" layout="responsive"></amp-img>
+              </a>
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">
+                <a href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>
+                  {{ title }}
+                </a>
+              </h2>
+              <p>{{ description }}</p>
+              <div class="justify-end card-actions">
+                <div class="mb-4">
+                  <span class="text-xs badge"> 📅 &nbsp;{{ date }}</span>
+                  {{#tags}}<a class="text-xs badge badge-info" href="/blog/tags#{{.}}" data-proofer-ignore> {{.}}</a>{{/tags}}
+                  {{#categories}}<a class="text-xs badge badge-sucess" href="/blog/categories#{{.}}" data-proofer-ignore> {{.}}</a>{{/categories}}
+                  {{#source}}
+                  <span class="text-xs badge badge-info gap-2">
+                    {% endraw %}
+                    {% include logos/external-link.svg color='#ffffff' %}
+                    {% raw %}
+                    &nbsp; {{ source }}</span>
+                  {{/source}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!---
+            <div class="box">
+            <div class="columns is-multiline">
+            <div class="column is-3-desktop is-12-mobile">
+            <a class="image" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>
+            <amp-img 
+            width="400" height="225" 
+            src="{{ thumb }}" 
+            srcset="{{ thumb }} 400w, {{ image }} 900w"
+            alt="{{ title }}" layout="responsive"></amp-img>
+            </a>
+            </div>
+            <div class="column is-9-desktop is-12-mobile">
+            <div class="content">
+            <a class="title is-6" href="{{#link}}{{ link }}{{/link}}{{^link}}{{ url }}{{/link}}" data-proofer-ignore>{{ title }}</a>
+            <p class="is-size-7">
+            {{ description }}
+            </p>
+            <div class="tags has-addons">
+            <span class="tag">
+            📅 &nbsp;{{ date }}</span>
+            {{#tags}}<a class="tag" href="/blog/tags#{{.}}" data-proofer-ignore> {{.}}</a>{{/tags}}
+            {{#categories}}<a class="tag is-link" href="/blog/categories#{{.}}" data-proofer-ignore> {{.}}</a>{{/categories}}
+            {{#source}}
+            <span class="tag is-danger">
+            {% endraw %}
+            {% include logos/external-link.svg color='#ffffff' %}
+            {% raw %}
+            &nbsp; {{ source }}</span>
+            {{/source}}
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>--->
+            {% endraw %}
+        </template>
+      </amp-list>
 
-        <div class="box"
-             hidden 
-             [hidden]="filteredArticles.length > 0"
-             >
-             <div class="content">
-               <p class="title is-6">No results</p>
-               <p class="is-size-7">
-                 Why don't you try with other word or tags ? 
-                 <br>
-                 Maybe "python" ? 
-               </p>
-             </div>
-        </div>
+      <div class="box"
+           hidden 
+           [hidden]="filteredArticles.length > 0"
+           >
+           <div class="content">
+             <p class="title is-6">No results</p>
+             <p class="is-size-7">
+               Why don't you try with other word or tags ? 
+               <br>
+               Maybe "python" ? 
+             </p>
+           </div>
       </div>
+    </div>
 
 
     <!---
-    <nav class="navbar is-light something" id="search-bar">
+      <nav class="navbar is-light something" id="search-bar">
       <div class="navbar-item columns is-mobile">
-        <div class="column is-narrow">
-          <div class="select">
-            <select on="change:AMP.setState({filteredArticles: allArticles.filter(a => a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1 )}),top-blog-page.scrollTo(duration=200)">
-              <option value>Choose tag</option>
-              {% capture tags %}
-              {% for tag in site.tags %}
-              |{{ tag | first }}#{{ tag[1].size }}
-              {% endfor %}
-              {% endcapture %}
-              {% assign sortedtags = tags | split: '|' | sort %}
-              {% for tag in sortedtags %}
-              {% assign tagitems = tag | split: '#' %}
-              {% if tagitems[1] != null %}
-              <option>{{ tagitems[0] }}</option>
-              {% unless forloop.last %}{% endunless %}
-              {% endif %}
-              {% endfor %}
-            </select>
-          </div>
-        </div>
-
-
-        <div class="column">
-          <div class="field has-addons">
-            <div class="control">
-              <input class="input is-primary" type="search" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.categories.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ), inputValue: event.value }), top-blog-page.scrollTo(duration=200)" placeholder="🔍 Search" [value]="inputValue">
-            </div>
-            <div class="control">
-              <button 
-                class="button is-primary"
-                hidden 
-                [hidden]="inputValue.length == 0"
-                on="tap:AMP.setState({inputValue: '', filteredArticles: allArticles}),top-blog-page.scrollTo(duration=200)">
-                X
-              </button>
-            </div>
-          </div>
-        </div>
+      <div class="column is-narrow">
+      <div class="select">
+      <select on="change:AMP.setState({filteredArticles: allArticles.filter(a => a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1 )}),top-blog-page.scrollTo(duration=200)">
+      <option value>Choose tag</option>
+      {% capture tags %}
+      {% for tag in site.tags %}
+      |{{ tag | first }}#{{ tag[1].size }}
+      {% endfor %}
+      {% endcapture %}
+      {% assign sortedtags = tags | split: '|' | sort %}
+      {% for tag in sortedtags %}
+      {% assign tagitems = tag | split: '#' %}
+      {% if tagitems[1] != null %}
+      <option>{{ tagitems[0] }}</option>
+      {% unless forloop.last %}{% endunless %}
+      {% endif %}
+      {% endfor %}
+      </select>
       </div>
-    </nav>
-    --->
+      </div>
 
-</div>
+
+      <div class="column">
+      <div class="field has-addons">
+      <div class="control">
+      <input class="input is-primary" type="search" on="input-throttled:AMP.setState({filteredArticles: allArticles.filter(a => ((a.title.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.description.toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.tags.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) || (a.categories.join(' ').toLowerCase().indexOf(event.value.toLowerCase()) != -1) ) ), inputValue: event.value }), top-blog-page.scrollTo(duration=200)" placeholder="🔍 Search" [value]="inputValue">
+      </div>
+      <div class="control">
+      <button 
+      class="button is-primary"
+      hidden 
+      [hidden]="inputValue.length == 0"
+      on="tap:AMP.setState({inputValue: '', filteredArticles: allArticles}),top-blog-page.scrollTo(duration=200)">
+      X
+      </button>
+      </div>
+      </div>
+      </div>
+      </div>
+      </nav>--->
+
+  </div>
 </div>

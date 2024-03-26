@@ -178,7 +178,7 @@ image:
                 <p class="mb-0 whitespace-normal"> {{ post.description | truncate: 140, ".." }} </p>
               </div>
               <div class="tags has-addons">
-                <span class="tag">
+                <span class="tag text-xs">
                   📅 
                   &nbsp;{{ post.date | date: "%b %-d, %Y" }}</span>
                 <span class="text-xs badge badge-info gap-2">{{ post.categories | join: ", " | truncate: 30, ".."}}</span>
@@ -237,7 +237,7 @@ image:
                 {{ realisation.title | truncate: 35, ".."}}</a>
               </strong>
               <div class="w-80">
-              <p class="mb-0 whitespace-normal"> {{ realisation.description | truncate: 140, ".." }} </p>
+              <p class="mb-5 whitespace-normal"> {{ realisation.description | truncate: 140, ".." }} </p>
               </div>
               <div class="tags has-addons">
                 {% for category in realisation.categories %}
