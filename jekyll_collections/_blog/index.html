@@ -13,21 +13,17 @@ bind: true
 
 <div class="w-full px-4 mt-4">
   <div class="flex" id="top-blog-page">
-    <div class="flex-auto w-0 md:w-3/12">
-      <ul class="fixed hidden text-xs font-semibold md:contents">
-        <p class="menu-label">
+    <div class="flex-auto w-0 md:w-2/12">
+      <ul class="fixed hidden md:contents">
+        <p class="menu-label ">
           Categories
         </p>
-        <li>
-          <ul>
-            {% for category in site.categories %}
-            {% capture category_name %}{{ category | first }}{% endcapture %}
-            <li>
-              <a  on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.categories[0].toLowerCase() == '{{ category_name }}' )})">{{ category_name | capitalize }} ({{ category[1].size }})</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </li>
+        <ul>
+          {% for category in site.categories %}
+          {% capture category_name %}{{ category | first }}{% endcapture %}
+          <a class="mb-2 text-xs badge gap-2" on="tap:AMP.setState({filteredArticles: allArticles.filter(a => a.categories[0].toLowerCase() == '{{ category_name }}' )})">{{ category_name | capitalize }} ({{ category[1].size }})</a> <br>
+          {% endfor %}
+        </ul>
         <p class="menu-label">
           Tags
         </p>
@@ -50,7 +46,7 @@ bind: true
           </ul>
       </ul>
     </div>
-    <div class="flex-auto w-full md:w-9/12">
+    <div class="flex-auto w-full md:w-10/12">
       <amp-state id="allArticles"
                  src="/api/github-pages.json">
       </amp-state>
