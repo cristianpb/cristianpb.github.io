@@ -1,11 +1,11 @@
 # Site settings
 
-title: Cristian Perez Brokate
+title: Cristian Brokate
 description: > # this means to ignore newlines until "baseurl:"
-  I use data science tools to process multiple source of data and build robust data process pipelines.
-  I build web applications with modern frontend javascript frameworks.
-  I'm also in charge of IT management for large compute servers.
-  In my free time I build IoT applications.
+  I have experience utilizing data science tools to create and maintain robust data processing pipelines.
+  I am familiar with building web applications using modern front-end JavaScript frameworks.
+  I also have a background in managing IT infrastructure for large compute servers
+  In my spare time, I like to build Internet of Things (IoT) applications.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cristianpb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: https://twitter.com/cris_perez_b
@@ -17,7 +17,7 @@ linkedin_username: cristianperezbrokate
 github_username:  cristianpb
 researchgate_username:  Cristian_Perez_Brokate
 social:
-  name: Cristian Perez Brokate
+  name: Cristian Brokate
   links:
     - https://twitter.com/cris_perez_b
     - https://www.linkedin.com/in/cristianperezbrokate
@@ -26,7 +26,7 @@ social:
     - https://www.researchgate.net/profile/Cristian_Perez_Brokate
     - https://www.kaggle.com/cristianpb
 author:
-  name: Cristian Perez Brokate
+  name: Cristian Brokate
   github: cristianpb
   medium: "@cristianpb"
   twitter: cris_perez_b
