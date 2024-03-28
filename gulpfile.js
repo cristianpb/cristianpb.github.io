@@ -159,7 +159,10 @@ function amp_validator() {
 function purificationPosts() {
   return gulp.src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
-    .pipe(purgecss({content: ['_includes/*.html', '_layouts/default.html', '_layouts/post.html', 'jekyll_collections/_blog/*.html']}))
+    .pipe(purgecss({
+      content: ['_includes/*.html', '_layouts/default.html', '_layouts/post.html', 'jekyll_collections/_blog/*.html'],
+      variables: true
+    }))
     .pipe(replace(/!important/gm, ''))
     .pipe(gulp.dest(paths.styles.tmp));
 }
@@ -177,7 +180,10 @@ function concatenation() {
 function purificationDefault() {
   return gulp.src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
-    .pipe(purgecss({ content: ['_includes/*.html', '_layouts/default.html', 'jekyll_collections/_pages/*.html', '_data/about/*.yml'] }))
+    .pipe(purgecss({ 
+      content: ['_includes/*.html', '_layouts/default.html', 'jekyll_collections/_pages/*.html', '_data/about/*.yml'],
+      variables: true
+    }))
     .pipe(replace(/!important/gm, ''))
     .pipe(cleanCSS({compatibility: 'ie8'}, (details) => {
       console.log(`Minification of ${details.name}: ${details.stats.originalSize} -> ${details.stats.minifiedSize} b`);
