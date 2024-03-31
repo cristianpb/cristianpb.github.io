@@ -161,7 +161,14 @@ function purificationPosts() {
     .pipe(sass().on('error', sass.logError))
     .pipe(purgecss({
       content: ['_includes/*.html', '_layouts/default.html', '_layouts/post.html', 'jekyll_collections/_blog/*.html'],
-      variables: true
+      variables: true,
+      safelist: {
+        standard: [],
+        deep: [],
+        greedy: [],
+        keyframes: [],
+        variables: [/menu-list-link-padding|body-family|family-primary|background-hover|hover-background-l-delta/]
+      }
     }))
     .pipe(replace(/!important/gm, ''))
     .pipe(gulp.dest(paths.styles.tmp));
@@ -171,7 +178,7 @@ function concatenation() {
   return gulp.src([`${paths.styles.tmp}/main.css`, 'assets/css/github.css'])
     .pipe(concat('main.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}, (details) => {
-      console.log(`Minification of ${details.name} posts: ${details.stats.originalSize} -> ${details.stats.minifiedSize} b`);
+      console.log(`Minification of ${details.name} posts: ${details.stats.originalSize/1000} kb -> ${details.stats.minifiedSize/1000} kb`);
     }))
     .pipe(rename({ suffix: '-post-min' }))
     .pipe(gulp.dest('./_includes/'));
@@ -182,11 +189,19 @@ function purificationDefault() {
     .pipe(sass().on('error', sass.logError))
     .pipe(purgecss({ 
       content: ['_includes/*.html', '_layouts/default.html', 'jekyll_collections/_pages/*.html', '_data/about/*.yml'],
-      variables: true
+      variables: true,
+      safelist: {
+        standard: [],
+        deep: [],
+        greedy: [],
+        keyframes: [],
+        variables: [/menu-list-link-padding|body-family|family-primary|background-hover|hover-background-l-delta/]
+        
+      }
     }))
     .pipe(replace(/!important/gm, ''))
     .pipe(cleanCSS({compatibility: 'ie8'}, (details) => {
-      console.log(`Minification of ${details.name}: ${details.stats.originalSize} -> ${details.stats.minifiedSize} b`);
+      console.log(`Minification of ${details.name}: ${details.stats.originalSize/1000} kb -> ${details.stats.minifiedSize/1000} kb`);
     }))
     .pipe(rename({ suffix: '-min' }))
     .pipe(gulp.dest('./_includes/'));

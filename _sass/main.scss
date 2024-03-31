@@ -7,11 +7,9 @@ $space: 1rem;
 
 // @import 'variables';
 @use "../node_modules/bulma/sass" with (
-    $family-primary: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif',
     //$font-display: auto,
     // $navbar-height: 3.95rem,
     $primary: $lightblue,
-    $menu-label-color: $menu-color,
     // $color-text-light: $white,
 );
 
