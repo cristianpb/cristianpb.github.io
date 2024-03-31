@@ -182,7 +182,7 @@ set completefunc=emoji#complete
 
 <amp-img src="/assets/img/vim-plugins/vim-emoji.gif" alt="Vim emoji" height="432" width="593" layout="responsive"></amp-img>
 
-I spend most on my time using vim, then I consider a good idea to make it confortable, so I like to give vim a little of style, I use [vim-devicons](https://github.com/ryanoasis/vim-devicons). Terminal font must be able to render glyphs. This can be patched with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#font-installation).
+I spend most on my time using vim, then I consider a good idea to make it confortable, so I like to give vim a little of style, I use [vim-devicons](https://github.com/ryanoasis/vim-devicons). Terminal font must be able to render glyphs. This can be patched with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
 
 <amp-img src="https://github.com/ryanoasis/vim-devicons/wiki/screenshots/v0.8.x/overall-screenshot.png" alt="screenshots" height="432" width="650" layout="responsive"></amp-img>
 

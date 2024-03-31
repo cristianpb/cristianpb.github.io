@@ -3,6 +3,9 @@ name: Github CI
 
 on: [push]
 
+env:
+  ruby-version: "3.1"
+  node-version: 20
 
 jobs:
   job-amp:
@@ -11,29 +14,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Ruby 3.1
-        uses: actions/setup-ruby@v1
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
-      - uses: actions/setup-node@v1
+          ruby-version: ${{ env.ruby-version }}
+      - uses: actions/setup-node@v4
         with:
-          node-version: '8.x'
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: ${{ env.node-version }}
       - name: Install node requirements
         run: npm ci
-      - uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
       - name: Install ruby dependencies
         run: |
           sed -i "/\b\(redirect\)\b/d" Gemfile
@@ -53,17 +43,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Set up Ruby 3.1
-        uses: actions/setup-ruby@v1
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
-      - uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+          ruby-version: ${{ env.ruby-version }}
       - name: Install ruby dependencies
         run: |
           gem install bundler
@@ -81,17 +65,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Ruby 3.1
-        uses: actions/setup-ruby@v1
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
-      - uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+          ruby-version: ${{ env.ruby-version }}
       - name: Install ruby dependencies
         run: |
           sed -i "/\b\(redirect\)\b/d" Gemfile

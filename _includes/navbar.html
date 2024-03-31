@@ -21,16 +21,24 @@
   <div id="navMenu" class="navbar-menu">
     <div class="navbar-start">
       {% if page.title %}
-        <a class="navbar-item" href="{{ page.url | prepend: site.baseurl }}">
+      <div class="navbar-item" >
+        <a class="button is-primary " href="{{ page.url | prepend: site.baseurl }}">
           {{ page.title }}
         </a>
+      </div>
       {% endif %}
     </div>
 
     <div class="navbar-end">
-        <a class="navbar-item" href="/about">Academic</a>
-        <a class="navbar-item" href="/blog">Blog</a>
-        <a class="navbar-item" href="https://cristianpb.github.io/analytics-google">Analytics</a>
+      <div class="navbar-item">
+        <a class="button is-primary" href="/about">Academic</a>
+      </div>
+      <div class="navbar-item">
+        <a class="button is-primary" href="/blog">Blog</a>
+      </div>
+      <div class="navbar-item">
+        <a class="button is-primary" href="https://cristianpb.github.io/analytics-google">Analytics</a>
+      </div>
     </div>
   </div>
 </nav>
