@@ -1,3 +1,20 @@
+- authors: <span class="under">Cristian Brokate</span>, Manon Richard, Lisa Giordani, Jean Liénard
+  title: "SWATTING Spambots: Real-time Detection of Malicious Bots on X"
+  url: "https://dl.acm.org/doi/abs/10.1145/3589335.3651564"
+  journal: "WWW '24: Companion Proceedings of the ACM on Web Conference 2024"
+  page: pp. 818-821
+  date: May 2024
+  img: /assets/img/about/www2024.jpg
+  img-horz: /assets/img/about/www2024-horz.jpg
+
+- authors: Manon Richard, Lisa Giordani, <span class="under">Cristian Brokate</span>, Jean Liénard
+  title: "Unmasking information manipulation: A quantitative approach to detecting Copy-pasta, Rewording, and Translation on Social Media"
+  url: "https://arxiv.org/abs/2312.17338"
+  journal: Arxiv
+  date: Dec. 2023
+  img: /assets/img/about/arxiv.jpg
+  img-horz: /assets/img/about/arxiv-horz.jpg
+
 - authors: Mariem Zenkri, Dung di Caprio, <span class="under">Cristian Felipe Pérez-Brokate</span>, Damien Féron, Jacques de Lamare
   title: Contribution of cellular automata to the understanding of corrosion phenomena
   url: "https://arxiv.org/abs/1710.01545"
@@ -58,3 +75,21 @@
   date: Apr. 2014
   img: /assets/img/about/mat_science_eng.jpg
   img-horz: /assets/img/about/mat_science_eng-horz.jpg
+
+- authors: <span class="under">C. F. Pérez-Brokate</span>, D. di Caprio, D. Féron, J. D. Lamare, and A. Chaussé
+  title:  Overview of Cellular Automaton Models for Corrosion
+  url: "https://link.springer.com/chapter/10.1007/978-3-319-11520-7_20"
+  journal:  International Conference on Cellular Automata
+  page: pp.187–196
+  date: 2014
+  img: /assets/img/about/acri.jpg
+  img-horz: /assets/img/about/acri-horz.jpg
+
+- authors: M. Bellet, <span class="under">C. F. Pérez-Brokate</span>, P. Hubsch
+  title:  3D finite element thermomechanical modelling of the primary cooling for beam-blanks continuous casting
+  url: "https://www.researchgate.net/profile/Michel_Bellet/publication/263446224_3D_finite_element_thermomechanical_modelling_of_the_primary_cooling_for_beam-blanks_continuous_casting/links/0c96053ad975d9afa6000000.pdf"
+  journal: 8th European Continuous Casting Conference
+  page: pp. 1220
+  img: /assets/img/about/eccc.jpg
+  img-horz: /assets/img/about/eccc-horz.jpg
+  date: 2014

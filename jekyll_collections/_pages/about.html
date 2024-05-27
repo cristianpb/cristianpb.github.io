@@ -134,52 +134,21 @@ carousel: true
               {{ article.authors }}
             </p>
             <div class="tags has-addons">
+              {% if article.journal and article.journal != "" and article.journal != nil %}
               <span class="tag">
                 {{ article.journal }}
               </span>
+              {% endif %}
+              {% if article.volume and article.volume != "" and article.volume != nil %}
               <span class="tag">
                 {{ article.volume }}
               </span>
+              {% endif %}
+              {% if article.page and article.page != "" and article.page != nil %}
               <span class="tag">
                 {{ article.page }}
               </span>
-              <span class="tag">
-                {{ article.date }}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-
-    <h3 class="subtitle" id="conferenceproceedings">Conference proceedings</h3>
-
-
-    {% for article in site.data.about.conference_proceedings %}
-    <div class="box">
-      <div class="columns is-multiline">
-        <div class="column is-1-desktop is-12-mobile has-text-centered">
-          <a href="{{ article.url }}" class="image">
-            <amp-img src="{{ article.img-horz }}" width="200" height="128" layout="responsive" alt="{{ article.title }}" media="(max-width: 768px)"></amp-img>
-            <amp-img src="{{ article.img }}" width="64" height="90" alt="{{ article.title }}" media="(min-width: 769px)"></amp-img>
-          </a>
-        </div>
-        <div class="column is-11-desktop is-12-mobile">
-          <div class="content">
-            <p>
-              <a class="title is-6" href="{{ article.url }}">{{ article.title }}</a>
-            </p>
-            <p class="is-size-7">
-              {{ article.authors }}
-            </p>
-            <div class="tags has-addons">
-              <span class="tag">
-                {{ article.journal }}
-              </span>
-              <span class="tag">
-                {{ article.page }}
-              </span>
+              {% endif %}
               <span class="tag">
                 {{ article.date }}
               </span>
@@ -206,6 +175,11 @@ carousel: true
       <div class="column">
         <div class="content">
           <ul>
+            <li>
+              🇸🇬
+              WWW 2024: The Web Conference, Singapore, Singapore.
+              Poster "SWATTING Spambots: Real-time Detection of Malicious Bots on X"
+            </li>
             <li>
               🇫🇷
               EUROCORR 2016, Montpelier, France.
