@@ -6,11 +6,13 @@
           alt="{{ site.title }}"
           width="30" height="30"></amp-img>
     </a>
+    {% if page.title and page.title != "" and page.title != nil %}
     <div class="navbar-item" >
       <a class="button is-primary is-hidden-desktop " href="{{ page.url | prepend: site.baseurl }}">
         {{ page.title | | truncate: 30 }}
       </a>
     </div>
+    {% endif %}
     <a class="navbar-burger burger" on='tap:sidebar.toggle' data-target="navMenu">
       <span></span>
       <span></span>
@@ -20,7 +22,7 @@
 
   <div id="navMenu" class="navbar-menu">
     <div class="navbar-start">
-      {% if page.title %}
+      {% if page.title and page.title != "" and page.title != nil %}
       <div class="navbar-item" >
         <a class="button is-primary " href="{{ page.url | prepend: site.baseurl }}">
           {{ page.title }}
