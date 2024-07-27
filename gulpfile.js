@@ -146,9 +146,11 @@ function images() {
 }
 
 function amp_validator() {
+  const logger = console
+  logger.info = console.log
   return gulp.src(paths.html.src)
     .pipe(gulpAmpValidator.validate())
-    .pipe(gulpAmpValidator.format())
+    .pipe(gulpAmpValidator.format(logger))
     .pipe(gulpAmpValidator.failAfterError());
 }
  

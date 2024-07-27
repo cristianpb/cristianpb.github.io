@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/cristianpb/cristianpb.github.io#readme",
   "devDependencies": {
-    "bulma": "^1.0.0",
+    "amphtml-validator": "^1.0.38",
+    "bulma": "^1.0.2",
     "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-amphtml-validator": "^1.0.6",
@@ -36,6 +37,7 @@
     "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "imagemin-webp": "^8.0.0"
+    "imagemin-webp": "^8.0.0",
+    "sass": "^1.77.8"
   }
 }
