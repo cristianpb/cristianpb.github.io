@@ -104,7 +104,7 @@ For more complex research, in multiple fields, the components looks like the fol
 
 ## Render search results with AMP
 
-AMP provides some components to process the JSON object that is binned with [amp-bind](https://amp.dev/documentation/components/amp-bind/?format=websites):
+AMP provides some components to process the JSON object that is binned with [amp-bind](https://amp.dev/documentation/components/websites/amp-bind):
 * The [amp-list](https://amp.dev/documentation/components/amp-list/?format=websites) component dynamically downloads data and creates a list of items using a template.
 * The [amp-mustache](https://amp.dev/documentation/examples/components/amp-mustache) component renders an element using [mustache](https://mustache.github.io/) syntax.
 

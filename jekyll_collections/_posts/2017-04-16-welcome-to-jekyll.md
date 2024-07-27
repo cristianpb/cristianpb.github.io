@@ -99,7 +99,7 @@ Talk][jekyll-talk].
 
 I started using [Emping theme](https://github.com/rmsubekti/emping). It offers
 a more aesthetic design and also includes [_Amp
-Page_](https://www.ampproject.org) implementation to improve charging time,
+Page_](https://amp.dev/) implementation to improve charging time,
 _Pagination_ for the blog, a nice _404 Error Page_, _SEO Gems_ and the _Share
 Button_ with different social networks.
 

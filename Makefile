@@ -10,4 +10,4 @@ bash:
 	@docker run --rm -p 4000:4000 --volume="${PWD}:/srv/jekyll" -it jekyll/jekyll:${JEKYLL_VERSION} bash
 
 html-test:
-	@docker run --rm -p 4000:4000 --volume="${PWD}:/srv/jekyll" -it jekyll/jekyll:${JEKYLL_VERSION} /bin/bash -c 'gem install html-proofer && /usr/gem/bin/htmlproofer --ignore-urls "/www.linkedin.com/,/twitter.com/,/www.researchgate.net/,/www.sciencedirect.com/,/www.arduino.cc/,/www.velib-metropole.fr/,/herokuapp.com/,/www.tandfonline.com/" --ignore-missing-alt --allow-missing-href --ignore-status-codes "0"  /srv/jekyll/_site'
+	@docker run --rm -p 4000:4000 --volume="${PWD}:/srv/jekyll" -it jekyll/jekyll:${JEKYLL_VERSION} /bin/bash -c 'gem install html-proofer && /usr/gem/bin/htmlproofer --ignore-urls "/www.linkedin.com/,/twitter.com/,/www.researchgate.net/,/www.sciencedirect.com/,/www.arduino.cc/,/www.velib-metropole.fr/,/herokuapp.com/,/www.tandfonline.com/,/medium.com/" --ignore-missing-alt --allow-missing-href --ignore-status-codes "0"  /srv/jekyll/_site'
