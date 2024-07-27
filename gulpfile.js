@@ -173,6 +173,7 @@ function purificationPosts() {
       }
     }))
     .pipe(replace(/!important/gm, ''))
+    .pipe(replace(/@charset "UTF-8";/gm, ''))
     .pipe(gulp.dest(paths.styles.tmp));
 }
 
@@ -202,6 +203,7 @@ function purificationDefault() {
       }
     }))
     .pipe(replace(/!important/gm, ''))
+    .pipe(replace(/@charset "UTF-8";/gm, ''))
     .pipe(cleanCSS({compatibility: 'ie8'}, (details) => {
       console.log(`Minification of ${details.name}: ${details.stats.originalSize/1000} kb -> ${details.stats.minifiedSize/1000} kb`);
     }))
