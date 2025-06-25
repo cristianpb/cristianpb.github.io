@@ -15,7 +15,6 @@ twitter:
 logo: '/assets/img/avatar.png' 
 linkedin_username: cristianperezbrokate
 github_username:  cristianpb
-researchgate_username:  Cristian_Perez_Brokate
 social:
   name: Cristian Brokate
   links:
@@ -23,7 +22,6 @@ social:
     - https://www.linkedin.com/in/cristianperezbrokate
     - https://github.com/cristianpb
     - https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
-    - https://www.researchgate.net/profile/Cristian_Perez_Brokate
     - https://www.kaggle.com/cristianpb
 author:
   name: Cristian Brokate
@@ -40,7 +38,6 @@ socialnetworks:
   linkedin: https://www.linkedin.com/in/cristianperezbrokate
   kaggle: https://www.kaggle.com/cristianpb
   google: https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
-  researchgate: https://www.researchgate.net/profile/Cristian_Perez_Brokate
 
 google_analytics: G-GHSXP90EV3
 google_site_verification: dadHYln91lNA-p2JDYCrivQ6etkGJeqk1Dz1GpshKk0
