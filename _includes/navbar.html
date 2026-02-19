@@ -1,5 +1,5 @@
 {% include sidebar.html %}
-<nav class="navbar is-fixed-top is-primary">
+<nav class="navbar is-fixed-top">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
         <amp-img src="{{ site.baseurl | append:'/assets/img/avatar-small.png'}}" 
@@ -8,7 +8,7 @@
     </a>
     {% if page.title and page.title != "" and page.title != nil %}
     <div class="navbar-item" >
-      <a class="button is-primary is-hidden-desktop " href="{{ page.url | prepend: site.baseurl }}">
+      <a class="button is-hidden-desktop " href="{{ page.url | prepend: site.baseurl }}">
         {{ page.title | | truncate: 30 }}
       </a>
     </div>
@@ -24,7 +24,7 @@
     <div class="navbar-start">
       {% if page.title and page.title != "" and page.title != nil %}
       <div class="navbar-item" >
-        <a class="button is-primary " href="{{ page.url | prepend: site.baseurl }}">
+        <a class="button" href="{{ page.url | prepend: site.baseurl }}">
           {{ page.title }}
         </a>
       </div>
@@ -33,13 +33,13 @@
 
     <div class="navbar-end">
       <div class="navbar-item">
-        <a class="button is-primary" href="/about">Academic</a>
+        <a class="button" href="/about">Academic</a>
       </div>
       <div class="navbar-item">
-        <a class="button is-primary" href="/blog">Blog</a>
+        <a class="button" href="/blog">Blog</a>
       </div>
       <div class="navbar-item">
-        <a class="button is-primary" href="https://cristianpb.github.io/analytics-google">Analytics</a>
+        <a class="button" href="https://cristianpb.github.io/analytics-google">Analytics</a>
       </div>
     </div>
   </div>
