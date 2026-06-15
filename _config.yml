@@ -8,17 +8,13 @@ description: > # this means to ignore newlines until "baseurl:"
   In my spare time, I like to build Internet of Things (IoT) applications.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cristianpb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: https://twitter.com/cris_perez_b
 # Needed by jekyll-seo-tag
-twitter: 
-  username: cris_perez_b
 logo: '/assets/img/avatar.png' 
 linkedin_username: cristianperezbrokate
 github_username:  cristianpb
 social:
   name: Cristian Brokate
   links:
-    - https://twitter.com/cris_perez_b
     - https://www.linkedin.com/in/cristianperezbrokate
     - https://github.com/cristianpb
     - https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
@@ -27,14 +23,12 @@ author:
   name: Cristian Brokate
   github: cristianpb
   medium: "@cristianpb"
-  twitter: cris_perez_b
   linkedin: cristianperezbrokate
   kaggle: cristianpb
 
 socialnetworks:
   github: https://github.com/cristianpb
   medium: https://medium.com/@cristianpb
-  twitter: https://twitter.com/cris_perez_b
   linkedin: https://www.linkedin.com/in/cristianperezbrokate
   kaggle: https://www.kaggle.com/cristianpb
   google: https://scholar.google.com/citations?hl=en&user=rIdjCp0AAAAJ
